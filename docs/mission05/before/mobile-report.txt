@@ -1,0 +1,648 @@
+Pular para o conteúdo
+Situação atual
+Histórico
+Ambiente
+Território
+Evidências
+Voltar
+Portel (PA) — piloto
+Abaetetuba (PA)
+Abel Figueiredo (PA)
+Acará (PA)
+Afuá (PA)
+Água Azul do Norte (PA)
+Alenquer (PA)
+Almeirim (PA)
+Altamira (PA)
+Anajás (PA)
+Ananindeua (PA)
+Anapu (PA)
+Augusto Corrêa (PA)
+Aurora do Pará (PA)
+Aveiro (PA)
+Bagre (PA)
+Baião (PA)
+Bannach (PA)
+Barcarena (PA)
+Belém (PA)
+Belterra (PA)
+Benevides (PA)
+Bom Jesus do Tocantins (PA)
+Bonito (PA)
+Bragança (PA)
+Brasil Novo (PA)
+Brejo Grande do Araguaia (PA)
+Breu Branco (PA)
+Breves (PA)
+Bujaru (PA)
+Cachoeira do Arari (PA)
+Cachoeira do Piriá (PA)
+Cametá (PA)
+Canaã dos Carajás (PA)
+Capanema (PA)
+Capitão Poço (PA)
+Castanhal (PA)
+Chaves (PA)
+Colares (PA)
+Conceição do Araguaia (PA)
+Concórdia do Pará (PA)
+Cumaru do Norte (PA)
+Curionópolis (PA)
+Curralinho (PA)
+Curuá (PA)
+Curuçá (PA)
+Dom Eliseu (PA)
+Eldorado do Carajás (PA)
+Faro (PA)
+Floresta do Araguaia (PA)
+Garrafão do Norte (PA)
+Goianésia do Pará (PA)
+Gurupá (PA)
+Igarapé-Açu (PA)
+Igarapé-Miri (PA)
+Inhangapi (PA)
+Ipixuna do Pará (PA)
+Irituia (PA)
+Itaituba (PA)
+Itupiranga (PA)
+Jacareacanga (PA)
+Jacundá (PA)
+Juruti (PA)
+Limoeiro do Ajuru (PA)
+Mãe do Rio (PA)
+Magalhães Barata (PA)
+Marabá (PA)
+Maracanã (PA)
+Marapanim (PA)
+Marituba (PA)
+Medicilândia (PA)
+Melgaço (PA)
+Mocajuba (PA)
+Moju (PA)
+Mojuí dos Campos (PA)
+Monte Alegre (PA)
+Muaná (PA)
+Nova Esperança do Piriá (PA)
+Nova Ipixuna (PA)
+Nova Timboteua (PA)
+Novo Progresso (PA)
+Novo Repartimento (PA)
+Óbidos (PA)
+Oeiras do Pará (PA)
+Oriximiná (PA)
+Ourém (PA)
+Ourilândia do Norte (PA)
+Pacajá (PA)
+Palestina do Pará (PA)
+Paragominas (PA)
+Parauapebas (PA)
+Pau D'Arco (PA)
+Peixe-Boi (PA)
+Piçarra (PA)
+Placas (PA)
+Ponta de Pedras (PA)
+Porto de Moz (PA)
+Prainha (PA)
+Primavera (PA)
+Quatipuru (PA)
+Redenção (PA)
+Rio Maria (PA)
+Rondon do Pará (PA)
+Rurópolis (PA)
+Salinópolis (PA)
+Salvaterra (PA)
+Santa Bárbara do Pará (PA)
+Santa Cruz do Arari (PA)
+Santa Izabel do Pará (PA)
+Santa Luzia do Pará (PA)
+Santa Maria das Barreiras (PA)
+Santa Maria do Pará (PA)
+Santana do Araguaia (PA)
+Santarém (PA)
+Santarém Novo (PA)
+Santo Antônio do Tauá (PA)
+São Caetano de Odivelas (PA)
+São Domingos do Araguaia (PA)
+São Domingos do Capim (PA)
+São Félix do Xingu (PA)
+São Francisco do Pará (PA)
+São Geraldo do Araguaia (PA)
+São João da Ponta (PA)
+São João de Pirabas (PA)
+São João do Araguaia (PA)
+São Miguel do Guamá (PA)
+São Sebastião da Boa Vista (PA)
+Sapucaia (PA)
+Senador José Porfírio (PA)
+Soure (PA)
+Tailândia (PA)
+Terra Alta (PA)
+Terra Santa (PA)
+Tomé-Açu (PA)
+Tracuateua (PA)
+Trairão (PA)
+Tucumã (PA)
+Tucuruí (PA)
+Ulianópolis (PA)
+Uruará (PA)
+Vigia (PA)
+Viseu (PA)
+Vitória do Xingu (PA)
+Xinguara (PA)
+Baixar JSON
+Imprimir ou salvar PDF
+
+Ficha de Atenção Territorial
+
+Portel (PA)
+
+Gerada em 15/11/2026 01:53 UTC (14/11 22:53 (Brasília)). Amazônia Viva, protótipo de pesquisa.
+
+Observação
+Estimativa
+Previsão
+Indicador externo
+Ausente
+Limite IBGE
+Unidades de conservação federais
+Assentamentos federais
+Eventos Censipam
+
+Pontos: detecções VIIRS NOAA-20 (âmbar) e NOAA-21 (azul) dos últimos 7 dias.
+
+Triagem experimental
+Estimativa
+
+Examinar com prioridade
+
+3 de 4 critérios avaliados atendidos.
+
+Classificação experimental para triagem e discussão. Critérios e limiares não foram calibrados nem validados operacionalmente. Não indica risco, causa ou propagação de fogo.
+
+Área (limite IBGE)
+25.385 km²
+População (Censo 2022)
+62.503
+Código IBGE
+1505809
+Eventos Censipam
+97
+1
+O que foi detectado?
+Observação
+
+NOAA-20 (VIIRS)
+
+1.123
+
+última: 14/11/2026 16:47 UTC
+
+14/11 13:47 (Brasília)
+
+NOAA-21 (VIIRS)
+
+1.225
+
+última: 14/11/2026 17:30 UTC
+
+14/11 14:30 (Brasília)
+
+Atividade persistente
+
+34
+
+células de ~11 km com detecção em ≥ 5 dos dias completos recentes
+
+Janela: últimos 7 dias até 15/11/2026 01:53 UTC. Fonte: NASA FIRMS (VIIRS 375 m, quase tempo real; atraso declarado de até ~3 h). Cada detecção é um pixel com anomalia térmica, não um incêndio individual.
+
+Eventos de fogo consolidados pelo Censipam
+Indicador externo
+
+97 eventos intersectam o território: 52 ativo, 45 em observação.
+
+Evento	Status	Última visão	Persistência	Índice Censipam	Áreas oficiais citadas
+7202296	Ativo	15/11/2026 01:10 UTC	1 dias	23,1
++6,8%
+	PDS LIBERDADE I
+7205128	Ativo	15/11/2026 01:10 UTC	0 dias	11,9
++103,7%
+	—
+7206145	Ativo	15/11/2026 00:40 UTC	0 dias	16,0
++1.037,6%
+	—
+7167337	Ativo	15/11/2026 00:30 UTC	10 dias	39,3
++30,4%
+	—
+7196998	Ativo	15/11/2026 00:30 UTC	2 dias	19,1
++171,6%
+	PA BOM JARDIM
+7173827	Ativo	14/11/2026 22:30 UTC	9 dias	34,4
++5,6%
+	—
+6999404	Em observação	14/11/2026 21:00 UTC	47 dias	35,2
++14,4%
+	PA TERRA PARA PAZ
+7049940	Ativo	14/11/2026 19:04 UTC	38 dias	57,7
+-0,1%
+	PDS LIBERDADE I; PA RIO CURURUÍ; PA RIO BANDEIRA
+7086662	Ativo	14/11/2026 19:04 UTC	30 dias	43,3
++15,8%
+	—
+7147694	Ativo	14/11/2026 19:04 UTC	15 dias	41,8
+-1,7%
+	PDS LIBERDADE I
+7181277	Ativo	14/11/2026 19:04 UTC	7 dias	31,1
++6,9%
+	—
+7185066	Ativo	14/11/2026 19:04 UTC	6 dias	16,2
+-18,6%
+	—
+
+Os 12 eventos com visão mais recente. Índice de Prioridade para Acionamento: indicador operacional do Censipam para apoiar o acionamento de brigadas. A fórmula e os pesos não estão publicados em formato verificável (o FAQ lista componentes como área, FRP, tempo, velocidade, variação de área e número de focos). Exibido sem alteração; não entra nos critérios desta plataforma. A área dos eventos não é exibida: a unidade de 'area_total_evento' não está documentada na API.
+
+2
+Quando ocorreu?
+Observação
+Satélite	08/11	09/11	10/11	11/11	12/11	13/11	14/11
+
+NOAA-20
+	
+406
+	
+102
+	
+44
+	
+116
+	
+175
+	
+166
+	
+114
+
+
+NOAA-21
+	
+448
+	
+225
+	
+63
+	
+185
+	
+63
+	
+60
+	
+181
+Última passagem com detecção, NOAA-20 (VIIRS): 14/11/2026 16:47 UTC (14/11 13:47 (Brasília))
+Última passagem com detecção, NOAA-21 (VIIRS): 14/11/2026 17:30 UTC (14/11 14:30 (Brasília))
+
+Contagens por dia UTC; o dia de hoje é parcial. Satélites polares passam sobre a região cerca de duas vezes por dia (~13h30 e ~01h30, horário local); dias sem detecção podem ser dias sem observação útil (nuvens).
+
+3
+O comportamento é incomum?
+Estimativa
+
+MODIS (Terra e Aqua)
+
+08/11/2026 a 14/11/2026 (7 dias UTC completos)
+
+05
+10
+15
+20
+25
+agora
+Agora
+410
+Observação
+Mediana (25 anos)
+121
+Estimativa
+Posição
+P92
+
+Mesmo instrumento nos dois lados: MODIS_NRT (quase tempo real) × MODIS_SP (arquivo 2001–2025).
+
+VIIRS NOAA-20
+
+08/11/2026 a 14/11/2026 (7 dias UTC completos)
+
+21
+22
+23
+24
+25
+agora
+Agora
+1.123
+Observação
+Mediana (5 anos)
+595
+Estimativa
+Posição
+P60
+
+Mesmo instrumento nos dois lados: VIIRS_NOAA20_NRT (quase tempo real) × VIIRS_NOAA20_SP (arquivo 2021–2025).
+
+Série harmonizada (experimental)
+experimental
+
+08/11/2026 a 14/11/2026 (7 dias UTC completos)
+
+05
+10
+15
+20
+25
+agora
+Agora
+1.123
+Observação
+Mediana (24 anos)
+552,7
+Estimativa
+Posição
+P83
+
+Atual: NOAA-20 observado. Anos anteriores: NOAA-20 observado (2021–2025) ou MODIS Aqua convertido por razão sazonal (antes de 2021). Série experimental, não validada operacionalmente.
+
+Harmonização MODIS × VIIRS neste território
+Estimativa
+
+Em 2021–2025 (60 meses pareados), o VIIRS NOAA-20 registrou 6,0× as detecções do MODIS Aqua (intervalo interquartil 5,6–6,9); Spearman 0,94. Concordância espacial mediana (Jaccard, grade de 0,1°, meses com ≥ 8 células): 0,38. Por isso as contagens dos dois sensores não são somadas nem convertidas entre si. Ver análise completa.
+
+Critérios de atenção (triagem experimental)
+Estimativa
+
+Atividade persistente (VIIRS NOAA-20/NOAA-21)
+
+Critério: Ao menos uma célula de 0.1° (~11 km) com detecção VIIRS em ≥ 5 dos 7 dias UTC completos mais recentes (presença diária; contagens dos satélites não são somadas).
+
+Incerteza: Nuvens e horário de passagem afetam quais dias registram detecções; a grade fixa pode dividir um mesmo foco.
+
+atendido
+34 célula(s)
+
+Atividade acima do usual para o período (MODIS (Terra e Aqua))
+
+Critério: Contagem da janela ≥ percentil 90 do mesmo período nos anos anteriores, mesmo instrumento
+
+Incerteza: Baseado em 25 anos; exige ≥ 5. Deriva orbital Terra/Aqua não corrigida.
+
+atendido
+percentil 92
+
+Atividade acima do usual para o período (VIIRS NOAA-20)
+
+Critério: Contagem da janela ≥ percentil 90 do mesmo período nos anos anteriores, mesmo instrumento
+
+Incerteza: Baseado em 5 anos; exige ≥ 5.
+
+não atendido
+percentil 60
+
+Chuva abaixo da climatologia (14 dias)
+
+Critério: Precipitação acumulada < 50% do esperado pela climatologia NASA POWER 2001–2025
+
+Incerteza: Reanálise em grade de ~50 km em um único ponto; precipitação convectiva é muito heterogênea.
+
+atendido
+30% do esperado
+
+Regra do nível: nenhum sinal atendido: sem sinais; 1 sinal: observar; 2 ou mais: examinar com prioridade. Não é índice de risco nem previsão.
+
+Fatos usados, com tipo e fonte
+
+Observação
+NOAA-20 (VIIRS): 1.123 detecções nos últimos 7 dias; última observação em 14/11/2026 16:47 UTC. (VIIRS_NOAA20_NRT)
+Observação
+NOAA-21 (VIIRS): 1.225 detecções nos últimos 7 dias; última observação em 14/11/2026 17:30 UTC. (VIIRS_NOAA21_NRT)
+Estimativa
+MODIS (Terra e Aqua), 08/11 a 14/11: 410 detecções. Mediana do mesmo período em 25 anos (2001–2025): 121. (MODIS_NRT × MODIS_SP)
+Estimativa
+VIIRS NOAA-20, 08/11 a 14/11: 1.123 detecções. Mediana do mesmo período em 5 anos (2021–2025): 595. (VIIRS_NOAA20_NRT × VIIRS_NOAA20_SP)
+Estimativa
+Série harmonizada experimental (equivalente NOAA-20), mesmo período em 24 anos (2002–2025): mediana 552,7; atual 1.123 (posição: percentil 83). (VIIRS_NOAA20_NRT × (VIIRS_NOAA20_SP + MODIS Aqua convertido))
+Estimativa
+Chuva nos 14 dias até 11/11/2026: 10,5 mm (climatologia 2001–2025 para o período: 35,1 mm). (NASA POWER (reanálise))
+Observação
+População residente no território: 62.503 pessoas (Censo 2022); densidade 2,5 hab./km². Total do território, não pessoas afetadas. (IBGE Censo 2022)
+Observação
+Unidades de conservação federais com sobreposição ao território: 1 (1.884 km² dentro do município); 13 detecções VIIRS dos últimos 7 dias nessas áreas. (ICMBio via Censipam)
+Observação
+Assentamentos federais com sobreposição ao território: 12 (5.418 km² dentro do município); 911 detecções VIIRS dos últimos 7 dias nessas áreas. (INCRA via Censipam)
+Estimativa
+Localidades mapeadas pelo IBGE no território: 28; com detecção VIIRS a até 5 km nos últimos 7 dias: 18. Proximidade, não dano. (IBGE BC250 2025 × VIIRS 7 dias)
+Estimativa
+Unidades de saúde com coordenadas no CNES: 19 (de 20 cadastradas); com detecção a até 5 km: 19. (CNES × VIIRS 7 dias)
+Estimativa
+Exposição potencial (limite superior): até 61.988 pessoas (99,2% da população) vivem em setores censitários a até 5 km de detecções. Não são pessoas afetadas. (IBGE Censo 2022 (setores) × VIIRS 7 dias)
+Indicador externo
+Censipam: 97 eventos de fogo intersectam o território (52 ativo, 45 em observação). (Censipam — Painel do Fogo)
+4
+Quais condições ambientais estavam presentes?
+Estimativa
+Temperatura máx. a 2 m
+37,4 °C
+11/11/2026
+Umidade relativa (7 dias)
+51,4%
+Chuva em 14 dias
+10,5 mm
+30% da climatologia 2001–2025
+Vento a 10 m (7 dias)
+1,2 m/s
+predomina de NE (origem)
+
+NASA POWER, reanálise em grade de ~50 km no centroide do território; último dia disponível 11/11/2026 (4 dias de atraso). Não são medições locais.
+
+Ausente
+Previsão meteorológica e de comportamento do fogo: não integradas. Nenhuma direção de propagação é indicada.
+
+5
+Quais territórios habitados ou protegidos estão próximos?
+Observação
+
+População residente: 62.503 pessoas; densidade 2,5 hab./km² (IBGE, Censo 2022).
+Total do território inteiro. Não representa pessoas expostas ou afetadas por fogo; a plataforma não estima pessoas afetadas a partir da proximidade de detecções.
+
+Área oficial	Camada (fonte)	No município	% do município	Detecções VIIRS 7 dias
+Nenhuma sobreposição	Terras indígenas
+FUNAI
+	
+FLORESTA NACIONAL DE CAXIUANÃ
+Categoria: FLONA; Grupo (PI/US): US; Criação: 1961
+	Unidades de conservação federais
+ICMBio
+	1.884,0 km²	7,4%	13
+Nenhuma sobreposição	Unidades de conservação estaduais
+MMA — Cadastro Nacional de Unidades de Conservação (CNUC)
+	
+Nenhuma sobreposição	Territórios quilombolas
+INCRA
+	
+PDS LIBERDADE I
+Capacidade (famílias): 3500; Famílias assentadas: 915; Criação: 17/10/2006
+	Assentamentos federais
+INCRA
+	4.471,2 km²	17,6%	728
+PA TERRA PARA PAZ
+Capacidade (famílias): 400; Famílias assentadas: 196; Criação: 16/12/2005
+	Assentamentos federais
+INCRA
+	467,9 km²	1,8%	102
+PAE ILHA GRANDE - PACAJAI
+Capacidade (famílias): 550; Famílias assentadas: 540; Criação: 18/10/2006
+	Assentamentos federais
+INCRA
+	369,0 km²	1,5%	69
+PDS VIROLA JATOBÁ
+Capacidade (famílias): 180; Famílias assentadas: 114; Criação: 13/08/2004
+	Assentamentos federais
+INCRA
+	71,8 km²	0,3%	1
+PA BOM JARDIM
+Capacidade (famílias): 921; Famílias assentadas: 702; Criação: 22/12/1997
+	Assentamentos federais
+INCRA
+	16,8 km²	0,1%	8
+PA SANTA CECILIA
+Capacidade (famílias): 23; Famílias assentadas: 20; Criação: 13/09/2006
+	Assentamentos federais
+INCRA
+	9,3 km²	0,0%	0
+e mais 6 com sobreposição menor	Assentamentos federais	12,0 km²	0,0%	3
+
+Interseção das geometrias oficiais com o limite IBGE; área geodésica (WGS84); detecções VIIRS dos últimos 7 dias contadas dentro de cada interseção. Servido pelo GeoServer Panorama (Censipam). Detecções somam NOAA-20 e NOAA-21 apenas como contagem de pixels VIIRS observados na área, sem conversão entre sensores.
+
+Unidades de conservação municipais não estão nas camadas consultadas.
+
+Comunidades e localidades não cadastradas em bases oficiais não aparecem aqui.
+
+Pessoas e infraestrutura perto das detecções
+Estimativa
+
+Proximidade e exposição potencial não são dano confirmado. As distâncias usam 5.356 detecções VIIRS dos últimos 7 dias (retângulo do município ampliado em ~13 km (inclui focos logo além da divisa)). Distâncias em projeção azimutal equidistante centrada no território. Raios: 1, 5 e 10 km. Proximidade não indica dano; exposição potencial é limite superior.
+
+Localidades com detecção a até 5 km
+
+18 de 28
+
+27 aglomerado rural isolado; 1 cidade
+
+Unidades de saúde com detecção a até 5 km
+
+19 de 19
+
+20 no CNES; 1 sem coordenada; 1 com atendimento hospitalar
+
+Exposição potencial
+Estimativa
+
+até 61.988
+
+pessoas em 87 de 91 setores a até 5 km (99,2% da população). Limite superior, não pessoas afetadas.
+
+Medida mais restrita: 31.708 pessoas vivem em 40 setores que contêm ao menos uma detecção. Exposição potencial (limite superior), não pessoas afetadas. Setores rurais são grandes e a população se concentra ao longo dos rios; a soma superestima quem de fato vive perto das detecções.
+
+Localidades mapeadas (IBGE)
+Localidade	Tipo	Detecção mais próxima	Até 1 km	Até 5 km	Até 10 km
+Santo Agostinho	Aglomerado rural isolado	0,3 km	1	6	23
+Arraial Santo Amaro	Aglomerado rural isolado	0,8 km	1	4	7
+Santa Rosa	Aglomerado rural isolado	1,1 km	0	9	14
+Marcelo	Aglomerado rural isolado	1,5 km	0	4	5
+Vila Vista Alegre	Aglomerado rural isolado	1,5 km	0	8	64
+Santa Luzia	Aglomerado rural isolado	1,5 km	0	30	62
+Mildinho	Aglomerado rural isolado	1,7 km	0	5	43
+Cocal	Aglomerado rural isolado	1,7 km	0	9	16
+Rooli	Aglomerado rural isolado	1,8 km	0	4	52
+Bevenuto	Aglomerado rural isolado	2,1 km	0	2	7
+
+Os 10 mais próximos de 28. Lista completa no CSV de proximidade.
+
+Escala 1:250.000: localidades pequenas podem não estar mapeadas; aldeias e comunidades tradicionais não cadastradas não aparecem.
+
+Unidades de saúde (CNES)
+Unidade	Tipo	Detecção mais próxima	Até 1 km	Até 5 km	Até 10 km
+POSTO DE SAUDE LISBOA	CENTRO DE SAUDE/UNIDADE BASICA	0,6 km	2	14	84
+POSTO DE SAUDE AJARA	CENTRO DE SAUDE/UNIDADE BASICA	1,2 km	0	6	57
+POSTO DE SAUDE DE SANTO AMARO	POSTO DE SAUDE	2,2 km	0	16	55
+UNIDADE SAUDE DA FAMILIA CIDADE NOVA	CENTRO DE SAUDE/UNIDADE BASICA	2,4 km	0	14	94
+UBSF PEROLA DO MARAJO	UNIDADE MOVEL FLUVIAL	2,8 km	0	12	91
+UNIDADE SAUDE DA FAMILIA DO MURUCI	CENTRO DE SAUDE/UNIDADE BASICA	2,9 km	0	14	103
+POSTO DE SAUDE BALBINOTE	POSTO DE SAUDE	2,9 km	0	14	56
+UNIDADE SAUDE DA FAMILIA AMACOL	CENTRO DE SAUDE/UNIDADE BASICA	3,0 km	0	12	101
+POSTO DE SAUDE DE ACANGATA	CENTRO DE SAUDE/UNIDADE BASICA	3,0 km	0	5	54
+CLINICA FISIO SOUZA	CONSULTORIO ISOLADO	3,0 km	0	12	108
+
+Os 10 mais próximos de 19. Lista completa no CSV de proximidade.
+
+Coordenadas declaradas no cadastro; algumas podem estar imprecisas. Proximidade não indica dano à unidade.
+
+Brigadas mais próximas (Censipam)
+11 GBM (CBM, Breves/PA): 113,1 km
+8 GBM (CBM, Tucuruí/PA): 194,4 km
+OLHO DAGUA (PREVFOGO, Moju/PA): 238,3 km
+QUARTEL VITÓRIA DO JARI 8 GBM (CBM, Vitória do Jari/AP): 243,2 km
+Nenhuma brigada cadastrada dentro do território. Distância em linha reta a partir do centroide do município (não é tempo de deslocamento).
+Pistas e pontos de pouso (IBGE)
+Aeródromo Balbinot: Revestimento primário (solto), 700 m, uso particular
+(sem nome): Pavimentado, 950 m, uso particular
+Aeródromo Fazenda Terra Alta: Sem revestimento (leito natural), 840 m, uso particular
+Aeródromo Ambrósio: Revestimento primário (solto), 800 m, uso particular
+
+Não integrado nesta versão: Escolas (INEP); Aldeias e comunidades tradicionais não cadastradas na BC250; Rodovias e linhas de energia (disponíveis no IBGE/Censipam; não cruzadas nesta versão).
+
+6
+Que informações precisam ser verificadas?
+Ausente
+Confirmar em campo ou com brigadas se as detecções correspondem a incêndio florestal, queima agrícola, limpeza de pasto ou outra fonte de calor.
+Verificar a nebulosidade nas passagens recentes: dias sem detecção podem ser dias sem observação.
+Conferir o status atual dos eventos no Painel do Fogo do Censipam antes de qualquer acionamento.
+Verificar se há comunidades, aldeias ou estruturas não mapeadas nas bases oficiais usadas aqui.
+Confirmar se o território está entre as áreas de emergência Nível II identificadas pela Cedec (Decreto estadual nº 5.782/2026).
+Avaliar condições locais de vento e chuva com observações de estação ou previsão oficial (não integradas nesta versão).
+
+Contexto normativo (verificar no Diário Oficial)
+
+Decreto estadual nº 5.767/2026 (11/11/2026): Emergência ambiental e climática em todo o Pará, por 120 dias. Noticiado por veículos de imprensa; texto oficial no Diário Oficial do Estado a conferir.
+
+Decreto estadual nº 5.782/2026 (13/11/2026): Emergência de Nível II nas áreas atingidas por incêndios, por 180 dias. Noticiado; lista de áreas da Cedec não localizada. A ficha não indica se o território está incluído.
+
+7
+Quais são as fontes e limitações?
+Observação
+NOAA-20 (VIIRS): https://firms.modaps.eosdis.nasa.gov/data/active_fire/noaa-20-viirs-c2/csv/J1_VIIRS_C2_South_America_7d.csv; coletado 15/11/2026 01:50 UTC; SHA-256 9eb5f3ab9933a755…
+NOAA-21 (VIIRS): https://firms.modaps.eosdis.nasa.gov/data/active_fire/noaa-21-viirs-c2/csv/J2_VIIRS_C2_South_America_7d.csv; coletado 15/11/2026 01:50 UTC; SHA-256 b1f9dcd4305c9489…
+MODIS_SP: arquivo anual por país da NASA FIRMS, anos 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 (proveniência por arquivo em Evidências).
+VIIRS_NOAA20_SP: arquivo anual por país da NASA FIRMS, anos 2021, 2022, 2023, 2024, 2025 (proveniência por arquivo em Evidências).
+HARMONIZED: arquivo anual por país da NASA FIRMS, anos 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 (proveniência por arquivo em Evidências).
+NASA POWER: https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,T2M_MAX,RH2M,WS10M,WD10M,PRECTOTCORR&community=AG&longitude=-50.9556&latitude=-2.5654&start=20261009&end=20261115&format=JSON
+IBGE Censo 2022: https://servicodados.ibge.gov.br/api/v3/agregados/4714/periodos/2022/variaveis/93|6318?localidades=N6[1505809]
+Terras indígenas (FUNAI via Censipam): coletado 14/11/2026 23:59 UTC
+Unidades de conservação federais (ICMBio via Censipam): coletado 15/11/2026 00:01 UTC
+Unidades de conservação estaduais (MMA — Cadastro Nacional de Unidades de Conservação (CNUC) via Censipam): coletado 14/11/2026 23:59 UTC
+Territórios quilombolas (INCRA via Censipam): coletado 14/11/2026 23:59 UTC
+Assentamentos federais (INCRA via Censipam): coletado 14/11/2026 23:59 UTC
+Censipam Painel do Fogo: https://panorama.sipam.gov.br/painel-do-fogo/api/v1/eventos?sigla_estado=PA; coletado 15/11/2026 01:44 UTC
+Limite territorial: IBGE malhas v3 (qualidade máxima).
+Localidades: IBGE — Base Cartográfica Contínua 1:250.000, edição 2025 (posição geográfica de localidades); coletado 15/11/2026 01:09 UTC
+Unidades de saúde: https://apidadosabertos.saude.gov.br/cnes/estabelecimentos?codigo_municipio=150580; coletado 15/11/2026 01:09 UTC
+Setores censitários: https://ftp.ibge.gov.br/Censos/Censo_Demografico_2022/Agregados_por_Setores_Censitarios/malha_com_atributos/setores/gpkg/UF/PA/PA_setores_CD2022.gpkg (SHA-256 de6fd053e6705285…)
+Pistas de pouso: IBGE — BC250 2025 (pistas e pontos de pouso)
+CSV das detecções (7 dias)
+CSV de proximidade (localidades, saúde, setores)
+Limitações
+Detecções de calor indicam pixels com anomalia térmica no momento da passagem do satélite; não equivalem a incêndios individuais nem a área queimada.
+Nuvens, fumaça densa, horário de passagem e geometria de visada reduzem ou impedem detecções; ausência de detecção não comprova ausência de fogo.
+MODIS (1 km) e VIIRS (375 m) têm sensibilidades diferentes; suas contagens não são somadas nem comparadas diretamente.
+Cada comparação histórica usa o mesmo instrumento nos dois lados (MODIS×MODIS, NOAA-20×NOAA-20); dados NRT e de processamento padrão podem diferir ligeiramente.
+As órbitas de Terra e Aqua derivaram nos últimos anos, alterando o horário de passagem e, portanto, as contagens esperadas.
+Variáveis meteorológicas vêm de reanálise em grade (NASA POWER), com latência de dias; não são medições locais.
+Nenhum modelo de propagação de fogo foi aplicado e nenhuma previsão está integrada.
+A população informada é o total censitário do território; não é uma estimativa de pessoas afetadas.

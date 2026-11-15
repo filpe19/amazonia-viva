@@ -1,0 +1,12 @@
+{
+  "region_id": "santarem",
+  "name": "Santarém (PA)",
+  "ibge_code": "1506807",
+  "publisher": "IBGE — Instituto Brasileiro de Geografia e Estatística",
+  "source_url": "https://servicodados.ibge.gov.br/api/v3/malhas/municipios/1506807?formato=application/vnd.geo%2Bjson&qualidade=maxima",
+  "quality": "maxima",
+  "fetched_at": "2026-11-14T22:50:43+00:00",
+  "sha256": "543e8bc5846338a76870dd6b58719983141d4bd4cc654dd147c31bc0dfcf861f",
+  "bytes": 17231,
+  "license_note": "Dados públicos do IBGE (API de malhas territoriais v3)."
+}

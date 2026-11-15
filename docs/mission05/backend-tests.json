@@ -1,0 +1,11 @@
+{
+  "command": ".venv/bin/python -m pytest",
+  "cwd": "backend",
+  "baseline_passed": 77,
+  "after_passed": 77,
+  "duration_seconds": 11.68,
+  "warnings": [
+    "Existing StarletteDeprecationWarning: httpx with starlette.testclient is deprecated; install httpx2 instead."
+  ],
+  "source": "Captured local regression execution during Mission 05"
+}

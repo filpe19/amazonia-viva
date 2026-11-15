@@ -1,0 +1,632 @@
+[
+  {
+    "device": "desktop",
+    "page": "current",
+    "metrics": {
+      "width": 1440,
+      "document": 1440,
+      "main": 1348,
+      "mainWidth": 1348,
+      "headings": [
+        "Pará",
+        "Por produto",
+        "Passagens dos satélites sobre o território"
+      ],
+      "canvases": [
+        {
+          "width": 1348,
+          "height": 900
+        }
+      ],
+      "controls": [
+        {
+          "label": "Território analisado",
+          "value": "para"
+        }
+      ],
+      "overflow": []
+    },
+    "errors": [],
+    "http_errors": []
+  },
+  {
+    "device": "desktop",
+    "page": "history",
+    "metrics": {
+      "width": 1440,
+      "document": 1440,
+      "main": 1348,
+      "mainWidth": 1348,
+      "headings": [
+        "Inteligência histórica",
+        "O que está importado",
+        "Calendário harmonizado de atividade de fogo (experimental)",
+        "Atividade mensal por sensor",
+        "Este ano é incomum para a época?",
+        "Comparação por ano e mês",
+        "Calendário de detecções em 2025",
+        "Comparar períodos",
+        "MODIS × VIIRS no período de sobreposição",
+        "Experimento: agregação comum e validação",
+        "Cobertura, processamento e incertezas",
+        "Pipeline de harmonização",
+        "Arquivos de origem"
+      ],
+      "canvases": [],
+      "controls": [
+        {
+          "label": "Território analisado",
+          "value": "portel"
+        },
+        {
+          "label": null,
+          "value": "VIIRS_NOAA20_SP"
+        },
+        {
+          "label": "Ano",
+          "value": "2025"
+        },
+        {
+          "label": "Ano do calendário",
+          "value": "2025"
+        }
+      ],
+      "overflow": []
+    },
+    "errors": [],
+    "http_errors": []
+  },
+  {
+    "device": "desktop",
+    "page": "territory",
+    "metrics": {
+      "width": 1440,
+      "document": 1440,
+      "main": 1348,
+      "mainWidth": 1348,
+      "headings": [
+        "Análise territorial",
+        "Escolha o território",
+        "Detecções recentes (últimos 7 dias)",
+        "Comparação com os anos anteriores (mesmo instrumento)",
+        "Condições ambientais",
+        "Informações territoriais verificadas",
+        "Resumo fundamentado"
+      ],
+      "canvases": [],
+      "controls": [
+        {
+          "label": "Território analisado",
+          "value": "portel"
+        }
+      ],
+      "overflow": []
+    },
+    "errors": [],
+    "http_errors": []
+  },
+  {
+    "device": "desktop",
+    "page": "environment",
+    "metrics": {
+      "width": 1440,
+      "document": 1440,
+      "main": 1348,
+      "mainWidth": 1348,
+      "headings": [
+        "Contexto ambiental",
+        "Último dia disponível",
+        "Rosa dos ventos",
+        "Chuva diária e climatologia",
+        "Temperatura e umidade nos últimos 30 dias",
+        "Fontes desta página"
+      ],
+      "canvases": [],
+      "controls": [
+        {
+          "label": "Território analisado",
+          "value": "portel"
+        }
+      ],
+      "overflow": []
+    },
+    "errors": [],
+    "http_errors": []
+  },
+  {
+    "device": "desktop",
+    "page": "evidence",
+    "metrics": {
+      "width": 1440,
+      "document": 1440,
+      "main": 1348,
+      "mainWidth": 1348,
+      "headings": [
+        "Evidências e relatórios",
+        "Consulta",
+        "Região e período",
+        "Observações e fontes",
+        "Comparações disponíveis",
+        "Arquivos históricos usados",
+        "Limitações"
+      ],
+      "canvases": [],
+      "controls": [
+        {
+          "label": "Território analisado",
+          "value": "portel"
+        }
+      ],
+      "overflow": []
+    },
+    "errors": [],
+    "http_errors": []
+  },
+  {
+    "device": "desktop",
+    "page": "report",
+    "metrics": {
+      "width": 1440,
+      "document": 1440,
+      "main": 1348,
+      "mainWidth": 1348,
+      "headings": [
+        "Portel (PA)",
+        "O que foi detectado?",
+        "Quando ocorreu?",
+        "O comportamento é incomum?",
+        "Quais condições ambientais estavam presentes?",
+        "Quais territórios habitados ou protegidos estão próximos?",
+        "Que informações precisam ser verificadas?",
+        "Quais são as fontes e limitações?"
+      ],
+      "canvases": [],
+      "controls": [
+        {
+          "label": "Território da ficha",
+          "value": "portel"
+        }
+      ],
+      "overflow": []
+    },
+    "errors": [],
+    "http_errors": []
+  },
+  {
+    "device": "mobile",
+    "page": "current",
+    "metrics": {
+      "width": 390,
+      "document": 390,
+      "main": 390,
+      "mainWidth": 390,
+      "headings": [
+        "Pará",
+        "Por produto",
+        "Passagens dos satélites sobre o território"
+      ],
+      "canvases": [
+        {
+          "width": 390,
+          "height": 490
+        }
+      ],
+      "controls": [
+        {
+          "label": "Território analisado",
+          "value": "para"
+        }
+      ],
+      "overflow": []
+    },
+    "errors": [],
+    "http_errors": []
+  },
+  {
+    "device": "mobile",
+    "page": "history",
+    "metrics": {
+      "width": 390,
+      "document": 390,
+      "main": 435,
+      "mainWidth": 390,
+      "headings": [
+        "Inteligência histórica",
+        "O que está importado",
+        "Calendário harmonizado de atividade de fogo (experimental)",
+        "Atividade mensal por sensor",
+        "Este ano é incomum para a época?",
+        "Comparação por ano e mês",
+        "Calendário de detecções em 2025",
+        "Comparar períodos",
+        "MODIS × VIIRS no período de sobreposição",
+        "Experimento: agregação comum e validação",
+        "Cobertura, processamento e incertezas",
+        "Pipeline de harmonização",
+        "Arquivos de origem"
+      ],
+      "canvases": [],
+      "controls": [
+        {
+          "label": "Território analisado",
+          "value": "portel"
+        },
+        {
+          "label": null,
+          "value": "VIIRS_NOAA20_SP"
+        },
+        {
+          "label": "Ano",
+          "value": "2025"
+        },
+        {
+          "label": "Ano do calendário",
+          "value": "2025"
+        }
+      ],
+      "overflow": [
+        {
+          "tag": "DIV",
+          "cls": "control inline-flex bg-lichen p-0.5 ring-1 ring-rule",
+          "text": "MODIS (2001–2025)NOAA-20 (2021–2025)S-NPP (2023–2024)"
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "control whitespace-nowrap px-2 py-1 text-xs font-medium transition-colors text-ink-2 hover:text-ink",
+          "text": "S-NPP (2023–2024)"
+        },
+        {
+          "tag": "svg",
+          "cls": {},
+          "text": "janfevmarabrmaijunjulagosetoutnovdezSQS"
+        },
+        {
+          "tag": "text",
+          "cls": {},
+          "text": "jun"
+        },
+        {
+          "tag": "text",
+          "cls": {},
+          "text": "jul"
+        },
+        {
+          "tag": "text",
+          "cls": {},
+          "text": "ago"
+        },
+        {
+          "tag": "text",
+          "cls": {},
+          "text": "set"
+        },
+        {
+          "tag": "text",
+          "cls": {},
+          "text": "out"
+        },
+        {
+          "tag": "text",
+          "cls": {},
+          "text": "nov"
+        },
+        {
+          "tag": "text",
+          "cls": {},
+          "text": "dez"
+        },
+        {
+          "tag": "rect",
+          "cls": {},
+          "text": ""
+        },
+        {
+          "tag": "rect",
+          "cls": {},
+          "text": ""
+        }
+      ]
+    },
+    "errors": [],
+    "http_errors": []
+  },
+  {
+    "device": "mobile",
+    "page": "territory",
+    "metrics": {
+      "width": 390,
+      "document": 390,
+      "main": 462,
+      "mainWidth": 390,
+      "headings": [
+        "Análise territorial",
+        "Escolha o território",
+        "Detecções recentes (últimos 7 dias)",
+        "Comparação com os anos anteriores (mesmo instrumento)",
+        "Condições ambientais",
+        "Informações territoriais verificadas",
+        "Resumo fundamentado"
+      ],
+      "canvases": [],
+      "controls": [
+        {
+          "label": "Território analisado",
+          "value": "portel"
+        }
+      ],
+      "overflow": [
+        {
+          "tag": "DIV",
+          "cls": "",
+          "text": "O que os dados mostramNOAA-20 (VIIRS): 1.123 detecções nos últimos 7 dias; últim"
+        },
+        {
+          "tag": "H3",
+          "cls": "type-label mb-2 text-sm text-ink-2",
+          "text": "O que os dados mostram"
+        },
+        {
+          "tag": "UL",
+          "cls": "flex flex-col gap-2.5",
+          "text": "NOAA-20 (VIIRS): 1.123 detecções nos últimos 7 dias; última observação em 14/11/"
+        },
+        {
+          "tag": "LI",
+          "cls": "text-[14px] leading-relaxed text-ink",
+          "text": "NOAA-20 (VIIRS): 1.123 detecções nos últimos 7 dias; última observação em 14/11/"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "whitespace-nowrap text-xs text-ink-3",
+          "text": "(fonte: VIIRS_NOAA20_NRT)"
+        },
+        {
+          "tag": "LI",
+          "cls": "text-[14px] leading-relaxed text-ink",
+          "text": "NOAA-21 (VIIRS): 1.225 detecções nos últimos 7 dias; última observação em 14/11/"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "whitespace-nowrap text-xs text-ink-3",
+          "text": "(fonte: VIIRS_NOAA21_NRT)"
+        },
+        {
+          "tag": "LI",
+          "cls": "text-[14px] leading-relaxed text-ink",
+          "text": "MODIS (Terra e Aqua), 08/11 a 14/11: 410 detecções. Mediana do mesmo período em "
+        },
+        {
+          "tag": "LI",
+          "cls": "text-[14px] leading-relaxed text-ink",
+          "text": "VIIRS NOAA-20, 08/11 a 14/11: 1.123 detecções. Mediana do mesmo período em 5 ano"
+        },
+        {
+          "tag": "LI",
+          "cls": "text-[14px] leading-relaxed text-ink",
+          "text": "Série harmonizada experimental (equivalente NOAA-20), mesmo período em 24 anos ("
+        },
+        {
+          "tag": "SPAN",
+          "cls": "whitespace-nowrap text-xs text-ink-3",
+          "text": "(fonte: VIIRS_NOAA20_NRT × (VIIRS_NOAA20_SP + MODIS Aqua convertido))"
+        },
+        {
+          "tag": "LI",
+          "cls": "text-[14px] leading-relaxed text-ink",
+          "text": "Chuva nos 14 dias até 11/11/2026: 10,5 mm (climatologia 2001–2025 para o período"
+        }
+      ]
+    },
+    "errors": [],
+    "http_errors": []
+  },
+  {
+    "device": "mobile",
+    "page": "environment",
+    "metrics": {
+      "width": 390,
+      "document": 390,
+      "main": 390,
+      "mainWidth": 390,
+      "headings": [
+        "Contexto ambiental",
+        "Último dia disponível",
+        "Rosa dos ventos",
+        "Chuva diária e climatologia",
+        "Temperatura e umidade nos últimos 30 dias",
+        "Fontes desta página"
+      ],
+      "canvases": [],
+      "controls": [
+        {
+          "label": "Território analisado",
+          "value": "portel"
+        }
+      ],
+      "overflow": []
+    },
+    "errors": [],
+    "http_errors": []
+  },
+  {
+    "device": "mobile",
+    "page": "evidence",
+    "metrics": {
+      "width": 390,
+      "document": 390,
+      "main": 390,
+      "mainWidth": 390,
+      "headings": [
+        "Evidências e relatórios",
+        "Consulta",
+        "Região e período",
+        "Observações e fontes",
+        "Comparações disponíveis",
+        "Arquivos históricos usados",
+        "Limitações"
+      ],
+      "canvases": [],
+      "controls": [
+        {
+          "label": "Território analisado",
+          "value": "portel"
+        }
+      ],
+      "overflow": [
+        {
+          "tag": "TABLE",
+          "cls": "w-full min-w-[860px] text-left text-[12.5px]",
+          "text": "ProdutoDetecçõesÚltima observaçãoColetaModoVersãoSHA-256OrigemNOAA-20 (VIIRS)1.1"
+        },
+        {
+          "tag": "THEAD",
+          "cls": "text-ink-3",
+          "text": "ProdutoDetecçõesÚltima observaçãoColetaModoVersãoSHA-256Origem"
+        },
+        {
+          "tag": "TR",
+          "cls": "",
+          "text": "ProdutoDetecçõesÚltima observaçãoColetaModoVersãoSHA-256Origem"
+        },
+        {
+          "tag": "TH",
+          "cls": "pr-3 font-medium",
+          "text": "Coleta"
+        },
+        {
+          "tag": "TH",
+          "cls": "pr-3 font-medium",
+          "text": "Modo"
+        },
+        {
+          "tag": "TH",
+          "cls": "pr-3 font-medium",
+          "text": "Versão"
+        },
+        {
+          "tag": "TH",
+          "cls": "pr-3 font-medium",
+          "text": "SHA-256"
+        },
+        {
+          "tag": "TH",
+          "cls": "font-medium",
+          "text": "Origem"
+        },
+        {
+          "tag": "TBODY",
+          "cls": "num divide-y divide-rule/60 align-top",
+          "text": "NOAA-20 (VIIRS)1.12314/11/2026 16:47 UTC15/11/2026 01:50 UTCarquivo público NRT2"
+        },
+        {
+          "tag": "TR",
+          "cls": "",
+          "text": "NOAA-20 (VIIRS)1.12314/11/2026 16:47 UTC15/11/2026 01:50 UTCarquivo público NRT2"
+        },
+        {
+          "tag": "TD",
+          "cls": "pr-3",
+          "text": "15/11/2026 01:50 UTC"
+        },
+        {
+          "tag": "TD",
+          "cls": "pr-3",
+          "text": "arquivo público NRT"
+        }
+      ]
+    },
+    "errors": [],
+    "http_errors": []
+  },
+  {
+    "device": "mobile",
+    "page": "report",
+    "metrics": {
+      "width": 390,
+      "document": 390,
+      "main": 496,
+      "mainWidth": 390,
+      "headings": [
+        "Portel (PA)",
+        "O que foi detectado?",
+        "Quando ocorreu?",
+        "O comportamento é incomum?",
+        "Quais condições ambientais estavam presentes?",
+        "Quais territórios habitados ou protegidos estão próximos?",
+        "Que informações precisam ser verificadas?",
+        "Quais são as fontes e limitações?"
+      ],
+      "canvases": [],
+      "controls": [
+        {
+          "label": "Território da ficha",
+          "value": "portel"
+        }
+      ],
+      "overflow": [
+        {
+          "tag": "TABLE",
+          "cls": "w-full min-w-[640px] text-left text-[12.5px]",
+          "text": "EventoStatusÚltima visãoPersistênciaÍndice CensipamÁreas oficiais citadas7202296"
+        },
+        {
+          "tag": "THEAD",
+          "cls": "text-ink-3",
+          "text": "EventoStatusÚltima visãoPersistênciaÍndice CensipamÁreas oficiais citadas"
+        },
+        {
+          "tag": "TR",
+          "cls": "",
+          "text": "EventoStatusÚltima visãoPersistênciaÍndice CensipamÁreas oficiais citadas"
+        },
+        {
+          "tag": "TH",
+          "cls": "pr-3 text-right font-medium",
+          "text": "Índice Censipam"
+        },
+        {
+          "tag": "TH",
+          "cls": "font-medium",
+          "text": "Áreas oficiais citadas"
+        },
+        {
+          "tag": "TBODY",
+          "cls": "num divide-y divide-rule/60 align-top",
+          "text": "7202296Ativo15/11/2026 01:10 UTC1 dias23,1+6,8%PDS LIBERDADE I7205128Ativo15/11/"
+        },
+        {
+          "tag": "TR",
+          "cls": "",
+          "text": "7202296Ativo15/11/2026 01:10 UTC1 dias23,1+6,8%PDS LIBERDADE I"
+        },
+        {
+          "tag": "TD",
+          "cls": "pr-3 text-right",
+          "text": "23,1+6,8%"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "block text-[10.5px] text-ink-3",
+          "text": "+6,8%"
+        },
+        {
+          "tag": "TD",
+          "cls": "text-[11.5px] text-ink-2",
+          "text": "PDS LIBERDADE I"
+        },
+        {
+          "tag": "TR",
+          "cls": "",
+          "text": "7205128Ativo15/11/2026 01:10 UTC0 dias11,9+103,7%—"
+        },
+        {
+          "tag": "TD",
+          "cls": "pr-3 text-right",
+          "text": "11,9+103,7%"
+        }
+      ]
+    },
+    "errors": [],
+    "http_errors": []
+  }
+]

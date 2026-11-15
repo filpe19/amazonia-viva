@@ -1,0 +1,12 @@
+{
+  "region_id": "pa_municipios",
+  "publisher": "IBGE — Instituto Brasileiro de Geografia e Estatística",
+  "source_url": "https://servicodados.ibge.gov.br/api/v3/malhas/estados/15?intrarregiao=municipio&formato=application/vnd.geo%2Bjson&qualidade=maxima",
+  "names_url": "https://servicodados.ibge.gov.br/api/v1/localidades/estados/15/municipios",
+  "quality": "maxima",
+  "fetched_at": "2026-11-14T23:52:49+00:00",
+  "sha256": "e29e2713ead7c74b137e3123b8a7aa5874b1602c5a7c9450a0363a6738a8a12e",
+  "bytes": 2348216,
+  "features": 144,
+  "license_note": "Dados públicos do IBGE (malhas territoriais v3 e localidades v1)."
+}

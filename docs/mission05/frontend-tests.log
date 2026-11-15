@@ -1,0 +1,13 @@
+
+> amazonia-viva-web@0.1.0 test
+> vitest run
+
+
+ RUN  v5.1.0 /Users/felipealsouza/Projetos/amazonia-viva/frontend
+
+
+ Test Files  1 passed (1)
+      Tests  4 passed (4)
+   Start at  23:34:18
+   Duration  198ms (import 35%, transform 22%, worker 22%, tests 21%)
+

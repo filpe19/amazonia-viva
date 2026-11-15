@@ -1,0 +1,292 @@
+Skip to content
+Activity
+History
+Territory
+Amazon basin
+/
+Environmental context
+Portel (PA)— pilot
+Almeirim (PA)
+Santarém (PA)
+Brasil
+Pará
+Abaetetuba (PA)
+Abel Figueiredo (PA)
+Acará (PA)
+Afuá (PA)
+Água Azul do Norte (PA)
+Alenquer (PA)
+Almeirim (PA)
+Altamira (PA)
+Anajás (PA)
+Ananindeua (PA)
+Anapu (PA)
+Augusto Corrêa (PA)
+Aurora do Pará (PA)
+Aveiro (PA)
+Bagre (PA)
+Baião (PA)
+Bannach (PA)
+Barcarena (PA)
+Belém (PA)
+Belterra (PA)
+Benevides (PA)
+Bom Jesus do Tocantins (PA)
+Bonito (PA)
+Bragança (PA)
+Brasil Novo (PA)
+Brejo Grande do Araguaia (PA)
+Breu Branco (PA)
+Breves (PA)
+Bujaru (PA)
+Cachoeira do Arari (PA)
+Cachoeira do Piriá (PA)
+Cametá (PA)
+Canaã dos Carajás (PA)
+Capanema (PA)
+Capitão Poço (PA)
+Castanhal (PA)
+Chaves (PA)
+Colares (PA)
+Conceição do Araguaia (PA)
+Concórdia do Pará (PA)
+Cumaru do Norte (PA)
+Curionópolis (PA)
+Curralinho (PA)
+Curuá (PA)
+Curuçá (PA)
+Dom Eliseu (PA)
+Eldorado do Carajás (PA)
+Faro (PA)
+Floresta do Araguaia (PA)
+Garrafão do Norte (PA)
+Goianésia do Pará (PA)
+Gurupá (PA)
+Igarapé-Açu (PA)
+Igarapé-Miri (PA)
+Inhangapi (PA)
+Ipixuna do Pará (PA)
+Irituia (PA)
+Itaituba (PA)
+Itupiranga (PA)
+Jacareacanga (PA)
+Jacundá (PA)
+Juruti (PA)
+Limoeiro do Ajuru (PA)
+Mãe do Rio (PA)
+Magalhães Barata (PA)
+Marabá (PA)
+Maracanã (PA)
+Marapanim (PA)
+Marituba (PA)
+Medicilândia (PA)
+Melgaço (PA)
+Mocajuba (PA)
+Moju (PA)
+Mojuí dos Campos (PA)
+Monte Alegre (PA)
+Muaná (PA)
+Nova Esperança do Piriá (PA)
+Nova Ipixuna (PA)
+Nova Timboteua (PA)
+Novo Progresso (PA)
+Novo Repartimento (PA)
+Óbidos (PA)
+Oeiras do Pará (PA)
+Oriximiná (PA)
+Ourém (PA)
+Ourilândia do Norte (PA)
+Pacajá (PA)
+Palestina do Pará (PA)
+Paragominas (PA)
+Parauapebas (PA)
+Pau D'Arco (PA)
+Peixe-Boi (PA)
+Piçarra (PA)
+Placas (PA)
+Ponta de Pedras (PA)
+Portel (PA)
+Porto de Moz (PA)
+Prainha (PA)
+Primavera (PA)
+Quatipuru (PA)
+Redenção (PA)
+Rio Maria (PA)
+Rondon do Pará (PA)
+Rurópolis (PA)
+Salinópolis (PA)
+Salvaterra (PA)
+Santa Bárbara do Pará (PA)
+Santa Cruz do Arari (PA)
+Santa Izabel do Pará (PA)
+Santa Luzia do Pará (PA)
+Santa Maria das Barreiras (PA)
+Santa Maria do Pará (PA)
+Santana do Araguaia (PA)
+Santarém (PA)
+Santarém Novo (PA)
+Santo Antônio do Tauá (PA)
+São Caetano de Odivelas (PA)
+São Domingos do Araguaia (PA)
+São Domingos do Capim (PA)
+São Félix do Xingu (PA)
+São Francisco do Pará (PA)
+São Geraldo do Araguaia (PA)
+São João da Ponta (PA)
+São João de Pirabas (PA)
+São João do Araguaia (PA)
+São Miguel do Guamá (PA)
+São Sebastião da Boa Vista (PA)
+Sapucaia (PA)
+Senador José Porfírio (PA)
+Soure (PA)
+Tailândia (PA)
+Terra Alta (PA)
+Terra Santa (PA)
+Tomé-Açu (PA)
+Tracuateua (PA)
+Trairão (PA)
+Tucumã (PA)
+Tucuruí (PA)
+Ulianópolis (PA)
+Uruará (PA)
+Vigia (PA)
+Viseu (PA)
+Vitória do Xingu (PA)
+Xinguara (PA)
+Environmental context
+Meteorological reanalysis at a representative point. Values describe a grid cell of roughly 50 km, not a measurement at the detection location.
+
+Representative point: centroid of the IBGE territorial boundary.
+
+Latitude
+Longitude
+Query this point
+Historical record. NASA POWER monthly climatology, 2001–2025 mean.
+Recent analysis. Daily and hourly reanalysis, available with a delay of several days.
+Forecast. Not integrated. This POWER module does not provide a weather forecast.
+Latest available day
+Reanalysis for 11 Nov 2026 (local solar time), 4 days before today.
+Maximum air temperature at 2 m
+
+37.4
+°C
+
+30-day mean of daily maxima: 37.1 °C
+Source
+NASA POWER, daily reanalysis (GEOSIT, POWER)
+Period
+11 Nov 2026
+Relative humidity at 2 m (daily mean)
+
+52.8
+%
+
+Normal for November: 66.9%
+Source
+NASA POWER, daily reanalysis (GEOSIT, POWER)
+Period
+11 Nov 2026
+Wind at 10 m
+
+1.2
+m/s, hourly mean
+
+Prevailing from NE (direction of origin)
+Source
+NASA POWER, hourly reanalysis (UTC)
+Period
+7 days through 12 Nov 2026 23:00 UTC
+14-day accumulated precipitation
+
+10.5
+mm
+
+30% of climatological expectation (35.1 mm)
+Source
+NASA POWER, daily reanalysis (GEOSIT, POWER) ; climatology 2001–2025
+Period
+29 Oct 2026 to 11 Nov 2026
+Wind rose
+Hourly frequency by wind origin and speed class, over the latest 7 available days.
+N
+E
+S
+W
+50%
+
+Speed (m/s)
+
+0–1
+
+1–2
+
+2–3
+
+3–5
+
+≥5
+
+168 hours of reanalysis at 10 m. Direção meteorológica: de onde o vento sopra (0° = norte, sentido horário). Radius scales with the square root of frequency.
+
+Daily precipitation and climatology
+Bars: daily reanalysis precipitation. Line: climatological daily mean for the month (2001–2025).
+
+mm/day, 13 Oct 2026 to 11 Nov 2026
+
+13 Oct
+19 Oct
+25 Oct
+31 Oct
+11 Nov
+0
+2
+4
+6
+8
+Temperature and humidity over the last 30 days
+Variables with different units are displayed separately. Dashed line: the same variable's monthly climatological mean (2001–2025).
+Daily mean temperature at 2 m
+
+°C
+
+13 Oct
+19 Oct
+25 Oct
+31 Oct
+11 Nov
+28.9
+29.75
+30.6
+31.45
+32.3
+Relative humidity at 2 m
+
+%
+
+13 Oct
+19 Oct
+25 Oct
+31 Oct
+11 Nov
+48
+54
+60
+66
+72
+Sources for this view
+Query point
+2.5654° S, 50.9556° W (IBGE boundary centroid for Portel (PA))
+Data type
+GEOS-IT/MERRA-2 reanalysis on a ~0.5° × 0.625° grid, for the cell containing the point. These are neither station measurements nor instantaneous local conditions at a detection.
+Daily series
+https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,T2M_MAX,RH2M,WS10M,WD10M,PRECTOTCORR&community=AG&longitude=-50.9556&latitude=-2.5654&start=20261009&end=20261115&format=JSON
+retrieved at 15 Nov 2026 00:01 UTC
+Hourly series
+https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=T2M,RH2M,WS10M,WD10M,PRECTOTCORR&community=AG&longitude=-50.9556&latitude=-2.5654&start=20261105&end=20261115&format=JSON&time-standard=UTC
+Climatology
+25-year Meteorological and Solar Monthly & Annual Climatologies (January 2001 - December 2025)
+https://power.larc.nasa.gov/api/temporal/climatology/point?parameters=T2M,RH2M,WS10M,PRECTOTCORR&community=AG&longitude=-50.9556&latitude=-2.5654&format=JSON
+Forecast
+This NASA POWER integration provides historical and recent analysis, not a weather forecast.
+48

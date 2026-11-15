@@ -1,0 +1,555 @@
+[
+  {
+    "device": "desktop",
+    "page": "current",
+    "metrics": {
+      "width": 1440,
+      "document": 1440,
+      "main": 1208,
+      "mainWidth": 1208,
+      "headings": [
+        "Latest satellite observations",
+        "Observations by satellite",
+        "Satellite overpasses with detections"
+      ],
+      "canvases": [
+        {
+          "width": 860,
+          "height": 535
+        }
+      ],
+      "controls": [
+        {
+          "label": "Selected territory",
+          "value": "para"
+        }
+      ],
+      "overflow": []
+    },
+    "errors": [],
+    "console_errors": [],
+    "request_failures": [],
+    "http_errors": []
+  },
+  {
+    "device": "desktop",
+    "page": "history",
+    "metrics": {
+      "width": 1440,
+      "document": 1440,
+      "main": 1208,
+      "mainWidth": 1208,
+      "headings": [
+        "Fire history",
+        "A common view of fire activity"
+      ],
+      "canvases": [],
+      "controls": [
+        {
+          "label": "Selected territory",
+          "value": "portel"
+        },
+        {
+          "label": null,
+          "value": "VIIRS_NOAA20_SP"
+        }
+      ],
+      "overflow": []
+    },
+    "errors": [],
+    "console_errors": [],
+    "request_failures": [],
+    "http_errors": []
+  },
+  {
+    "device": "desktop",
+    "page": "territory",
+    "metrics": {
+      "width": 1440,
+      "document": 1440,
+      "main": 1208,
+      "mainWidth": 1208,
+      "headings": [
+        "Territory analysis",
+        "What is happening?",
+        "Is this activity unusual?",
+        "What environmental conditions are present?",
+        "Which areas need further investigation?",
+        "What evidence supports the analysis?"
+      ],
+      "canvases": [],
+      "controls": [
+        {
+          "label": "Selected territory",
+          "value": "portel"
+        }
+      ],
+      "overflow": []
+    },
+    "errors": [],
+    "console_errors": [],
+    "request_failures": [],
+    "http_errors": []
+  },
+  {
+    "device": "desktop",
+    "page": "environment",
+    "metrics": {
+      "width": 1440,
+      "document": 1440,
+      "main": 1208,
+      "mainWidth": 1208,
+      "headings": [
+        "Environmental context",
+        "Latest available day",
+        "Wind rose",
+        "Daily precipitation and climatology",
+        "Temperature and humidity over the last 30 days",
+        "Sources for this view"
+      ],
+      "canvases": [],
+      "controls": [
+        {
+          "label": "Selected territory",
+          "value": "portel"
+        }
+      ],
+      "overflow": []
+    },
+    "errors": [],
+    "console_errors": [],
+    "request_failures": [],
+    "http_errors": []
+  },
+  {
+    "device": "desktop",
+    "page": "evidence",
+    "metrics": {
+      "width": 1440,
+      "document": 1440,
+      "main": 1208,
+      "mainWidth": 1208,
+      "headings": [
+        "Evidence & exports",
+        "Query",
+        "Territory and period",
+        "Observations and sources",
+        "Available comparisons",
+        "Historical source files",
+        "Limitations"
+      ],
+      "canvases": [],
+      "controls": [
+        {
+          "label": "Selected territory",
+          "value": "portel"
+        }
+      ],
+      "overflow": []
+    },
+    "errors": [],
+    "console_errors": [],
+    "request_failures": [],
+    "http_errors": []
+  },
+  {
+    "device": "desktop",
+    "page": "report",
+    "metrics": {
+      "width": 1440,
+      "document": 1440,
+      "main": 1208,
+      "mainWidth": 1208,
+      "headings": [
+        "Portel (PA)",
+        "What was detected?",
+        "When was it observed?",
+        "Is this activity unusual?",
+        "What environmental conditions are present?",
+        "Which inhabited or protected territories are nearby?",
+        "What needs further verification?",
+        "What evidence and limitations support this analysis?"
+      ],
+      "canvases": [],
+      "controls": [
+        {
+          "label": "Selected territory",
+          "value": "portel"
+        }
+      ],
+      "overflow": []
+    },
+    "errors": [],
+    "console_errors": [],
+    "request_failures": [],
+    "http_errors": []
+  },
+  {
+    "device": "mobile",
+    "page": "current",
+    "metrics": {
+      "width": 390,
+      "document": 390,
+      "main": 390,
+      "mainWidth": 390,
+      "headings": [
+        "Latest satellite observations",
+        "Observations by satellite",
+        "Satellite overpasses with detections"
+      ],
+      "canvases": [
+        {
+          "width": 356,
+          "height": 420
+        }
+      ],
+      "controls": [
+        {
+          "label": "Selected territory",
+          "value": "para"
+        }
+      ],
+      "overflow": []
+    },
+    "errors": [],
+    "console_errors": [],
+    "request_failures": [],
+    "http_errors": []
+  },
+  {
+    "device": "mobile",
+    "page": "history",
+    "metrics": {
+      "width": 390,
+      "document": 390,
+      "main": 390,
+      "mainWidth": 390,
+      "headings": [
+        "Fire history",
+        "A common view of fire activity"
+      ],
+      "canvases": [],
+      "controls": [
+        {
+          "label": "Selected territory",
+          "value": "portel"
+        },
+        {
+          "label": null,
+          "value": "VIIRS_NOAA20_SP"
+        }
+      ],
+      "overflow": [
+        {
+          "tag": "TABLE",
+          "cls": "harmonized-calendar",
+          "text": "YearJanFebMarAprMayJunJulAugSepOctNovDec2002——————~42~327~618~931~1.6k~4832003~1"
+        },
+        {
+          "tag": "THEAD",
+          "cls": "",
+          "text": "YearJanFebMarAprMayJunJulAugSepOctNovDec"
+        },
+        {
+          "tag": "TR",
+          "cls": "",
+          "text": "YearJanFebMarAprMayJunJulAugSepOctNovDec"
+        },
+        {
+          "tag": "TH",
+          "cls": "",
+          "text": "Jul"
+        },
+        {
+          "tag": "TH",
+          "cls": "",
+          "text": "Aug"
+        },
+        {
+          "tag": "TH",
+          "cls": "",
+          "text": "Sep"
+        },
+        {
+          "tag": "TH",
+          "cls": "",
+          "text": "Oct"
+        },
+        {
+          "tag": "TH",
+          "cls": "",
+          "text": "Nov"
+        },
+        {
+          "tag": "TH",
+          "cls": "",
+          "text": "Dec"
+        },
+        {
+          "tag": "TBODY",
+          "cls": "",
+          "text": "2002——————~42~327~618~931~1.6k~4832003~120~0~12~6~6~18~23~130~204~485~1.6k~90920"
+        },
+        {
+          "tag": "TR",
+          "cls": "",
+          "text": "2002——————~42~327~618~931~1.6k~483"
+        },
+        {
+          "tag": "TD",
+          "cls": "",
+          "text": "~42"
+        }
+      ]
+    },
+    "errors": [],
+    "console_errors": [],
+    "request_failures": [],
+    "http_errors": []
+  },
+  {
+    "device": "mobile",
+    "page": "territory",
+    "metrics": {
+      "width": 390,
+      "document": 390,
+      "main": 390,
+      "mainWidth": 390,
+      "headings": [
+        "Territory analysis",
+        "What is happening?",
+        "Is this activity unusual?",
+        "What environmental conditions are present?",
+        "Which areas need further investigation?",
+        "What evidence supports the analysis?"
+      ],
+      "canvases": [],
+      "controls": [
+        {
+          "label": "Selected territory",
+          "value": "portel"
+        }
+      ],
+      "overflow": []
+    },
+    "errors": [],
+    "console_errors": [],
+    "request_failures": [],
+    "http_errors": []
+  },
+  {
+    "device": "mobile",
+    "page": "environment",
+    "metrics": {
+      "width": 390,
+      "document": 390,
+      "main": 390,
+      "mainWidth": 390,
+      "headings": [
+        "Environmental context",
+        "Latest available day",
+        "Wind rose",
+        "Daily precipitation and climatology",
+        "Temperature and humidity over the last 30 days",
+        "Sources for this view"
+      ],
+      "canvases": [],
+      "controls": [
+        {
+          "label": "Selected territory",
+          "value": "portel"
+        }
+      ],
+      "overflow": []
+    },
+    "errors": [],
+    "console_errors": [],
+    "request_failures": [],
+    "http_errors": []
+  },
+  {
+    "device": "mobile",
+    "page": "evidence",
+    "metrics": {
+      "width": 390,
+      "document": 390,
+      "main": 390,
+      "mainWidth": 390,
+      "headings": [
+        "Evidence & exports",
+        "Query",
+        "Territory and period",
+        "Observations and sources",
+        "Available comparisons",
+        "Historical source files",
+        "Limitations"
+      ],
+      "canvases": [],
+      "controls": [
+        {
+          "label": "Selected territory",
+          "value": "portel"
+        }
+      ],
+      "overflow": [
+        {
+          "tag": "TABLE",
+          "cls": "w-full min-w-[860px] text-left text-[12.5px]",
+          "text": "ProductDetectionsLatest observationRetrievedModeVersionSHA-256OriginNOAA-20 (VII"
+        },
+        {
+          "tag": "THEAD",
+          "cls": "text-ink-3",
+          "text": "ProductDetectionsLatest observationRetrievedModeVersionSHA-256Origin"
+        },
+        {
+          "tag": "TR",
+          "cls": "",
+          "text": "ProductDetectionsLatest observationRetrievedModeVersionSHA-256Origin"
+        },
+        {
+          "tag": "TH",
+          "cls": "pr-3 font-medium",
+          "text": "Retrieved"
+        },
+        {
+          "tag": "TH",
+          "cls": "pr-3 font-medium",
+          "text": "Mode"
+        },
+        {
+          "tag": "TH",
+          "cls": "pr-3 font-medium",
+          "text": "Version"
+        },
+        {
+          "tag": "TH",
+          "cls": "pr-3 font-medium",
+          "text": "SHA-256"
+        },
+        {
+          "tag": "TH",
+          "cls": "font-medium",
+          "text": "Origin"
+        },
+        {
+          "tag": "TBODY",
+          "cls": "num divide-y divide-rule/60 align-top",
+          "text": "NOAA-20 (VIIRS)1,12314 Nov 2026 16:47 UTC15 Nov 2026 02:22 UTCpublic NRT archive"
+        },
+        {
+          "tag": "TR",
+          "cls": "",
+          "text": "NOAA-20 (VIIRS)1,12314 Nov 2026 16:47 UTC15 Nov 2026 02:22 UTCpublic NRT archive"
+        },
+        {
+          "tag": "TD",
+          "cls": "pr-3",
+          "text": "15 Nov 2026 02:22 UTC"
+        },
+        {
+          "tag": "TD",
+          "cls": "pr-3",
+          "text": "public NRT archive"
+        }
+      ]
+    },
+    "errors": [],
+    "console_errors": [],
+    "request_failures": [],
+    "http_errors": []
+  },
+  {
+    "device": "mobile",
+    "page": "report",
+    "metrics": {
+      "width": 390,
+      "document": 390,
+      "main": 390,
+      "mainWidth": 390,
+      "headings": [
+        "Portel (PA)",
+        "What was detected?",
+        "When was it observed?",
+        "Is this activity unusual?",
+        "What environmental conditions are present?",
+        "Which inhabited or protected territories are nearby?",
+        "What needs further verification?",
+        "What evidence and limitations support this analysis?"
+      ],
+      "canvases": [],
+      "controls": [
+        {
+          "label": "Selected territory",
+          "value": "portel"
+        }
+      ],
+      "overflow": [
+        {
+          "tag": "TABLE",
+          "cls": "w-full min-w-[640px] text-left text-[12.5px]",
+          "text": "EventStatusLatest observationPersistenceCensipam indexOfficial areas reported by"
+        },
+        {
+          "tag": "THEAD",
+          "cls": "text-ink-3",
+          "text": "EventStatusLatest observationPersistenceCensipam indexOfficial areas reported by"
+        },
+        {
+          "tag": "TR",
+          "cls": "",
+          "text": "EventStatusLatest observationPersistenceCensipam indexOfficial areas reported by"
+        },
+        {
+          "tag": "TH",
+          "cls": "pr-3 text-right font-medium",
+          "text": "Censipam index"
+        },
+        {
+          "tag": "TH",
+          "cls": "font-medium",
+          "text": "Official areas reported by source"
+        },
+        {
+          "tag": "TBODY",
+          "cls": "num divide-y divide-rule/60 align-top",
+          "text": "7196998active15 Nov 2026 01:40 UTC2 days19.1+171.6%PA BOM JARDIM7202296active15 "
+        },
+        {
+          "tag": "TR",
+          "cls": "",
+          "text": "7196998active15 Nov 2026 01:40 UTC2 days19.1+171.6%PA BOM JARDIM"
+        },
+        {
+          "tag": "TD",
+          "cls": "pr-3 text-right",
+          "text": "19.1+171.6%"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "block text-[10.5px] text-ink-3",
+          "text": "+171.6%"
+        },
+        {
+          "tag": "TD",
+          "cls": "text-[11.5px] text-ink-2",
+          "text": "PA BOM JARDIM"
+        },
+        {
+          "tag": "TR",
+          "cls": "",
+          "text": "7202296active15 Nov 2026 01:10 UTC1 days23.1+6.8%PDS LIBERDADE I"
+        },
+        {
+          "tag": "TD",
+          "cls": "pr-3 text-right",
+          "text": "23.1+6.8%"
+        }
+      ]
+    },
+    "errors": [],
+    "console_errors": [],
+    "request_failures": [],
+    "http_errors": []
+  }
+]

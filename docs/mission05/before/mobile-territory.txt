@@ -1,0 +1,382 @@
+Pular para o conteúdo
+Situação atual
+Histórico
+Ambiente
+Território
+Evidências
+Análise territorial
+Um roteiro para responder o que está acontecendo no território: detecções recentes, comparação com os anos anteriores, condições ambientais e um resumo com as evidências usadas.
+1
+Escolha o território
+gerado em 15/11/2026 01:53 UTC
+Território
+Portel (PA) — piloto
+Almeirim (PA)
+Santarém (PA)
+Brasil
+Pará
+Abaetetuba (PA)
+Abel Figueiredo (PA)
+Acará (PA)
+Afuá (PA)
+Água Azul do Norte (PA)
+Alenquer (PA)
+Almeirim (PA)
+Altamira (PA)
+Anajás (PA)
+Ananindeua (PA)
+Anapu (PA)
+Augusto Corrêa (PA)
+Aurora do Pará (PA)
+Aveiro (PA)
+Bagre (PA)
+Baião (PA)
+Bannach (PA)
+Barcarena (PA)
+Belém (PA)
+Belterra (PA)
+Benevides (PA)
+Bom Jesus do Tocantins (PA)
+Bonito (PA)
+Bragança (PA)
+Brasil Novo (PA)
+Brejo Grande do Araguaia (PA)
+Breu Branco (PA)
+Breves (PA)
+Bujaru (PA)
+Cachoeira do Arari (PA)
+Cachoeira do Piriá (PA)
+Cametá (PA)
+Canaã dos Carajás (PA)
+Capanema (PA)
+Capitão Poço (PA)
+Castanhal (PA)
+Chaves (PA)
+Colares (PA)
+Conceição do Araguaia (PA)
+Concórdia do Pará (PA)
+Cumaru do Norte (PA)
+Curionópolis (PA)
+Curralinho (PA)
+Curuá (PA)
+Curuçá (PA)
+Dom Eliseu (PA)
+Eldorado do Carajás (PA)
+Faro (PA)
+Floresta do Araguaia (PA)
+Garrafão do Norte (PA)
+Goianésia do Pará (PA)
+Gurupá (PA)
+Igarapé-Açu (PA)
+Igarapé-Miri (PA)
+Inhangapi (PA)
+Ipixuna do Pará (PA)
+Irituia (PA)
+Itaituba (PA)
+Itupiranga (PA)
+Jacareacanga (PA)
+Jacundá (PA)
+Juruti (PA)
+Limoeiro do Ajuru (PA)
+Mãe do Rio (PA)
+Magalhães Barata (PA)
+Marabá (PA)
+Maracanã (PA)
+Marapanim (PA)
+Marituba (PA)
+Medicilândia (PA)
+Melgaço (PA)
+Mocajuba (PA)
+Moju (PA)
+Mojuí dos Campos (PA)
+Monte Alegre (PA)
+Muaná (PA)
+Nova Esperança do Piriá (PA)
+Nova Ipixuna (PA)
+Nova Timboteua (PA)
+Novo Progresso (PA)
+Novo Repartimento (PA)
+Óbidos (PA)
+Oeiras do Pará (PA)
+Oriximiná (PA)
+Ourém (PA)
+Ourilândia do Norte (PA)
+Pacajá (PA)
+Palestina do Pará (PA)
+Paragominas (PA)
+Parauapebas (PA)
+Pau D'Arco (PA)
+Peixe-Boi (PA)
+Piçarra (PA)
+Placas (PA)
+Ponta de Pedras (PA)
+Portel (PA)
+Porto de Moz (PA)
+Prainha (PA)
+Primavera (PA)
+Quatipuru (PA)
+Redenção (PA)
+Rio Maria (PA)
+Rondon do Pará (PA)
+Rurópolis (PA)
+Salinópolis (PA)
+Salvaterra (PA)
+Santa Bárbara do Pará (PA)
+Santa Cruz do Arari (PA)
+Santa Izabel do Pará (PA)
+Santa Luzia do Pará (PA)
+Santa Maria das Barreiras (PA)
+Santa Maria do Pará (PA)
+Santana do Araguaia (PA)
+Santarém (PA)
+Santarém Novo (PA)
+Santo Antônio do Tauá (PA)
+São Caetano de Odivelas (PA)
+São Domingos do Araguaia (PA)
+São Domingos do Capim (PA)
+São Félix do Xingu (PA)
+São Francisco do Pará (PA)
+São Geraldo do Araguaia (PA)
+São João da Ponta (PA)
+São João de Pirabas (PA)
+São João do Araguaia (PA)
+São Miguel do Guamá (PA)
+São Sebastião da Boa Vista (PA)
+Sapucaia (PA)
+Senador José Porfírio (PA)
+Soure (PA)
+Tailândia (PA)
+Terra Alta (PA)
+Terra Santa (PA)
+Tomé-Açu (PA)
+Tracuateua (PA)
+Trairão (PA)
+Tucumã (PA)
+Tucuruí (PA)
+Ulianópolis (PA)
+Uruará (PA)
+Vigia (PA)
+Viseu (PA)
+Vitória do Xingu (PA)
+Xinguara (PA)
+Atualizar análise
+
+Também é possível escolher o município clicando no mapa da Situação atual. Terras indígenas, unidades de conservação, quilombos e assentamentos vêm de bases oficiais; comunidades e infraestrutura ainda não estão integradas.
+
+2
+Detecções recentes (últimos 7 dias)
+
+NOAA-20 (VIIRS)
+
+1.123
+
+última observação 14/11/2026 16:47 UTC
+
+NOAA-21 (VIIRS)
+
+1.225
+
+última observação 14/11/2026 17:30 UTC
+
+NOAA-20 e NOAA-21 são satélites distintos com o mesmo tipo de sensor; as contagens são mostradas separadas.
+
+3
+Comparação com os anos anteriores (mesmo instrumento)
+
+MODIS (Terra e Aqua)
+
+08/11/2026 a 14/11/2026 (7 dias UTC completos)
+
+05
+10
+15
+20
+25
+agora
+Agora
+410
+Observação
+Mediana (25 anos)
+121
+Estimativa
+Posição
+P92
+
+Mesmo instrumento nos dois lados: MODIS_NRT (quase tempo real) × MODIS_SP (arquivo 2001–2025).
+
+VIIRS NOAA-20
+
+08/11/2026 a 14/11/2026 (7 dias UTC completos)
+
+21
+22
+23
+24
+25
+agora
+Agora
+1.123
+Observação
+Mediana (5 anos)
+595
+Estimativa
+Posição
+P60
+
+Mesmo instrumento nos dois lados: VIIRS_NOAA20_NRT (quase tempo real) × VIIRS_NOAA20_SP (arquivo 2021–2025).
+
+Série harmonizada (experimental)
+experimental
+
+08/11/2026 a 14/11/2026 (7 dias UTC completos)
+
+05
+10
+15
+20
+25
+agora
+Agora
+1.123
+Observação
+Mediana (24 anos)
+552,7
+Estimativa
+Posição
+P83
+
+Atual: NOAA-20 observado. Anos anteriores: NOAA-20 observado (2021–2025) ou MODIS Aqua convertido por razão sazonal (antes de 2021). Série experimental, não validada operacionalmente.
+
+MODIS é comparado só com MODIS e NOAA-20 só com NOAA-20. A relação entre os dois sensores neste território está em Histórico › MODIS × VIIRS.
+
+4
+Condições ambientais
+Temperatura máx. a 2 m
+37,4 °C
+11/11/2026
+Umidade relativa média
+51,4 %
+7 dias até 11/11
+Chuva em 14 dias
+10,5 mm
+30% da climatologia
+Vento a 10 m
+1,2 m/s
+predomina de NE
+
+NASA POWER (reanálise em grade de ~50 km) no ponto 2.5654° S, 50.9556° O. Último dia disponível: 11/11/2026. Ver contexto ambiental completo
+
+5
+Informações territoriais verificadas
+
+População (Censo 2022)
+Observação
+
+62.503
+
+2,5 hab./km². Total do território, não pessoas afetadas.
+
+Áreas oficiais sobrepostas
+Observação
+
+13
+
+FUNAI, ICMBio, MMA/CNUC e INCRA, via GeoServer do Censipam
+
+Eventos Censipam
+Indicador externo
+
+97
+
+52 ativo, 45 em observação
+
+Terras indígenas:
+nenhuma sobreposição
+Unidades de conservação federais:
+FLORESTA NACIONAL DE CAXIUANÃ (7,4%)
+Unidades de conservação estaduais:
+nenhuma sobreposição
+Territórios quilombolas:
+nenhuma sobreposição
+Assentamentos federais:
+PDS LIBERDADE I (17,6%); PA TERRA PARA PAZ (1,8%); PAE ILHA GRANDE - PACAJAI (1,5%); e mais 9
+
+Unidades de conservação municipais não estão nas camadas consultadas.
+
+Comunidades e localidades não cadastradas em bases oficiais não aparecem aqui.
+
+Pessoas e infraestrutura perto das detecções (7 dias)
+Estimativa
+
+18 de 28 localidades (IBGE) com detecção a até 5 km
+19 de 19 unidades de saúde (CNES) com detecção a até 5 km
+até 61.988 pessoas em setores a até 5 km (limite superior)
+
+Proximidade e exposição potencial, não dano confirmado. Detalhes, tabelas e CSV na Ficha de Atenção Territorial.
+
+6
+Resumo fundamentado
+O que os dados mostram
+NOAA-20 (VIIRS): 1.123 detecções nos últimos 7 dias; última observação em 14/11/2026 16:47 UTC. (fonte: VIIRS_NOAA20_NRT)
+NOAA-21 (VIIRS): 1.225 detecções nos últimos 7 dias; última observação em 14/11/2026 17:30 UTC. (fonte: VIIRS_NOAA21_NRT)
+MODIS (Terra e Aqua), 08/11 a 14/11: 410 detecções. Mediana do mesmo período em 25 anos (2001–2025): 121. (fonte: MODIS_NRT × MODIS_SP)
+VIIRS NOAA-20, 08/11 a 14/11: 1.123 detecções. Mediana do mesmo período em 5 anos (2021–2025): 595. (fonte: VIIRS_NOAA20_NRT × VIIRS_NOAA20_SP)
+Série harmonizada experimental (equivalente NOAA-20), mesmo período em 24 anos (2002–2025): mediana 552,7; atual 1.123 (posição: percentil 83). (fonte: VIIRS_NOAA20_NRT × (VIIRS_NOAA20_SP + MODIS Aqua convertido))
+Chuva nos 14 dias até 11/11/2026: 10,5 mm (climatologia 2001–2025 para o período: 35,1 mm). (fonte: NASA POWER (reanálise))
+
+Triagem experimental, sem validação operacional
+
+Examinar com prioridade
+
+3 de 4 sinais avaliados atendidos.
+
+Classificação experimental para triagem e discussão. Critérios e limiares não foram calibrados nem validados operacionalmente. Não indica risco, causa ou propagação de fogo.
+
+Regra: nenhum sinal atendido: sem sinais; 1 sinal: observar; 2 ou mais: examinar com prioridade.
+
+Critérios avaliados
+
+Atividade persistente (VIIRS NOAA-20/NOAA-21)
+
+Critério: Ao menos uma célula de 0.1° (~11 km) com detecção VIIRS em ≥ 5 dos 7 dias UTC completos mais recentes (presença diária; contagens dos satélites não são somadas).
+
+Incerteza: Nuvens e horário de passagem afetam quais dias registram detecções; a grade fixa pode dividir um mesmo foco.
+
+atendido
+
+34 célula(s)
+
+Atividade acima do usual para o período (MODIS (Terra e Aqua))
+
+Critério: Contagem da janela ≥ percentil 90 do mesmo período nos anos anteriores, mesmo instrumento
+
+Incerteza: Baseado em 25 anos; exige ≥ 5. Deriva orbital Terra/Aqua não corrigida.
+
+atendido
+
+percentil 92
+
+Atividade acima do usual para o período (VIIRS NOAA-20)
+
+Critério: Contagem da janela ≥ percentil 90 do mesmo período nos anos anteriores, mesmo instrumento
+
+Incerteza: Baseado em 5 anos; exige ≥ 5.
+
+não atendido
+
+percentil 60
+
+Chuva abaixo da climatologia (14 dias)
+
+Critério: Precipitação acumulada < 50% do esperado pela climatologia NASA POWER 2001–2025
+
+Incerteza: Reanálise em grade de ~50 km em um único ponto; precipitação convectiva é muito heterogênea.
+
+atendido
+
+30% do esperado
+
+Limitações desta análise (8)
+Camadas territoriais planejadas
+Gerar Ficha de Atenção Territorial
+Evidências e exportação

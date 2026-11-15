@@ -1,0 +1,41 @@
+PASS Home and shared Pará selection
+PASS Real MapLibre basemap, territorial layer and detection points rendered
+PASS Portel municipal polygon is selectable
+PASS Actual map click shares Portel through URL and selector
+PASS Night filter uses real night observations
+PASS Satellite filter removes NOAA-21 from rendered detections
+PASS No selected satellites produces an explicit empty state
+PASS Real observation available for map inspection
+PASS Clicked observation exposes satellite, sensor, UTC, coordinates, FRP, confidence and provenance
+PASS Cluster layer activated with real features
+PASS Recent CSV download retains original scientific columns
+PASS History shares Portel with its independent archive period
+PASS Scientific calendar distinguishes all three origins
+PASS Converted month displays empirical uncertainty
+PASS Verified seasonal validation metrics and context
+PASS Method retains uncalibrated-interval limitation
+PASS Experimental CSV available
+PASS Original sensor charts render
+PASS Historical method and provenance retained
+PASS Territory answers five questions using shared selection
+PASS Territory avoids a threat classification and retains caveats
+PASS Existing report preserves all seven evidence questions
+PASS Report JSON export preserves real provenance and region
+PASS Proximity CSV export retained
+PASS Environmental chart, units and reanalysis distinction
+PASS Evidence manifest downloadable
+PASS Current period persists across modules
+PASS Browser back restores shared territory from the previous module URL
+PASS No runtime errors in complete desktop flow
+PASS No unexpected HTTP or console errors
+PASS Mobile satellite popover fits viewport
+PASS Mobile layer popover fits viewport
+PASS Mobile layout without document overflow: current
+PASS Mobile layout without document overflow: history
+PASS Mobile layout without document overflow: territory
+PASS Mobile layout without document overflow: environment
+PASS Mobile layout without document overflow: evidence
+PASS Mobile layout without document overflow: report
+PASS Mobile bottom navigation works
+PASS API outage displays explanation and retry without fictitious records
+PASS Retry recovers original source observations after outage

@@ -1,0 +1,247 @@
+Pular para o conteúdo
+Situação atual
+Histórico
+Ambiente
+Território
+Evidências
+300 km
+OpenFreeMap © OpenMapTiles Data from OpenStreetMap
+
+Últimas observações por satélite
+
+Pará
+Detecções na janela
+4.037
+Observação mais recente
+14/11 17:32 UTC
+há 8 h 20 min
+Atualização da plataforma
+15/11 01:50 UTC
+coleta na NASA FIRMS
+Atraso da fonte
+até ~3 h
+declarado pelo FIRMS
+Território
+Portel (PA) — piloto
+Almeirim (PA)
+Santarém (PA)
+Brasil
+Pará
+Abaetetuba (PA)
+Abel Figueiredo (PA)
+Acará (PA)
+Afuá (PA)
+Água Azul do Norte (PA)
+Alenquer (PA)
+Almeirim (PA)
+Altamira (PA)
+Anajás (PA)
+Ananindeua (PA)
+Anapu (PA)
+Augusto Corrêa (PA)
+Aurora do Pará (PA)
+Aveiro (PA)
+Bagre (PA)
+Baião (PA)
+Bannach (PA)
+Barcarena (PA)
+Belém (PA)
+Belterra (PA)
+Benevides (PA)
+Bom Jesus do Tocantins (PA)
+Bonito (PA)
+Bragança (PA)
+Brasil Novo (PA)
+Brejo Grande do Araguaia (PA)
+Breu Branco (PA)
+Breves (PA)
+Bujaru (PA)
+Cachoeira do Arari (PA)
+Cachoeira do Piriá (PA)
+Cametá (PA)
+Canaã dos Carajás (PA)
+Capanema (PA)
+Capitão Poço (PA)
+Castanhal (PA)
+Chaves (PA)
+Colares (PA)
+Conceição do Araguaia (PA)
+Concórdia do Pará (PA)
+Cumaru do Norte (PA)
+Curionópolis (PA)
+Curralinho (PA)
+Curuá (PA)
+Curuçá (PA)
+Dom Eliseu (PA)
+Eldorado do Carajás (PA)
+Faro (PA)
+Floresta do Araguaia (PA)
+Garrafão do Norte (PA)
+Goianésia do Pará (PA)
+Gurupá (PA)
+Igarapé-Açu (PA)
+Igarapé-Miri (PA)
+Inhangapi (PA)
+Ipixuna do Pará (PA)
+Irituia (PA)
+Itaituba (PA)
+Itupiranga (PA)
+Jacareacanga (PA)
+Jacundá (PA)
+Juruti (PA)
+Limoeiro do Ajuru (PA)
+Mãe do Rio (PA)
+Magalhães Barata (PA)
+Marabá (PA)
+Maracanã (PA)
+Marapanim (PA)
+Marituba (PA)
+Medicilândia (PA)
+Melgaço (PA)
+Mocajuba (PA)
+Moju (PA)
+Mojuí dos Campos (PA)
+Monte Alegre (PA)
+Muaná (PA)
+Nova Esperança do Piriá (PA)
+Nova Ipixuna (PA)
+Nova Timboteua (PA)
+Novo Progresso (PA)
+Novo Repartimento (PA)
+Óbidos (PA)
+Oeiras do Pará (PA)
+Oriximiná (PA)
+Ourém (PA)
+Ourilândia do Norte (PA)
+Pacajá (PA)
+Palestina do Pará (PA)
+Paragominas (PA)
+Parauapebas (PA)
+Pau D'Arco (PA)
+Peixe-Boi (PA)
+Piçarra (PA)
+Placas (PA)
+Ponta de Pedras (PA)
+Portel (PA)
+Porto de Moz (PA)
+Prainha (PA)
+Primavera (PA)
+Quatipuru (PA)
+Redenção (PA)
+Rio Maria (PA)
+Rondon do Pará (PA)
+Rurópolis (PA)
+Salinópolis (PA)
+Salvaterra (PA)
+Santa Bárbara do Pará (PA)
+Santa Cruz do Arari (PA)
+Santa Izabel do Pará (PA)
+Santa Luzia do Pará (PA)
+Santa Maria das Barreiras (PA)
+Santa Maria do Pará (PA)
+Santana do Araguaia (PA)
+Santarém (PA)
+Santarém Novo (PA)
+Santo Antônio do Tauá (PA)
+São Caetano de Odivelas (PA)
+São Domingos do Araguaia (PA)
+São Domingos do Capim (PA)
+São Félix do Xingu (PA)
+São Francisco do Pará (PA)
+São Geraldo do Araguaia (PA)
+São João da Ponta (PA)
+São João de Pirabas (PA)
+São João do Araguaia (PA)
+São Miguel do Guamá (PA)
+São Sebastião da Boa Vista (PA)
+Sapucaia (PA)
+Senador José Porfírio (PA)
+Soure (PA)
+Tailândia (PA)
+Terra Alta (PA)
+Terra Santa (PA)
+Tomé-Açu (PA)
+Tracuateua (PA)
+Trairão (PA)
+Tucumã (PA)
+Tucuruí (PA)
+Ulianópolis (PA)
+Uruará (PA)
+Vigia (PA)
+Viseu (PA)
+Vitória do Xingu (PA)
+Xinguara (PA)
+Janela
+24 h
+48 h
+7 dias
+Sensor e satélite
+NOAA-20 (VIIRS), 375 m
+NOAA-21 (VIIRS), 375 m
+MODIS (Terra e Aqua), 1 km
+
+Suomi NPP encerrou a produção em 02/11/2026 e fica só no histórico.
+
+Passagem
+Todas
+Diurnas
+Noturnas
+Camadas
+Detecções de calor
+Agrupamentos geográficos
+Limite territorial (IBGE)
+Municípios do Pará (clique para analisar)
+Fundo
+Mapa
+Imagem VIIRS
+Exportar CSV desta consulta
+
+Dados: arquivos públicos NRT da NASA FIRMS (sem chave).
+
+Por produto
+NOAA-20 (VIIRS)
+1.381
+Última observação
+14/11/2026 16:47 UTC
+Dia / noite
+1.029 / 352
+Confiança
+baixa 112, nominal 1.246, alta 23
+FRP mediana / máx.
+6,4 / 672,9 MW
+Resolução
+375 m, quase tempo real
+NOAA-21 (VIIRS)
+2.656
+Última observação
+14/11/2026 17:32 UTC
+Dia / noite
+859 / 1.797
+Confiança
+baixa 38, nominal 2.567, alta 51
+FRP mediana / máx.
+2,5 / 345,1 MW
+Resolução
+375 m, quase tempo real
+
+Contagens são por produto. Não some produtos de sensores diferentes; uma detecção é um pixel com anomalia térmica, não um incêndio individual.
+
+Clique em um ponto do mapa para ver os atributos da detecção.
+
+Passagens dos satélites sobre o território
+
+Barras: detecções por passagem (escala de raiz). Horários em UTC.
+
+NOAA-20
+última 14/11 16:47
+NOAA-21
+última 14/11 17:32
+03:00
+06:00
+09:00
+12:00
+15:00
+18:00
+21:00
+00:00
+agora

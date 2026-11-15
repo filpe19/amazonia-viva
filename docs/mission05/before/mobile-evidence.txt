@@ -1,0 +1,248 @@
+Pular para o conteúdo
+Situação atual
+Histórico
+Ambiente
+Território
+Evidências
+Evidências e relatórios
+Cada consulta é rastreável: região, período, produtos, arquivos de origem com data de coleta e SHA-256, e as limitações que se aplicam. Exporte os registros reais em CSV ou o manifesto completo em JSON.
+Consulta
+Território
+Portel (PA) — piloto
+Almeirim (PA)
+Santarém (PA)
+Brasil
+Pará
+Abaetetuba (PA)
+Abel Figueiredo (PA)
+Acará (PA)
+Afuá (PA)
+Água Azul do Norte (PA)
+Alenquer (PA)
+Almeirim (PA)
+Altamira (PA)
+Anajás (PA)
+Ananindeua (PA)
+Anapu (PA)
+Augusto Corrêa (PA)
+Aurora do Pará (PA)
+Aveiro (PA)
+Bagre (PA)
+Baião (PA)
+Bannach (PA)
+Barcarena (PA)
+Belém (PA)
+Belterra (PA)
+Benevides (PA)
+Bom Jesus do Tocantins (PA)
+Bonito (PA)
+Bragança (PA)
+Brasil Novo (PA)
+Brejo Grande do Araguaia (PA)
+Breu Branco (PA)
+Breves (PA)
+Bujaru (PA)
+Cachoeira do Arari (PA)
+Cachoeira do Piriá (PA)
+Cametá (PA)
+Canaã dos Carajás (PA)
+Capanema (PA)
+Capitão Poço (PA)
+Castanhal (PA)
+Chaves (PA)
+Colares (PA)
+Conceição do Araguaia (PA)
+Concórdia do Pará (PA)
+Cumaru do Norte (PA)
+Curionópolis (PA)
+Curralinho (PA)
+Curuá (PA)
+Curuçá (PA)
+Dom Eliseu (PA)
+Eldorado do Carajás (PA)
+Faro (PA)
+Floresta do Araguaia (PA)
+Garrafão do Norte (PA)
+Goianésia do Pará (PA)
+Gurupá (PA)
+Igarapé-Açu (PA)
+Igarapé-Miri (PA)
+Inhangapi (PA)
+Ipixuna do Pará (PA)
+Irituia (PA)
+Itaituba (PA)
+Itupiranga (PA)
+Jacareacanga (PA)
+Jacundá (PA)
+Juruti (PA)
+Limoeiro do Ajuru (PA)
+Mãe do Rio (PA)
+Magalhães Barata (PA)
+Marabá (PA)
+Maracanã (PA)
+Marapanim (PA)
+Marituba (PA)
+Medicilândia (PA)
+Melgaço (PA)
+Mocajuba (PA)
+Moju (PA)
+Mojuí dos Campos (PA)
+Monte Alegre (PA)
+Muaná (PA)
+Nova Esperança do Piriá (PA)
+Nova Ipixuna (PA)
+Nova Timboteua (PA)
+Novo Progresso (PA)
+Novo Repartimento (PA)
+Óbidos (PA)
+Oeiras do Pará (PA)
+Oriximiná (PA)
+Ourém (PA)
+Ourilândia do Norte (PA)
+Pacajá (PA)
+Palestina do Pará (PA)
+Paragominas (PA)
+Parauapebas (PA)
+Pau D'Arco (PA)
+Peixe-Boi (PA)
+Piçarra (PA)
+Placas (PA)
+Ponta de Pedras (PA)
+Portel (PA)
+Porto de Moz (PA)
+Prainha (PA)
+Primavera (PA)
+Quatipuru (PA)
+Redenção (PA)
+Rio Maria (PA)
+Rondon do Pará (PA)
+Rurópolis (PA)
+Salinópolis (PA)
+Salvaterra (PA)
+Santa Bárbara do Pará (PA)
+Santa Cruz do Arari (PA)
+Santa Izabel do Pará (PA)
+Santa Luzia do Pará (PA)
+Santa Maria das Barreiras (PA)
+Santa Maria do Pará (PA)
+Santana do Araguaia (PA)
+Santarém (PA)
+Santarém Novo (PA)
+Santo Antônio do Tauá (PA)
+São Caetano de Odivelas (PA)
+São Domingos do Araguaia (PA)
+São Domingos do Capim (PA)
+São Félix do Xingu (PA)
+São Francisco do Pará (PA)
+São Geraldo do Araguaia (PA)
+São João da Ponta (PA)
+São João de Pirabas (PA)
+São João do Araguaia (PA)
+São Miguel do Guamá (PA)
+São Sebastião da Boa Vista (PA)
+Sapucaia (PA)
+Senador José Porfírio (PA)
+Soure (PA)
+Tailândia (PA)
+Terra Alta (PA)
+Terra Santa (PA)
+Tomé-Açu (PA)
+Tracuateua (PA)
+Trairão (PA)
+Tucumã (PA)
+Tucuruí (PA)
+Ulianópolis (PA)
+Uruará (PA)
+Vigia (PA)
+Viseu (PA)
+Vitória do Xingu (PA)
+Xinguara (PA)
+Janela
+24 h
+48 h
+7 dias
+Todas
+Diurnas
+Noturnas
+Produtos
+NOAA-20 (VIIRS)
+NOAA-21 (VIIRS)
+MODIS (Terra e Aqua)
+Exportar CSV
+Baixar manifesto JSON
+Relatório PDF (planejado)
+Região e período
+Região
+Portel (PA) (código IBGE 1505809)
+Limite territorial
+IBGE, malha v3, coletado em 14/11/2026 23:52 UTC
+https://servicodados.ibge.gov.br/api/v3/malhas/estados/15?intrarregiao=municipio&formato=application/vnd.geo%2Bjson&qualidade=maxima
+Período consultado
+08/11/2026 01:53 UTC a 15/11/2026 01:53 UTC
+Turno
+diurno e noturno
+Manifesto gerado em
+15/11/2026 01:53 UTC
+Observações e fontes
+Contagens por produto, sem soma entre sensores. Cada linha indica exatamente o arquivo ou chamada de API usado.
+Produto	Detecções	Última observação	Coleta	Modo	Versão	SHA-256	Origem
+
+NOAA-20 (VIIRS)
+	1.123	14/11/2026 16:47 UTC	15/11/2026 01:50 UTC	arquivo público NRT	2.0NRT	9eb5f3ab9933…	J1_VIIRS_C2_South_America_7d.csv
+
+NOAA-21 (VIIRS)
+	1.225	14/11/2026 17:30 UTC	15/11/2026 01:50 UTC	arquivo público NRT	2.0NRT	b1f9dcd4305c…	J2_VIIRS_C2_South_America_7d.csv
+
+MODIS (Terra e Aqua)
+	410	14/11/2026 19:04 UTC	15/11/2026 01:50 UTC	arquivo público NRT	6.1NRT	94672711d595…	MODIS_C6_1_South_America_7d.csv
+
+Latência declarada pela fonte: <3 horas após a observação (dados globais NRT, FIRMS FAQ).
+
+Comparações disponíveis
+Período atual × mesmo período nos anos anteriores (MODIS NRT × arquivo MODIS).
+Séries mensais, sazonalidade e calendário (32 arquivos anuais importados).
+MODIS × VIIRS S-NPP nos anos de sobreposição (exploratório, sem série harmonizada).
+Arquivos históricos usados
+Arquivo anual por país publicado pela NASA FIRMS, processado em agregados.
+Produto	Ano	Versão	Linhas	Importado em	SHA-256
+MODIS (arquivo)	2001	6.2	145.721	15/11/2026 01:32 UTC	0ca60412834d…
+MODIS (arquivo)	2002	6.2	524.224	15/11/2026 01:32 UTC	23fa825d4b18…
+MODIS (arquivo)	2003	6.2	548.388	15/11/2026 01:33 UTC	e57adce53988…
+MODIS (arquivo)	2004	6.2	634.507	15/11/2026 01:33 UTC	438671d18103…
+MODIS (arquivo)	2005	6.2	631.834	15/11/2026 01:33 UTC	40ec6a527c35…
+MODIS (arquivo)	2006	6.2	406.646	15/11/2026 01:33 UTC	5c73a026c2b9…
+MODIS (arquivo)	2007	6.2	700.531	15/11/2026 01:33 UTC	2d49aa49ead6…
+MODIS (arquivo)	2008	6.2	354.521	15/11/2026 01:33 UTC	4bb1d5392945…
+MODIS (arquivo)	2009	6.2	250.516	15/11/2026 01:33 UTC	43126b7fac72…
+MODIS (arquivo)	2010	6.2	583.691	15/11/2026 01:34 UTC	ac4fceba8612…
+MODIS (arquivo)	2011	6.2	271.299	15/11/2026 01:35 UTC	a56e530a5207…
+MODIS (arquivo)	2012	6.2	402.205	15/11/2026 01:35 UTC	1a9887200ac2…
+MODIS (arquivo)	2013	6.2	220.409	15/11/2026 01:35 UTC	56f988b17893…
+MODIS (arquivo)	2014	6.2	311.349	15/11/2026 01:35 UTC	1883fbaa50b7…
+MODIS (arquivo)	2015	6.2	419.826	15/11/2026 01:35 UTC	27d5de1a2cd0…
+MODIS (arquivo)	2016	6.2	334.349	14/11/2026 23:52 UTC	a12097eedb21…
+MODIS (arquivo)	2017	6.2	389.240	14/11/2026 23:52 UTC	a6e2e271a1b8…
+MODIS (arquivo)	2018	6.03	231.849	14/11/2026 23:52 UTC	efddb4ab4bb1…
+MODIS (arquivo)	2019	6.03	374.668	14/11/2026 23:52 UTC	2a14ae9be81f…
+MODIS (arquivo)	2020	6.03	405.388	14/11/2026 23:52 UTC	663bd08ed07e…
+MODIS (arquivo)	2021	6.03	340.582	14/11/2026 23:53 UTC	8466734fc998…
+MODIS (arquivo)	2022	6.03	362.785	14/11/2026 23:53 UTC	ce67f4c7d1d4…
+MODIS (arquivo)	2023	61.03	357.737	14/11/2026 23:53 UTC	659ce5160d96…
+MODIS (arquivo)	2024	61.03	527.894	14/11/2026 23:53 UTC	b617f757e2b1…
+MODIS (arquivo)	2025	61.03	236.731	14/11/2026 23:52 UTC	1da12d96d12d…
+VIIRS NOAA-20 (arquivo)	2021	2	1.304.753	14/11/2026 23:54 UTC	ed71e40d4f96…
+VIIRS NOAA-20 (arquivo)	2022	2	1.452.881	14/11/2026 23:54 UTC	348404b92408…
+VIIRS NOAA-20 (arquivo)	2023	2	1.312.648	14/11/2026 23:55 UTC	aa1344aaeedf…
+VIIRS NOAA-20 (arquivo)	2024	2	1.988.404	14/11/2026 23:55 UTC	219e933850ce…
+VIIRS NOAA-20 (arquivo)	2025	2	853.909	14/11/2026 23:55 UTC	01a4ea954a97…
+VIIRS S-NPP (arquivo)	2023	2	1.345.502	14/11/2026 23:53 UTC	7e0d392c6e47…
+VIIRS S-NPP (arquivo)	2024	2	1.935.740	14/11/2026 23:54 UTC	70bddaf02d8e…
+Limitações
+Detecções de calor indicam pixels com anomalia térmica no momento da passagem do satélite; não equivalem a incêndios individuais nem a área queimada.
+Nuvens, fumaça densa, horário de passagem e geometria de visada reduzem ou impedem detecções; ausência de detecção não comprova ausência de fogo.
+MODIS (1 km) e VIIRS (375 m) têm sensibilidades diferentes; suas contagens não são somadas nem comparadas diretamente.
+Cada comparação histórica usa o mesmo instrumento nos dois lados (MODIS×MODIS, NOAA-20×NOAA-20); dados NRT e de processamento padrão podem diferir ligeiramente.
+As órbitas de Terra e Aqua derivaram nos últimos anos, alterando o horário de passagem e, portanto, as contagens esperadas.
+Variáveis meteorológicas vêm de reanálise em grade (NASA POWER), com latência de dias; não são medições locais.
+Nenhum modelo de propagação de fogo foi aplicado e nenhuma previsão está integrada.
+A população informada é o total censitário do território; não é uma estimativa de pessoas afetadas.

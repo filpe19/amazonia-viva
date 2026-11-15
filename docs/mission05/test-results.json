@@ -1,0 +1,219 @@
+{
+  "duration_seconds": 76.2,
+  "checks": [
+    {
+      "name": "Home and shared Par\u00e1 selection",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Real MapLibre basemap, territorial layer and detection points rendered",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Portel municipal polygon is selectable",
+      "passed": true,
+      "detail": {
+        "x": 731,
+        "y": 469.5
+      }
+    },
+    {
+      "name": "Actual map click shares Portel through URL and selector",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Night filter uses real night observations",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Satellite filter removes NOAA-21 from rendered detections",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "No selected satellites produces an explicit empty state",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Real observation available for map inspection",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Clicked observation exposes satellite, sensor, UTC, coordinates, FRP, confidence and provenance",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Cluster layer activated with real features",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Recent CSV download retains original scientific columns",
+      "passed": true,
+      "detail": "detection_id,product_id,sensor,satellite,satellite_name,instrument,latitude,longitude,acq_date,acq_time,acq_datetime_utc,daynight,confidence_raw,confidence_class,confidence_pct,frp_mw,bright_ti4_k,bri"
+    },
+    {
+      "name": "History shares Portel with its independent archive period",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Scientific calendar distinguishes all three origins",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Converted month displays empirical uncertainty",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Verified seasonal validation metrics and context",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Method retains uncalibrated-interval limitation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Experimental CSV available",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Original sensor charts render",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Historical method and provenance retained",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Territory answers five questions using shared selection",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Territory avoids a threat classification and retains caveats",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Existing report preserves all seven evidence questions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Report JSON export preserves real provenance and region",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Proximity CSV export retained",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Environmental chart, units and reanalysis distinction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Evidence manifest downloadable",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Current period persists across modules",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Browser back restores shared territory from the previous module URL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "No runtime errors in complete desktop flow",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "No unexpected HTTP or console errors",
+      "passed": true,
+      "detail": {
+        "http": [],
+        "console": []
+      }
+    },
+    {
+      "name": "Mobile satellite popover fits viewport",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Mobile layer popover fits viewport",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Mobile layout without document overflow: current",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Mobile layout without document overflow: history",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Mobile layout without document overflow: territory",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Mobile layout without document overflow: environment",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Mobile layout without document overflow: evidence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Mobile layout without document overflow: report",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Mobile bottom navigation works",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "API outage displays explanation and retry without fictitious records",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Retry recovers original source observations after outage",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "page_errors": [],
+  "console_errors": [],
+  "http_errors": []
+}

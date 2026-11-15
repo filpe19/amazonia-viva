@@ -1,0 +1,61 @@
+# Amazônia Viva — proximity and potential exposure (not confirmed damage). Territory: Portel (PA). Generated: 2026-11-15T02:34:49Z. Observations: VIIRS NOAA-20/NOAA-21, 7 days.
+categoria,nome,tipo,latitude,longitude,deteccao_mais_proxima_km,deteccoes_ate_1km,deteccoes_ate_5km,deteccoes_ate_10km,populacao_setor,situacao_setor,fonte,tipo_informacao
+localidade,Santo Agostinho,Aglomerado rural isolado,-1.99691667,-50.96941667,0.29,1,6,23,,,IBGE BC250 2025,estimativa (proximidade)
+localidade,Arraial Santo Amaro,Aglomerado rural isolado,-2.15506302,-51.43467191,0.77,1,4,7,,,IBGE BC250 2025,estimativa (proximidade)
+localidade,Santa Rosa,Aglomerado rural isolado,-2.6182744,-50.57696373,1.12,0,9,14,,,IBGE BC250 2025,estimativa (proximidade)
+localidade,Marcelo,Aglomerado rural isolado,-2.18564166,-51.4270045,1.46,0,4,5,,,IBGE BC250 2025,estimativa (proximidade)
+localidade,Vila Vista Alegre,Aglomerado rural isolado,-2.17945309,-50.77559157,1.47,0,8,64,,,IBGE BC250 2025,estimativa (proximidade)
+localidade,Santa Luzia,Aglomerado rural isolado,-1.90863523,-50.87576994,1.49,0,30,62,,,IBGE BC250 2025,estimativa (proximidade)
+localidade,Mildinho,Aglomerado rural isolado,-2.01175,-50.86183333,1.67,0,5,43,,,IBGE BC250 2025,estimativa (proximidade)
+localidade,Cocal,Aglomerado rural isolado,-2.23496418,-51.00644606,1.69,0,9,16,,,IBGE BC250 2025,estimativa (proximidade)
+localidade,Rooli,Aglomerado rural isolado,-2.00325246,-50.85099787,1.78,0,4,52,,,IBGE BC250 2025,estimativa (proximidade)
+localidade,Bevenuto,Aglomerado rural isolado,-2.59442962,-51.00690757,2.07,0,2,7,,,IBGE BC250 2025,estimativa (proximidade)
+localidade,Bacuri,Aglomerado rural isolado,-2.09893357,-50.99098974,2.1,0,1,7,,,IBGE BC250 2025,estimativa (proximidade)
+localidade,Sao Joao do Pracajura,Aglomerado rural isolado,-1.82128333,-51.3531,3.22,0,2,9,,,IBGE BC250 2025,estimativa (proximidade)
+localidade,Vila Castanhal,Aglomerado rural isolado,-2.07792729,-50.80326342,3.31,0,9,69,,,IBGE BC250 2025,estimativa (proximidade)
+localidade,Jataituba,Aglomerado rural isolado,-2.99411151,-50.25324896,3.4,0,3,45,,,IBGE BC250 2025,estimativa (proximidade)
+localidade,Portel,Cidade,-1.93224486,-50.82399724,3.58,0,12,92,,,IBGE BC250 2025,estimativa (proximidade)
+localidade,João,Aglomerado rural isolado,-2.76162179,-51.0060899,4.49,0,3,8,,,IBGE BC250 2025,estimativa (proximidade)
+localidade,Amparo,Aglomerado rural isolado,-2.1919344,-50.71136703,4.51,0,1,15,,,IBGE BC250 2025,estimativa (proximidade)
+localidade,Meritituba,Aglomerado rural isolado,-2.2220312,-50.66746107,4.79,0,1,13,,,IBGE BC250 2025,estimativa (proximidade)
+localidade,Boa Vista,Aglomerado rural isolado,-2.18403287,-51.07925997,5.39,0,0,19,,,IBGE BC250 2025,estimativa (proximidade)
+localidade,Santo Antônio,Aglomerado rural isolado,-2.59787488,-50.9771935,5.4,0,0,8,,,IBGE BC250 2025,estimativa (proximidade)
+localidade,Parada,Aglomerado rural isolado,-2.43436875,-51.24635386,5.46,0,0,2,,,IBGE BC250 2025,estimativa (proximidade)
+localidade,Uirapuru,Aglomerado rural isolado,-2.4865761,-50.9196541,5.46,0,0,5,,,IBGE BC250 2025,estimativa (proximidade)
+localidade,Ponta da Bóia,Aglomerado rural isolado,-2.56639472,-50.79301316,5.85,0,0,4,,,IBGE BC250 2025,estimativa (proximidade)
+localidade,Abc,Aglomerado rural isolado,-2.75588177,-50.50823164,6.48,0,0,11,,,IBGE BC250 2025,estimativa (proximidade)
+localidade,Cipoal,Aglomerado rural isolado,-2.77598278,-50.45427194,8.84,0,0,4,,,IBGE BC250 2025,estimativa (proximidade)
+localidade,ABC Tropical,Aglomerado rural isolado,-2.70190433,-50.53085869,10.72,0,0,0,,,IBGE BC250 2025,estimativa (proximidade)
+localidade,Santa Catarina,Aglomerado rural isolado,-2.45212196,-51.29656675,10.95,0,0,0,,,IBGE BC250 2025,estimativa (proximidade)
+localidade,Carvalho,Aglomerado rural isolado,-2.28413483,-51.48981424,12.28,0,0,0,,,IBGE BC250 2025,estimativa (proximidade)
+unidade_saude,POSTO DE SAUDE LISBOA,CENTRO DE SAUDE/UNIDADE BASICA,-1.9754309610120648,-50.79511642456055,0.59,2,14,84,,,CNES 4217071,estimativa (proximidade)
+unidade_saude,POSTO DE SAUDE AJARA,CENTRO DE SAUDE/UNIDADE BASICA,-1.991278680971521,-50.855112075805664,1.21,0,6,57,,,CNES 496057,estimativa (proximidade)
+unidade_saude,POSTO DE SAUDE DE SANTO AMARO,POSTO DE SAUDE,-1.9901421107151263,-50.81481456756592,2.17,0,16,55,,,CNES 2312832,estimativa (proximidade)
+unidade_saude,UNIDADE SAUDE DA FAMILIA CIDADE NOVA,CENTRO DE SAUDE/UNIDADE BASICA,-1.943777959381552,-50.81326961517334,2.38,0,14,94,,,CNES 2312840,estimativa (proximidade)
+unidade_saude,UBSF PEROLA DO MARAJO,UNIDADE MOVEL FLUVIAL,-1.9412045183983622,-50.8221960067749,2.82,0,12,91,,,CNES 936898,estimativa (proximidade)
+unidade_saude,UNIDADE SAUDE DA FAMILIA DO MURUCI,CENTRO DE SAUDE/UNIDADE BASICA,-1.9390707039453545,-50.81420302391052,2.9,0,14,103,,,CNES 2312875,estimativa (proximidade)
+unidade_saude,POSTO DE SAUDE BALBINOTE,POSTO DE SAUDE,-1.9987843139062984,-50.81655263900757,2.92,0,14,56,,,CNES 2312905,estimativa (proximidade)
+unidade_saude,UNIDADE SAUDE DA FAMILIA AMACOL,CENTRO DE SAUDE/UNIDADE BASICA,-1.9388776954701434,-50.8201789855957,3,0,12,101,,,CNES 2312859,estimativa (proximidade)
+unidade_saude,POSTO DE SAUDE DE ACANGATA,CENTRO DE SAUDE/UNIDADE BASICA,-1.9971545222382712,-50.87036848068237,3,0,5,54,,,CNES 2312867,estimativa (proximidade)
+unidade_saude,CLINICA FISIO SOUZA,CONSULTORIO ISOLADO,-1.9380520478555048,-50.8167028427124,3.03,0,12,108,,,CNES 4410467,estimativa (proximidade)
+unidade_saude,CENTRO ESPECIALIZADO EM REABILITACAO PORTEL,CLINICA/CENTRO DE ESPECIALIDADE,-1.9373014587655695,-50.81693887710571,3.11,0,12,108,,,CNES 2923629,estimativa (proximidade)
+unidade_saude,USG BRASIL,COOPERATIVA OU EMPRESA DE CESSAO DE TRABALHADORES NA SAUDE,-1.936786768911659,-50.81650972366333,3.17,0,12,109,,,CNES 4217012,estimativa (proximidade)
+unidade_saude,CENTRAL DE REGULACAO PORTEL,CENTRAL DE REGULACAO DO ACESSO,-1.936164851796261,-50.81674575805664,3.24,0,12,111,,,CNES 910821,estimativa (proximidade)
+unidade_saude,UNIDADE SAUDE DA FAMILIA DO BOSQUE,CENTRO DE SAUDE/UNIDADE BASICA,-1.936186297217837,-50.81895589828491,3.27,0,12,105,,,CNES 2312824,estimativa (proximidade)
+unidade_saude,HOSPITAL GERAL DE PORTEL DR WILSON DA MOTTA SILVEIRA,HOSPITAL GERAL,-1.9348566805673657,-50.814878940582275,3.37,0,12,107,,,CNES 2676923,estimativa (proximidade)
+unidade_saude,UNIDADE DE SUPORTE BASICO USB 127 PORTEL,UNIDADE MOVEL DE NIVEL PRE-HOSPITALAR NA AREA DE URGENCIA,-1.9345778898471422,-50.81500768661499,3.4,0,12,107,,,CNES 52000,estimativa (proximidade)
+unidade_saude,POSTO DE SAUDE IDE,POSTO DE SAUDE,-2.016862025843633,-50.80084562301636,4.02,0,4,61,,,CNES 4430867,estimativa (proximidade)
+unidade_saude,POSTO DE SAUDE ABC,CENTRO DE SAUDE/UNIDADE BASICA,-2.004381349281223,-50.88236331939697,4.08,0,5,55,,,CNES 2312891,estimativa (proximidade)
+unidade_saude,POSTO DE SAUDE MONTE HOREBE,POSTO DE SAUDE,-2.5940968614377313,-50.987892150878906,4.18,0,2,7,,,CNES 2619911,estimativa (proximidade)
+setor_censitario,150580905000022,,,,0,,48,,2929,Rural,IBGE Censo 2022,"estimate (potential exposure, upper bound)"
+setor_censitario,150580905000064,,,,2.29,,15,,2485,Urbana,IBGE Censo 2022,"estimate (potential exposure, upper bound)"
+setor_censitario,150580905000066,,,,1.44,,16,,2034,Urbana,IBGE Censo 2022,"estimate (potential exposure, upper bound)"
+setor_censitario,150580905000011,,,,1.54,,14,,2028,Urbana,IBGE Censo 2022,"estimate (potential exposure, upper bound)"
+setor_censitario,150580905000020,,,,0,,83,,1869,Rural,IBGE Censo 2022,"estimate (potential exposure, upper bound)"
+setor_censitario,150580905000012,,,,1.79,,14,,1678,Urbana,IBGE Censo 2022,"estimate (potential exposure, upper bound)"
+setor_censitario,150580905000013,,,,1.62,,14,,1567,Urbana,IBGE Censo 2022,"estimate (potential exposure, upper bound)"
+setor_censitario,150580905000029,,,,0,,105,,1509,Rural,IBGE Censo 2022,"estimate (potential exposure, upper bound)"
+setor_censitario,150580905000010,,,,1.69,,14,,1459,Urbana,IBGE Censo 2022,"estimate (potential exposure, upper bound)"
+setor_censitario,150580905000080,,,,0,,29,,1457,Rural,IBGE Censo 2022,"estimate (potential exposure, upper bound)"
+setor_censitario,150580905000090,,,,0,,1122,,1457,Rural,IBGE Censo 2022,"estimate (potential exposure, upper bound)"
+setor_censitario,150580905000007,,,,2.78,,13,,1437,Urbana,IBGE Censo 2022,"estimate (potential exposure, upper bound)"

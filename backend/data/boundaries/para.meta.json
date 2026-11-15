@@ -1,0 +1,12 @@
+{
+  "region_id": "para",
+  "name": "Pará",
+  "ibge_code": "15",
+  "publisher": "IBGE — Instituto Brasileiro de Geografia e Estatística",
+  "source_url": "https://servicodados.ibge.gov.br/api/v3/malhas/estados/15?formato=application/vnd.geo%2Bjson&qualidade=maxima",
+  "quality": "maxima",
+  "fetched_at": "2026-11-14T22:50:43+00:00",
+  "sha256": "4783aefbb6ec6245e03fb19c986bc73f5d712e054f753d6189af7a5d321ac679",
+  "bytes": 74406,
+  "license_note": "Dados públicos do IBGE (API de malhas territoriais v3)."
+}

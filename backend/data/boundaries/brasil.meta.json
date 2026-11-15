@@ -1,0 +1,12 @@
+{
+  "region_id": "brasil",
+  "name": "Brasil",
+  "ibge_code": "BR",
+  "publisher": "IBGE — Instituto Brasileiro de Geografia e Estatística",
+  "source_url": "https://servicodados.ibge.gov.br/api/v3/malhas/paises/BR?formato=application/vnd.geo%2Bjson&qualidade=maxima",
+  "quality": "maxima",
+  "fetched_at": "2026-11-14T22:50:42+00:00",
+  "sha256": "933da368ffec297004c1d934c7e4bb3653b9bd5ac8bc5c1d830458f187059aee",
+  "bytes": 65655,
+  "license_note": "Dados públicos do IBGE (API de malhas territoriais v3)."
+}
