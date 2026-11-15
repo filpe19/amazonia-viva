@@ -1,0 +1,251 @@
+Skip to content
+Amazônia Viva
+Environmental intelligence
+Explore the evidence
+Current activity
+Latest satellite observations
+Fire history
+Records & experimental harmonization
+Territory analysis
+Environment & supporting evidence
+Environmental context
+Evidence & exports
+
+Evidence before decisions.
+
+Observations, context and uncertainty in one place.
+
+NASA FIRMS
+Independent research platform
+NASA Space Apps Challenge 2026
+Amazon basin
+/
+Current activity
+Portel (PA)— pilot
+Almeirim (PA)
+Santarém (PA)
+Brasil
+Pará
+Abaetetuba (PA)
+Abel Figueiredo (PA)
+Acará (PA)
+Afuá (PA)
+Água Azul do Norte (PA)
+Alenquer (PA)
+Almeirim (PA)
+Altamira (PA)
+Anajás (PA)
+Ananindeua (PA)
+Anapu (PA)
+Augusto Corrêa (PA)
+Aurora do Pará (PA)
+Aveiro (PA)
+Bagre (PA)
+Baião (PA)
+Bannach (PA)
+Barcarena (PA)
+Belém (PA)
+Belterra (PA)
+Benevides (PA)
+Bom Jesus do Tocantins (PA)
+Bonito (PA)
+Bragança (PA)
+Brasil Novo (PA)
+Brejo Grande do Araguaia (PA)
+Breu Branco (PA)
+Breves (PA)
+Bujaru (PA)
+Cachoeira do Arari (PA)
+Cachoeira do Piriá (PA)
+Cametá (PA)
+Canaã dos Carajás (PA)
+Capanema (PA)
+Capitão Poço (PA)
+Castanhal (PA)
+Chaves (PA)
+Colares (PA)
+Conceição do Araguaia (PA)
+Concórdia do Pará (PA)
+Cumaru do Norte (PA)
+Curionópolis (PA)
+Curralinho (PA)
+Curuá (PA)
+Curuçá (PA)
+Dom Eliseu (PA)
+Eldorado do Carajás (PA)
+Faro (PA)
+Floresta do Araguaia (PA)
+Garrafão do Norte (PA)
+Goianésia do Pará (PA)
+Gurupá (PA)
+Igarapé-Açu (PA)
+Igarapé-Miri (PA)
+Inhangapi (PA)
+Ipixuna do Pará (PA)
+Irituia (PA)
+Itaituba (PA)
+Itupiranga (PA)
+Jacareacanga (PA)
+Jacundá (PA)
+Juruti (PA)
+Limoeiro do Ajuru (PA)
+Mãe do Rio (PA)
+Magalhães Barata (PA)
+Marabá (PA)
+Maracanã (PA)
+Marapanim (PA)
+Marituba (PA)
+Medicilândia (PA)
+Melgaço (PA)
+Mocajuba (PA)
+Moju (PA)
+Mojuí dos Campos (PA)
+Monte Alegre (PA)
+Muaná (PA)
+Nova Esperança do Piriá (PA)
+Nova Ipixuna (PA)
+Nova Timboteua (PA)
+Novo Progresso (PA)
+Novo Repartimento (PA)
+Óbidos (PA)
+Oeiras do Pará (PA)
+Oriximiná (PA)
+Ourém (PA)
+Ourilândia do Norte (PA)
+Pacajá (PA)
+Palestina do Pará (PA)
+Paragominas (PA)
+Parauapebas (PA)
+Pau D'Arco (PA)
+Peixe-Boi (PA)
+Piçarra (PA)
+Placas (PA)
+Ponta de Pedras (PA)
+Portel (PA)
+Porto de Moz (PA)
+Prainha (PA)
+Primavera (PA)
+Quatipuru (PA)
+Redenção (PA)
+Rio Maria (PA)
+Rondon do Pará (PA)
+Rurópolis (PA)
+Salinópolis (PA)
+Salvaterra (PA)
+Santa Bárbara do Pará (PA)
+Santa Cruz do Arari (PA)
+Santa Izabel do Pará (PA)
+Santa Luzia do Pará (PA)
+Santa Maria das Barreiras (PA)
+Santa Maria do Pará (PA)
+Santana do Araguaia (PA)
+Santarém (PA)
+Santarém Novo (PA)
+Santo Antônio do Tauá (PA)
+São Caetano de Odivelas (PA)
+São Domingos do Araguaia (PA)
+São Domingos do Capim (PA)
+São Félix do Xingu (PA)
+São Francisco do Pará (PA)
+São Geraldo do Araguaia (PA)
+São João da Ponta (PA)
+São João de Pirabas (PA)
+São João do Araguaia (PA)
+São Miguel do Guamá (PA)
+São Sebastião da Boa Vista (PA)
+Sapucaia (PA)
+Senador José Porfírio (PA)
+Soure (PA)
+Tailândia (PA)
+Terra Alta (PA)
+Terra Santa (PA)
+Tomé-Açu (PA)
+Tracuateua (PA)
+Trairão (PA)
+Tucumã (PA)
+Tucuruí (PA)
+Ulianópolis (PA)
+Uruará (PA)
+Vigia (PA)
+Viseu (PA)
+Vitória do Xingu (PA)
+Xinguara (PA)
+Language
+PT-BR
+EN
+Data service connected
+Latest satellite observations
+
+Explore thermal detections in Portel (PA). Each point is an observation at a satellite overpass.
+
+Analyse this territory
+Observation window
+24 hours
+48 hours
+7 days
+Overpass
+All
+Day
+Night
+Satellites
+2
+Layers
+Export CSV
+30 km
+OpenFreeMap © OpenMapTiles Data from OpenStreetMap
+NOAA-20
+375 m
+NOAA-21
+375 m
+IBGE boundary
+Observations by satellite
+
+Counts remain separate. The same fire can be observed more than once.
+
+NOAA-20 (VIIRS)
+1,123
+Latest observation
+14 Nov 2026 16:47 UTC
+Day / night
+750 / 373
+Confidence
+low 120, nominal 984, high 19
+FRP median / max.
+5.6 / 267.2 MW
+Resolution
+375 m, near real time
+NOAA-21 (VIIRS)
+1,225
+Latest observation
+14 Nov 2026 17:30 UTC
+Day / night
+555 / 670
+Confidence
+low 29, nominal 1,115, high 81
+FRP median / max.
+4.4 / 258.9 MW
+Resolution
+375 m, near real time
+
+Counts are per product. Repeated observations do not represent unique fires.
+
+Inspect an observation
+NOAA-21
+14 Nov 2026 17:30 UTC
+NOAA-21
+14 Nov 2026 17:30 UTC
+NOAA-21
+14 Nov 2026 17:30 UTC
+Latest observation
+14 Nov 2026 17:30 UTC
+9 h 46 min ago
+Platform synchronization
+15 Nov 2026 03:06 UTC
+Time records were collected from FIRMS
+Nominal source latency
+Up to ~3 hours
+Declared by NASA FIRMS; not continuous observation
+
+A detection is a thermal-anomaly pixel, not an individual fire or a burned-area measurement. No detection does not establish that no fire occurred. Source: NASA FIRMS
+
+Satellite observation timeline

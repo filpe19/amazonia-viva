@@ -1,3 +1,4 @@
+import { t, useLocale } from '../lib/i18n'
 import { sourceCopy } from '../lib/sourceCopy'
 import { CalendarClock, History, MapPin, Telescope } from 'lucide-react'
 import { useMemo, useState } from 'react'
@@ -7,7 +8,7 @@ import { ChartFrame, ChartTooltipBox, WindArrow, WindRose, axisProps, gridProps 
 import { Indicator } from '../components/Indicator'
 import { Page, Section } from '../components/Page'
 import { ErrorState, Loading, Unavailable } from '../components/states'
-import { MONTHS_PT_LONG, fmt1, fmtCoord, fmtDate, fmtInt, fmtUtc } from '../lib/format'
+import { monthNames, fmtNum, fmt1, fmtCoord, fmtDate, fmtInt, fmtUtc } from '../lib/format'
 import { useWeather } from '../lib/hooks'
 import { useRegion } from '../lib/region-context'
 import type { DailyWeather } from '../lib/types'
@@ -18,10 +19,11 @@ const SECTOR_PT: Record<string, string> = {
 }
 
 function CategoryKey() {
+  useLocale()
   const items = [
-    { icon: History, label: "Historical record", body: "NASA POWER monthly climatology, 2001–2025 mean." },
-    { icon: CalendarClock, label: "Recent analysis", body: "Daily and hourly reanalysis, available with a delay of several days." },
-    { icon: Telescope, label: "Forecast", body: "Not integrated. This POWER module does not provide a weather forecast." },
+    { icon: History, label: t("Historical record"), body: t("NASA POWER monthly climatology, 2001–2025 mean.") },
+    { icon: CalendarClock, label: t("Recent analysis"), body: t("Daily and hourly reanalysis, available with a delay of several days.") },
+    { icon: Telescope, label: t("Forecast"), body: t("Not integrated. This POWER module does not provide a weather forecast.") },
   ]
   return (
     <ul className="grid gap-3 sm:grid-cols-3">
@@ -36,6 +38,7 @@ function CategoryKey() {
 }
 
 export default function EnvironmentPage() {
+  const { locale } = useLocale()
   const { region } = useRegion()
   const [params, setParams] = useSearchParams()
   const lat = params.get('lat') ? Number(params.get('lat')) : undefined
@@ -61,13 +64,13 @@ export default function EnvironmentPage() {
         const m = MONTH_KEYS[Number(s.date.slice(5, 7)) - 1]
         return { ...s, label: fmtDate(s.date, false), climPrecip: clim[m]?.PRECTOTCORR ?? null, climT2m: clim[m]?.T2M ?? null, climRh: clim[m]?.RH2M ?? null }
       }),
-    [rec, clim],
+    [rec, clim, locale],
   )
 
   const pvc = hist?.precip_vs_climatology?.last_14d
   const period30 = rec?.last_30d?.period
-  const recentSrc = `NASA POWER, daily reanalysis (${(rec?.sources ?? []).join(', ') || 'GEOS-IT'})`
-  const monthNow = latestDate ? MONTHS_PT_LONG[Number(latestDate.slice(5, 7)) - 1] : ''
+  const recentSrc = t("NASA POWER, daily reanalysis ({0})", {"0": (rec?.sources ?? []).join(', ') || 'GEOS-IT'})
+  const monthNow = latestDate ? monthNames('long')[Number(latestDate.slice(5, 7)) - 1] : ''
 
   const applyPoint = (e: React.FormEvent) => {
     e.preventDefault()
@@ -78,23 +81,23 @@ export default function EnvironmentPage() {
 
   return (
     <Page
-      title="Environmental context"
+      title={t("Environmental context")}
       intro={
         <>
-          Meteorological reanalysis at a representative point. Values describe a grid cell of roughly 50 km, not a measurement at the detection location.
+          {t("Meteorological reanalysis at a representative point. Values describe a grid cell of roughly 50 km, not a measurement at the detection location.")}
         </>
       }
       aside={
         <div className="panel flex w-full flex-col gap-3 p-4 lg:w-[360px]">
           {!custom ? (
             <>
-              <p className="text-xs text-ink-3">Representative point: centroid of the IBGE territorial boundary.</p>
+              <p className="text-xs text-ink-3">{t("Representative point: centroid of the IBGE territorial boundary.")}</p>
             </>
           ) : (
             <div className="flex items-start justify-between gap-2 text-sm">
               <p className="flex items-center gap-1.5 font-medium text-ink"><MapPin className="size-4 text-canopy-700" aria-hidden="true" /> {fmtCoord(lat!, lon!)}</p>
               <button type="button" className="control px-2 py-1 text-xs text-ink-2 ring-1 ring-rule hover:bg-lichen" onClick={() => setParams({})}>
-                Use selected territory
+                {t("Use selected territory")}
               </button>
             </div>
           )}
@@ -107,10 +110,10 @@ export default function EnvironmentPage() {
               <input inputMode="decimal" value={draft.lon} onChange={(e) => setDraft((v) => ({ ...v, lon: e.target.value }))} placeholder="-54.7083"
                 className="control bg-surface px-2 py-1.5 text-sm ring-1 ring-rule" />
             </label>
-            <button type="submit" className="control col-span-2 bg-canopy-900 px-3 py-2 text-sm font-medium text-white hover:bg-canopy-800">Query this point</button>
+            <button type="submit" className="control col-span-2 bg-canopy-900 px-3 py-2 text-sm font-medium text-white hover:bg-canopy-800">{t("Query this point")}</button>
           </form>
           {region === 'brasil' && !custom && (
-            <p className="text-xs text-caution">One point does not represent all of Brazil. Select a coordinate or a smaller territory.</p>
+            <p className="text-xs text-caution">{t("One point does not represent all of Brazil. Select a coordinate or a smaller territory.")}</p>
           )}
         </div>
       }
@@ -123,56 +126,56 @@ export default function EnvironmentPage() {
       {d && Object.keys(d.errors).length > 0 && (
         <div className="flex flex-col gap-2">
           {Object.entries(d.errors).map(([k, e]) => (
-            <Unavailable key={k} title={`Some data are unavailable (${k})`}>{sourceCopy(e.message)}</Unavailable>
+            <Unavailable key={k} title={t("Some data are unavailable ({0})", {"0": k})}>{sourceCopy(e.message)}</Unavailable>
           ))}
         </div>
       )}
 
-      <Section title="Latest available day" description={latestDate ? <>Reanalysis for {fmtDate(latestDate)} (local solar time), {rec?.latency_days} days before today.</> : undefined}>
+      <Section title={t("Latest available day")} description={latestDate ? <>{t("Reanalysis for")} {fmtDate(latestDate)} {t("(local solar time),")} {rec?.latency_days} {t("days before today.")}</> : undefined}>
         <div className="grid grid-cols-1 gap-x-8 sm:grid-cols-2 lg:grid-cols-4">
-          <Indicator title="Maximum air temperature at 2 m" value={fmt1(rec?.latest?.T2M_MAX)} unit="°C" loading={q.isLoading}
+          <Indicator title={t("Maximum air temperature at 2 m")} value={fmt1(rec?.latest?.T2M_MAX)} unit="°C" loading={q.isLoading}
             unavailable={rec && !rec.available ? "Recent data unavailable" : null}
             source={recentSrc} period={latestDate ? fmtDate(latestDate) : '—'}
-            note={rec?.last_30d?.t2m_max_mean_c != null ? <>30-day mean of daily maxima: {fmt1(rec.last_30d.t2m_max_mean_c)} °C</> : undefined} />
-          <Indicator title="Relative humidity at 2 m (daily mean)" value={fmt1(rec?.latest?.RH2M)} unit="%" loading={q.isLoading}
+            note={rec?.last_30d?.t2m_max_mean_c != null ? <>{t("30-day mean of daily maxima:")} {fmt1(rec.last_30d.t2m_max_mean_c)} °C</> : undefined} />
+          <Indicator title={t("Relative humidity at 2 m (daily mean)")} value={fmt1(rec?.latest?.RH2M)} unit="%" loading={q.isLoading}
             source={recentSrc} period={latestDate ? fmtDate(latestDate) : '—'}
             note={clim[MONTH_KEYS[Number(latestDate?.slice(5, 7) ?? 1) - 1]]?.RH2M != null
-              ? <>Normal for {monthNow}: {fmt1(clim[MONTH_KEYS[Number(latestDate!.slice(5, 7)) - 1]].RH2M)}%</> : undefined} />
-          <Indicator title="Wind at 10 m" loading={q.isLoading}
+              ? <>{t("Normal for")} {monthNow}: {fmt1(clim[MONTH_KEYS[Number(latestDate!.slice(5, 7)) - 1]].RH2M)}%</> : undefined} />
+          <Indicator title={t("Wind at 10 m")} loading={q.isLoading}
             value={<span className="flex items-center gap-2">{fmt1(hourly?.wind_rose_7d?.mean_speed_ms)}{hourly?.wind_rose_7d?.resultant_direction_from_deg != null && <WindArrow fromDeg={hourly.wind_rose_7d.resultant_direction_from_deg} size={30} />}</span>}
-            unit="m/s, hourly mean"
+            unit={t("m/s, hourly mean")}
             unavailable={hourly && !hourly.available ? "Hourly data unavailable" : null}
-            source="NASA POWER, hourly reanalysis (UTC)"
-            period={hourly?.last_available_hour_utc ? `7 days through ${fmtUtc(hourly.last_available_hour_utc)}` : '—'}
-            note={hourly?.wind_rose_7d?.prevailing_sector ? <>Prevailing from {SECTOR_PT[hourly.wind_rose_7d.prevailing_sector]} (direction of origin)</> : undefined} />
-          <Indicator title="14-day accumulated precipitation" value={fmt1(rec?.last_14d?.precip_total_mm)} unit="mm" loading={q.isLoading}
-            source={`${recentSrc} ; climatology 2001–2025`}
-            period={rec?.last_14d ? `${fmtDate(rec.last_14d.period[0])} to ${fmtDate(rec.last_14d.period[1])}` : '—'}
-            note={pvc?.ratio != null ? <>{fmtInt(pvc.ratio * 100)}% of climatological expectation ({fmt1(pvc.climatology_expected_mm)} mm)</> : undefined} />
+            source={t("NASA POWER, hourly reanalysis (UTC)")}
+            period={hourly?.last_available_hour_utc ? t("7 days through {0}", {"0":fmtUtc(hourly.last_available_hour_utc)}) : '—'}
+            note={hourly?.wind_rose_7d?.prevailing_sector ? <>{t("Prevailing from")} {SECTOR_PT[hourly.wind_rose_7d.prevailing_sector]} {t("(direction of origin)")}</> : undefined} />
+          <Indicator title={t("14-day accumulated precipitation")} value={fmt1(rec?.last_14d?.precip_total_mm)} unit="mm" loading={q.isLoading}
+            source={t("{0} ; climatology 2001–2025", {"0":recentSrc})}
+            period={rec?.last_14d ? t("{0} to {1}", {"0":fmtDate(rec.last_14d.period[0]),"1":fmtDate(rec.last_14d.period[1])}) : '—'}
+            note={pvc?.ratio != null ? <>{fmtInt(pvc.ratio * 100)}{t("% of climatological expectation (")}{fmt1(pvc.climatology_expected_mm)} mm)</> : undefined} />
         </div>
       </Section>
 
       <div className="grid gap-6 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
-        <Section title="Wind rose" description="Hourly frequency by wind origin and speed class, over the latest 7 available days.">
+        <Section title={t("Wind rose")} description={t("Hourly frequency by wind origin and speed class, over the latest 7 available days.")}>
           {q.isLoading ? <Loading /> : hourly?.available && hourly.wind_rose_7d ? (
             <>
               <WindRose data={hourly.wind_rose_7d} />
               <p className="mt-3 text-[11.5px] leading-relaxed text-ink-3">
-                {fmtInt(hourly.wind_rose_7d.n_hours)} hours of reanalysis at 10 m. {hourly.wind_rose_7d.convention} Radius scales with the square root of frequency.
+                {fmtInt(hourly.wind_rose_7d.n_hours)} {t("hours of reanalysis at 10 m.")} {hourly.wind_rose_7d.convention} {t("Radius scales with the square root of frequency.")}
               </p>
             </>
-          ) : <Unavailable title="Hourly data unavailable">NASA POWER did not return hourly data for this point.</Unavailable>}
+          ) : <Unavailable title={t("Hourly data unavailable")}>{t("NASA POWER did not return hourly data for this point.")}</Unavailable>}
         </Section>
 
-        <Section title="Daily precipitation and climatology" description="Bars: daily reanalysis precipitation. Line: climatological daily mean for the month (2001–2025).">
+        <Section title={t("Daily precipitation and climatology")} description={t("Bars: daily reanalysis precipitation. Line: climatological daily mean for the month (2001–2025).")}>
           {q.isLoading ? <Loading /> : series.length ? (
-            <ChartFrame title="" subtitle={`mm/day, ${period30 ? `${fmtDate(period30[0])} to ${fmtDate(period30[1])}` : ''}`}>
+            <ChartFrame title="" subtitle={t("mm/day, {0}", {"0": period30 ? `${fmtDate(period30[0])} to ${fmtDate(period30[1])}` : ''})}>
               <div className="h-[230px]">
                 <ResponsiveContainer>
                   <ComposedChart data={series} margin={{ top: 8, right: 8, left: -18, bottom: 0 }}>
                     <CartesianGrid {...gridProps} />
                     <XAxis dataKey="label" {...axisProps} interval="preserveStartEnd" minTickGap={24} />
-                    <YAxis {...axisProps} axisLine={false} width={44} />
+                    <YAxis {...axisProps} axisLine={false} tickFormatter={v=>fmtNum(v)} width={44} />
                     <Tooltip cursor={{ fill: '#eef2ee' }} content={({ active, payload }) => active && payload?.length ? (
                       <ChartTooltipBox title={fmtDate((payload[0].payload as DailyWeather).date)} rows={[
                         { label: "Precipitation", value: `${fmt1((payload[0].payload as DailyWeather).PRECTOTCORR)} mm`, color: '#2a78d6' },
@@ -184,24 +187,24 @@ export default function EnvironmentPage() {
                 </ResponsiveContainer>
               </div>
             </ChartFrame>
-          ) : <Unavailable title="Recent daily series unavailable" />}
+          ) : <Unavailable title={t("Recent daily series unavailable")} />}
         </Section>
       </div>
 
-      <Section title="Temperature and humidity over the last 30 days" description="Variables with different units are displayed separately. Dashed line: the same variable's monthly climatological mean (2001–2025).">
+      <Section title={t("Temperature and humidity over the last 30 days")} description={t("Variables with different units are displayed separately. Dashed line: the same variable's monthly climatological mean (2001–2025).")}>
         {q.isLoading ? <Loading /> : series.length ? (
           <div className="grid gap-6 md:grid-cols-2">
             {([
-              { key: 'T2M', clim: 'climT2m', title: "Daily mean temperature at 2 m", unit: '°C', color: '#14231d' },
-              { key: 'RH2M', clim: 'climRh', title: 'Relative humidity at 2 m', unit: '%', color: '#14231d' },
+              { key: 'T2M', clim: 'climT2m', title: t("Daily mean temperature at 2 m"), unit: '°C', color: '#14231d' },
+              { key: 'RH2M', clim: 'climRh', title: t("Relative humidity at 2 m"), unit: '%', color: '#14231d' },
             ] as const).map((v) => (
-              <ChartFrame key={v.key} title={v.title} subtitle={v.unit}>
+              <ChartFrame key={v.key} title={t(v.title)} subtitle={v.unit}>
                 <div className="h-[190px]">
                   <ResponsiveContainer>
                     <LineChart data={series} margin={{ top: 8, right: 8, left: -18, bottom: 0 }}>
                       <CartesianGrid {...gridProps} />
                       <XAxis dataKey="label" {...axisProps} interval="preserveStartEnd" minTickGap={24} />
-                      <YAxis {...axisProps} axisLine={false} width={44} domain={['auto', 'auto']} />
+                      <YAxis {...axisProps} axisLine={false} tickFormatter={v=>fmtNum(v)} width={44} domain={['auto', 'auto']} />
                       <Tooltip content={({ active, payload }) => active && payload?.length ? (
                         <ChartTooltipBox title={fmtDate((payload[0].payload as DailyWeather).date)} rows={[
                           { label: "Reanalysis", value: `${fmt1((payload[0].payload as Record<string, number>)[v.key])} ${v.unit}` },
@@ -215,23 +218,23 @@ export default function EnvironmentPage() {
               </ChartFrame>
             ))}
           </div>
-        ) : <Unavailable title="Recent daily series unavailable" />}
+        ) : <Unavailable title={t("Recent daily series unavailable")} />}
       </Section>
 
       {d && (
-        <Section title="Sources for this view">
+        <Section title={t("Sources for this view")}>
           <dl className="grid gap-x-6 gap-y-3 text-[13px] sm:grid-cols-[180px_1fr]">
-            <dt className="text-ink-3">Query point</dt>
+            <dt className="text-ink-3">{t("Query point")}</dt>
             <dd className="num text-ink">{fmtCoord(d.point.lat, d.point.lon)} ({sourceCopy(d.point.basis)})</dd>
-            <dt className="text-ink-3">Data type</dt>
+            <dt className="text-ink-3">{t("Data type")}</dt>
             <dd className="text-ink-2">{sourceCopy(d.grid_note)}</dd>
-            {rec?.provenance && (<><dt className="text-ink-3">Daily series</dt>
-              <dd className="break-all text-ink-2"><a className="text-river underline" href={rec.provenance.request_url} target="_blank" rel="noreferrer">{rec.provenance.request_url}</a><br />retrieved at {fmtUtc(rec.provenance.fetched_at)}{rec.provenance.stale ? "(cached copy; source unavailable)" : ''}</dd></>)}
-            {hourly?.provenance && (<><dt className="text-ink-3">Hourly series</dt>
+            {rec?.provenance && (<><dt className="text-ink-3">{t("Daily series")}</dt>
+              <dd className="break-all text-ink-2"><a className="text-river underline" href={rec.provenance.request_url} target="_blank" rel="noreferrer">{rec.provenance.request_url}</a><br />{t("retrieved at")} {fmtUtc(rec.provenance.fetched_at)}{rec.provenance.stale ? t("(cached copy; source unavailable)") : ''}</dd></>)}
+            {hourly?.provenance && (<><dt className="text-ink-3">{t("Hourly series")}</dt>
               <dd className="break-all text-ink-2"><a className="text-river underline" href={hourly.provenance.request_url} target="_blank" rel="noreferrer">{hourly.provenance.request_url}</a></dd></>)}
-            {hist?.provenance && (<><dt className="text-ink-3">Climatology</dt>
-              <dd className="break-all text-ink-2">{hist.range}<br /><a className="text-river underline" href={hist.provenance.request_url} target="_blank" rel="noreferrer">{hist.provenance.request_url}</a></dd></>)}
-            <dt className="text-ink-3">Forecast</dt>
+            {hist?.provenance && (<><dt className="text-ink-3">{t("Climatology")}</dt>
+              <dd className="break-all text-ink-2">{sourceCopy(hist.range)}<br /><a className="text-river underline" href={hist.provenance.request_url} target="_blank" rel="noreferrer">{hist.provenance.request_url}</a></dd></>)}
+            <dt className="text-ink-3">{t("Forecast")}</dt>
             <dd className="text-ink-2">{sourceCopy(d.forecast.note)}</dd>
           </dl>
         </Section>

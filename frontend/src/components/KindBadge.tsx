@@ -1,3 +1,4 @@
+import { t, useLocale } from '../lib/i18n'
 import { CircleSlash, Eye, Landmark, Sigma, Telescope } from 'lucide-react'
 import type { InfoKind } from '../lib/types'
 
@@ -11,11 +12,12 @@ const KIND: Record<InfoKind, { label: string; cls: string; Icon: typeof Eye; tit
 }
 
 export function KindBadge({ kind, compact = false }: { kind: InfoKind; compact?: boolean }) {
+  useLocale()
   const k = KIND[kind] ?? KIND.ausente
   return (
-    <span title={k.title} className={`inline-flex shrink-0 items-center gap-1 rounded-full font-medium ${k.cls} ${compact ? 'px-1.5 py-0.5 text-[10.5px]' : 'px-2 py-0.5 text-[11.5px]'}`}>
+    <span title={t(k.title)} className={`inline-flex shrink-0 items-center gap-1 rounded-full font-medium ${k.cls} ${compact ? 'px-1.5 py-0.5 text-[10.5px]' : 'px-2 py-0.5 text-[11.5px]'}`}>
       <k.Icon className={compact ? 'size-3' : 'size-3.5'} aria-hidden="true" />
-      {k.label}
+      {t(k.label)}
     </span>
   )
 }

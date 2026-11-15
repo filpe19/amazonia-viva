@@ -1,3 +1,4 @@
+import { t, useLocale } from '../../lib/i18n'
 import maplibregl, { type GeoJSONSource, type MapLayerMouseEvent } from 'maplibre-gl'
 import { useEffect, useRef, useState } from 'react'
 import type { DetectionProps, DetectionsFC } from '../../lib/types'
@@ -70,6 +71,7 @@ export function DetectionMap({
   data, boundary, bbox, layers, basemap, imageryDate, selectedId, onSelect,
   municipalities, selectedRegionId, onSelectRegion, overlays, className = '',
 }: Props) {
+  const { locale } = useLocale()
   const ref = useRef<HTMLDivElement>(null)
   const mapRef = useRef<maplibregl.Map | null>(null)
   const [ready, setReady] = useState(false)
@@ -137,7 +139,7 @@ export function DetectionMap({
         if (hoverId !== null) map.setFeatureState({ source: 'mun', id: hoverId }, { hover: false })
         hoverId = f.id ?? null
         if (hoverId !== null) map.setFeatureState({ source: 'mun', id: hoverId }, { hover: true })
-        tip.setLngLat(e.lngLat).setHTML(`<strong>${String(f.properties?.name ?? '')}</strong><br><span style="color:#6b7a72">select to analyse</span>`).addTo(map)
+        tip.setLngLat(e.lngLat).setHTML(`<strong>${String(f.properties?.name ?? '')}</strong><br><span style="color:#6b7a72">${t("Select to analyse")}</span>`).addTo(map)
       })
       map.on('mouseleave', 'mun-fill', () => {
         if (hoverId !== null) map.setFeatureState({ source: 'mun', id: hoverId }, { hover: false })
@@ -354,9 +356,18 @@ export function DetectionMap({
     map.setFilter('det-selected', ['==', ['get', 'id'], selectedId ?? ''])
   }, [selectedId, ready])
 
+  // MapLibre owns these native controls; update their accessible labels in place.
+  useEffect(() => {
+    const labels: [string, string][] = [['.maplibregl-ctrl-zoom-in','Zoom in'],['.maplibregl-ctrl-zoom-out','Zoom out'],['.maplibregl-ctrl-attrib-button','Toggle attribution']]
+    for (const [selector, label] of labels) {
+      const control = ref.current?.querySelector<HTMLButtonElement>(selector)
+      if (control) { control.title = t(label); control.setAttribute('aria-label', t(label)) }
+    }
+  }, [locale, ready])
+
   void selectedRegionId
   return <div className={`map-canvas-wrap ${className}`} data-map-state={mapError ? 'error' : ready ? 'ready' : 'loading'} data-feature-count={data?.features.length ?? 0}>
-    <div ref={ref} className="h-full w-full" role="application" aria-label="Satellite observation map; select a detection or municipality" />
-    {!ready && <div className="map-status" role="status">{mapError ? <>The basemap could not be loaded. <button onClick={() => setRetry(r => r + 1)}>Retry map</button></> : 'Loading geographic layers…'}</div>}
+    <div ref={ref} className="h-full w-full" role="application" aria-label={t("Satellite observation map; select a detection or municipality")} />
+    {!ready && <div className="map-status" role="status">{mapError ? <>{t("The basemap could not be loaded.")} <button onClick={() => setRetry(r => r + 1)}>{t("Retry map")}</button></> : t("Loading geographic layers…")}</div>}
   </div>
 }

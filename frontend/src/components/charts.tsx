@@ -1,3 +1,4 @@
+import { t, useLocale } from '../lib/i18n'
 import { useState, type ReactNode } from 'react'
 import type { WindRose as WindRoseData } from '../lib/types'
 import { ErrorBoundary } from './ErrorBoundary'
@@ -12,14 +13,15 @@ export const axisProps = {
 export const gridProps = { stroke: '#e3e9e3', strokeDasharray: '0', vertical: false } as const
 
 export function ChartTooltipBox({ title, rows }: { title: string; rows: { label: string; value: string; color?: string }[] }) {
+  useLocale()
   return (
     <div className="rounded-md bg-ink px-2.5 py-2 text-xs text-white shadow-lg">
-      <p className="mb-1 font-semibold">{title}</p>
+      <p className="mb-1 font-semibold">{t(title)}</p>
       {rows.map((r) => (
         <p key={r.label} className="num flex items-center gap-1.5">
           {r.color && <span className="inline-block size-2 rounded-full" style={{ background: r.color }} />}
-          <span className="text-white/75">{r.label}</span>
-          <span className="ml-auto pl-3 font-medium">{r.value}</span>
+          <span className="text-white/75">{t(r.label)}</span>
+          <span className="ml-auto pl-3 font-medium">{t(r.value)}</span>
         </p>
       ))}
     </div>
@@ -27,12 +29,13 @@ export function ChartTooltipBox({ title, rows }: { title: string; rows: { label:
 }
 
 export function ChartFrame({ title, subtitle, children, footer, actions }: { title: string; subtitle?: ReactNode; children: ReactNode; footer?: ReactNode; actions?: ReactNode }) {
+  useLocale()
   return (
     <figure className="flex min-w-0 flex-col gap-2">
       <figcaption className="flex flex-wrap items-end justify-between gap-2">
         <div className="min-w-0">
-          <h3 className="type-title text-[15px] text-ink">{title}</h3>
-          {subtitle && <p className="text-xs text-ink-3">{subtitle}</p>}
+          <h3 className="type-title text-[15px] text-ink">{t(title)}</h3>
+          {subtitle && <p className="text-xs text-ink-3">{typeof subtitle === 'string' ? t(subtitle) : subtitle}</p>}
         </div>
         {actions}
       </figcaption>
@@ -47,6 +50,7 @@ const SPEED_RAMP = ['#b7d3f6', '#86b6ef', '#5598e7', '#256abf', '#104281']
 
 /** Rosa dos ventos: frequência (%) por setor de origem, empilhada por classe de velocidade. */
 export function WindRose({ data, size = 260 }: { data: WindRoseData; size?: number }) {
+  useLocale()
   const [hover, setHover] = useState<number | null>(null)
   const c = size / 2
   const rMax = c - 26
@@ -67,7 +71,7 @@ export function WindRose({ data, size = 260 }: { data: WindRoseData; size?: numb
     <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-start">
       <div className="relative">
         <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} role="img"
-          aria-label={`Wind rose, ${data.n_hours} hours; prevailing sector ${data.prevailing_sector ?? '—'}`}>
+          aria-label={t("Wind rose, {0} hours; prevailing sector {1}", {"0": data.n_hours, "1": data.prevailing_sector ?? '—'})}>
           {rings.map((v) => (
             <circle key={v} cx={c} cy={c} r={r(v)} fill="none" stroke="#e3e9e3" />
           ))}
@@ -104,14 +108,14 @@ export function WindRose({ data, size = 260 }: { data: WindRoseData; size?: numb
         {hover != null && (
           <div className="pointer-events-none absolute left-1/2 top-1 -translate-x-1/2">
             <ChartTooltipBox
-              title={`From ${data.sectors[hover]}: ${fmt1(totals[hover])}% of hours`}
+              title={t("From {0}: {1}% of hours", {"0": data.sectors[hover], "1": fmt1(totals[hover])})}
               rows={data.speed_classes_ms.map((s, k) => ({ label: `${s} m/s`, value: `${fmt1(data.freq_pct[hover][k])}%`, color: SPEED_RAMP[k] }))}
             />
           </div>
         )}
       </div>
       <div className="flex flex-col gap-1 text-xs text-ink-2">
-        <p className="font-semibold text-ink">Speed (m/s)</p>
+        <p className="font-semibold text-ink">{t("Speed (m/s)")}</p>
         {data.speed_classes_ms.map((s, k) => (
           <p key={s} className="num flex items-center gap-2">
             <span className="inline-block h-2.5 w-4 rounded-sm" style={{ background: SPEED_RAMP[k] }} aria-hidden="true" />
@@ -125,9 +129,10 @@ export function WindRose({ data, size = 260 }: { data: WindRoseData; size?: numb
 
 /** Indicador compacto de direção (seta aponta para onde o vento vai). */
 export function WindArrow({ fromDeg, size = 40 }: { fromDeg: number; size?: number }) {
+  useLocale()
   const to = (fromDeg + 180) % 360
   return (
-    <svg width={size} height={size} viewBox="0 0 40 40" role="img" aria-label={`Wind from ${Math.round(fromDeg)}°`}>
+    <svg width={size} height={size} viewBox="0 0 40 40" role="img" aria-label={t("Wind from {0}°", {"0": Math.round(fromDeg)})}>
       <circle cx="20" cy="20" r="18" fill="#dbe9f8" />
       <g transform={`rotate(${to} 20 20)`}>
         <path d="M20 6 L26 20 L21.5 18.5 L21.5 32 L18.5 32 L18.5 18.5 L14 20 Z" fill="#104281" />

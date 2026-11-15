@@ -1,0 +1,49 @@
+PASS English default and accessible language selector
+PASS Portuguese headings, navigation and map detail
+PASS Language switch retains the same MapLibre instance, canvas and camera
+PASS Territory and observation period persist on switch
+PASS MapLibre control labels are translated
+PASS Portuguese satellite controls and original IDs
+PASS Language preference survives reload
+PASS EN desktop layout: current
+PASS EN desktop layout: history
+PASS EN calendar origins and uncertainty
+PASS EN empirical range and monthly number format
+PASS EN history observed charts render
+PASS EN history methods charts render
+PASS EN desktop layout: territory
+PASS EN desktop layout: environment
+PASS EN desktop layout: evidence
+PASS EN desktop layout: report
+PASS Report JSON bytes are identical across language switch
+PASS PT desktop layout: current
+PASS PT desktop layout: history
+PASS PT calendar origins and uncertainty
+PASS PT empirical range and monthly number format
+PASS PT history observed charts render
+PASS PT history methods charts render
+PASS PT desktop layout: territory
+PASS PT desktop layout: environment
+PASS PT desktop layout: evidence
+PASS PT desktop layout: report
+PASS Original CSV scientific headers stay unchanged
+PASS EN mobile expanded controls fit
+PASS EN mobile layout: current
+PASS EN mobile layout: history
+PASS EN mobile layout: territory
+PASS EN mobile layout: environment
+PASS EN mobile layout: evidence
+PASS EN mobile layout: report
+PASS EN mobile navigation retains territory
+PASS PT mobile expanded controls fit
+PASS PT mobile layout: current
+PASS PT mobile layout: history
+PASS PT mobile layout: territory
+PASS PT mobile layout: environment
+PASS PT mobile layout: evidence
+PASS PT mobile layout: report
+PASS PT mobile navigation retains territory
+PASS No known English labels left in Portuguese snapshots
+PASS No JavaScript, console or HTTP errors in real bilingual flows
+PASS Portuguese API error and retry are localized
+PASS Portuguese retry restores real observations

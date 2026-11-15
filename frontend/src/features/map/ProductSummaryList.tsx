@@ -1,3 +1,4 @@
+import { t, useLocale } from '../../lib/i18n'
 import { sourceCopy } from '../../lib/sourceCopy'
 import { AlertTriangle, Info } from 'lucide-react'
 import { fmt1, fmtInt, fmtUtc } from '../../lib/format'
@@ -8,6 +9,7 @@ const CONF_ORDER = ['low', 'nominal', 'high']
 const CONF_LABEL: Record<string, string> = { low: "low", nominal: 'nominal', high: "high" }
 
 export function ProductSummaryList({ meta }: { meta: DetectionsMeta }) {
+  useLocale()
   return (
     <div className="flex flex-col divide-y divide-rule/70">
       {meta.products.map((p) => {
@@ -18,7 +20,7 @@ export function ProductSummaryList({ meta }: { meta: DetectionsMeta }) {
             <div className="flex items-baseline justify-between gap-2">
               <h3 className="flex items-center gap-1.5 text-[13px] font-semibold text-ink">
                 <span className="inline-block size-2.5 rounded-full" style={{ background: st.color }} aria-hidden="true" />
-                {st.label}
+                {t(st.label)}
               </h3>
               <span className="num text-xl font-semibold text-ink">{p.available ? fmtInt(total) : '—'}</span>
             </div>
@@ -30,36 +32,36 @@ export function ProductSummaryList({ meta }: { meta: DetectionsMeta }) {
             )}
             {p.available && (
               <dl className="mt-1.5 grid grid-cols-[auto_1fr] gap-x-3 gap-y-0.5 text-xs text-ink-2">
-                <dt className="text-ink-3">Latest observation</dt>
-                <dd className="num">{p.latest_observation_utc ? fmtUtc(p.latest_observation_utc) : 'none in this window'}</dd>
+                <dt className="text-ink-3">{t("Latest observation")}</dt>
+                <dd className="num">{p.latest_observation_utc ? fmtUtc(p.latest_observation_utc) : t("none in this window")}</dd>
                 {p.by_daynight && (
                   <>
-                    <dt className="text-ink-3">Day / night</dt>
+                    <dt className="text-ink-3">{t("Day / night")}</dt>
                     <dd className="num">{fmtInt(p.by_daynight.D ?? 0)} / {fmtInt(p.by_daynight.N ?? 0)}</dd>
                   </>
                 )}
                 {p.by_confidence && total > 0 && (
                   <>
-                    <dt className="text-ink-3">Confidence</dt>
+                    <dt className="text-ink-3">{t("Confidence")}</dt>
                     <dd className="num">
-                      {CONF_ORDER.filter((c) => p.by_confidence?.[c]).map((c) => `${CONF_LABEL[c]} ${fmtInt(p.by_confidence?.[c])}`).join(', ')}
+                      {CONF_ORDER.filter((c) => p.by_confidence?.[c]).map((c) => `${t(CONF_LABEL[c])} ${fmtInt(p.by_confidence?.[c])}`).join(', ')}
                     </dd>
                   </>
                 )}
                 {p.confidence_pct_quartiles && (
                   <>
-                    <dt className="text-ink-3">Median confidence</dt>
-                    <dd className="num">{fmtInt(p.confidence_pct_quartiles[1])}% (escala MODIS)</dd>
+                    <dt className="text-ink-3">{t("Median confidence")}</dt>
+                    <dd className="num">{fmtInt(p.confidence_pct_quartiles[1])}{t("% (MODIS scale)")}</dd>
                   </>
                 )}
                 {p.frp_mw?.median != null && (
                   <>
-                    <dt className="text-ink-3">FRP median / max.</dt>
+                    <dt className="text-ink-3">{t("FRP median / max.")}</dt>
                     <dd className="num">{fmt1(p.frp_mw.median)} / {fmt1(p.frp_mw.max)} MW</dd>
                   </>
                 )}
-                <dt className="text-ink-3">Resolution</dt>
-                <dd>{st.resolution}, {p.processing === 'NRT' ? 'near real time' : "standard processing"}</dd>
+                <dt className="text-ink-3">{t("Resolution")}</dt>
+                <dd>{st.resolution}, {p.processing === 'NRT' ? t("near real time") : t("standard processing")}</dd>
               </dl>
             )}
             {p.provenance?.warnings?.map((w) => (
@@ -72,7 +74,7 @@ export function ProductSummaryList({ meta }: { meta: DetectionsMeta }) {
           </section>
         )
       })}
-      <p className="pt-3 text-[11.5px] leading-relaxed text-ink-3">Counts are per product. Repeated observations do not represent unique fires.</p>
+      <p className="pt-3 text-[11.5px] leading-relaxed text-ink-3">{t("Counts are per product. Repeated observations do not represent unique fires.")}</p>
     </div>
   )
 }

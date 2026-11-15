@@ -1,3 +1,4 @@
+import { getLocale, t } from './i18n'
 /** English presentation of descriptive API notes. IDs, enums, original payloads,
  * CSVs and JSON exports are never rewritten. Geographic proper names are retained. */
 const NOTES: Record<string,string> = {
@@ -103,6 +104,7 @@ const NOTES: Record<string,string> = {
 
 export function sourceCopy(value: string | null | undefined): string {
   if (!value) return '—'
+  if (getLocale() === 'pt-BR') return t(value)
   if (NOTES[value]) return NOTES[value]
   let text = value
   const rules: [RegExp, string][] = [

@@ -1,3 +1,4 @@
+import { t, useLocale } from '../lib/i18n'
 import { useMemo, useState } from 'react'
 import { computePasses, latestPassByProduct, type Pass } from '../lib/passes'
 import { productStyle } from '../lib/products'
@@ -10,6 +11,7 @@ import { fmtAgo, fmtInt, fmtUtc } from '../lib/format'
  * detecções naquela passagem. A linha vertical marca o momento da consulta.
  */
 export function OverpassRibbon({ data, products }: { data: DetectionsFC | undefined; products: string[] }) {
+  useLocale()
   const [hover, setHover] = useState<{ pass: Pass; x: number } | null>(null)
   const meta = data?.metadata
   const t0 = meta ? Date.parse(meta.window.start_utc) : 0
@@ -39,9 +41,9 @@ export function OverpassRibbon({ data, products }: { data: DetectionsFC | undefi
   return (
     <div className="relative">
       <div className="mb-1.5 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-        <h2 className="type-title text-[15px] text-ink">Satellite overpasses with detections</h2>
+        <h2 className="type-title text-[15px] text-ink">{t("Satellite overpasses with detections")}</h2>
         <p className="text-xs text-ink-3">
-          Bars: detection counts per overpass (square-root scale). Times in UTC.
+          {t("Bars: detection counts per overpass (square-root scale). Times in UTC.")}
         </p>
       </div>
       <div className="grid grid-cols-[minmax(92px,auto)_1fr] gap-x-3">
@@ -56,7 +58,7 @@ export function OverpassRibbon({ data, products }: { data: DetectionsFC | undefi
                   {st.short}
                 </span>
                 <span className="num text-[11px] leading-tight text-ink-3">
-                  {lp ? `latest ${fmtUtc(new Date(lp.end).toISOString(), false).replace(' UTC', '')}` : "no detections"}
+                  {lp ? t("latest {0}", {"0": fmtUtc(new Date(lp.end).toISOString(), false).replace(' UTC', '')}) : t("no detections")}
                 </span>
               </div>
             )
@@ -64,7 +66,7 @@ export function OverpassRibbon({ data, products }: { data: DetectionsFC | undefi
         </div>
         <div className="relative min-w-0">
           <svg viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="none" className="h-auto w-full" style={{ height: H }} role="img"
-            aria-label="Timeline of satellite overpasses with detections in the territory">
+            aria-label={t("Timeline of satellite overpasses with detections in the territory")}>
             {lanes.map((pid, i) => (
               <line key={pid} x1={0} x2={W} y1={(i + 1) * laneH - 4} y2={(i + 1) * laneH - 4} stroke="#cfd8d0" strokeWidth={1} vectorEffect="non-scaling-stroke" />
             ))}
@@ -104,16 +106,16 @@ export function OverpassRibbon({ data, products }: { data: DetectionsFC | undefi
               )
             })}
           </div>
-          <span className="absolute -top-0.5 right-0 rounded bg-ink px-1 text-[10px] font-medium text-white">query time</span>
+          <span className="absolute -top-0.5 right-0 rounded bg-ink px-1 text-[10px] font-medium text-white">{t("query time")}</span>
           {hover && (
             <div
               className="pointer-events-none absolute z-10 -translate-x-1/2 -translate-y-full rounded-md bg-ink px-2 py-1.5 text-xs text-white shadow-lg"
               style={{ left: `${(hover.x / W) * 100}%`, top: 0 }}
               role="tooltip"
             >
-              <p className="font-semibold">{productStyle(hover.pass.product).label}</p>
+              <p className="font-semibold">{t(productStyle(hover.pass.product).label)}</p>
               <p className="num">{fmtUtc(new Date(hover.pass.start).toISOString())}</p>
-              <p className="num">{fmtInt(hover.pass.count)} detections in territory</p>
+              <p className="num">{fmtInt(hover.pass.count)} {t("detections in territory")}</p>
               <p className="text-white/70">{fmtAgo(new Date(hover.pass.end).toISOString())}</p>
             </div>
           )}

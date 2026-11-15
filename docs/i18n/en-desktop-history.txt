@@ -1,0 +1,928 @@
+Skip to content
+Amazônia Viva
+Environmental intelligence
+Explore the evidence
+Current activity
+Latest satellite observations
+Fire history
+Records & experimental harmonization
+Territory analysis
+Environment & supporting evidence
+Environmental context
+Evidence & exports
+
+Evidence before decisions.
+
+Observations, context and uncertainty in one place.
+
+NASA FIRMS
+Independent research platform
+NASA Space Apps Challenge 2026
+Amazon basin
+/
+Fire history
+Portel (PA)— pilot
+Almeirim (PA)
+Santarém (PA)
+Brasil
+Pará
+Abaetetuba (PA)
+Abel Figueiredo (PA)
+Acará (PA)
+Afuá (PA)
+Água Azul do Norte (PA)
+Alenquer (PA)
+Almeirim (PA)
+Altamira (PA)
+Anajás (PA)
+Ananindeua (PA)
+Anapu (PA)
+Augusto Corrêa (PA)
+Aurora do Pará (PA)
+Aveiro (PA)
+Bagre (PA)
+Baião (PA)
+Bannach (PA)
+Barcarena (PA)
+Belém (PA)
+Belterra (PA)
+Benevides (PA)
+Bom Jesus do Tocantins (PA)
+Bonito (PA)
+Bragança (PA)
+Brasil Novo (PA)
+Brejo Grande do Araguaia (PA)
+Breu Branco (PA)
+Breves (PA)
+Bujaru (PA)
+Cachoeira do Arari (PA)
+Cachoeira do Piriá (PA)
+Cametá (PA)
+Canaã dos Carajás (PA)
+Capanema (PA)
+Capitão Poço (PA)
+Castanhal (PA)
+Chaves (PA)
+Colares (PA)
+Conceição do Araguaia (PA)
+Concórdia do Pará (PA)
+Cumaru do Norte (PA)
+Curionópolis (PA)
+Curralinho (PA)
+Curuá (PA)
+Curuçá (PA)
+Dom Eliseu (PA)
+Eldorado do Carajás (PA)
+Faro (PA)
+Floresta do Araguaia (PA)
+Garrafão do Norte (PA)
+Goianésia do Pará (PA)
+Gurupá (PA)
+Igarapé-Açu (PA)
+Igarapé-Miri (PA)
+Inhangapi (PA)
+Ipixuna do Pará (PA)
+Irituia (PA)
+Itaituba (PA)
+Itupiranga (PA)
+Jacareacanga (PA)
+Jacundá (PA)
+Juruti (PA)
+Limoeiro do Ajuru (PA)
+Mãe do Rio (PA)
+Magalhães Barata (PA)
+Marabá (PA)
+Maracanã (PA)
+Marapanim (PA)
+Marituba (PA)
+Medicilândia (PA)
+Melgaço (PA)
+Mocajuba (PA)
+Moju (PA)
+Mojuí dos Campos (PA)
+Monte Alegre (PA)
+Muaná (PA)
+Nova Esperança do Piriá (PA)
+Nova Ipixuna (PA)
+Nova Timboteua (PA)
+Novo Progresso (PA)
+Novo Repartimento (PA)
+Óbidos (PA)
+Oeiras do Pará (PA)
+Oriximiná (PA)
+Ourém (PA)
+Ourilândia do Norte (PA)
+Pacajá (PA)
+Palestina do Pará (PA)
+Paragominas (PA)
+Parauapebas (PA)
+Pau D'Arco (PA)
+Peixe-Boi (PA)
+Piçarra (PA)
+Placas (PA)
+Ponta de Pedras (PA)
+Portel (PA)
+Porto de Moz (PA)
+Prainha (PA)
+Primavera (PA)
+Quatipuru (PA)
+Redenção (PA)
+Rio Maria (PA)
+Rondon do Pará (PA)
+Rurópolis (PA)
+Salinópolis (PA)
+Salvaterra (PA)
+Santa Bárbara do Pará (PA)
+Santa Cruz do Arari (PA)
+Santa Izabel do Pará (PA)
+Santa Luzia do Pará (PA)
+Santa Maria das Barreiras (PA)
+Santa Maria do Pará (PA)
+Santana do Araguaia (PA)
+Santarém (PA)
+Santarém Novo (PA)
+Santo Antônio do Tauá (PA)
+São Caetano de Odivelas (PA)
+São Domingos do Araguaia (PA)
+São Domingos do Capim (PA)
+São Félix do Xingu (PA)
+São Francisco do Pará (PA)
+São Geraldo do Araguaia (PA)
+São João da Ponta (PA)
+São João de Pirabas (PA)
+São João do Araguaia (PA)
+São Miguel do Guamá (PA)
+São Sebastião da Boa Vista (PA)
+Sapucaia (PA)
+Senador José Porfírio (PA)
+Soure (PA)
+Tailândia (PA)
+Terra Alta (PA)
+Terra Santa (PA)
+Tomé-Açu (PA)
+Tracuateua (PA)
+Trairão (PA)
+Tucumã (PA)
+Tucuruí (PA)
+Ulianópolis (PA)
+Uruará (PA)
+Vigia (PA)
+Viseu (PA)
+Vitória do Xingu (PA)
+Xinguara (PA)
+Language
+PT-BR
+EN
+Data service connected
+Fire history
+Read the original sensor records or explore their experimental conversion into a common reference. Observations and estimates are always identified separately.
+Experimental calendar
+Observed records
+Methods & coverage
+A common view of fire activity
+Explore the monthly record in NOAA-20 equivalent detections. Earlier MODIS Aqua observations are experimentally converted; recent VIIRS observations retain their original counts.
+Experimental harmonization
+
+This is a comparison tool. It is not an operationally validated product or a reconstruction of individual fires.
+
+2002-07 — 2025-12
+Observed data
+VIIRS NOAA-20
+Experimentally converted data
+MODIS Aqua · ~ estimate
+Unavailable data
+—
+Year	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec
+2002	
+—
+	
+—
+	
+—
+	
+—
+	
+—
+	
+—
+	
+~42
+	
+~327
+	
+~618
+	
+~931
+	
+~1.6k
+	
+~483
+
+2003	
+~120
+	
+~0
+	
+~12
+	
+~6
+	
+~6
+	
+~18
+	
+~23
+	
+~130
+	
+~204
+	
+~485
+	
+~1.6k
+	
+~909
+
+2004	
+~36
+	
+~0
+	
+~0
+	
+~0
+	
+~0
+	
+~6
+	
+~50
+	
+~203
+	
+~524
+	
+~886
+	
+~2.4k
+	
+~1.0k
+
+2005	
+~191
+	
+~6
+	
+~0
+	
+~0
+	
+~12
+	
+~48
+	
+~143
+	
+~242
+	
+~262
+	
+~989
+	
+~1.7k
+	
+~414
+
+2006	
+~12
+	
+~6
+	
+~0
+	
+~0
+	
+~0
+	
+~24
+	
+~15
+	
+~254
+	
+~332
+	
+~1.2k
+	
+~1.3k
+	
+~972
+
+2007	
+~78
+	
+~0
+	
+~0
+	
+~12
+	
+~18
+	
+~54
+	
+~58
+	
+~288
+	
+~507
+	
+~938
+	
+~1.7k
+	
+~132
+
+2008	
+~48
+	
+~12
+	
+~0
+	
+~0
+	
+~0
+	
+~30
+	
+~108
+	
+~282
+	
+~332
+	
+~1.9k
+	
+~2.1k
+	
+~301
+
+2009	
+~78
+	
+~6
+	
+~0
+	
+~0
+	
+~0
+	
+~0
+	
+~42
+	
+~259
+	
+~495
+	
+~1.6k
+	
+~2.8k
+	
+~640
+
+2010	
+~108
+	
+~24
+	
+~12
+	
+~0
+	
+~0
+	
+~12
+	
+~15
+	
+~192
+	
+~245
+	
+~1.2k
+	
+~1.6k
+	
+~332
+
+2011	
+~0
+	
+~0
+	
+~0
+	
+~0
+	
+~0
+	
+~0
+	
+~46
+	
+~152
+	
+~285
+	
+~698
+	
+~912
+	
+~458
+
+2012	
+~138
+	
+~0
+	
+~0
+	
+~0
+	
+~6
+	
+~36
+	
+~93
+	
+~310
+	
+~443
+	
+~1.1k
+	
+~2.2k
+	
+~194
+
+2013	
+~0
+	
+~0
+	
+~0
+	
+~0
+	
+~0
+	
+~24
+	
+~35
+	
+~107
+	
+~315
+	
+~1.3k
+	
+~1.1k
+	
+~972
+
+2014	
+~30
+	
+~0
+	
+~0
+	
+~0
+	
+~0
+	
+~6
+	
+~8
+	
+~118
+	
+~600
+	
+~1.2k
+	
+~2.3k
+	
+~1.1k
+
+2015	
+~42
+	
+~0
+	
+~0
+	
+~0
+	
+~0
+	
+~0
+	
+~35
+	
+~158
+	
+~588
+	
+~2.4k
+	
+~3.6k
+	
+~1.5k
+
+2016	
+~42
+	
+~18
+	
+~18
+	
+~6
+	
+~0
+	
+~48
+	
+~73
+	
+~406
+	
+~816
+	
+~1.8k
+	
+~3.8k
+	
+~966
+
+2017	
+~0
+	
+~0
+	
+~0
+	
+~0
+	
+~6
+	
+~24
+	
+~182
+	
+~919
+	
+~1.5k
+	
+~2.9k
+	
+~4.5k
+	
+~1.5k
+
+2018	
+~66
+	
+~0
+	
+~0
+	
+~0
+	
+~0
+	
+~18
+	
+~19
+	
+~299
+	
+~524
+	
+~4.6k
+	
+~3.0k
+	
+~194
+
+2019	
+~30
+	
+~6
+	
+~0
+	
+~0
+	
+~0
+	
+~6
+	
+~39
+	
+~259
+	
+~519
+	
+~3.3k
+	
+~2.9k
+	
+~414
+
+2020	
+~30
+	
+~0
+	
+~0
+	
+~6
+	
+~6
+	
+~90
+	
+~216
+	
+~265
+	
+~1.9k
+	
+~5.1k
+	
+~872
+	
+~238
+
+2021	
+1
+	
+23
+	
+1
+	
+0
+	
+3
+	
+10
+	
+67
+	
+473
+	
+978
+	
+3.0k
+	
+1.7k
+	
+52
+
+2022	
+8
+	
+1
+	
+6
+	
+1
+	
+2
+	
+15
+	
+196
+	
+1.0k
+	
+5.8k
+	
+6.8k
+	
+1.4k
+	
+269
+
+2023	
+20
+	
+1
+	
+0
+	
+0
+	
+6
+	
+61
+	
+158
+	
+602
+	
+3.2k
+	
+8.5k
+	
+6.1k
+	
+347
+
+2024	
+78
+	
+0
+	
+0
+	
+0
+	
+0
+	
+20
+	
+142
+	
+902
+	
+2.4k
+	
+4.8k
+	
+6.0k
+	
+593
+
+2025	
+5
+	
+0
+	
+3
+	
+0
+	
+1
+	
+2
+	
+9
+	
+46
+	
+134
+	
+1.2k
+	
+1.3k
+	
+500
+Read the calendar
+
+Select a month to inspect its origin, value and conversion range. Keyboard and touch are supported.
+
+Columns
+Calendar months, UTC
+Rows
+Years in the imported archive
+Color intensity
+Monthly activity, not fire severity
+Zero
+Zero detections in the imported data; different from unavailable
+
+A detection is not an individual fire.
+
+How uncertain is the conversion?
+
+Leave-one-year-out evaluation on active months in the overlap period. Errors are absolute percentages of the observed VIIRS count.
+
+15.9%
+Median error
+31.5%
+90th percentile error
+25
+Active test months
+2021–2025
+
+The P90 is an error threshold exceeded by the worst 10% of evaluated months, not a 90% accuracy score. The evaluation uses ≥30 detections in both products. Small-count months are not represented by these error statistics.
+
+What does “equivalent detection” mean?
+Annual equivalent detections
+
+Bars: central value. Whiskers: summed empirical conversion ranges, not a calibrated annual confidence interval.
+
+2002
+2004
+2006
+2008
+2010
+2012
+2014
+2016
+2018
+2020
+2022
+2025
+0
+5,000
+10,000
+15,000
+20,000
+Unusual months in the experimental series
+Month	Detections	Other-year median	Position	robust z
+
+Aug/25	46	265	below all previous years	-2.02
+
+Nov/24	6,044	1,720.3	P96	5.24
+
+Sep/24	2,398	518.5	P91	6.22
+
+Aug/24	902	259.3	P91	6.41
+
+Nov/23	6,065	1,720.3	above all previous years	5.27
+
+Oct/23	8,496	1,306.1	above all previous years	10.42
+
+Sep/23	3,160	518.5	P96	8.74
+
+Jun/23	61	17.9	P96	2.43
+
+Oct/22	6,826	1,306.1	P96	8.00
+
+Sep/22	5,752	518.5	above all previous years	17.31
+
+Aug/22	1,046	259.3	above all previous years	7.84
+
+Jul/22	196	46.3	P96	3.73
+
+Feb/21	23	0	P96	—
+
+Oct/20	5,127	1,306.1	P91	5.54
+
+Jul/20	216	46.3	above all previous years	4.24
+
+Jun/20	89	17.9	above all previous years	4.05
+
+Dec/17	1,486	457.7	P96	3.16
+
+Nov/17	4,530	1,720.3	P91	3.41
+
+Aug/17	918	259.3	P96	6.58
+
+Jul/17	181	46.3	P91	3.37
+
+Mar/16	17	0	above all previous years	—
+
+Feb/16	17	0	P91	—
+
+Dec/15	1,498	457.7	above all previous years	3.20
+
+Dec/14	1,103	457.7	P91	1.98
+
+Jan/12	137	32.9	P96	2.36
+
+Mar/10	11	0	P93	—
+
+Feb/10	23	0	above all previous years	—
+
+Jun/07	53	17.9	P91	2.02
+
+May/07	17	0	above all previous years	—
+
+Apr/07	11	0	above all previous years	—
+
+May/05	11	0	P96	—
+
+Jan/05	191	32.9	above all previous years	3.58
+
+Mar/03	11	0	P93	—
+
+Jan/03	119	32.9	P91	1.96
+
+Compared with the same calendar month in other years: P10/P90, |robust z| ≥1.5 and an absolute difference ≥10. Conversion uncertainty also affects this comparison.
+
+Keep the evidence
+
+Original records and the experimental series remain separate exports.
+
+Experimental series CSV
+Export original observations
+
+Source: NASA FIRMS archive. Units: NOAA-20 equivalent detections per month. Neither count nor conversion measures burned area.
+
+0

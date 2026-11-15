@@ -1,0 +1,674 @@
+Skip to content
+Amazônia Viva
+Environmental intelligence
+Explore the evidence
+Current activity
+Latest satellite observations
+Fire history
+Records & experimental harmonization
+Territory analysis
+Environment & supporting evidence
+Environmental context
+Evidence & exports
+
+Evidence before decisions.
+
+Observations, context and uncertainty in one place.
+
+NASA FIRMS
+Independent research platform
+NASA Space Apps Challenge 2026
+Amazon basin
+/
+Territory report
+Portel (PA)— pilot
+Almeirim (PA)
+Santarém (PA)
+Brasil
+Pará
+Abaetetuba (PA)
+Abel Figueiredo (PA)
+Acará (PA)
+Afuá (PA)
+Água Azul do Norte (PA)
+Alenquer (PA)
+Almeirim (PA)
+Altamira (PA)
+Anajás (PA)
+Ananindeua (PA)
+Anapu (PA)
+Augusto Corrêa (PA)
+Aurora do Pará (PA)
+Aveiro (PA)
+Bagre (PA)
+Baião (PA)
+Bannach (PA)
+Barcarena (PA)
+Belém (PA)
+Belterra (PA)
+Benevides (PA)
+Bom Jesus do Tocantins (PA)
+Bonito (PA)
+Bragança (PA)
+Brasil Novo (PA)
+Brejo Grande do Araguaia (PA)
+Breu Branco (PA)
+Breves (PA)
+Bujaru (PA)
+Cachoeira do Arari (PA)
+Cachoeira do Piriá (PA)
+Cametá (PA)
+Canaã dos Carajás (PA)
+Capanema (PA)
+Capitão Poço (PA)
+Castanhal (PA)
+Chaves (PA)
+Colares (PA)
+Conceição do Araguaia (PA)
+Concórdia do Pará (PA)
+Cumaru do Norte (PA)
+Curionópolis (PA)
+Curralinho (PA)
+Curuá (PA)
+Curuçá (PA)
+Dom Eliseu (PA)
+Eldorado do Carajás (PA)
+Faro (PA)
+Floresta do Araguaia (PA)
+Garrafão do Norte (PA)
+Goianésia do Pará (PA)
+Gurupá (PA)
+Igarapé-Açu (PA)
+Igarapé-Miri (PA)
+Inhangapi (PA)
+Ipixuna do Pará (PA)
+Irituia (PA)
+Itaituba (PA)
+Itupiranga (PA)
+Jacareacanga (PA)
+Jacundá (PA)
+Juruti (PA)
+Limoeiro do Ajuru (PA)
+Mãe do Rio (PA)
+Magalhães Barata (PA)
+Marabá (PA)
+Maracanã (PA)
+Marapanim (PA)
+Marituba (PA)
+Medicilândia (PA)
+Melgaço (PA)
+Mocajuba (PA)
+Moju (PA)
+Mojuí dos Campos (PA)
+Monte Alegre (PA)
+Muaná (PA)
+Nova Esperança do Piriá (PA)
+Nova Ipixuna (PA)
+Nova Timboteua (PA)
+Novo Progresso (PA)
+Novo Repartimento (PA)
+Óbidos (PA)
+Oeiras do Pará (PA)
+Oriximiná (PA)
+Ourém (PA)
+Ourilândia do Norte (PA)
+Pacajá (PA)
+Palestina do Pará (PA)
+Paragominas (PA)
+Parauapebas (PA)
+Pau D'Arco (PA)
+Peixe-Boi (PA)
+Piçarra (PA)
+Placas (PA)
+Ponta de Pedras (PA)
+Portel (PA)
+Porto de Moz (PA)
+Prainha (PA)
+Primavera (PA)
+Quatipuru (PA)
+Redenção (PA)
+Rio Maria (PA)
+Rondon do Pará (PA)
+Rurópolis (PA)
+Salinópolis (PA)
+Salvaterra (PA)
+Santa Bárbara do Pará (PA)
+Santa Cruz do Arari (PA)
+Santa Izabel do Pará (PA)
+Santa Luzia do Pará (PA)
+Santa Maria das Barreiras (PA)
+Santa Maria do Pará (PA)
+Santana do Araguaia (PA)
+Santarém (PA)
+Santarém Novo (PA)
+Santo Antônio do Tauá (PA)
+São Caetano de Odivelas (PA)
+São Domingos do Araguaia (PA)
+São Domingos do Capim (PA)
+São Félix do Xingu (PA)
+São Francisco do Pará (PA)
+São Geraldo do Araguaia (PA)
+São João da Ponta (PA)
+São João de Pirabas (PA)
+São João do Araguaia (PA)
+São Miguel do Guamá (PA)
+São Sebastião da Boa Vista (PA)
+Sapucaia (PA)
+Senador José Porfírio (PA)
+Soure (PA)
+Tailândia (PA)
+Terra Alta (PA)
+Terra Santa (PA)
+Tomé-Açu (PA)
+Tracuateua (PA)
+Trairão (PA)
+Tucumã (PA)
+Tucuruí (PA)
+Ulianópolis (PA)
+Uruará (PA)
+Vigia (PA)
+Viseu (PA)
+Vitória do Xingu (PA)
+Xinguara (PA)
+Language
+PT-BR
+EN
+Data service connected
+Back
+Download JSON
+Print or save PDF
+
+Territory evidence report
+
+Portel (PA)
+
+Generated 15 Nov 2026 03:17 UTC (15/11 00:17 (Brasília, UTC−3)). Amazônia Viva research platform.
+
+Observation
+Estimate
+Forecast
+External indicator
+Unavailable
+IBGE boundary
+Federal conservation units
+Federal settlements
+Censipam events
+
+Points: VIIRS NOAA-20 (amber) and NOAA-21 (blue) detections over the last 7 days.
+
+Exploratory screening
+Estimate
+
+Investigation checklist
+
+3 of 4 evaluated criteria met.
+
+Exploratory screening for investigation and discussion. Thresholds are not calibrated or operationally validated. This does not estimate risk, cause or fire spread.
+
+Area (IBGE boundary)
+25,385 km²
+Population (2022 Census)
+62,503
+IBGE code
+1505809
+Censipam events
+98
+1
+What was detected?
+Observation
+
+NOAA-20 (VIIRS)
+
+1,123
+
+latest: 14 Nov 2026 16:47 UTC
+
+14/11 13:47 (Brasília, UTC−3)
+
+NOAA-21 (VIIRS)
+
+1,225
+
+latest: 14 Nov 2026 17:30 UTC
+
+14/11 14:30 (Brasília, UTC−3)
+
+Repeated observations
+
+34
+
+cells of ~11 km with detections on ≥5 recent complete days
+
+Window: last 7 days through 15 Nov 2026 03:17 UTC. Source: NASA FIRMS (VIIRS 375 m, near real time; nominal latency up to ~3 h). Each detection is a thermal-anomaly pixel, not an individual fire.
+
+Fire events reported by Censipam
+External indicator
+
+98 events intersect this territory: 53 active, 45 under observation.
+
+Event	Status	Latest observation	Persistence	Censipam index	Official areas reported by source
+7206145	active	15 Nov 2026 00:40 UTC	0 days	16.0
++1,037.6%
+	—
+7067280	active	15 Nov 2026 00:05 UTC	35 days	35.6
+-1.1%
+	PDS LIBERDADE I
+7147694	active	15 Nov 2026 00:05 UTC	15 days	41.8
+-1.7%
+	PDS LIBERDADE I
+7167337	active	15 Nov 2026 00:05 UTC	10 days	39.3
++30.4%
+	—
+7193883	active	15 Nov 2026 00:05 UTC	3 days	11.0
+-44.3%
+	—
+7196998	active	15 Nov 2026 00:05 UTC	2 days	19.1
++171.6%
+	PA BOM JARDIM
+7202296	active	15 Nov 2026 00:05 UTC	1 days	23.1
++6.8%
+	PDS LIBERDADE I
+7202304	active	15 Nov 2026 00:05 UTC	1 days	22.5
++6.0%
+	PA RIO CURURUÍ
+7203743	active	15 Nov 2026 00:05 UTC	0 days	13.4
++1,530.4%
+	—
+7203957	active	15 Nov 2026 00:05 UTC	0 days	13.3
+-5.5%
+	—
+7205128	active	15 Nov 2026 00:05 UTC	0 days	11.9
++103.7%
+	—
+7173827	active	14 Nov 2026 22:30 UTC	9 days	34.4
++5.6%
+	—
+
+The 12 most recently observed events. Censipam response priority index: an external operational indicator intended to support brigade activation. Its formula and weights are not published in a verifiable format. The source FAQ lists components including area, FRP, duration, speed, area change and detection count. The value is displayed as supplied and is not used by this platform's screening criteria. Event area is not shown because the API does not document the unit of area_total_evento.
+
+2
+When was it observed?
+Observation
+Satellite	08 Nov	09 Nov	10 Nov	11 Nov	12 Nov	13 Nov	14 Nov
+
+NOAA-20
+	
+406
+	
+102
+	
+44
+	
+116
+	
+175
+	
+166
+	
+114
+
+
+NOAA-21
+	
+448
+	
+225
+	
+63
+	
+185
+	
+63
+	
+60
+	
+181
+Latest overpass with a detection, NOAA-20 (VIIRS): 14 Nov 2026 16:47 UTC (14/11 13:47 (Brasília, UTC−3))
+Latest overpass with a detection, NOAA-21 (VIIRS): 14 Nov 2026 17:30 UTC (14/11 14:30 (Brasília, UTC−3))
+
+Counts by UTC day; today is incomplete. Polar satellites observe at discrete overpasses. A day without detections may lack useful observations because of clouds.
+
+3
+Is this activity unusual?
+Estimate
+
+MODIS (Terra & Aqua)
+
+08 Nov 2026 to 14 Nov 2026 (7 complete UTC days)
+
+05
+10
+15
+20
+25
+current
+Current
+410
+Observation
+Median (25 years)
+121
+Estimate
+Position
+P92
+
+Same instrument: MODIS_NRT (near real time) × MODIS_SP (archive 2001–2025).
+
+VIIRS NOAA-20
+
+08 Nov 2026 to 14 Nov 2026 (7 complete UTC days)
+
+21
+22
+23
+24
+25
+current
+Current
+1,123
+Observation
+Median (5 years)
+595
+Estimate
+Position
+P60
+
+Same instrument: VIIRS_NOAA20_NRT (near real time) × VIIRS_NOAA20_SP (archive 2021–2025).
+
+Harmonized series (experimental)
+experimental
+
+08 Nov 2026 to 14 Nov 2026 (7 complete UTC days)
+
+05
+10
+15
+20
+25
+current
+Current
+1,123
+Observation
+Median (24 years)
+552.7
+Estimate
+Position
+P83
+
+Current: observed NOAA-20. Historical: observed NOAA-20 in 2021–2025, or seasonally converted MODIS Aqua before 2021. Experimental series; not operationally validated.
+
+MODIS × VIIRS comparison for this territory
+Estimate
+
+In 2021–2025 (60 paired months), VIIRS NOAA-20 recorded 6.0× the MODIS Aqua detection count (interquartile range 5.6–6.9); Spearman 0.94. Median spatial agreement (Jaccard, grid size 0.1°, months with ≥ 8 cells): 0.38. The original sensor counts remain separate. Experimental conversions are shown only with their method and uncertainty. View full analysis.
+
+Exploratory investigation criteria
+Estimate
+
+Repeated activity (VIIRS NOAA-20/NOAA-21)
+
+Criterion: At least one 0.1° cell (~11 km) with a VIIRS detection on at least 5 of the last 7 complete UTC days. Daily presence is used; satellite counts are not added.
+
+Uncertainty: Clouds and overpass timing affect daily detection availability. A fixed grid may split the same thermal source across cells.
+
+met
+34 célula(s)
+
+Activity above the historical range (MODIS Terra and Aqua)
+
+Criterion: Window count at or above the same-period historical 90th percentile, using the same instrument
+
+Uncertainty: Based on 25 years; requires ≥5. Terra/Aqua orbital drift is not corrected.
+
+met
+percentile 92
+
+Activity above the historical range (VIIRS NOAA-20)
+
+Criterion: Window count at or above the same-period historical 90th percentile, using the same instrument
+
+Uncertainty: Based on 5 years; requires ≥5.
+
+not met
+percentile 60
+
+Precipitation below climatology (14 days)
+
+Criterion: Accumulated precipitation below 50% of the NASA POWER 2001–2025 climatological expectation
+
+Uncertainty: Approximately 50 km reanalysis grid at a single point. Convective precipitation can vary substantially across the territory.
+
+met
+30% do esperado
+
+Screening rule: Existing screening rule: no criteria met, one criterion met, or two or more criteria met. These categories are not a calibrated risk rating.. This is not a risk index or a forecast.
+
+Supporting facts, with information type and source
+
+Observation
+NOAA-20 (VIIRS): 1.123 detections over the last 7 days; latest observation at 14/11/2026 16:47 UTC. (VIIRS_NOAA20_NRT)
+Observation
+NOAA-21 (VIIRS): 1.225 detections over the last 7 days; latest observation at 14/11/2026 17:30 UTC. (VIIRS_NOAA21_NRT)
+Estimate
+MODIS (Terra e Aqua), 08/11 to 14/11: 410 detections. Same-period median over 25 years (2001–2025): 121. (MODIS_NRT × MODIS_SP)
+Estimate
+VIIRS NOAA-20, 08/11 to 14/11: 1.123 detections. Same-period median over 5 years (2021–2025): 595. (VIIRS_NOAA20_NRT × VIIRS_NOAA20_SP)
+Estimate
+Experimental harmonized series (NOAA-20 equivalent), same period over 24 years (2002–2025): median 552,7; current 1.123 (position: percentilee 83). (VIIRS_NOAA20_NRT × (VIIRS_NOAA20_SP + MODIS Aqua convertido))
+Estimate
+Precipitation over the 14 days through 11/11/2026: 10,5 mm (2001–2025 climatology for this period: 35,1 mm). (NASA POWER (reanálise))
+Observation
+Territory population: 62.503 people (2022 Census); density 2,5 people/km². Total do territory, not affected people. (IBGE Censo 2022)
+Observation
+Federal conservation units overlapping this territory: 1 (1.884 km² inside the municipality); 13 recent VIIRS detections in these areas. (ICMBio via Censipam)
+Observation
+Federal settlements overlapping this territory: 12 (5.418 km² inside the municipality); 911 recent VIIRS detections in these areas. (INCRA via Censipam)
+Estimate
+IBGE localities in this territory: 28; with to VIIRS detection within 5 km over the last 7 days: 18. Proximity, not damage. (IBGE BC250 2025 × VIIRS 7 dias)
+Estimate
+CNES health facilities with coordinates: 19 (of 20 registered); with to detection within 5 km: 19. (CNES × VIIRS 7 dias)
+Estimate
+Exposição potencial (upper bound): até 61.988 people (99,2% of population) live in census tracts within 5 km de detections. Não são people afetadas. (IBGE Censo 2022 (setores) × VIIRS 7 dias)
+External indicator
+Censipam: 98 fire events intersect this territory (53 active, 45 under observation). (Censipam — Painel do Fogo)
+4
+What environmental conditions are present?
+Estimate
+Maximum temperature at 2 m
+37.4 °C
+11 Nov 2026
+Relative humidity (7 days)
+51.4%
+14-day precipitation
+10.5 mm
+30% of climatology 2001–2025
+Wind at 10 m (7 days)
+1.2 m/s
+prevailing from NE (origin)
+
+NASA POWER reanalysis, ~50 km grid at the territorial centroid; latest available day 11 Nov 2026 (4 days delayed). These are not local measurements.
+
+Unavailable
+Weather and fire-behavior forecasts are not integrated. No spread direction is inferred.
+
+5
+Which inhabited or protected territories are nearby?
+Observation
+
+Resident population: 62,503 people; density 2.5 people/km² (IBGE, 2022 Census).
+Total territory population. This does not represent people exposed to or affected by fire. Affected population is not estimated from proximity alone.
+
+Official area	Layer (source)	Within municipality	% of municipality	VIIRS detections, 7 days
+No overlaps	Indigenous territories
+FUNAI
+	
+FLORESTA NACIONAL DE CAXIUANÃ
+Categoria: FLONA; Grupo (PI/US): US; Criação: 1961
+	Federal conservation units
+ICMBio
+	1,884.0 km²	7.4%	13
+No overlaps	State conservation units
+MMA — Cadastro Nacional de Unidades de Conservação (CNUC)
+	
+No overlaps	Quilombola territories
+INCRA
+	
+PDS LIBERDADE I
+Capacidade (famílias): 3500; Famílias assentadas: 915; Criação: 17/10/2006
+	Federal settlements
+INCRA
+	4,471.2 km²	17.6%	728
+PA TERRA PARA PAZ
+Capacidade (famílias): 400; Famílias assentadas: 196; Criação: 16/12/2005
+	Federal settlements
+INCRA
+	467.9 km²	1.8%	102
+PAE ILHA GRANDE - PACAJAI
+Capacidade (famílias): 550; Famílias assentadas: 540; Criação: 18/10/2006
+	Federal settlements
+INCRA
+	369.0 km²	1.5%	69
+PDS VIROLA JATOBÁ
+Capacidade (famílias): 180; Famílias assentadas: 114; Criação: 13/08/2004
+	Federal settlements
+INCRA
+	71.8 km²	0.3%	1
+PA BOM JARDIM
+Capacidade (famílias): 921; Famílias assentadas: 702; Criação: 22/12/1997
+	Federal settlements
+INCRA
+	16.8 km²	0.1%	8
+PA SANTA CECILIA
+Capacidade (famílias): 23; Famílias assentadas: 20; Criação: 13/09/2006
+	Federal settlements
+INCRA
+	9.3 km²	0.0%	0
+and 6 with smaller overlap	Federal settlements	12.0 km²	0.0%	3
+
+Official geometries intersected with the IBGE boundary; areas are geodesic (WGS84). Recent VIIRS detections are counted inside each intersection. Served by Censipam Panorama GeoServer. Combined NOAA-20/NOAA-21 pixels describe observations in the area; repeated observations do not represent unique fires.
+
+Municipal conservation units are absent from the consulted layers.
+
+Communities missing from official registers are not represented here.
+
+People and infrastructure near observations
+Estimate
+
+Proximity and potential exposure do not establish damage or threat. Distances use 5,356 VIIRS detections over the last 7 days (retângulo do município ampliado em ~13 km (inclui focos logo além da divisa)). Distances use an azimuthal equidistant projection centred on the territory, with 1, 5 and 10 km radii. Proximity does not establish damage; potential exposure is an upper bound.
+
+Localities with a detection within 5 km
+
+18 of 28
+
+27 aglomerado rural isolado; 1 cidade
+
+Health facilities with a detection within 5 km
+
+19 of 19
+
+20 registered in CNES; 1 without coordinates; 1 with hospital care
+
+Potential exposure
+Estimate
+
+up to 61,988
+
+people in 87 of 91 tracts within 5 km (99.2% of population). Upper bound, not affected people.
+
+More restrictive measure: 31,708 people live in 40 tracts containing at least one detection. Potential exposure is an upper bound, not affected population. Rural census tracts are large and settlement follows rivers; whole-tract population sums overestimate residents close to detections.
+
+Mapped localities (IBGE)
+Locality	Type	Nearest detection	Within 1 km	Within 5 km	Within 10 km
+Santo Agostinho	Aglomerado rural isolado	0.3 km	1	6	23
+Arraial Santo Amaro	Aglomerado rural isolado	0.8 km	1	4	7
+Santa Rosa	Aglomerado rural isolado	1.1 km	0	9	14
+Marcelo	Aglomerado rural isolado	1.5 km	0	4	5
+Vila Vista Alegre	Aglomerado rural isolado	1.5 km	0	8	64
+Santa Luzia	Aglomerado rural isolado	1.5 km	0	30	62
+Mildinho	Aglomerado rural isolado	1.7 km	0	5	43
+Cocal	Aglomerado rural isolado	1.7 km	0	9	16
+Rooli	Aglomerado rural isolado	1.8 km	0	4	52
+Bevenuto	Aglomerado rural isolado	2.1 km	0	2	7
+
+The 10 nearest of 28. Full list in the proximity CSV.
+
+The 1:250,000 map may omit small localities, unregistered villages and traditional communities.
+
+Health facilities (CNES)
+Facility	Type	Nearest detection	Within 1 km	Within 5 km	Within 10 km
+POSTO DE SAUDE LISBOA	CENTRO DE SAUDE/UNIDADE BASICA	0.6 km	2	14	84
+POSTO DE SAUDE AJARA	CENTRO DE SAUDE/UNIDADE BASICA	1.2 km	0	6	57
+POSTO DE SAUDE DE SANTO AMARO	POSTO DE SAUDE	2.2 km	0	16	55
+UNIDADE SAUDE DA FAMILIA CIDADE NOVA	CENTRO DE SAUDE/UNIDADE BASICA	2.4 km	0	14	94
+UBSF PEROLA DO MARAJO	UNIDADE MOVEL FLUVIAL	2.8 km	0	12	91
+UNIDADE SAUDE DA FAMILIA DO MURUCI	CENTRO DE SAUDE/UNIDADE BASICA	2.9 km	0	14	103
+POSTO DE SAUDE BALBINOTE	POSTO DE SAUDE	2.9 km	0	14	56
+UNIDADE SAUDE DA FAMILIA AMACOL	CENTRO DE SAUDE/UNIDADE BASICA	3.0 km	0	12	101
+POSTO DE SAUDE DE ACANGATA	CENTRO DE SAUDE/UNIDADE BASICA	3.0 km	0	5	54
+CLINICA FISIO SOUZA	CONSULTORIO ISOLADO	3.0 km	0	12	108
+
+The 10 nearest of 19. Full list in the proximity CSV.
+
+Registered coordinates may be imprecise. Proximity does not establish damage to a facility.
+
+Nearest registered brigades (Censipam)
+11 GBM (CBM, Breves/PA): 113.1 km
+8 GBM (CBM, Tucuruí/PA): 194.4 km
+OLHO DAGUA (PREVFOGO, Moju/PA): 238.3 km
+QUARTEL VITÓRIA DO JARI 8 GBM (CBM, Vitória do Jari/AP): 243.2 km
+No brigade is registered inside this territory. Straight-line distance from the municipal centroid; not travel time.
+Airstrips and landing sites (IBGE)
+Aeródromo Balbinot: Revestimento primário (solto), 700 m, use private
+(sem nome): Pavimentado, 950 m, use private
+Aeródromo Fazenda Terra Alta: Unpaved (natural surface), 840 m, use private
+Aeródromo Ambrósio: Revestimento primário (solto), 800 m, use private
+
+Not integrated in this version: Schools (INEP); Villages and traditional communities absent from the IBGE BC250 register; Roads and power lines: candidate IBGE/Censipam sources, not intersected in this version.
+
+6
+What needs further verification?
+Unavailable
+Verify with field teams whether detections correspond to forest fire, agricultural burning, pasture management or another heat source.
+Check cloud cover during recent overpasses; days with no detections may lack useful observations.
+Check the current event status in Censipam's fire dashboard before considering any response.
+Check for communities, villages or infrastructure omitted from the official sources.
+Verify whether this territory is covered by the official emergency-area designation. The application has not confirmed inclusion.
+Check local wind and precipitation with station observations or official forecasts, which are not integrated here.
+
+Regulatory context (verify in the official gazette)
+
+State decree no. 5.767/2026 (11 Nov 2026): Source reports a 120-day environmental and climate emergency across Pará; verify the official decree. Reported by news outlets; the official gazette text remains unverified.
+
+State decree no. 5.782/2026 (13 Nov 2026): Source reports a 180-day Level II emergency in affected areas; verify official coverage. Reported designation; the official list of covered areas was not located. This report does not establish that the territory is included.
+
+7
+What evidence and limitations support this analysis?
+Observation
+NOAA-20 (VIIRS): https://firms.modaps.eosdis.nasa.gov/data/active_fire/noaa-20-viirs-c2/csv/J1_VIIRS_C2_South_America_7d.csv; retrieved 15 Nov 2026 03:06 UTC; SHA-256 9eb5f3ab9933a755…
+NOAA-21 (VIIRS): https://firms.modaps.eosdis.nasa.gov/data/active_fire/noaa-21-viirs-c2/csv/J2_VIIRS_C2_South_America_7d.csv; retrieved 15 Nov 2026 03:06 UTC; SHA-256 b1f9dcd4305c9489…
+MODIS_SP: NASA FIRMS annual country archives, years 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 (file provenance in Evidence & exports).
+VIIRS_NOAA20_SP: NASA FIRMS annual country archives, years 2021, 2022, 2023, 2024, 2025 (file provenance in Evidence & exports).
+HARMONIZED: NASA FIRMS annual country archives, years 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 (file provenance in Evidence & exports).
+NASA POWER: https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,T2M_MAX,RH2M,WS10M,WD10M,PRECTOTCORR&community=AG&longitude=-50.9556&latitude=-2.5654&start=20261009&end=20261115&format=JSON
+IBGE Censo 2022: https://servicodados.ibge.gov.br/api/v3/agregados/4714/periodos/2022/variaveis/93|6318?localidades=N6[1505809]
+Indigenous territories (FUNAI via Censipam): retrieved 14 Nov 2026 23:59 UTC
+Federal conservation units (ICMBio via Censipam): retrieved 15 Nov 2026 00:01 UTC
+State conservation units (MMA — Cadastro Nacional de Unidades de Conservação (CNUC) via Censipam): retrieved 14 Nov 2026 23:59 UTC
+Quilombola territories (INCRA via Censipam): retrieved 14 Nov 2026 23:59 UTC
+Federal settlements (INCRA via Censipam): retrieved 14 Nov 2026 23:59 UTC
+Censipam Painel do Fogo: https://panorama.sipam.gov.br/painel-do-fogo/api/v1/eventos?sigla_estado=PA; retrieved 15 Nov 2026 03:11 UTC
+Territorial boundary: IBGE boundary API v3 (maximum detail).
+Localities: IBGE — Base Cartográfica Contínua 1:250.000, edição 2025 (posição geográfica de localidades); retrieved 15 Nov 2026 01:09 UTC
+Health facilities: https://apidadosabertos.saude.gov.br/cnes/estabelecimentos?codigo_municipio=150580; retrieved 15 Nov 2026 01:09 UTC
+Census tracts: https://ftp.ibge.gov.br/Censos/Censo_Demografico_2022/Agregados_por_Setores_Censitarios/malha_com_atributos/setores/gpkg/UF/PA/PA_setores_CD2022.gpkg (SHA-256 de6fd053e6705285…)
+Airstrips: IBGE — BC250 2025 (pistas e pontos de pouso)
+Detections CSV (7 days)
+Proximity CSV (localities, health facilities, census tracts)
+Limitations
+Heat detections are thermal-anomaly pixels at overpass time. They do not identify individual fires or measure burned area.
+Clouds, dense smoke, overpass timing and viewing geometry can prevent detection. No detections does not establish absence of fire.
+MODIS (1 km) and VIIRS (375 m) have different sensitivities. Original counts remain separate.
+Historical comparisons use the same instrument on both sides. Near-real-time and standard processing may differ slightly.
+Terra and Aqua orbital drift has changed overpass times and expected detection counts in recent years.
+Meteorology comes from NASA POWER gridded reanalysis, with a delay of days. These are not local measurements.
+No fire-spread model has been applied and no forecast is integrated.
+The population shown is the territory's census total, not an estimate of affected people.

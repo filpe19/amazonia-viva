@@ -1,3 +1,4 @@
+import { t } from './i18n'
 // Identidade visual fixa por produto (a cor segue a entidade, nunca a ordem).
 // Paleta validada com o validador de CVD/contraste: NOAA-20, NOAA-21, MODIS em todos os pares;
 // S-NPP validado contra MODIS (os dois únicos que coexistem no histórico).
@@ -25,7 +26,8 @@ export const NRT_SELECTABLE = ['VIIRS_NOAA20_NRT', 'VIIRS_NOAA21_NRT', 'MODIS_NR
 export const DEFAULT_NRT = ['VIIRS_NOAA20_NRT', 'VIIRS_NOAA21_NRT']
 
 export function productStyle(id: string): ProductStyle {
-  return PRODUCT_STYLES[id] ?? { id, label: id, short: id, sensor: 'VIIRS', color: '#6b7a72', resolution: '—' }
+  const style = PRODUCT_STYLES[id] ?? { id, label: id, short: id, sensor: 'VIIRS' as const, color: '#6b7a72', resolution: '—' }
+  return { ...style, label: t(style.label) }
 }
 
 export const REGION_LABEL: Record<string, string> = { brasil: 'Brasil', para: 'Pará', santarem: 'Santarém (PA)' }

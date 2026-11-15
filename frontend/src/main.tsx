@@ -1,3 +1,4 @@
+import { t, useLocale } from './lib/i18n'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { StrictMode, Suspense, lazy } from 'react'
 import { createRoot } from 'react-dom/client'
@@ -26,7 +27,8 @@ const queryClient = new QueryClient({
 })
 
 function NotFound() {
-  return <div className="p-8 text-ink-2">Page not found.</div>
+  useLocale()
+  return <div className="p-8 text-ink-2">{t("Page not found.")}</div>
 }
 
 createRoot(document.getElementById('root')!).render(

@@ -125,10 +125,11 @@ amazonia-viva/
 
 ## Missão 05 — interface científica
 
-Interface de demonstração em inglês, com três experiências conectadas e seleção territorial compartilhada. O mapa usa limites IBGE e detecções reais; a hora da observação e a sincronização da plataforma são distintas. O calendário separa observações VIIRS e valores convertidos de MODIS Aqua, preservando a incerteza.
+Interface de demonstração em inglês e português (PT-BR), com três experiências conectadas e seleção territorial compartilhada. Use os botões **PT-BR / EN** na barra superior, inclusive no celular; a preferência é salva entre páginas e recarregamentos. A troca mantém mapa, território e filtros. O mapa usa limites IBGE e detecções reais; a hora da observação e a sincronização da plataforma são distintas. O calendário separa observações VIIRS e valores convertidos de MODIS Aqua, preservando a incerteza.
 
 - [Entrega, diagnóstico visual, testes e limitações](docs/mission05/DELIVERY.md)
 - [Direção de design](docs/mission05/DESIGN.md)
+- [Tradução PT-BR/EN, testes e screenshots](docs/i18n/README.md)
 - [Verificações Playwright](docs/mission05/test-results.json)
 - [Capturas antes](docs/mission05/before/) e [depois](docs/mission05/after/)
 
@@ -139,6 +140,8 @@ python frontend/e2e/visual_audit.py --help
 python frontend/e2e/visual_audit.py after
 python frontend/e2e/mission05_flow.py --help
 python frontend/e2e/mission05_flow.py
+python frontend/e2e/i18n_flow.py --help
+python frontend/e2e/i18n_flow.py
 ```
 
 Nenhum download histórico nem nova integração é feito pela auditoria. A simulação de indisponibilidade intercepta uma resposta apenas em um contexto isolado do navegador. Os dados históricos, o backend e os cálculos científicos foram preservados.

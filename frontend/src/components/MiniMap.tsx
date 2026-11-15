@@ -1,3 +1,4 @@
+import { t, useLocale } from '../lib/i18n'
 import { useMemo } from 'react'
 
 /**
@@ -31,6 +32,7 @@ export function MiniMap({ outline, layers, points, height = 340, ariaLabel }: {
   height?: number
   ariaLabel: string
 }) {
+  useLocale()
   const geo = useMemo(() => {
     const all = outline.flatMap(ringsOf).flat()
     if (!all.length) return null
@@ -70,11 +72,11 @@ export function MiniMap({ outline, layers, points, height = 340, ariaLabel }: {
         {outline.map((g, i) => <path key={`b${i}`} d={geo.path(g)} fill="none" stroke="#17402f" strokeWidth={2} vectorEffect="non-scaling-stroke" />)}
       </svg>
       <figcaption className="flex flex-wrap gap-x-4 gap-y-1 text-[11.5px] text-ink-2">
-        <span className="flex items-center gap-1.5"><span className="inline-block h-0.5 w-4 bg-canopy-800" />IBGE boundary</span>
+        <span className="flex items-center gap-1.5"><span className="inline-block h-0.5 w-4 bg-canopy-800" />{t("IBGE boundary")}</span>
         {layers.filter((l) => l.geometries.length).map((l) => (
           <span key={l.id} className="flex items-center gap-1.5">
             <span className="inline-block h-2.5 w-4 rounded-sm border" style={{ borderColor: l.stroke, background: l.fill ?? 'transparent', borderStyle: l.dashed ? 'dashed' : 'solid' }} />
-            {l.label}
+            {t(l.label)}
           </span>
         ))}
       </figcaption>

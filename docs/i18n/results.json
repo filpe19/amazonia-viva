@@ -1,0 +1,433 @@
+{
+  "duration_seconds": 114.0,
+  "checks": [
+    {
+      "name": "English default and accessible language selector",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Portuguese headings, navigation and map detail",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Language switch retains the same MapLibre instance, canvas and camera",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Territory and observation period persist on switch",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "MapLibre control labels are translated",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Portuguese satellite controls and original IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Language preference survives reload",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "EN desktop layout: current",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "EN desktop layout: history",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "EN calendar origins and uncertainty",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "EN empirical range and monthly number format",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "EN history observed charts render",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "EN history methods charts render",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "EN desktop layout: territory",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "EN desktop layout: environment",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "EN desktop layout: evidence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "EN desktop layout: report",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Report JSON bytes are identical across language switch",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "PT desktop layout: current",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "PT desktop layout: history",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "PT calendar origins and uncertainty",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "PT empirical range and monthly number format",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "PT history observed charts render",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "PT history methods charts render",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "PT desktop layout: territory",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "PT desktop layout: environment",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "PT desktop layout: evidence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "PT desktop layout: report",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Original CSV scientific headers stay unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "EN mobile expanded controls fit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "EN mobile layout: current",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "EN mobile layout: history",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "EN mobile layout: territory",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "EN mobile layout: environment",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "EN mobile layout: evidence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "EN mobile layout: report",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "EN mobile navigation retains territory",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "PT mobile expanded controls fit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "PT mobile layout: current",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "PT mobile layout: history",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "PT mobile layout: territory",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "PT mobile layout: environment",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "PT mobile layout: evidence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "PT mobile layout: report",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "PT mobile navigation retains territory",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "No known English labels left in Portuguese snapshots",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "No JavaScript, console or HTTP errors in real bilingual flows",
+      "passed": true,
+      "detail": {
+        "page": [],
+        "console": [],
+        "http": []
+      }
+    },
+    {
+      "name": "Portuguese API error and retry are localized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Portuguese retry restores real observations",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "snapshots": [
+    {
+      "name": "en-desktop-current",
+      "width": 1440,
+      "document_width": 1440,
+      "untranslated_known_labels": []
+    },
+    {
+      "name": "en-desktop-history",
+      "width": 1440,
+      "document_width": 1440,
+      "untranslated_known_labels": []
+    },
+    {
+      "name": "en-desktop-history-observed",
+      "width": 1440,
+      "document_width": 1440,
+      "untranslated_known_labels": []
+    },
+    {
+      "name": "en-desktop-history-methods",
+      "width": 1440,
+      "document_width": 1440,
+      "untranslated_known_labels": []
+    },
+    {
+      "name": "en-desktop-territory",
+      "width": 1440,
+      "document_width": 1440,
+      "untranslated_known_labels": []
+    },
+    {
+      "name": "en-desktop-environment",
+      "width": 1440,
+      "document_width": 1440,
+      "untranslated_known_labels": []
+    },
+    {
+      "name": "en-desktop-evidence",
+      "width": 1440,
+      "document_width": 1440,
+      "untranslated_known_labels": []
+    },
+    {
+      "name": "en-desktop-report",
+      "width": 1440,
+      "document_width": 1440,
+      "untranslated_known_labels": []
+    },
+    {
+      "name": "pt-desktop-current",
+      "width": 1440,
+      "document_width": 1440,
+      "untranslated_known_labels": []
+    },
+    {
+      "name": "pt-desktop-history",
+      "width": 1440,
+      "document_width": 1440,
+      "untranslated_known_labels": []
+    },
+    {
+      "name": "pt-desktop-history-observed",
+      "width": 1440,
+      "document_width": 1440,
+      "untranslated_known_labels": []
+    },
+    {
+      "name": "pt-desktop-history-methods",
+      "width": 1440,
+      "document_width": 1440,
+      "untranslated_known_labels": []
+    },
+    {
+      "name": "pt-desktop-territory",
+      "width": 1440,
+      "document_width": 1440,
+      "untranslated_known_labels": []
+    },
+    {
+      "name": "pt-desktop-environment",
+      "width": 1440,
+      "document_width": 1440,
+      "untranslated_known_labels": []
+    },
+    {
+      "name": "pt-desktop-evidence",
+      "width": 1440,
+      "document_width": 1440,
+      "untranslated_known_labels": []
+    },
+    {
+      "name": "pt-desktop-report",
+      "width": 1440,
+      "document_width": 1440,
+      "untranslated_known_labels": []
+    },
+    {
+      "name": "en-mobile-current",
+      "width": 390,
+      "document_width": 390,
+      "untranslated_known_labels": []
+    },
+    {
+      "name": "en-mobile-history",
+      "width": 390,
+      "document_width": 390,
+      "untranslated_known_labels": []
+    },
+    {
+      "name": "en-mobile-territory",
+      "width": 390,
+      "document_width": 390,
+      "untranslated_known_labels": []
+    },
+    {
+      "name": "en-mobile-environment",
+      "width": 390,
+      "document_width": 390,
+      "untranslated_known_labels": []
+    },
+    {
+      "name": "en-mobile-evidence",
+      "width": 390,
+      "document_width": 390,
+      "untranslated_known_labels": []
+    },
+    {
+      "name": "en-mobile-report",
+      "width": 390,
+      "document_width": 390,
+      "untranslated_known_labels": []
+    },
+    {
+      "name": "pt-mobile-current",
+      "width": 390,
+      "document_width": 390,
+      "untranslated_known_labels": []
+    },
+    {
+      "name": "pt-mobile-history",
+      "width": 390,
+      "document_width": 390,
+      "untranslated_known_labels": []
+    },
+    {
+      "name": "pt-mobile-territory",
+      "width": 390,
+      "document_width": 390,
+      "untranslated_known_labels": []
+    },
+    {
+      "name": "pt-mobile-environment",
+      "width": 390,
+      "document_width": 390,
+      "untranslated_known_labels": []
+    },
+    {
+      "name": "pt-mobile-evidence",
+      "width": 390,
+      "document_width": 390,
+      "untranslated_known_labels": []
+    },
+    {
+      "name": "pt-mobile-report",
+      "width": 390,
+      "document_width": 390,
+      "untranslated_known_labels": []
+    },
+    {
+      "name": "pt-mobile-source-outage",
+      "width": 390,
+      "document_width": 390,
+      "untranslated_known_labels": []
+    }
+  ],
+  "errors": [],
+  "console": [],
+  "http": []
+}

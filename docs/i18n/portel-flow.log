@@ -1,0 +1,18 @@
+
+> amazonia-viva-web@0.1.0 e2e
+> node e2e/portel-flow.mjs
+
+[ok] mapa carregado
+[ok] Portel selecionado pelo clique no mapa
+[ok] horário da observação mais recente (UTC) — Latest observation
+14 Nov 2026 17:30 UTC
+9 h 46 min ago
+Platform synchronization
+[ok] produtos VIIRS listados
+[ok] comparação MODIS com arquivo histórico disponível
+[ok] chuva/temperatura/umidade/vento
+[ok] pessoas e infraestrutura
+[ok] ficha responde às 7 perguntas
+[ok] exportação JSON — ficha-atencao-territorial_portel_20261115T0317.json
+[ok] exportação CSV de proximidade — proximidade_portel_20261115T0317.csv
+[ok] sem erros de página

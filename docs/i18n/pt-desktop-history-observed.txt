@@ -1,0 +1,479 @@
+Ir para o conteúdo
+Amazônia Viva
+Inteligência ambiental
+Explore as evidências
+Atividade recente
+Últimas observações por satélite
+Histórico do fogo
+Registros e harmonização experimental
+Análise territorial
+Ambiente e evidências de apoio
+Contexto ambiental
+Evidências e exportações
+
+Evidências para apoiar decisões.
+
+Observações, contexto e incerteza em um só lugar.
+
+NASA FIRMS
+Plataforma independente de pesquisa
+NASA Space Apps Challenge 2026
+Bacia Amazônica
+/
+Histórico do fogo
+Portel (PA)— piloto
+Almeirim (PA)
+Santarém (PA)
+Brasil
+Pará
+Abaetetuba (PA)
+Abel Figueiredo (PA)
+Acará (PA)
+Afuá (PA)
+Água Azul do Norte (PA)
+Alenquer (PA)
+Almeirim (PA)
+Altamira (PA)
+Anajás (PA)
+Ananindeua (PA)
+Anapu (PA)
+Augusto Corrêa (PA)
+Aurora do Pará (PA)
+Aveiro (PA)
+Bagre (PA)
+Baião (PA)
+Bannach (PA)
+Barcarena (PA)
+Belém (PA)
+Belterra (PA)
+Benevides (PA)
+Bom Jesus do Tocantins (PA)
+Bonito (PA)
+Bragança (PA)
+Brasil Novo (PA)
+Brejo Grande do Araguaia (PA)
+Breu Branco (PA)
+Breves (PA)
+Bujaru (PA)
+Cachoeira do Arari (PA)
+Cachoeira do Piriá (PA)
+Cametá (PA)
+Canaã dos Carajás (PA)
+Capanema (PA)
+Capitão Poço (PA)
+Castanhal (PA)
+Chaves (PA)
+Colares (PA)
+Conceição do Araguaia (PA)
+Concórdia do Pará (PA)
+Cumaru do Norte (PA)
+Curionópolis (PA)
+Curralinho (PA)
+Curuá (PA)
+Curuçá (PA)
+Dom Eliseu (PA)
+Eldorado do Carajás (PA)
+Faro (PA)
+Floresta do Araguaia (PA)
+Garrafão do Norte (PA)
+Goianésia do Pará (PA)
+Gurupá (PA)
+Igarapé-Açu (PA)
+Igarapé-Miri (PA)
+Inhangapi (PA)
+Ipixuna do Pará (PA)
+Irituia (PA)
+Itaituba (PA)
+Itupiranga (PA)
+Jacareacanga (PA)
+Jacundá (PA)
+Juruti (PA)
+Limoeiro do Ajuru (PA)
+Mãe do Rio (PA)
+Magalhães Barata (PA)
+Marabá (PA)
+Maracanã (PA)
+Marapanim (PA)
+Marituba (PA)
+Medicilândia (PA)
+Melgaço (PA)
+Mocajuba (PA)
+Moju (PA)
+Mojuí dos Campos (PA)
+Monte Alegre (PA)
+Muaná (PA)
+Nova Esperança do Piriá (PA)
+Nova Ipixuna (PA)
+Nova Timboteua (PA)
+Novo Progresso (PA)
+Novo Repartimento (PA)
+Óbidos (PA)
+Oeiras do Pará (PA)
+Oriximiná (PA)
+Ourém (PA)
+Ourilândia do Norte (PA)
+Pacajá (PA)
+Palestina do Pará (PA)
+Paragominas (PA)
+Parauapebas (PA)
+Pau D'Arco (PA)
+Peixe-Boi (PA)
+Piçarra (PA)
+Placas (PA)
+Ponta de Pedras (PA)
+Portel (PA)
+Porto de Moz (PA)
+Prainha (PA)
+Primavera (PA)
+Quatipuru (PA)
+Redenção (PA)
+Rio Maria (PA)
+Rondon do Pará (PA)
+Rurópolis (PA)
+Salinópolis (PA)
+Salvaterra (PA)
+Santa Bárbara do Pará (PA)
+Santa Cruz do Arari (PA)
+Santa Izabel do Pará (PA)
+Santa Luzia do Pará (PA)
+Santa Maria das Barreiras (PA)
+Santa Maria do Pará (PA)
+Santana do Araguaia (PA)
+Santarém (PA)
+Santarém Novo (PA)
+Santo Antônio do Tauá (PA)
+São Caetano de Odivelas (PA)
+São Domingos do Araguaia (PA)
+São Domingos do Capim (PA)
+São Félix do Xingu (PA)
+São Francisco do Pará (PA)
+São Geraldo do Araguaia (PA)
+São João da Ponta (PA)
+São João de Pirabas (PA)
+São João do Araguaia (PA)
+São Miguel do Guamá (PA)
+São Sebastião da Boa Vista (PA)
+Sapucaia (PA)
+Senador José Porfírio (PA)
+Soure (PA)
+Tailândia (PA)
+Terra Alta (PA)
+Terra Santa (PA)
+Tomé-Açu (PA)
+Tracuateua (PA)
+Trairão (PA)
+Tucumã (PA)
+Tucuruí (PA)
+Ulianópolis (PA)
+Uruará (PA)
+Vigia (PA)
+Viseu (PA)
+Vitória do Xingu (PA)
+Xinguara (PA)
+Idioma
+PT-BR
+EN
+Serviço de dados conectado
+Histórico do fogo
+Consulte os registros originais dos sensores ou explore sua conversão experimental para uma referência comum. Observações e estimativas são sempre identificadas separadamente.
+Calendário experimental
+Registros observados
+Métodos e cobertura
+Atividade mensal por sensor
+Cada gráfico representa um produto. As escalas verticais são independentes porque as sensibilidades dos sensores diferem.
+Satélites MODIS
+Terra e Aqua
+Aqua
+Terra
+Somente vegetação presumida (tipo 0)
+MODIS (Terra e Aqua), 1 km
+
+Detecções mensais, 2001–2025
+
+jan/01
+jan/04
+jan/07
+jan/10
+jan/13
+jan/16
+jan/19
+jan/22
+dez/25
+0
+500
+1.000
+1.500
+2.000
+VIIRS S-NPP, 375 m
+
+Detecções mensais, 2023–2024
+
+jan/23
+jun/23
+nov/23
+abr/24
+dez/24
+0
+2.500
+5.000
+7.500
+10.000
+VIIRS NOAA-20, 375 m (mesmo satélite das observações recentes)
+
+Detecções mensais, 2021–2025
+
+jan/21
+mai/21
+set/21
+jan/22
+mai/22
+set/22
+jan/23
+mai/23
+set/23
+jan/24
+mai/24
+set/24
+jan/25
+mai/25
+dez/25
+0
+2.500
+5.000
+7.500
+10.000
+Este ano é incomum para a estação?
+Ano MODIS selecionado versus mediana e faixa P10–P90 dos demais anos importados, mês a mês. Percentis exigem pelo menos cinco anos.
+Ano
+2001
+2002
+2003
+2004
+2005
+2006
+2007
+2008
+2009
+2010
+2011
+2012
+2013
+2014
+2015
+2016
+2017
+2018
+2019
+2020
+2021
+2022
+2023
+2024
+2025
+2025
+mediana
+P10–P90
+jan
+fev
+mar
+abr
+mai
+jun
+jul
+ago
+set
+out
+nov
+dez
+0
+350
+700
+1.050
+1.400
+Comparação por ano e mês
+Cada célula representa um mês do mesmo produto. Setas indicam meses além do P10/P90 dos demais anos com |z robusto| ≥1,5.
+Produto
+MODIS (2001–2025)
+NOAA-20 (2021–2025)
+S-NPP (2023–2024)
+	jan	fev	mar	abr	mai	jun	jul	ago	set	out	nov	dez
+2001	0	0	0	0	0	0	0	5
+	15	35
+	29
+	19
+2002	1	1	1	0	3	0	15	73	137	247	322	108
+2003	23	1	3	3	2	6	9	24	54	124	357	207
+2004	13	1	0	0	0	5	20	44	161	221	541	213
+2005	49
+	1	0	0	4	10	46	58	53	238	403	79
+2006	3	1	0	0	0	9	4	57	76	242	330	235
+2007	25
+	0	0	2	3	9	16	53	98	226	402	25
+2008	9	2	0	0	0	13	30	54	68	417	488	69
+2009	15	1	0	0	0	0	14	48	158	343	750	159
+2010	24	5	2	0	0	2	4	40	56	260	354	64
+2011	1	0	0	0	0	1	15	36	65	159	181	99
+2012	24	0	0	0	1	6	26	56	117	207	523	31
+2013	0	0	0	0	0	7	10	19	58	269	217	179
+2014	9	0	0	0	0	2	3	21	150	268	533	240
+2015	7	0	0	0	0	0	9	28	198	631	943	406
+
+2016	9	3	3	1	0	8	20	86	229	348	984	184
+2017	0	0	0	0	1	4	52	261
+	411	766	1,1k
+	371
+
+2018	11	0	0	0	0	4	7	61	144	1,3k	876	33
+2019	5	1	0	0	0	1	10	53	161	916	791	102
+2020	5	0	0	1	1	15
+	58
+	67	500	1,4k
+	234	44
+2021	0	3	1	1	1	1	12	114	228	729	337	8
+2022	2	0	0	0	0	0	68
+	242
+	1,4k
+	1,3k
+	382	84
+2023	5	2	0	0	0	8	57
+	182	866
+	2,0k
+	1,5k
+	76
+2024	30
+	2	0	0	0	6	39	255
+	703
+	1,2k	1,7k
+	157
+2025	1	0	1	0	1	0	2	18	41	322	505	136
+sem detecções
+menos
+mais
+acima do P90 do mesmo mês e z robusto ≥ 1,5
+abaixo do P10 e z robusto ≤ −1,5
+
+Selecione um mês para consultar seu valor e a comparação.
+
+Meses incomuns (MODIS (arquivo))
+Mês	Detecções	Mediana dos demais anos	Posição	z robusto
+
+nov/24	1.675	445,5	acima de todos os anos anteriores	6,94
+
+set/24	703	140,5	P92	4,80
+
+ago/24	255	53,5	P96	7,35
+
+jan/24	30	6	P96	3,24
+
+nov/23	1.533	445,5	P96	6,14
+
+out/23	1.962	295,5	acima de todos os anos anteriores	10,71
+
+set/23	866	140,5	P96	6,19
+
+jul/23	57	14,5	P92	3,19
+
+out/22	1.340	295,5	P92	6,71
+
+set/22	1.398	140,5	acima de todos os anos anteriores	10,74
+
+ago/22	242	53,5	P92	6,87
+
+jul/22	68	14,5	acima de todos os anos anteriores	4,01
+
+out/20	1.420	295,5	P96	7,22
+
+jul/20	58	14,5	P96	3,26
+
+jun/20	15	4	acima de todos os anos anteriores	2,12
+
+dez/17	371	100,5	P96	2,90
+
+nov/17	1.112	445,5	P92	3,76
+
+ago/17	261	53,5	acima de todos os anos anteriores	7,57
+
+dez/15	406	100,5	acima de todos os anos anteriores	3,27
+
+jan/07	25	6	P92	2,56
+
+jan/05	49	6	acima de todos os anos anteriores	5,80
+
+nov/01	29	496,5	abaixo de todos os anos anteriores	-1,85
+
+out/01	35	332,5	abaixo de todos os anos anteriores	-1,69
+
+ago/01	5	55	abaixo de todos os anos anteriores	-1,82
+
+Mês acima do percentil 90 (ou abaixo do 10) dos mesmos meses nos demais anos do mesmo produto E com |z robusto| ≥ 1,5 (z = (n − mediana) / (1,4826 × MAD)) e diferença de ao menos 10 detecções; exige ≥ 5 anos de comparação.
+
+Calendário de detecções in 2025
+Detecções por dia UTC neste território, um produto por vez.
+MODIS
+NOAA-20
+S-NPP
+2001
+2002
+2003
+2004
+2005
+2006
+2007
+2008
+2009
+2010
+2011
+2012
+2013
+2014
+2015
+2016
+2017
+2018
+2019
+2020
+2021
+2022
+2023
+2024
+2025
+
+Total anual (MODIS (arquivo)): 1.027
+
+jan
+fev
+mar
+abr
+mai
+jun
+jul
+ago
+set
+out
+nov
+dez
+Seg
+Qua
+Sex
+sem detecções
+menos
+mais (máx. 77/dia)
+Comparar períodos
+O mesmo produto MODIS Terra/Aqua em dois intervalos de datas.
+Período A
+a
+Período B
+a
+Período A
+3.010
+92 dias
+Período B
+2.186
+92 dias
+B em relação a A
+0,73×
+-824 detecções
+
+Mesma série de produto nos dois períodos; diferenças de duração entre períodos não são normalizadas. Produto: MODIS (arquivo).
+
+350

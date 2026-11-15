@@ -1,0 +1,251 @@
+Ir para o conteúdo
+Amazônia Viva
+Inteligência ambiental
+Explore as evidências
+Atividade recente
+Últimas observações por satélite
+Histórico do fogo
+Registros e harmonização experimental
+Análise territorial
+Ambiente e evidências de apoio
+Contexto ambiental
+Evidências e exportações
+
+Evidências para apoiar decisões.
+
+Observações, contexto e incerteza em um só lugar.
+
+NASA FIRMS
+Plataforma independente de pesquisa
+NASA Space Apps Challenge 2026
+Bacia Amazônica
+/
+Atividade recente
+Portel (PA)— piloto
+Almeirim (PA)
+Santarém (PA)
+Brasil
+Pará
+Abaetetuba (PA)
+Abel Figueiredo (PA)
+Acará (PA)
+Afuá (PA)
+Água Azul do Norte (PA)
+Alenquer (PA)
+Almeirim (PA)
+Altamira (PA)
+Anajás (PA)
+Ananindeua (PA)
+Anapu (PA)
+Augusto Corrêa (PA)
+Aurora do Pará (PA)
+Aveiro (PA)
+Bagre (PA)
+Baião (PA)
+Bannach (PA)
+Barcarena (PA)
+Belém (PA)
+Belterra (PA)
+Benevides (PA)
+Bom Jesus do Tocantins (PA)
+Bonito (PA)
+Bragança (PA)
+Brasil Novo (PA)
+Brejo Grande do Araguaia (PA)
+Breu Branco (PA)
+Breves (PA)
+Bujaru (PA)
+Cachoeira do Arari (PA)
+Cachoeira do Piriá (PA)
+Cametá (PA)
+Canaã dos Carajás (PA)
+Capanema (PA)
+Capitão Poço (PA)
+Castanhal (PA)
+Chaves (PA)
+Colares (PA)
+Conceição do Araguaia (PA)
+Concórdia do Pará (PA)
+Cumaru do Norte (PA)
+Curionópolis (PA)
+Curralinho (PA)
+Curuá (PA)
+Curuçá (PA)
+Dom Eliseu (PA)
+Eldorado do Carajás (PA)
+Faro (PA)
+Floresta do Araguaia (PA)
+Garrafão do Norte (PA)
+Goianésia do Pará (PA)
+Gurupá (PA)
+Igarapé-Açu (PA)
+Igarapé-Miri (PA)
+Inhangapi (PA)
+Ipixuna do Pará (PA)
+Irituia (PA)
+Itaituba (PA)
+Itupiranga (PA)
+Jacareacanga (PA)
+Jacundá (PA)
+Juruti (PA)
+Limoeiro do Ajuru (PA)
+Mãe do Rio (PA)
+Magalhães Barata (PA)
+Marabá (PA)
+Maracanã (PA)
+Marapanim (PA)
+Marituba (PA)
+Medicilândia (PA)
+Melgaço (PA)
+Mocajuba (PA)
+Moju (PA)
+Mojuí dos Campos (PA)
+Monte Alegre (PA)
+Muaná (PA)
+Nova Esperança do Piriá (PA)
+Nova Ipixuna (PA)
+Nova Timboteua (PA)
+Novo Progresso (PA)
+Novo Repartimento (PA)
+Óbidos (PA)
+Oeiras do Pará (PA)
+Oriximiná (PA)
+Ourém (PA)
+Ourilândia do Norte (PA)
+Pacajá (PA)
+Palestina do Pará (PA)
+Paragominas (PA)
+Parauapebas (PA)
+Pau D'Arco (PA)
+Peixe-Boi (PA)
+Piçarra (PA)
+Placas (PA)
+Ponta de Pedras (PA)
+Portel (PA)
+Porto de Moz (PA)
+Prainha (PA)
+Primavera (PA)
+Quatipuru (PA)
+Redenção (PA)
+Rio Maria (PA)
+Rondon do Pará (PA)
+Rurópolis (PA)
+Salinópolis (PA)
+Salvaterra (PA)
+Santa Bárbara do Pará (PA)
+Santa Cruz do Arari (PA)
+Santa Izabel do Pará (PA)
+Santa Luzia do Pará (PA)
+Santa Maria das Barreiras (PA)
+Santa Maria do Pará (PA)
+Santana do Araguaia (PA)
+Santarém (PA)
+Santarém Novo (PA)
+Santo Antônio do Tauá (PA)
+São Caetano de Odivelas (PA)
+São Domingos do Araguaia (PA)
+São Domingos do Capim (PA)
+São Félix do Xingu (PA)
+São Francisco do Pará (PA)
+São Geraldo do Araguaia (PA)
+São João da Ponta (PA)
+São João de Pirabas (PA)
+São João do Araguaia (PA)
+São Miguel do Guamá (PA)
+São Sebastião da Boa Vista (PA)
+Sapucaia (PA)
+Senador José Porfírio (PA)
+Soure (PA)
+Tailândia (PA)
+Terra Alta (PA)
+Terra Santa (PA)
+Tomé-Açu (PA)
+Tracuateua (PA)
+Trairão (PA)
+Tucumã (PA)
+Tucuruí (PA)
+Ulianópolis (PA)
+Uruará (PA)
+Vigia (PA)
+Viseu (PA)
+Vitória do Xingu (PA)
+Xinguara (PA)
+Idioma
+PT-BR
+EN
+Serviço de dados conectado
+Últimas observações por satélite
+
+Explore detecções térmicas em Portel (PA). Cada ponto é uma observação durante a passagem de um satélite.
+
+Analisar este território
+Janela de observação
+24 horas
+48 horas
+7 dias
+Passagem
+Todas
+Dia
+Noite
+Satélites
+2
+Camadas
+Exportar CSV
+30 km
+OpenFreeMap © OpenMapTiles Data from OpenStreetMap
+NOAA-20
+375 m
+NOAA-21
+375 m
+Limite IBGE
+Observações por satélite
+
+As contagens permanecem separadas. O mesmo fogo pode ser observado mais de uma vez.
+
+NOAA-20 (VIIRS)
+1.123
+Última observação
+14 nov 2026 16:47 UTC
+Dia / noite
+750 / 373
+Confiança
+baixa 120, nominal 984, alta 19
+FRP mediana / máx.
+5,6 / 267,2 MW
+Resolução
+375 m, quase tempo real
+NOAA-21 (VIIRS)
+1.225
+Última observação
+14 nov 2026 17:30 UTC
+Dia / noite
+555 / 670
+Confiança
+baixa 29, nominal 1.115, alta 81
+FRP mediana / máx.
+4,4 / 258,9 MW
+Resolução
+375 m, quase tempo real
+
+Contagens por produto. Observações repetidas não representam incêndios únicos.
+
+Consultar uma observação
+NOAA-21
+14 nov 2026 17:30 UTC
+NOAA-21
+14 nov 2026 17:30 UTC
+NOAA-21
+14 nov 2026 17:30 UTC
+Última observação
+14 nov 2026 17:30 UTC
+há 9 h 47 min
+Sincronização da plataforma
+15 nov 2026 03:06 UTC
+Horário em que os registros foram coletados no FIRMS
+Latência nominal da fonte
+Até ~3 horas
+Informado pelo NASA FIRMS; não é observação contínua
+
+Uma detecção é um pixel com anomalia térmica, não um incêndio individual nem uma medida de área queimada. A ausência de detecções não comprova ausência de fogo. Fonte: NASA FIRMS
+
+Linha do tempo das observações por satélite

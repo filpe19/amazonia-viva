@@ -1,0 +1,323 @@
+Ir para o conteúdo
+Amazônia Viva
+Inteligência ambiental
+Explore as evidências
+Atividade recente
+Últimas observações por satélite
+Histórico do fogo
+Registros e harmonização experimental
+Análise territorial
+Ambiente e evidências de apoio
+Contexto ambiental
+Evidências e exportações
+
+Evidências para apoiar decisões.
+
+Observações, contexto e incerteza em um só lugar.
+
+NASA FIRMS
+Plataforma independente de pesquisa
+NASA Space Apps Challenge 2026
+Bacia Amazônica
+/
+Contexto ambiental
+Portel (PA)— piloto
+Almeirim (PA)
+Santarém (PA)
+Brasil
+Pará
+Abaetetuba (PA)
+Abel Figueiredo (PA)
+Acará (PA)
+Afuá (PA)
+Água Azul do Norte (PA)
+Alenquer (PA)
+Almeirim (PA)
+Altamira (PA)
+Anajás (PA)
+Ananindeua (PA)
+Anapu (PA)
+Augusto Corrêa (PA)
+Aurora do Pará (PA)
+Aveiro (PA)
+Bagre (PA)
+Baião (PA)
+Bannach (PA)
+Barcarena (PA)
+Belém (PA)
+Belterra (PA)
+Benevides (PA)
+Bom Jesus do Tocantins (PA)
+Bonito (PA)
+Bragança (PA)
+Brasil Novo (PA)
+Brejo Grande do Araguaia (PA)
+Breu Branco (PA)
+Breves (PA)
+Bujaru (PA)
+Cachoeira do Arari (PA)
+Cachoeira do Piriá (PA)
+Cametá (PA)
+Canaã dos Carajás (PA)
+Capanema (PA)
+Capitão Poço (PA)
+Castanhal (PA)
+Chaves (PA)
+Colares (PA)
+Conceição do Araguaia (PA)
+Concórdia do Pará (PA)
+Cumaru do Norte (PA)
+Curionópolis (PA)
+Curralinho (PA)
+Curuá (PA)
+Curuçá (PA)
+Dom Eliseu (PA)
+Eldorado do Carajás (PA)
+Faro (PA)
+Floresta do Araguaia (PA)
+Garrafão do Norte (PA)
+Goianésia do Pará (PA)
+Gurupá (PA)
+Igarapé-Açu (PA)
+Igarapé-Miri (PA)
+Inhangapi (PA)
+Ipixuna do Pará (PA)
+Irituia (PA)
+Itaituba (PA)
+Itupiranga (PA)
+Jacareacanga (PA)
+Jacundá (PA)
+Juruti (PA)
+Limoeiro do Ajuru (PA)
+Mãe do Rio (PA)
+Magalhães Barata (PA)
+Marabá (PA)
+Maracanã (PA)
+Marapanim (PA)
+Marituba (PA)
+Medicilândia (PA)
+Melgaço (PA)
+Mocajuba (PA)
+Moju (PA)
+Mojuí dos Campos (PA)
+Monte Alegre (PA)
+Muaná (PA)
+Nova Esperança do Piriá (PA)
+Nova Ipixuna (PA)
+Nova Timboteua (PA)
+Novo Progresso (PA)
+Novo Repartimento (PA)
+Óbidos (PA)
+Oeiras do Pará (PA)
+Oriximiná (PA)
+Ourém (PA)
+Ourilândia do Norte (PA)
+Pacajá (PA)
+Palestina do Pará (PA)
+Paragominas (PA)
+Parauapebas (PA)
+Pau D'Arco (PA)
+Peixe-Boi (PA)
+Piçarra (PA)
+Placas (PA)
+Ponta de Pedras (PA)
+Portel (PA)
+Porto de Moz (PA)
+Prainha (PA)
+Primavera (PA)
+Quatipuru (PA)
+Redenção (PA)
+Rio Maria (PA)
+Rondon do Pará (PA)
+Rurópolis (PA)
+Salinópolis (PA)
+Salvaterra (PA)
+Santa Bárbara do Pará (PA)
+Santa Cruz do Arari (PA)
+Santa Izabel do Pará (PA)
+Santa Luzia do Pará (PA)
+Santa Maria das Barreiras (PA)
+Santa Maria do Pará (PA)
+Santana do Araguaia (PA)
+Santarém (PA)
+Santarém Novo (PA)
+Santo Antônio do Tauá (PA)
+São Caetano de Odivelas (PA)
+São Domingos do Araguaia (PA)
+São Domingos do Capim (PA)
+São Félix do Xingu (PA)
+São Francisco do Pará (PA)
+São Geraldo do Araguaia (PA)
+São João da Ponta (PA)
+São João de Pirabas (PA)
+São João do Araguaia (PA)
+São Miguel do Guamá (PA)
+São Sebastião da Boa Vista (PA)
+Sapucaia (PA)
+Senador José Porfírio (PA)
+Soure (PA)
+Tailândia (PA)
+Terra Alta (PA)
+Terra Santa (PA)
+Tomé-Açu (PA)
+Tracuateua (PA)
+Trairão (PA)
+Tucumã (PA)
+Tucuruí (PA)
+Ulianópolis (PA)
+Uruará (PA)
+Vigia (PA)
+Viseu (PA)
+Vitória do Xingu (PA)
+Xinguara (PA)
+Idioma
+PT-BR
+EN
+Serviço de dados conectado
+Contexto ambiental
+Reanálise meteorológica em um ponto representativo. Os valores descrevem uma célula de grade de aproximadamente 50 km, não uma medição no local da detecção.
+
+Ponto representativo: centroide do limite territorial IBGE.
+
+Latitude
+Longitude
+Consultar este ponto
+Registro histórico. Climatologia mensal NASA POWER, média de 2001–2025.
+Análise recente. Reanálise diária e horária, disponível com atraso de alguns dias.
+Previsão. Não integrada. Este módulo POWER não fornece previsão meteorológica.
+Último dia disponível
+Reanálise de 11 nov 2026 (horário solar local), 4 dias antes de hoje.
+Temperatura máxima do ar a 2 m
+
+37,4
+°C
+
+Média das máximas diárias em 30 dias: 37,1 °C
+Fonte
+NASA POWER, reanálise diária (GEOSIT, POWER)
+Período
+11 nov 2026
+Umidade relativa a 2 m (média diária)
+
+52,8
+%
+
+Normal de novembro: 66,9%
+Fonte
+NASA POWER, reanálise diária (GEOSIT, POWER)
+Período
+11 nov 2026
+Vento a 10 m
+
+1,2
+m/s, média horária
+
+Predominante de NE (direção de origem)
+Fonte
+NASA POWER, reanálise horária (UTC)
+Período
+7 dias até 12 nov 2026 23:00 UTC
+Precipitação acumulada em 14 dias
+
+10,5
+mm
+
+30% do esperado pela climatologia (35,1 mm)
+Fonte
+NASA POWER, reanálise diária (GEOSIT, POWER); climatologia 2001–2025
+Período
+29 out 2026 a 11 nov 2026
+Rosa dos ventos
+Frequência horária por direção de origem e classe de velocidade, nos últimos 7 dias disponíveis.
+N
+E
+S
+W
+50%
+
+Velocidade (m/s)
+
+0–1
+
+1–2
+
+2–3
+
+3–5
+
+≥5
+
+168 horas de reanálise a 10 m. Direção meteorológica: de onde o vento sopra (0° = norte, sentido horário). O raio é proporcional à raiz quadrada da frequência.
+
+Precipitação diária e climatologia
+Barras: precipitação diária de reanálise. Linha: média diária climatológica do mês (2001–2025).
+
+mm/dia, 13 out 2026 to 11 nov 2026
+
+13 out
+16 out
+19 out
+22 out
+25 out
+28 out
+31 out
+03 nov
+06 nov
+11 nov
+0
+2
+4
+6
+8
+Temperatura e umidade nos últimos 30 dias
+Variáveis com unidades diferentes são exibidas separadamente. Linha tracejada: média climatológica mensal da mesma variável (2001–2025).
+Temperatura média diária a 2 m
+
+°C
+
+13 out
+17 out
+21 out
+25 out
+29 out
+02 nov
+06 nov
+11 nov
+28,9
+29,8
+30,6
+31,5
+32,3
+Umidade relativa a 2 m
+
+%
+
+13 out
+17 out
+21 out
+25 out
+29 out
+02 nov
+06 nov
+11 nov
+48
+54
+60
+66
+72
+Fontes desta visualização
+Ponto consultado
+2,5654° S, 50,9556° W (centroide do limite IBGE de Portel (PA))
+Natureza dos dados
+Valores de reanálise em grade (~0,5° × 0,625°, GEOS-IT/MERRA-2) para a célula que contém o ponto. Não são medições de estação nem medições instantâneas no local de uma detecção.
+Série diária
+https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,T2M_MAX,RH2M,WS10M,WD10M,PRECTOTCORR&community=AG&longitude=-50.9556&latitude=-2.5654&start=20261009&end=20261115&format=JSON
+consultado em 15 nov 2026 00:01 UTC
+Série horária
+https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=T2M,RH2M,WS10M,WD10M,PRECTOTCORR&community=AG&longitude=-50.9556&latitude=-2.5654&start=20261105&end=20261115&format=JSON&time-standard=UTC
+Climatologia
+Climatologias meteorológicas e solares mensais e anuais de 25 anos (janeiro de 2001 a dezembro de 2025)
+https://power.larc.nasa.gov/api/temporal/climatology/point?parameters=T2M,RH2M,WS10M,PRECTOTCORR&community=AG&longitude=-50.9556&latitude=-2.5654&format=JSON
+Previsão
+O NASA POWER não fornece previsão. Nenhuma previsão meteorológica está integrada nesta versão.
+48

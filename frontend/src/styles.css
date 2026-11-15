@@ -363,7 +363,7 @@ select { text-overflow:ellipsis; }
 .history-downloads label { display:flex; flex-direction:column; gap:5px; font-size:12px; }
 .history-downloads input,.history-downloads select { border:1px solid var(--color-rule); border-radius:5px; padding:7px; font-size:12px; }
 @media (max-width:1200px) { .harmonized-explorer { grid-template-columns:minmax(0,1fr); gap:18px; } .calendar-inspector { position:static; border-left:0; border-top:1px solid var(--color-rule); padding:16px 0 0; } .calendar-inspector dl { display:grid; grid-template-columns:1fr 2fr; gap:8px 14px; } .calendar-inspector dt,.calendar-inspector dd { margin:0; } }
-@media (max-width:640px) { .experiment-notice { padding:12px; flex-wrap:wrap; } .experiment-notice>div { flex:1; } .experiment-notice>span { margin-left:32px; } .origin-legend { gap:10px; flex-direction:column; font-size:11px; } .origin-legend small { font-size:10px; } .conversion-validation { grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; } .conversion-validation>div:first-child { grid-column:1/-1; } .conversion-validation>div:not(:first-child) { padding-left:10px; } .conversion-validation strong { font-size:25px; } .calendar-scroller::after { content:'Scroll to explore all months'; display:block; margin-top:8px; color:var(--color-ink-2); font-size:11px; } .history-downloads { align-items:stretch; flex-direction:column; } .history-downloads .button-primary { width:100%; } }
+@media (max-width:640px) { .experiment-notice { padding:12px; flex-wrap:wrap; } .experiment-notice>div { flex:1; } .experiment-notice>span { margin-left:32px; } .origin-legend { gap:10px; flex-direction:column; font-size:11px; } .origin-legend small { font-size:10px; } .conversion-validation { grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; } .conversion-validation>div:first-child { grid-column:1/-1; } .conversion-validation>div:not(:first-child) { padding-left:10px; } .conversion-validation strong { font-size:25px; } .calendar-scroll-hint { display:block; margin-top:8px; color:var(--color-ink-2); font-size:11px; } .history-downloads { align-items:stretch; flex-direction:column; } .history-downloads .button-primary { width:100%; } }
 
 .territory-toolbar { display:flex; justify-content:space-between; align-items:center; gap:14px; }
 .territory-toolbar p { font-size:12px; color:var(--color-ink-2); }
@@ -394,3 +394,18 @@ select { text-overflow:ellipsis; }
 }
 
 @media(max-width:640px) { .experiment-notice>span { flex-basis:100%; margin-left:32px; } .experiment-notice>div { min-width:0; } }
+
+/* Locale switch stays next to the shared territory controls. */
+.language-switcher { display:inline-flex; flex-shrink:0; gap:2px; border:1px solid var(--color-rule); padding:3px; border-radius:6px; background:#f4f7f6; }
+.language-switcher button { min-height:32px; min-width:40px; padding:0 9px; font-size:11px; font-weight:600; color:#44554d; border-radius:3px; cursor:pointer; }
+.language-switcher button[aria-pressed=true] { background:#123e32; color:white; }
+.language-switcher button:hover:not([aria-pressed=true]) { background:#dfe9e4; }
+.calendar-scroll-hint { display:none; }
+@media(max-width:640px) {
+ .workspace-location { width:auto; flex:1; min-width:0; order:1; }
+ .workspace-location>span { display:none; }
+ .language-switcher { order:2; margin-left:auto; }
+ .language-switcher button { min-height:34px; }
+ .shared-territory { order:3; }
+ .calendar-scroll-hint { display:block; }
+}

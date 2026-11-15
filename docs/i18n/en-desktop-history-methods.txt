@@ -1,0 +1,516 @@
+Skip to content
+Amazônia Viva
+Environmental intelligence
+Explore the evidence
+Current activity
+Latest satellite observations
+Fire history
+Records & experimental harmonization
+Territory analysis
+Environment & supporting evidence
+Environmental context
+Evidence & exports
+
+Evidence before decisions.
+
+Observations, context and uncertainty in one place.
+
+NASA FIRMS
+Independent research platform
+NASA Space Apps Challenge 2026
+Amazon basin
+/
+Fire history
+Portel (PA)— pilot
+Almeirim (PA)
+Santarém (PA)
+Brasil
+Pará
+Abaetetuba (PA)
+Abel Figueiredo (PA)
+Acará (PA)
+Afuá (PA)
+Água Azul do Norte (PA)
+Alenquer (PA)
+Almeirim (PA)
+Altamira (PA)
+Anajás (PA)
+Ananindeua (PA)
+Anapu (PA)
+Augusto Corrêa (PA)
+Aurora do Pará (PA)
+Aveiro (PA)
+Bagre (PA)
+Baião (PA)
+Bannach (PA)
+Barcarena (PA)
+Belém (PA)
+Belterra (PA)
+Benevides (PA)
+Bom Jesus do Tocantins (PA)
+Bonito (PA)
+Bragança (PA)
+Brasil Novo (PA)
+Brejo Grande do Araguaia (PA)
+Breu Branco (PA)
+Breves (PA)
+Bujaru (PA)
+Cachoeira do Arari (PA)
+Cachoeira do Piriá (PA)
+Cametá (PA)
+Canaã dos Carajás (PA)
+Capanema (PA)
+Capitão Poço (PA)
+Castanhal (PA)
+Chaves (PA)
+Colares (PA)
+Conceição do Araguaia (PA)
+Concórdia do Pará (PA)
+Cumaru do Norte (PA)
+Curionópolis (PA)
+Curralinho (PA)
+Curuá (PA)
+Curuçá (PA)
+Dom Eliseu (PA)
+Eldorado do Carajás (PA)
+Faro (PA)
+Floresta do Araguaia (PA)
+Garrafão do Norte (PA)
+Goianésia do Pará (PA)
+Gurupá (PA)
+Igarapé-Açu (PA)
+Igarapé-Miri (PA)
+Inhangapi (PA)
+Ipixuna do Pará (PA)
+Irituia (PA)
+Itaituba (PA)
+Itupiranga (PA)
+Jacareacanga (PA)
+Jacundá (PA)
+Juruti (PA)
+Limoeiro do Ajuru (PA)
+Mãe do Rio (PA)
+Magalhães Barata (PA)
+Marabá (PA)
+Maracanã (PA)
+Marapanim (PA)
+Marituba (PA)
+Medicilândia (PA)
+Melgaço (PA)
+Mocajuba (PA)
+Moju (PA)
+Mojuí dos Campos (PA)
+Monte Alegre (PA)
+Muaná (PA)
+Nova Esperança do Piriá (PA)
+Nova Ipixuna (PA)
+Nova Timboteua (PA)
+Novo Progresso (PA)
+Novo Repartimento (PA)
+Óbidos (PA)
+Oeiras do Pará (PA)
+Oriximiná (PA)
+Ourém (PA)
+Ourilândia do Norte (PA)
+Pacajá (PA)
+Palestina do Pará (PA)
+Paragominas (PA)
+Parauapebas (PA)
+Pau D'Arco (PA)
+Peixe-Boi (PA)
+Piçarra (PA)
+Placas (PA)
+Ponta de Pedras (PA)
+Portel (PA)
+Porto de Moz (PA)
+Prainha (PA)
+Primavera (PA)
+Quatipuru (PA)
+Redenção (PA)
+Rio Maria (PA)
+Rondon do Pará (PA)
+Rurópolis (PA)
+Salinópolis (PA)
+Salvaterra (PA)
+Santa Bárbara do Pará (PA)
+Santa Cruz do Arari (PA)
+Santa Izabel do Pará (PA)
+Santa Luzia do Pará (PA)
+Santa Maria das Barreiras (PA)
+Santa Maria do Pará (PA)
+Santana do Araguaia (PA)
+Santarém (PA)
+Santarém Novo (PA)
+Santo Antônio do Tauá (PA)
+São Caetano de Odivelas (PA)
+São Domingos do Araguaia (PA)
+São Domingos do Capim (PA)
+São Félix do Xingu (PA)
+São Francisco do Pará (PA)
+São Geraldo do Araguaia (PA)
+São João da Ponta (PA)
+São João de Pirabas (PA)
+São João do Araguaia (PA)
+São Miguel do Guamá (PA)
+São Sebastião da Boa Vista (PA)
+Sapucaia (PA)
+Senador José Porfírio (PA)
+Soure (PA)
+Tailândia (PA)
+Terra Alta (PA)
+Terra Santa (PA)
+Tomé-Açu (PA)
+Tracuateua (PA)
+Trairão (PA)
+Tucumã (PA)
+Tucuruí (PA)
+Ulianópolis (PA)
+Uruará (PA)
+Vigia (PA)
+Viseu (PA)
+Vitória do Xingu (PA)
+Xinguara (PA)
+Language
+PT-BR
+EN
+Data service connected
+Fire history
+Read the original sensor records or explore their experimental conversion into a common reference. Observations and estimates are always identified separately.
+Experimental calendar
+Observed records
+Methods & coverage
+Available sensor archives
+Imported historical records, retained by sensor and processing version. Original-file provenance remains available below.
+
+MODIS (archive)
+
+2001–2025 (25 files, 789 MB read)
+
+Satellites: Aqua, Terra
+
+Different versions between years: 2001: 6.2; 2002: 6.2; 2003: 6.2; 2004: 6.2; 2005: 6.2; 2006: 6.2; 2007: 6.2; 2008: 6.2; 2009: 6.2; 2010: 6.2; 2011: 6.2; 2012: 6.2; 2013: 6.2; 2014: 6.2; 2015: 6.2; 2016: 6.2; 2017: 6.2; 2018: 6.03; 2019: 6.03; 2020: 6.03; 2021: 6.03; 2022: 6.03; 2023: 61.03; 2024: 61.03; 2025: 61.03. Possible discontinuity in the series.
+
+VIIRS S-NPP (archive)
+
+2023–2024 (2 files, 261 MB read)
+
+Satellites: Suomi NPP
+
+S-NPP production ended on 2 Nov 2026 at 15:40 UTC, according to FIRMS. Records remain available as history.
+
+VIIRS NOAA-20 (archive)
+
+2021–2025 (5 files, 565 MB read)
+
+Satellites: NOAA-20
+
+MODIS × VIIRS during overlapping years
+Same territory and months, with each sensor's counts side by side. This exploratory comparison measures association, but does not establish a validated fused series.
+MODIS reference
+Aqua
+Terra
+Terra & Aqua
+VIIRS comparison
+NOAA-20 (2021–2025)
+S-NPP (2023–2024)
+Paired months
+60
+2021, 2022, 2023, 2024, 2025
+Median VIIRS/MODIS ratio
+6.0×
+interquartile range 5.6–6.9
+Spearman correlation
+0.94
+monthly rank association
+Pearson in log(1+n)
+0.97
+logarithmic scale
+Paired monthly counts
+
+Log axes; line: median ratio
+
+1
+10
+100
+1,000
+10,000
+MODIS Aqua (detections/month)
+1
+10
+100
+1,000
+10,000
+VIIRS NOAA-20
+each point is a month
+Ratio VIIRS NOAA-20 / MODIS by month
+
+VIIRS detections per MODIS detection
+
+Jan/21
+Sep/21
+May/22
+Jan/23
+Sep/23
+May/24
+Jan/25
+Dec/25
+0×
+3×
+6×
+9×
+12×
+Spatial agreement on a common grid of 0.1°
+
+Monthly Jaccard index (months with ≥ 8 active cells); median 0.38
+
+Feb/21
+Jul/21
+Sep/21
+Nov/21
+Jan/22
+Aug/22
+Oct/22
+Dec/22
+Jun/23
+Aug/23
+Oct/23
+Dec/23
+Jun/24
+Aug/24
+Oct/24
+Dec/24
+Dec/25
+0
+0.3
+0.5
+0.8
+1
+Razões e correlações são descritivas; não constituem um fator de harmonização validado.
+MODIS (1 km) e VIIRS (375 m) diferem em sensibilidade to focos pequenos; to razão varia por região, estação e tamanho do fogo.
+Aqua (MODIS) e NOAA-20 (VIIRS) passam perto de 13h30/01h30, mas não no mesmo instante; Terra tem outro horário.
+A auditoria de cobertura usa apenas meses presentes nos arquivos; to disponibilidade de grânulos e to nebulosidade ainda não são consideradas.
+Experiment: common aggregation and evaluation
+Same territory and calendar month. Each sensor is divided by its own overlap-period mean (a dimensionless index): compare the shape of the series without adding or converting counts. Then evaluate a MODIS-to-VIIRS ratio conversion outside the training sample.
+Experimental; no validated fusion
+Estimate
+NOAA-20
+S-NPP
+Relative index by sensor (period mean = 1)
+
+MODIS Aqua & VIIRS NOAA-20, 2021–2025; median difference between indices: 0.01
+
+Jan/21
+May/21
+Sep/21
+Jan/22
+May/22
+Sep/22
+Jan/23
+May/23
+Sep/23
+Jan/24
+May/24
+Sep/24
+Jan/25
+May/25
+Dec/25
+0
+3
+6
+9
+12
+MODIS Aqua (mean 152.6/month)
+VIIRS NOAA-20 (mean 979.3/month)
+Out-of-sample error (leave one year out)
+
+Active months (≥ 30 detections in both sensors). APE = absolute percentage error against observed VIIRS NOAA-20 count.
+
+Constant ratio
+15%
+Median APE; P90 62% (25 months)
+Seasonal ratio
+16%
+Median APE; P90 32% (25 months)
+
+Held-out errors evaluate how a ratio conversion performs on years excluded from training. They do not establish that the harmonized series is scientifically or operationally validated. A modest median error with a large P90 means individual converted months may have large errors.
+
+Held-out year	Months	Training ratio	Constant-ratio APE	Seasonal-ratio APE
+2021	4	5.79×	13% (max. 21%)	9% (max. 21%)
+2022	6	5.98×	19% (max. 46%)	20% (max. 31%)
+2023	6	5.98×	20% (max. 104%)	25% (max. 49%)
+2024	6	6.02×	6% (max. 65%)	9% (max. 19%)
+2025	3	5.95×	1% (max. 66%)	13% (max. 82%)
+
+No definitively validated fused series is produced. The normalized index compares series shapes; held-out evaluation estimates conversion error on unseen years.
+
+Coverage, processing and uncertainty
+What each archive covers: years, days with detections, processing versions and nominal overpass time.
+
+MODIS (Terra e Aqua)
+
+Resolution
+1 km
+Algorithm
+MOD14/MYD14, Coleção 6 / 6.1
+Overpass
+Terra ~10h30 e ~22h30; Aqua ~13h30 e ~01h30 (horários nominais; ambos com deriva orbital nos últimos anos)
+Archive
+NASA FIRMS annual country archive; standard processing, with version recorded per file
+
+VIIRS (Suomi NPP)
+
+Resolution
+375 m
+Algorithm
+VNP14IMG, Coleção 2
+Overpass
+~13h30 e ~01h30
+Archive
+NASA FIRMS annual country archive; new S-NPP observations ended on 2 Nov 2026
+
+VIIRS (NOAA-20)
+
+Resolution
+375 m
+Algorithm
+VJ114IMG, Coleção 2
+Overpass
+~13h30 e ~01h30 (cerca de 50 min de diferença do S-NPP)
+Archive
+NASA FIRMS annual country archive, using the same satellite as VIIRS_NOAA20_NRT
+Product	Year	Detections in territory	Days with detections	Months with detections	Version	SHA-256
+MODIS (archive)	2001	103	49	5	6.2	0ca6041283…
+MODIS (archive)	2002	908	111	10	6.2	23fa825d4b…
+MODIS (archive)	2003	813	104	12	6.2	e57adce539…
+MODIS (archive)	2004	1,219	116	9	6.2	438671d181…
+MODIS (archive)	2005	941	119	10	6.2	40ec6a527c…
+MODIS (archive)	2006	957	94	9	6.2	5c73a026c2…
+MODIS (archive)	2007	859	123	10	6.2	2d49aa49ea…
+MODIS (archive)	2008	1,150	106	9	6.2	4bb1d53929…
+MODIS (archive)	2009	1,488	118	8	6.2	43126b7fac…
+MODIS (archive)	2010	811	97	10	6.2	ac4fceba86…
+MODIS (archive)	2011	557	92	8	6.2	a56e530a52…
+MODIS (archive)	2012	991	103	9	6.2	1a9887200a…
+MODIS (archive)	2013	759	88	7	6.2	56f988b178…
+MODIS (archive)	2014	1,226	98	8	6.2	1883fbaa50…
+MODIS (archive)	2015	2,222	120	7	6.2	27d5de1a2c…
+MODIS (archive)	2016	1,875	118	11	6.2	a12097eedb…
+MODIS (archive)	2017	2,978	136	8	6.2	a6e2e271a1…
+MODIS (archive)	2018	2,414	100	8	6.03	efddb4ab4b…
+MODIS (archive)	2019	2,040	100	9	6.03	2a14ae9be8…
+MODIS (archive)	2020	2,345	126	10	6.03	663bd08ed0…
+MODIS (archive)	2021	1,435	92	11	6.03	8466734fc9…
+MODIS (archive)	2022	3,516	138	7	6.03	ce67f4c7d1…
+MODIS (archive)	2023	4,691	150	9	61.03	659ce5160d…
+MODIS (archive)	2024	4,095	155	9	61.03	b617f757e2…
+MODIS (archive)	2025	1,027	98	9	61.03	1da12d96d1…
+VIIRS S-NPP (archive)	2023	18,646	188	10	2	7e0d392c6e…
+VIIRS S-NPP (archive)	2024	14,121	185	9	2	70bddaf02d…
+VIIRS NOAA-20 (archive)	2021	6,226	149	11	2	ed71e40d4f…
+VIIRS NOAA-20 (archive)	2022	15,472	169	12	2	348404b924…
+VIIRS NOAA-20 (archive)	2023	18,916	187	10	2	aa1344aaee…
+VIIRS NOAA-20 (archive)	2024	14,936	191	8	2	219e933850…
+VIIRS NOAA-20 (archive)	2025	3,208	138	10	2	01a4ea954a…
+
+Overlap with MODIS: VIIRS NOAA-20 (archive) 2021–2025 (5 years); VIIRS S-NPP (archive) 2023–2024 (2 years).
+
+Clouds, viewing angle and overpass timing affect counts. A month with no detections may lack useful observations.
+MODIS and VIIRS differ in resolution and sensitivity. VIIRS can detect smaller and more numerous thermal sources.
+Terra and Aqua overpasses have shifted earlier in recent years, affecting afternoon detection counts.
+The imported MODIS archive contains differing version values between years (6.2, 6.03, 61.03), potentially introducing discontinuities.
+Availability of processed overpass granules has not been audited; only months present in the archives have been checked.
+Municipal aggregates use local Parquet subsets. Small counts make percentiles and ratios unstable.
+Harmonization pipeline
+Steps needed to evaluate a statistically validated MODIS–VIIRS series.
+1
+
+Import annual FIRMS country archives
+Complete
+
+Streamed ingestion; source URL, Last-Modified and SHA-256 retained.
+
+2
+
+Clip to official IBGE boundaries
+Complete
+
+Point-in-polygon with detailed IBGE boundaries: Brazil, Pará and its 144 municipalities.
+
+3
+
+Common temporal aggregation
+Complete
+
+UTC day × satellite × day/night × type × confidence; derived monthly values.
+
+4
+
+Common spatial aggregation
+Complete
+
+Regular monthly grid: 0.5° for Pará and 0.1° for municipalities, using local Parquet subsets.
+
+5
+
+Coverage and version audit
+Partial
+
+Months and file versions audited; granule availability and clouds remain unaudited.
+
+6
+
+Compare overlapping years
+Partial
+
+MODIS × NOAA-20 (2021–2025) and S-NPP (2023–2024). Municipal grid: 0.1°. Extend S-NPP history in future work.
+
+7
+
+Sensitivity analysis
+Pending
+
+Confidence, presumed vegetation type, day/night, overpass time and Terra/Aqua orbital drift.
+
+8
+
+Statistical evaluation of fusion
+Pending
+
+Operational validation remains pending; the existing harmonized series is experimental.
+
+Source files
+Every aggregate is traceable to a published NASA FIRMS source file.
+Product	Year	Version	Rows read	In territory	SHA-256	Archive
+MODIS (archive)	2001	6.2	145,721	103	0ca60412834d…	modis_2001_Brazil.csv
+MODIS (archive)	2002	6.2	524,224	908	23fa825d4b18…	modis_2002_Brazil.csv
+MODIS (archive)	2003	6.2	548,388	813	e57adce53988…	modis_2003_Brazil.csv
+MODIS (archive)	2004	6.2	634,507	1,219	438671d18103…	modis_2004_Brazil.csv
+MODIS (archive)	2005	6.2	631,834	941	40ec6a527c35…	modis_2005_Brazil.csv
+MODIS (archive)	2006	6.2	406,646	957	5c73a026c2b9…	modis_2006_Brazil.csv
+MODIS (archive)	2007	6.2	700,531	859	2d49aa49ead6…	modis_2007_Brazil.csv
+MODIS (archive)	2008	6.2	354,521	1,150	4bb1d5392945…	modis_2008_Brazil.csv
+MODIS (archive)	2009	6.2	250,516	1,488	43126b7fac72…	modis_2009_Brazil.csv
+MODIS (archive)	2010	6.2	583,691	811	ac4fceba8612…	modis_2010_Brazil.csv
+MODIS (archive)	2011	6.2	271,299	557	a56e530a5207…	modis_2011_Brazil.csv
+MODIS (archive)	2012	6.2	402,205	991	1a9887200ac2…	modis_2012_Brazil.csv
+MODIS (archive)	2013	6.2	220,409	759	56f988b17893…	modis_2013_Brazil.csv
+MODIS (archive)	2014	6.2	311,349	1,226	1883fbaa50b7…	modis_2014_Brazil.csv
+MODIS (archive)	2015	6.2	419,826	2,222	27d5de1a2cd0…	modis_2015_Brazil.csv
+MODIS (archive)	2016	6.2	334,349	1,875	a12097eedb21…	modis_2016_Brazil.csv
+MODIS (archive)	2017	6.2	389,240	2,978	a6e2e271a1b8…	modis_2017_Brazil.csv
+MODIS (archive)	2018	6.03	231,849	2,414	efddb4ab4bb1…	modis_2018_Brazil.csv
+MODIS (archive)	2019	6.03	374,668	2,040	2a14ae9be81f…	modis_2019_Brazil.csv
+MODIS (archive)	2020	6.03	405,388	2,345	663bd08ed07e…	modis_2020_Brazil.csv
+MODIS (archive)	2021	6.03	340,582	1,435	8466734fc998…	modis_2021_Brazil.csv
+MODIS (archive)	2022	6.03	362,785	3,516	ce67f4c7d1d4…	modis_2022_Brazil.csv
+MODIS (archive)	2023	61.03	357,737	4,691	659ce5160d96…	modis_2023_Brazil.csv
+MODIS (archive)	2024	61.03	527,894	4,095	b617f757e2b1…	modis_2024_Brazil.csv
+MODIS (archive)	2025	61.03	236,731	1,027	1da12d96d12d…	modis_2025_Brazil.csv
+VIIRS NOAA-20 (archive)	2021	2	1,304,753	6,226	ed71e40d4f96…	viirs-jpss1_2021_Brazil.csv
+VIIRS NOAA-20 (archive)	2022	2	1,452,881	15,472	348404b92408…	viirs-jpss1_2022_Brazil.csv
+VIIRS NOAA-20 (archive)	2023	2	1,312,648	18,916	aa1344aaeedf…	viirs-jpss1_2023_Brazil.csv
+VIIRS NOAA-20 (archive)	2024	2	1,988,404	14,936	219e933850ce…	viirs-jpss1_2024_Brazil.csv
+VIIRS NOAA-20 (archive)	2025	2	853,909	3,208	01a4ea954a97…	viirs-jpss1_2025_Brazil.csv
+VIIRS S-NPP (archive)	2023	2	1,345,502	18,646	7e0d392c6e47…	viirs-snpp_2023_Brazil.csv
+VIIRS S-NPP (archive)	2024	2	1,935,740	14,121	70bddaf02d8e…	viirs-snpp_2024_Brazil.csv
+0.3

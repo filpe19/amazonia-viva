@@ -1,5 +1,7 @@
 # Missão 05 — entrega técnica do Amazônia Viva
 
+> Registro da entrega original. A alternância PT-BR/EN foi implementada posteriormente; consulte a [entrega de internacionalização](../i18n/README.md).
+
 A aplicação existente foi refinada para três experiências: **Current activity**, **Fire history** e **Territory analysis**. A demonstração está em inglês. Backend, arquivos históricos, fórmulas científicas e endpoints foram preservados.
 
 ## Aplicação local e recuperação
