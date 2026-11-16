@@ -1,6 +1,6 @@
 # Deploying on a shared server (behind an existing nginx)
 
-This is how Amazônia Viva runs on a server that already hosts other applications behind the host nginx. Nothing
+This is how Amazônia Viva runs in production at https://amazviva.online, on a server that already hosts other applications behind the host nginx. Nothing
 here binds to public ports or changes the other sites. For a dedicated server with automatic HTTPS, see
 [deploy/DEPLOY.md](../deploy/DEPLOY.md) (Caddy profile).
 
@@ -28,7 +28,7 @@ git clone https://github.com/filpe19/amazonia-viva.git /var/www/amazonia-viva
 
 # 2. Settings (see backend/.env.example). Minimum:
 cat > /var/www/amazonia-viva-shared/api.env <<'ENV'
-CORS_ORIGINS=["https://amazoniaviva.179-197-65-61.sslip.io"]
+CORS_ORIGINS=["https://amazviva.online","https://www.amazviva.online"]
 # Background pre-computation; the Amazon-wide scale needs ~3 GB, so leave it out on small shared servers
 WARM_TARGETS=["santarem:7d","santarem:24h","portel:7d","portel:24h"]
 # FIRMS_MAP_KEY=   (optional, free: https://firms.modaps.eosdis.nasa.gov/api/map_key/)
@@ -46,11 +46,11 @@ cd /var/www/amazonia-viva && sudo docker compose -f deploy/docker-compose.vps.ym
 sudo cp deploy/nginx-vps.conf /etc/nginx/sites-available/amazonia-viva
 sudo ln -s /etc/nginx/sites-available/amazonia-viva /etc/nginx/sites-enabled/amazonia-viva
 sudo nginx -t && sudo systemctl reload nginx
-sudo certbot --nginx -d amazoniaviva.179-197-65-61.sslip.io
+sudo certbot --nginx -d amazviva.online -d www.amazviva.online
 ```
 
-The temporary hostname uses [sslip.io](https://sslip.io), which resolves `*.179-197-65-61.sslip.io` to the server
-IP. No DNS change is needed.
+Before the domain existed, a temporary hostname on [sslip.io](https://sslip.io) (`*.179-197-65-61.sslip.io` resolves to the
+server IP) was used with the same steps and no DNS change. It stays enabled as a fallback.
 
 ## Updating
 

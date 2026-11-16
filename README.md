@@ -6,7 +6,7 @@ Built by team **Binary Horizon (Horizonte Binário)** for the NASA Space Apps Ch
 
 > Português: [README.pt-BR.md](README.pt-BR.md)
 
-**Live demo (temporary address):** https://amazoniaviva.179-197-65-61.sslip.io
+**Live demo:** https://amazviva.online
 
 Amazônia Viva turns NASA FIRMS fire detections into territorial context. It shows where fire activity is unusual,
 which hotspots deserve attention, and who and what may be affected. It also states clearly what the data cannot say.
