@@ -88,3 +88,24 @@ def test_exportacoes_csv(client):
     assert all("firms.test" in ln for ln in lines[1:])  # proveniência por linha
     assert client.get("/api/v1/history/export.csv", params={"region": "brasil", "product": "MODIS_SP", "start": "2024-01-01", "end": "2024-01-31"}).status_code == 422
     assert client.get("/api/v1/history/export.csv", params={"region": "portel", "product": "MODIS_SP", "start": "2024-02-01", "end": "2024-01-01"}).status_code == 422
+
+
+def test_camada_de_recorrencia_por_celula(client):
+    """Grade de recorrência: um único produto, total e anos ativos por célula (sem somar sensores)."""
+    d = client.get("/api/v1/history/grid", params={"region": "portel", "product": "VIIRS_NOAA20_SP"}).json()
+    meta = d["metadata"]
+    assert d["type"] == "FeatureCollection" and meta["product_id"] == "VIIRS_NOAA20_SP"
+    assert meta["years"] == [2021, 2025] and meta["n_years"] == 5 and meta["grid_deg"] == pytest.approx(0.1)
+    assert len(d["features"]) == 1  # todos os focos sintéticos caem no mesmo ponto
+    p = d["features"][0]["properties"]
+    assert p["total"] == 240 * 12 * 5 and p["years_active"] == 5 and p["months_active"] == 60
+    assert p["mean_per_year"] == pytest.approx(240 * 12) and meta["max_total"] == p["total"]
+    lat, lon = PORTEL_IN
+    ring = d["features"][0]["geometry"]["coordinates"][0]
+    assert min(x for x, _ in ring) <= lon <= max(x for x, _ in ring) and min(y for _, y in ring) <= lat <= max(y for _, y in ring)
+    # recorte de anos e produto MODIS separado
+    d2 = client.get("/api/v1/history/grid", params={"region": "portel", "product": "VIIRS_NOAA20_SP", "start_year": 2024, "end_year": 2025}).json()
+    assert d2["features"][0]["properties"]["total"] == 240 * 12 * 2 and d2["metadata"]["n_years"] == 2
+    m = client.get("/api/v1/history/grid", params={"region": "portel", "product": "MODIS_SP"}).json()
+    assert m["metadata"]["product_id"] == "MODIS_SP" and m["features"][0]["properties"]["total"] == 40 * 12 * 24
+    assert client.get("/api/v1/history/grid", params={"region": "portel", "product": "VIIRS_NOAA21_NRT"}).status_code == 422

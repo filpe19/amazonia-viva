@@ -1,0 +1,12 @@
+{
+  "region_id": "rondonia",
+  "name": "Rondônia",
+  "ibge_code": "11",
+  "publisher": "IBGE — Instituto Brasileiro de Geografia e Estatística",
+  "source_url": "https://servicodados.ibge.gov.br/api/v3/malhas/estados/11?formato=application/vnd.geo%2Bjson&qualidade=maxima",
+  "quality": "maxima",
+  "fetched_at": "2026-11-15T19:10:03+00:00",
+  "sha256": "2de84ac6649c87edfa042bf0d27274c32d3ecae8ada8d227c5ccbae1c6dbec05",
+  "bytes": 43820,
+  "license_note": "Dados públicos do IBGE (API de malhas territoriais v3)."
+}

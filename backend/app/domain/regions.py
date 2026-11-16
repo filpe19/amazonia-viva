@@ -29,7 +29,7 @@ from app.core.errors import NotFoundError
 class RegionDef:
     id: str
     name: str
-    level: str  # pais | estado | municipio
+    level: str  # bioma | pais | estado | municipio
     ibge_code: str
     ibge_path: str  # caminho na API de malhas v3 do IBGE
     parent: str | None = None
@@ -38,14 +38,28 @@ class RegionDef:
 
 
 REGION_DEFS: list[RegionDef] = [
+    # Amazônia (9 países): Amazônia Legal (IBGE, LC 124/2007) + definição de cada país na capa combinada da OTCA.
+    # Gerada por scripts.fetch_amazonia (não vem da API de malhas; ibge_path vazio).
+    RegionDef("amazonia", "Amazônia (9 países)", "bioma", "AMZ", "", featured=True),
     RegionDef("brasil", "Brasil", "pais", "BR", "paises/BR"),
-    RegionDef("para", "Pará", "estado", "15", "estados/15", parent="brasil"),
+    RegionDef("para", "Pará", "estado", "15", "estados/15", parent="brasil", featured=True),
+    # Demais estados da Amazônia Legal (limites estaduais do IBGE; municípios detalhados, por enquanto, só no Pará)
+    RegionDef("acre", "Acre", "estado", "12", "estados/12", parent="brasil"),
+    RegionDef("amapa", "Amapá", "estado", "16", "estados/16", parent="brasil"),
+    RegionDef("amazonas", "Amazonas", "estado", "13", "estados/13", parent="brasil"),
+    RegionDef("maranhao", "Maranhão", "estado", "21", "estados/21", parent="brasil"),
+    RegionDef("mato-grosso", "Mato Grosso", "estado", "51", "estados/51", parent="brasil"),
+    RegionDef("rondonia", "Rondônia", "estado", "11", "estados/11", parent="brasil"),
+    RegionDef("roraima", "Roraima", "estado", "14", "estados/14", parent="brasil"),
+    RegionDef("tocantins", "Tocantins", "estado", "17", "estados/17", parent="brasil"),
     RegionDef("santarem", "Santarém (PA)", "municipio", "1506807", "municipios/1506807", parent="para", featured=True),
 ]
 
 STATE_MUNICIPALITY_FILES = {"para": ("pa_municipios", "PA")}
-PILOT_MUNICIPALITIES = {"1505809"}  # Portel (PA): piloto da Missão 02
+PILOT_MUNICIPALITIES = {"1505809", "1506807"}  # Portel (Missão 02) e Santarém (piloto de demonstração: terras indígenas no entorno)
 FEATURED_MUNICIPALITIES = {"1505809", "1500503", "1506807"}  # Portel, Almeirim, Santarém
+
+UF_BY_CODE = {"11": "RO", "12": "AC", "13": "AM", "14": "RR", "15": "PA", "16": "AP", "17": "TO", "21": "MA", "51": "MT"}
 
 _GEOD = Geod(ellps="WGS84")
 
@@ -105,6 +119,13 @@ class Region:
             inside = shapely.contains_xy(self.geometry, lon[idx], lat[idx])
             mask[idx] = inside
         return mask
+
+    @property
+    def uf(self) -> str | None:
+        """Sigla da UF (estados e municípios da Amazônia Legal); None para Brasil/Amazônia."""
+        if self.definition.level in ("estado", "municipio"):
+            return UF_BY_CODE.get(str(self.definition.ibge_code)[:2])
+        return None
 
     def summary(self) -> dict:
         d = self.definition

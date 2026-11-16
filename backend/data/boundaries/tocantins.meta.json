@@ -1,0 +1,12 @@
+{
+  "region_id": "tocantins",
+  "name": "Tocantins",
+  "ibge_code": "17",
+  "publisher": "IBGE — Instituto Brasileiro de Geografia e Estatística",
+  "source_url": "https://servicodados.ibge.gov.br/api/v3/malhas/estados/17?formato=application/vnd.geo%2Bjson&qualidade=maxima",
+  "quality": "maxima",
+  "fetched_at": "2026-11-15T19:10:04+00:00",
+  "sha256": "6f79642ba83875ec18f63673e5638434140556031b407cc4bd346e8fdbb7ec3c",
+  "bytes": 47717,
+  "license_note": "Dados públicos do IBGE (API de malhas territoriais v3)."
+}

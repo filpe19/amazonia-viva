@@ -1,0 +1,12 @@
+{
+  "region_id": "roraima",
+  "name": "Roraima",
+  "ibge_code": "14",
+  "publisher": "IBGE — Instituto Brasileiro de Geografia e Estatística",
+  "source_url": "https://servicodados.ibge.gov.br/api/v3/malhas/estados/14?formato=application/vnd.geo%2Bjson&qualidade=maxima",
+  "quality": "maxima",
+  "fetched_at": "2026-11-15T19:10:03+00:00",
+  "sha256": "f789ea69ea78ef5abfa73fed4455f33a4364c273feea695d93ec2d2e55f7259e",
+  "bytes": 43376,
+  "license_note": "Dados públicos do IBGE (API de malhas territoriais v3)."
+}

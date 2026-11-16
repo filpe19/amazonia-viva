@@ -32,11 +32,25 @@ def create_app(settings: Settings | None = None, container=None) -> FastAPI:
         from app.domain.sources import PRODUCTS
 
         while True:
-            for pid in ("VIIRS_NOAA20_NRT", "VIIRS_NOAA21_NRT", "MODIS_NRT"):
+            for pid in ("VIIRS_NOAA20_NRT", "VIIRS_NOAA21_NRT", "MODIS_NRT") if not settings.firms_key_configured else ():
                 try:
                     await c.firms.fetch_public_file(PRODUCTS[pid], "7d")
                 except Exception as exc:  # noqa: BLE001 - registra e tenta no próximo ciclo
                     log.warning("warm cache failed", extra={"product": pid, "error": str(exc)})
+            # Pilotos de demonstração e escalas pesadas pré-calculados (em thread, um por vez; a API segue respondendo).
+            warm = [("santarem", "24h"), ("santarem", "7d"), ("portel", "24h"), ("portel", "7d"), ("para", "24h"), ("amazonia", "24h")]
+            for region_id, window in warm:
+                try:
+                    if c.hotspots is not None:
+                        await c.hotspots.hotspots(region_id, window)
+                    if c.indigenous is not None:
+                        await c.indigenous.alerts(region_id, window)
+                    if c.attention is not None and region_id != "amazonia":
+                        await c.attention.attention(region_id, window)
+                    if c.map_layers is not None and window == "24h":
+                        await c.map_layers.layers(region_id)
+                except Exception as exc:  # noqa: BLE001 - melhor esforço
+                    log.warning("warm failed", extra={"region": region_id, "window": window, "error": str(exc)})
             await asyncio.sleep(max(120, settings.firms_nrt_cache_ttl_seconds - 120))
 
     @asynccontextmanager
@@ -45,7 +59,7 @@ def create_app(settings: Settings | None = None, container=None) -> FastAPI:
         log.info("startup", extra={"firms_key": settings.firms_key_configured,
                                    "regions": len(app.state.container.regions.all())})
         task = None
-        if settings.environment != "test" and container is None and not settings.firms_key_configured:
+        if settings.environment != "test" and container is None:
             task = asyncio.create_task(warm_nrt_cache(app.state.container))
         yield
         if task:

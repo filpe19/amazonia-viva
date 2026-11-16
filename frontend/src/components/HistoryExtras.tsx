@@ -79,7 +79,7 @@ export function AnomalyList({ anomalies, rule }: { anomalies: Anomaly[]; rule?: 
   if (!anomalies.length) return <p className="text-sm text-ink-3">{t("No flagged months, or insufficient comparison years.")}</p>
   return (
     <div className="flex flex-col gap-2">
-      <div className="max-h-[320px] overflow-auto">
+      <div className="max-h-[320px] overflow-auto" tabIndex={0} role="region" aria-label="Scrollable list">
         <table className="w-full text-left text-[12.5px]">
           <thead className="sticky top-0 bg-surface text-ink-3"><tr><th className="py-1 pr-2 font-medium">{t("Month")}</th><th className="pr-2 text-right font-medium">{t("Detections")}</th><th className="pr-2 text-right font-medium">{t("Other-year median")}</th><th className="pr-2 text-right font-medium">{t("Position")}</th><th className="text-right font-medium">{t("robust z")}</th></tr></thead>
           <tbody className="num divide-y divide-rule/60">

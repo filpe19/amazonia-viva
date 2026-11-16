@@ -7,7 +7,12 @@ import { Link } from 'react-router-dom'
 import { Page } from '../components/Page'
 import { ErrorState, Loading, Unavailable } from '../components/states'
 import { fmt1, fmtCoord, fmtDate, fmtInt, fmtUtc } from '../lib/format'
-import { useImpact, useTerritoryBrief, useTerritoryContext } from '../lib/hooks'
+import { useDetections, useHistoryDetections, useHotspots, useImpact, useRegions, useTerritoryBrief, useTerritoryContext } from '../lib/hooks'
+import { Segmented } from '../components/controls'
+import { useSessionState } from '../lib/useSessionState'
+import { SATELLITES } from '../features/map/symbology'
+import { useMemo } from 'react'
+import type { WindowLabel } from '../lib/types'
 import { productStyle } from '../lib/products'
 import { useRegion } from '../lib/region-context'
 import type { Signal, TerritoryBrief, WeatherContext } from '../lib/types'
@@ -125,18 +130,75 @@ function WeatherSummary({ w }: { w: TerritoryBrief['weather'] }) {
   const pvc = wx.historical.precip_vs_climatology?.last_14d
   const rose = wx.recent_hourly.wind_rose_7d
   return (
-    <dl className="grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-4">
+    <><dl className="grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-4">
       <div><dt className="text-xs text-ink-3">{t("Maximum temperature at 2 m")}</dt><dd className="num text-2xl font-semibold">{fmt1(r.latest?.T2M_MAX)} <span className="text-sm font-normal text-ink-3">°C</span></dd><dd className="text-xs text-ink-3">{fmtDate(r.last_available_date)}</dd></div>
       <div><dt className="text-xs text-ink-3">{t("Mean relative humidity")}</dt><dd className="num text-2xl font-semibold">{fmt1(r.last_7d?.rh_mean_pct)} <span className="text-sm font-normal text-ink-3">%</span></dd><dd className="text-xs text-ink-3">{t("7 days through")} {fmtDate(r.last_available_date, false)}</dd></div>
       <div><dt className="text-xs text-ink-3">{t("14-day precipitation")}</dt><dd className="num text-2xl font-semibold">{fmt1(r.last_14d?.precip_total_mm)} <span className="text-sm font-normal text-ink-3">mm</span></dd>
         <dd className="text-xs text-ink-3">{pvc?.ratio != null ? t("{0}% of climatology", {"0": fmtInt(pvc.ratio * 100)}) : t("climatology unavailable")}</dd></div>
       <div><dt className="text-xs text-ink-3">{t("Wind at 10 m")}</dt><dd className="num text-2xl font-semibold">{fmt1(rose?.mean_speed_ms)} <span className="text-sm font-normal text-ink-3">m/s</span></dd>
         <dd className="text-xs text-ink-3">{rose?.prevailing_sector ? t("prevailing from {0}", {"0": rose.prevailing_sector}) : '—'}</dd></div>
-      <p className="col-span-2 text-[11.5px] text-ink-3 sm:col-span-4">
+    </dl>
+      <p className="mt-3 text-[11.5px] text-ink-3">
         {t("NASA POWER (~50 km reanalysis grid) at")} {fmtCoord(wx.point.lat, wx.point.lon)}{t(". Latest available day:")} {fmtDate(r.last_available_date)}.{' '}
         <Link to={`/ambiente?lat=${wx.point.lat}&lon=${wx.point.lon}`} className="text-river underline">{t("View full environmental context")}</Link>
-      </p>
-    </dl>
+      </p></>
+  )
+}
+
+const WINDOW_DAYS: Record<WindowLabel, number> = { '24h': 1, '48h': 2, '7d': 7 }
+
+/** Agora × mesmo período há N anos: detecções por satélite (mesmo instrumento), focos, graus e alvos. */
+function PeriodComparison({ region }: { region: string }) {
+  useLocale()
+  const regions = useRegions()
+  const info = regions.data?.regions.find((r) => r.id === region)
+  const histAllowed = region === 'para' || info?.parent === 'para'
+  const [win, setWin] = useSessionState<WindowLabel>('av:territory:window', '7d')
+  const [years, setYears] = useSessionState<number>('av:territory:years', 1)
+  const hist = useMemo(() => {
+    if (!histAllowed) return null
+    const end = new Date(Date.now() - 86_400_000)
+    end.setUTCFullYear(end.getUTCFullYear() - years)
+    const start = new Date(end.getTime() - (WINDOW_DAYS[win] - 1) * 86_400_000)
+    return { start: start.toISOString().slice(0, 10), end: end.toISOString().slice(0, 10) }
+  }, [histAllowed, years, win])
+  const nowDet = useDetections({ region, window: win, products: SATELLITES.map((s) => s.product).filter((v, i, a) => a.indexOf(v) === i), daynight: 'all' })
+  const thenDet = useHistoryDetections(region, hist)
+  const nowHs = useHotspots(region, win, null)
+  const thenHs = useHotspots(region, win, hist, Boolean(hist))
+  const count = (fc: { features: { properties: { s: string } }[] } | undefined, s: string) => (fc ? fc.features.filter((f) => f.properties.s === s).length : null)
+  const n = nowHs.data?.available ? nowHs.data.summary : undefined
+  const p = thenHs.data?.available ? thenHs.data.summary : undefined
+  const rows: [string, number | null | undefined, number | null | undefined, string?][] = [
+    ...SATELLITES.map((s) => [`${s.label} · ${s.resolution}`, count(nowDet.data, s.key), s.key.startsWith('NOAA-21') ? null : count(thenDet.data, s.key), s.key === 'NOAA-21' ? t('NOAA-21 has no archive yet') : s.key === 'NOAA-20' && years > 4 ? t('NOAA-20 archive starts in 2021') : undefined] as [string, number | null, number | null, string?]),
+    [t('Hotspots'), n?.clusters, p?.clusters],
+    [t('High alert'), n?.by_level.alto, p?.by_level.alto],
+    [t('Moderate alert'), n?.by_level.moderado, p?.by_level.moderado],
+    [t('Cities within 5 km or downwind'), n?.cities_close_or_downwind.length, p?.cities_close_or_downwind.length, t('downwind only for the current period (model wind)')],
+    [t('Federal roads within 10 km'), n?.federal_roads_near.length, p?.federal_roads_near.length],
+    [t('Indigenous lands touched'), n?.indigenous_lands_touched.length, p?.indigenous_lands_touched.length],
+  ]
+  return (
+    <section className="period-compare" aria-label={t('Compare with the same period in past years')}>
+      <div className="period-bar">
+        <span>{t('Period')}</span>
+        <Segmented label={t('Observation window')} size="sm" value={win} onChange={setWin} options={[{ value: '24h', label: '24 h' }, { value: '48h', label: '48 h' }, { value: '7d', label: '7 d' }]} />
+        <span>{t('Compare with')}</span>
+        <select value={years} onChange={(e) => setYears(Number(e.target.value))} disabled={!histAllowed} aria-label={t('Compare with the same period in past years')}>
+          {[1, 2, 5, 10].map((y) => <option key={y} value={y}>{t('{0} year(s) ago', { 0: y })}</option>)}
+        </select>
+        {hist && <small>{fmtDate(hist.start)} – {fmtDate(hist.end)} · {t('FIRMS archive')}</small>}
+      </div>
+      {!histAllowed ? <p className="text-xs text-ink-2">{t('Archive imported for Pará and its municipalities')}</p> : (
+        <table className="compare-table">
+          <thead><tr><th>{t('Indicator')}</th><th className="num">{t('Now')}</th><th className="num">{t('{0} year(s) ago', { 0: years })}</th><th>{t('Note')}</th></tr></thead>
+          <tbody>{rows.map(([k, a, b, note]) => (
+            <tr key={k}><th scope="row">{k}</th><td className="num">{a == null ? (nowDet.isLoading || nowHs.isLoading ? '…' : '—') : fmtInt(a)}</td><td className="num">{b == null ? (thenDet.isLoading || thenHs.isLoading ? '…' : '—') : fmtInt(b)}</td><td>{note ?? ''}</td></tr>
+          ))}</tbody>
+        </table>
+      )}
+      <p className="text-xs text-ink-2 mt-2">{t('Detections are compared only within the same satellite and instrument; counts are never added across sensors. Near-real-time and standard-processing files can differ slightly.')}</p>
+    </section>
   )
 }
 
@@ -158,6 +220,7 @@ export default function TerritoryPage() {
       </Step>
       <Step n={2} title={t("Is this activity unusual?")}>
         <p className="section-context">{t("Compare the same period with earlier years. Original sensor comparisons and experimental equivalents are identified separately.")}</p>
+        <PeriodComparison region={region} />
         <div className="grid gap-4 xl:grid-cols-2">{b.comparisons.map(c=><ComparisonBlock key={c.product_baseline} c={c}/>)}</div>
         <p className="mt-4 text-xs text-ink-2">{t("A high historical percentile describes unusual observed activity. It is not a probability of fire, damage or future spread.")}</p>
         <Link to={`/historico?regiao=${region}`} className="text-river text-xs underline mt-3 inline-block">{t("Read the calendar and conversion limitations")}</Link>

@@ -81,3 +81,24 @@ async def ibge_wfs_bbox(http: HttpClient, cache: FileCache, layer: str, bbox: tu
     data = json.loads(res.content)
     meta = cache.put(key, res.content, {"url": url, "fetched_at": datetime.now(UTC).isoformat()})
     return {"data": data, "url": url, "fetched_at": meta["fetched_at"], "cache_hit": False}
+
+
+async def ibge_municipal_seats(http: HttpClient, cache: FileCache, bbox: tuple[float, float, float, float],
+                               ttl: int = 30 * 86_400) -> dict:
+    """Sedes municipais da BC250 2025: tipolocalidade 'Cidade' (sede da prefeitura) ou 'Capital' (capital estadual)."""
+    from urllib.parse import urlencode
+
+    w, s, e, n = bbox
+    params = {"service": "WFS", "version": "2.0.0", "request": "GetFeature", "outputFormat": "application/json",
+              "typeNames": BC250_LAYERS["localidades"], "count": 2000,
+              # EPSG:4674 no GeoServer usa ordem lat,lon no BBOX do CQL
+              "CQL_FILTER": f"tipolocalidade IN ('Cidade','Capital') AND BBOX(geom,{s:.4f},{w:.4f},{n:.4f},{e:.4f})"}
+    url = f"{IBGE_WFS}?{urlencode(params)}"
+    key = f"ibge-wfs:{url}"
+    entry = cache.get(key)
+    if entry and entry.is_fresh(ttl):
+        return {"data": json.loads(entry.content), "url": url, "fetched_at": entry.meta["fetched_at"], "cache_hit": True}
+    res = await http.get(url, source="IBGE geoserviços")
+    data = json.loads(res.content)
+    meta = cache.put(key, res.content, {"url": url, "fetched_at": datetime.now(UTC).isoformat()})
+    return {"data": data, "url": url, "fetched_at": meta["fetched_at"], "cache_hit": False}

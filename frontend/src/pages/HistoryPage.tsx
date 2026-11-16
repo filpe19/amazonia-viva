@@ -1,3 +1,4 @@
+import { DateRangeControl } from '../components/DateRangeControl'
 import { t, useLocale } from '../lib/i18n'
 import { sourceCopy } from '../lib/sourceCopy'
 import { useQuery } from '@tanstack/react-query'
@@ -100,21 +101,11 @@ function ComparePanel({ region, product }: { region: string; product: string }) 
     queryFn: ({ signal }) => getJson<ComparePeriods>('/history/compare', { region, product, a_start: a.start, a_end: a.end, b_start: b.start, b_end: b.end }, signal),
     staleTime: 30 * 60_000,
   })
-  const field = (v: { start: string; end: string }, set: (x: { start: string; end: string }) => void, label: string) => (
-    <fieldset className="flex flex-col gap-1.5">
-      <legend className="type-label mb-1 text-xs text-ink-2">{label}</legend>
-      <div className="flex items-center gap-1.5">
-        <input type="date" value={v.start} onChange={(e) => set({ ...v, start: e.target.value })} className="control bg-surface px-2 py-1.5 text-sm ring-1 ring-rule" aria-label={t("{0}: start", {"0": label})} />
-        <span className="text-ink-3">{t("to")}</span>
-        <input type="date" value={v.end} onChange={(e) => set({ ...v, end: e.target.value })} className="control bg-surface px-2 py-1.5 text-sm ring-1 ring-rule" aria-label={t("{0}: end", {"0": label})} />
-      </div>
-    </fieldset>
-  )
   return (
     <div className="grid gap-6 md:grid-cols-[auto_1fr] md:items-end">
       <div className="flex flex-col gap-4">
-        {field(a, setA, t("Period A"))}
-        {field(b, setB, t("Period B"))}
+        <DateRangeControl label={t("Period A")} value={a} onApply={setA}/>
+        <DateRangeControl label={t("Period B")} value={b} onApply={setB}/>
       </div>
       <div>
         {q.isLoading ? <Loading /> : q.error ? <ErrorState error={q.error} compact /> : q.data && (

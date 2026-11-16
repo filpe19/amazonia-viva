@@ -237,7 +237,9 @@ class TerritoryService:
         # ------------------------------------------- comparações no mesmo instrumento
         if not isinstance(modis_q, BaseException):
             results_by_product.update({r.product.id: r for r in modis_q.results})
-        comparisons = [self._compare(region_id, spec, results_by_product.get(spec["current"]), today) for spec in COMPARISONS]
+        # Consultas ao arquivo histórico (SQLite/Parquet) em threads: não bloqueiam o laço de eventos da API.
+        comparisons = list(await asyncio.gather(*(asyncio.to_thread(self._compare, region_id, spec, results_by_product.get(spec["current"]), today)
+                                                  for spec in COMPARISONS)))
         out["comparisons"] = comparisons
         out["historical_comparison"] = comparisons[0]  # compatibilidade com a versão anterior da interface
         for comp in comparisons:
@@ -292,7 +294,7 @@ class TerritoryService:
                             f"(climatologia 2001–2025 para o período: {_br_num(comp['climatology_expected_mm'])} mm).",
                     "source": "NASA POWER (reanálise)",
                 })
-            if region.definition.level == "pais":
+            if region.definition.level in ("pais", "bioma"):
                 facts.append({"kind": "ausente", "text": "Para o Brasil inteiro, um único ponto meteorológico não é representativo.",
                               "source": "metodologia"})
             signals.append({

@@ -1,0 +1,12 @@
+{
+  "region_id": "mato-grosso",
+  "name": "Mato Grosso",
+  "ibge_code": "51",
+  "publisher": "IBGE — Instituto Brasileiro de Geografia e Estatística",
+  "source_url": "https://servicodados.ibge.gov.br/api/v3/malhas/estados/51?formato=application/vnd.geo%2Bjson&qualidade=maxima",
+  "quality": "maxima",
+  "fetched_at": "2026-11-15T19:10:03+00:00",
+  "sha256": "ffc4789c7518d5ff10882c18e1e1671a2a7de9187718e4b305f7735d04bcc554",
+  "bytes": 57267,
+  "license_note": "Dados públicos do IBGE (API de malhas territoriais v3)."
+}

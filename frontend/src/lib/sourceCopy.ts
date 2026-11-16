@@ -2,6 +2,42 @@ import { getLocale, t } from './i18n'
 /** English presentation of descriptive API notes. IDs, enums, original payloads,
  * CSVs and JSON exports are never rewritten. Geographic proper names are retained. */
 const NOTES: Record<string,string> = {
+  // Missão 09 — focos e impacto
+  "Foco confirmado (≥ 2 passagens) com detecção nas últimas 24 h E (dentro de terra indígena, unidade de conservação ou território quilombola; OU cidade, localidade ou terra indígena a ≤ 5 km; OU alvo a favor do vento a ≤ 10 km).": "Confirmed hotspot (≥ 2 overpasses) detected in the last 24 h AND (inside an Indigenous land, conservation unit or quilombola territory; OR a city, locality or Indigenous land within 5 km; OR a target downwind within 10 km).",
+  "Foco confirmado com algum alvo a ≤ 10 km; OU qualquer foco dentro de área protegida/indígena/quilombola; OU cidade a ≤ 5 km.": "Confirmed hotspot with any target within 10 km; OR any hotspot inside a protected, Indigenous or quilombola area; OR a city within 5 km.",
+  "Demais focos com algum alvo a ≤ 10 km (cidade, localidade, rodovia federal, área oficial).": "Other hotspots with a target within 10 km (city, locality, federal road, official area).",
+  "Nenhum alvo mapeado a ≤ 10 km (não listado individualmente).": "No mapped target within 10 km (not listed individually).",
+  "Visto por ≥ 2 satélites em ≥ 3 passagens, ou por ≥ 2 satélites e coincidente com evento ativo do Censipam.": "Seen by ≥ 2 satellites in ≥ 3 overpasses, or by ≥ 2 satellites and matching an active Censipam event.",
+  "Visto em ≥ 2 passagens (mesmo satélite ou não).": "Seen in ≥ 2 overpasses (same satellite or not).",
+  "Uma única passagem, ou todos os pixels com confiança baixa: pode ser fogo curto, nuvem nas outras passagens ou falso positivo.": "A single overpass, or all pixels low confidence: could be a short fire, clouds at other overpasses or a false positive.",
+  "Alvo a ≤ 20 km dentro de ± 30° da direção para onde o vento sopra (modelo).": "Target within 20 km and ± 30° of the direction the (model) wind blows toward.",
+  "Focos e graus calculados pela plataforma com regras públicas para triagem. Não são alertas oficiais, não medem dano e não preveem propagação: 'a favor do vento' é uma indicação geométrica com vento de modelo. Confirme em campo e com os órgãos responsáveis.": "Hotspots and levels computed by the platform from public rules for screening. Not official alerts; they do not measure damage or forecast spread: 'downwind' is a geometric indication using model wind. Confirm on the ground and with the responsible agencies.",
+  "Probabilidade de o fogo chegar a um alvo (exige modelo de propagação calibrado: combustível, umidade, relevo, vento local)": "Probability of fire reaching a target (requires a calibrated spread model: fuel, moisture, terrain, local wind)",
+  "Taxa de propagação e tempo de chegada": "Rate of spread and arrival time",
+  "Área queimada final (ver DETER cicatrizes e produtos de área queimada)": "Final burned area (see DETER fire scars and burned-area products)",
+  "Ativo": "Active",
+  "O arquivo histórico de detecções foi importado para o Pará e seus municípios; selecione-os para estudar outros anos.": "The detection archive was imported for Pará and its municipalities; select them to study past years.",
+  // Missão 08 — terras indígenas e origem do calor
+  "Corpo de Bombeiros": "Fire brigade (Corpo de Bombeiros)",
+  "Defesa Civil": "Civil Defence",
+  "Ibama — Linha Verde (denúncias ambientais; aciona o Prevfogo)": "Ibama Green Line (environmental reports; activates Prevfogo)",
+  "Centro do pixel dentro da TI, em ≥ 2 passagens distintas de satélite na janela.": "Pixel centre inside the Indigenous land in ≥ 2 distinct satellite overpasses in the window.",
+  "Centro do pixel dentro da TI, em uma única passagem.": "Pixel centre inside the Indigenous land in a single overpass.",
+  "Nenhuma detecção dentro; ≥ 1 detecção fora, a até 10 km do limite.": "No detection inside; ≥ 1 detection outside, within 10 km of the boundary.",
+  "Última detecção há até 24 h.": "Latest detection within 24 h.",
+  "Alertas calculados pela plataforma com regras públicas, para apoiar a triagem. Não são alertas oficiais e não confirmam incêndio, causa ou dano. A população indicada é a residente na TI segundo o Censo 2022, não pessoas afetadas.": "Alerts computed by the platform from public rules to support screening. They are not official alerts and do not confirm fire, cause or damage. Population is residents of the land in the 2022 Census, not people affected.",
+  "Pessoas indígenas residentes nas TIs com fogo detectado dentro, segundo o Censo 2022. Não são pessoas afetadas.": "Indigenous residents of the lands with fire detected inside, per the 2022 Census. Not people affected.",
+  "FUNAI — Terras indígenas (via Censipam GeoServer)": "FUNAI — Indigenous lands (via Censipam GeoServer)",
+  "IBGE — Censo Demográfico 2022, tabela 9719 (residentes em terras indígenas, por TI e UF)": "IBGE — 2022 Census, table 9719 (residents of Indigenous lands, by land and state)",
+  "DNIT — rodovias federais (via Censipam)": "DNIT — federal roads (via Censipam)",
+  "ANM — SIGMINE (processos minerários ativos e reservas garimpeiras)": "ANM — SIGMINE (active mining titles and garimpo reserves)",
+  "INPE — DETER (12 meses)": "INPE — DETER (12 months)",
+  "OTCA — Terras indígenas dos demais países amazônicos (via Censipam)": "ACTO/OTCA — Indigenous lands of the other Amazon countries (via Censipam)",
+  "NASA FIRMS NRT (VIIRS NOAA-20/NOAA-21, MODIS)": "NASA FIRMS NRT (VIIRS NOAA-20/NOAA-21, MODIS)",
+  "Avaliado para até 20 TIs com fogo dentro.": "Evaluated for up to 20 lands with fire inside.",
+  "Avaliado nas mesmas TIs.": "Evaluated for the same lands.",
+  "Tradicionalmente ocupada": "Traditionally occupied", "Regularizada": "Regularized", "Declarada": "Declared", "Homologada": "Ratified", "Delimitada": "Delimited", "Em Estudo": "Under study",
+  "AUTORIZAÇÃO DE PESQUISA · MINÉRIO DE OURO": "Exploration permit · gold ore",
   "Índice de Prioridade para Acionamento: indicador operacional do Censipam para apoiar o acionamento de brigadas. A fórmula e os pesos não estão publicados em formato verificável (o FAQ lista componentes como área, FRP, tempo, velocidade, variação de área e número de focos). Exibido sem alteração; não entra nos critérios desta plataforma.": "Censipam response priority index: an external operational indicator intended to support brigade activation. Its formula and weights are not published in a verifiable format. The source FAQ lists components including area, FRP, duration, speed, area change and detection count. The value is displayed as supplied and is not used by this platform's screening criteria.",
   "A área dos eventos não é exibida: a unidade de 'area_total_evento' não está documentada na API.": "Event area is not shown because the API does not document the unit of area_total_evento.",
 
@@ -108,6 +144,10 @@ export function sourceCopy(value: string | null | undefined): string {
   if (NOTES[value]) return NOTES[value]
   let text = value
   const rules: [RegExp, string][] = [
+    [/acima de todos os (\d+) anos/g, 'above all $1 years'], [/célula\(s\)/g, 'cell(s)'], [/(\d+)% do esperado/g, '$1% of expected'],
+    [/Aglomerado rural isolado/g, 'Isolated rural settlement'], [/^Cidade$/g, 'Town'], [/^Vila$/g, 'Village'],
+    [/Unidades de conservação estaduais/g, 'State conservation units'], [/Terras indígenas/g, 'Indigenous lands'],
+    [/Territórios quilombolas/g, 'Quilombola territories'],
     [/Baseado em (\d+) anos; exige ≥ (\d+)/g, 'Based on $1 years; requires ≥$2'],
     [/Deriva orbital Terra\/Aqua não corrigida/g, 'Terra/Aqua orbital drift is not corrected'],
     [/centroide do limite IBGE de /g, 'IBGE boundary centroid for '],

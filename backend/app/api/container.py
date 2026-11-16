@@ -16,9 +16,14 @@ from app.integrations.ibge import IbgeClient
 from app.integrations.power import PowerClient
 from app.persistence.cache import FileCache
 from app.persistence.history_store import HistoryStore
+from app.services.attention_service import AttentionService
 from app.services.detections_service import DetectionsService
+from app.services.heat_source_service import HeatSourceService
 from app.services.history_service import HistoryService
+from app.services.hotspot_service import HotspotService
 from app.services.impact_service import ImpactService
+from app.services.indigenous_service import IndigenousService
+from app.services.map_layers_service import MapLayersService
 from app.services.territory_context_service import TerritoryContextService
 from app.services.territory_service import TerritoryService
 from app.services.weather_service import WeatherService
@@ -38,6 +43,12 @@ class Container:
     territory: TerritoryService
     context: TerritoryContextService
     impact: ImpactService
+    cache: FileCache | None = None
+    attention: AttentionService | None = None
+    indigenous: IndigenousService | None = None
+    heat_source: HeatSourceService | None = None
+    hotspots: HotspotService | None = None
+    map_layers: MapLayersService | None = None
 
     async def aclose(self) -> None:
         await self.http.aclose()
@@ -64,10 +75,16 @@ def build_container(settings: Settings, http: HttpClient | None = None) -> Conta
     history = HistoryService(store, regions, settings.runtime_dir)
     censipam = CensipamClient(http, cache)
     context = TerritoryContextService(censipam, IbgeClient(http, cache), regions)
-    impact = ImpactService(detections, regions, http, cache, censipam, CnesClient(http, cache),
+    cnes = CnesClient(http, cache)
+    attention = AttentionService(detections, regions, http, cache, censipam, cnes)
+    indigenous = IndigenousService(detections, regions, http, cache, censipam, settings.runtime_dir / "reference")
+    heat_source = HeatSourceService(detections, indigenous, http, cache, settings.runtime_dir)
+    hotspots = HotspotService(detections, regions, http, cache, censipam, indigenous, settings.runtime_dir)
+    map_layers = MapLayersService(regions, censipam)
+    impact = ImpactService(detections, regions, http, cache, censipam, cnes,
                            str(settings.runtime_dir / "reference" / "PA_setores_CD2022.gpkg"))
     territory = TerritoryService(detections, history, weather, regions, context, impact)
-    return Container(settings, http, regions, firms, power, store, detections, weather, history, territory, context, impact)
+    return Container(settings, http, regions, firms, power, store, detections, weather, history, territory, context, impact, cache, attention, indigenous, heat_source, hotspots, map_layers)
 
 
 def get_container(request: Request) -> Container:

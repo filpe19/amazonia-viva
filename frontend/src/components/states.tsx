@@ -1,3 +1,5 @@
+import { Skeleton as UiSkeleton } from './ui/skeleton'
+import { Button } from './ui/button'
 import { t, useLocale } from '../lib/i18n'
 import { sourceCopy } from '../lib/sourceCopy'
 import { AlertTriangle, CloudOff, Database, Loader2 } from 'lucide-react'
@@ -6,7 +8,7 @@ import { ApiError } from '../lib/api'
 
 export function Skeleton({ className = '' }: { className?: string }) {
   useLocale()
-  return <div className={`skeleton ${className}`} aria-hidden="true" />
+  return <UiSkeleton className={`skeleton ${className}`} aria-hidden="true" />
 }
 
 export function Loading({ label = t("Loading observations…"), className = '' }: { label?: string; className?: string }) {
@@ -21,7 +23,7 @@ export function Loading({ label = t("Loading observations…"), className = '' }
 
 function errorCopy(err: unknown): { title: string; body: string; hint?: string } {
   if (err instanceof ApiError) {
-    if (err.code === 'network_error') return { title: t("Data service unavailable"), body: err.message, hint: t("Check the connection and retry.") }
+    if (err.code === 'network_error') return { title: t("Data service unavailable"), body: err.message }
     if (err.code === 'data_unavailable') {
       return { title: t("Historical data unavailable"), body: err.message, hint: t("Choose another satellite or period. The requested archive may not yet be available.") }
     }
@@ -49,9 +51,9 @@ export function ErrorState({ error, compact = false, onRetry }: { error: unknown
         <p className="text-ink-2">{sourceCopy(c.body)}</p>
         {c.hint && <p className="text-ink-3 break-words">{c.hint}</p>}
         {onRetry && (
-          <button type="button" onClick={onRetry} className="control mt-1 bg-surface px-2 py-1 text-xs font-medium text-ink ring-1 ring-rule hover:bg-lichen">
+          <Button type="button" variant="outline" onClick={onRetry} className="mt-2">
             {t("Try again")}
-          </button>
+          </Button>
         )}
       </div>
     </div>
@@ -69,4 +71,9 @@ export function Unavailable({ title, children, icon }: { title: string; children
       </div>
     </div>
   )
+}
+
+export function EmptyState({ title, description, action }: {title:string;description:string;action?:ReactNode}) {
+  useLocale()
+  return <div className="empty-state"><Database size={22} aria-hidden="true"/><h3>{t(title)}</h3><p>{t(description)}</p>{action&&<div className="mt-3">{action}</div>}</div>
 }

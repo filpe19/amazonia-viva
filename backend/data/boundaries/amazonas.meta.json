@@ -1,0 +1,12 @@
+{
+  "region_id": "amazonas",
+  "name": "Amazonas",
+  "ibge_code": "13",
+  "publisher": "IBGE — Instituto Brasileiro de Geografia e Estatística",
+  "source_url": "https://servicodados.ibge.gov.br/api/v3/malhas/estados/13?formato=application/vnd.geo%2Bjson&qualidade=maxima",
+  "quality": "maxima",
+  "fetched_at": "2026-11-15T19:10:03+00:00",
+  "sha256": "6f098bac8b97782371edd9b1a150be6ba5d85a7766f17ead8732ac936bf8f8ca",
+  "bytes": 76685,
+  "license_note": "Dados públicos do IBGE (API de malhas territoriais v3)."
+}

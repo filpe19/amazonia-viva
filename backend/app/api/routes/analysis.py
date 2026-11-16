@@ -8,6 +8,7 @@ from typing import Literal
 from fastapi import APIRouter, Depends, Query
 
 from app.api.container import Container, get_container
+from app.api.responses import big_json
 from app.core.errors import ValidationAppError
 from app.services.territory_service import LIMITATIONS
 
@@ -108,6 +109,48 @@ def history_harmonization_experiment(
     return c.history.harmonization_experiment(region, other, ref_satellites)
 
 
+@history.get("/grid")
+def history_grid(region: str = Query("portel"), product: Literal["MODIS_SP", "VIIRS_NOAA20_SP", "VIIRS_SNPP_SP"] = "VIIRS_NOAA20_SP",
+                 start_year: int | None = Query(None, ge=2000, le=2100), end_year: int | None = Query(None, ge=2000, le=2100),
+                 c: Container = Depends(get_container)) -> dict:
+    """Recorrência histórica por célula de grade (0,1° em municípios; 0,5° no Pará), um produto por vez."""
+    return c.history.grid_layer(region, product, start_year, end_year)
+
+
+@history.get("/detections")
+async def history_detections(region: str = Query("para"), start: date = Query(...), end: date = Query(...),
+                             c: Container = Depends(get_container)) -> dict:
+    """Detecções do arquivo FIRMS (processamento padrão) num período passado, no formato compacto do mapa (Pará e municípios).
+    MODIS 2001–2025; VIIRS NOAA-20 2021–2025. Para estudo e comparação com o mesmo período de outros anos."""
+    import asyncio
+
+    from app.services.hotspot_service import archive_frame
+
+    r = c.regions.get(region)
+    if end < start or (end - start).days > 31:
+        raise ValidationAppError("Período inválido (máximo de 31 dias)")
+    if not (r.id == "para" or r.definition.parent == "para"):
+        raise ValidationAppError("Arquivo histórico disponível para o Pará e seus municípios")
+    f = await asyncio.to_thread(archive_frame, c.settings.runtime_dir, r, start, end)
+    feats = [] if f.empty else [
+        {"type": "Feature", "geometry": {"type": "Point", "coordinates": [round(lo, 5), round(la, 5)]},
+         "properties": {"id": did, "p": pid, "s": sat, "t": t.strftime("%Y-%m-%dT%H:%MZ"), "frp": None if pd_isna(fr) else float(fr),
+                        "c": cf, "dn": dn}}
+        for lo, la, did, pid, sat, t, fr, cf, dn in zip(f["longitude"], f["latitude"], f["detection_id"], f["product_id"], f["satellite_name"],
+                                                       f["acq_datetime_utc"], f["frp_mw"], f["confidence_raw"], f["daynight"], strict=True)]
+    by = {} if f.empty else {k: int(v) for k, v in f.groupby(["product_id", "satellite_name"]).size().items() for k in [f"{k[0]}|{k[1]}"]}
+    return await big_json({"type": "FeatureCollection", "features": feats, "metadata": {
+        "mode": "archive", "region": r.summary(), "start": start.isoformat(), "end": end.isoformat(), "count": len(feats),
+        "by_product_satellite": by, "products": ["MODIS_SP (2001–2025)", "VIIRS_NOAA20_SP (2021–2025)"],
+        "note": "Arquivo de processamento padrão da NASA FIRMS (recorte do Pará). Contagens por satélite; não somar sensores."}})
+
+
+def pd_isna(v) -> bool:
+    import math
+
+    return v is None or (isinstance(v, float) and math.isnan(v))
+
+
 @history.get("/harmonized")
 def history_harmonized(region: str = Query("portel"), c: Container = Depends(get_container)) -> dict:
     """Calendário harmonizado EXPERIMENTAL (equivalente VIIRS NOAA-20), com faixa de incerteza e validação."""
@@ -174,6 +217,41 @@ async def territory_context(region_id: str, c: Container = Depends(get_container
 async def territory_impact(region_id: str, c: Container = Depends(get_container)) -> dict:
     """Localidades (IBGE), unidades de saúde (CNES), pistas e brigadas perto das detecções; exposição potencial por setores."""
     return await c.impact.impact(region_id)
+
+
+@territory.get("/{region_id}/attention")
+async def territory_attention(region_id: str, window: Literal["24h", "48h", "7d"] = "7d", c: Container = Depends(get_container)) -> dict:
+    """Sinais de atenção: cruzamento espacial transparente das detecções (4 satélites) com territórios oficiais,
+    localidades (IBGE), unidades de saúde (CNES) e avisos DETER (INPE). Não é alerta oficial; sem pontuação."""
+    return await big_json(await c.attention.attention(region_id, window))
+
+
+@territory.get("/{region_id}/map-layers")
+async def territory_map_layers(region_id: str, c: Container = Depends(get_container)) -> dict:
+    """Terras indígenas, UCs, quilombolas, assentamentos (município) e rodovias federais com atributos para pop-up."""
+    return await big_json(await c.map_layers.layers(region_id))
+
+
+@territory.get("/{region_id}/hotspots")
+async def territory_hotspots(region_id: str, window: Literal["24h", "48h", "7d"] = "24h", start: date | None = None, end: date | None = None,
+                             c: Container = Depends(get_container)) -> dict:
+    """Focos (agrupamentos de detecções) com proporção, vento (modelo), alvos no caminho (cidades, localidades, rodovias,
+    terras indígenas, UCs, quilombolas), confiabilidade e grau de alerta por regras públicas. Com start/end: modo histórico
+    (arquivo FIRMS, Pará). Não prevê propagação; não é alerta oficial."""
+    return await big_json(await c.hotspots.hotspots(region_id, window, start, end))
+
+
+@territory.get("/{region_id}/indigenous")
+async def territory_indigenous(region_id: str, window: Literal["24h", "48h", "7d"] = "7d", c: Container = Depends(get_container)) -> dict:
+    """Alertas para Terras Indígenas: fogo dentro da TI ou no entorno (≤ 10 km), população do Censo 2022, povos,
+    coordenação regional da FUNAI, acesso (rodovia federal, brigada) e indícios de origem (ANM, DETER). Não é alerta oficial."""
+    return await big_json(await c.indigenous.alerts(region_id, window))
+
+
+@territory.get("/{region_id}/deter")
+async def territory_deter(region_id: str, c: Container = Depends(get_container)) -> dict:
+    """Avisos DETER (INPE, últimos 12 meses) do município, simplificados para o mapa."""
+    return await big_json(await c.attention.deter_layer(region_id))
 
 
 @territory.get("/{region_id}/ficha")

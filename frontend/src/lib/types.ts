@@ -7,7 +7,7 @@ export type DayNight = 'all' | 'D' | 'N'
 export interface Region {
   id: RegionId
   name: string
-  level: 'pais' | 'estado' | 'municipio'
+  level: 'bioma' | 'pais' | 'estado' | 'municipio'
   ibge_code: string
   parent: string | null
   pilot: boolean
@@ -85,6 +85,11 @@ export interface DetectionProps {
   frp: number | null
   c: string | number | null
   dn: 'D' | 'N'
+  /** dimensões do pixel (km) ao longo da varredura (scan) e da órbita (track) */
+  sc?: number | null
+  tr?: number | null
+  /** classe de idade calculada no cliente (≤ 6 h, 6–24 h, > 24 h) */
+  age?: 'recent' | 'day' | 'older'
 }
 
 export interface DetectionsFC {
@@ -118,6 +123,10 @@ export interface DetectionRecord {
   track_km: number | null
   version: string | null
   type: number | null
+  product?: { id: string; sensor: string; platform: string; processing: string; collection: string; resolution_m: number; confidence_scale: string }
+  units?: Record<string, string>
+  attributes_doc?: string
+  provenance?: { source: string; mode: string; request_urls: string[]; fetched_at: string | null; source_file_last_modified: string | null; sha256: string; stale: boolean; nominal_latency: string; nominal_latency_source: string }
 }
 
 export interface SourcesInfo {
@@ -468,4 +477,118 @@ export interface HarmonizedSeries {
   validation: HarmonizationExperiment['loyo']
   method: string
   limitations: string[]
+}
+
+// ------------------------------------------------------------------ sinais de atenção (Missão 07)
+export interface AttentionRef { p: string; id: string; s: string; t: string; lon: number; lat: number; d_km?: number }
+export type AttentionCategory = 'indigenous' | 'conservation' | 'quilombola' | 'settlement' | 'locality' | 'health'
+  | 'deter_deforestation' | 'deter_burn_scar' | 'deter_degradation' | 'deter_selective_logging' | 'deter_mining' | string
+export interface DeterPolygonRef { gid: string; class: string; view_date: string | null; area_km2: number; satellite?: string | null; detections: number }
+export interface AttentionSignal {
+  id: string
+  group: 'protected' | 'people' | 'environment'
+  category: AttentionCategory
+  relation: 'inside' | 'near' | 'within_km'
+  criterion: 'inside_territory' | 'near_territory' | 'locality' | 'health' | 'deter'
+  radius_km?: number
+  months?: number
+  target: { id: string; name: string; layer_id: string; layer_label?: string; source: string; type?: string | null
+    attributes?: Record<string, unknown>; bbox?: number[]; lon?: number; lat?: number; polygons?: DeterPolygonRef[]; polygons_hit?: number }
+  by_satellite: Record<string, number>
+  first_utc: string | null
+  last_utc: string | null
+  recent_6h: number
+  max_frp_mw: number | null
+  nearest_km?: number
+  detections: AttentionRef[]
+  detections_truncated: boolean
+  bbox: number[] | null
+  region_ids: string[]
+}
+export interface DeterClassSummary { class: string; group: string; label: string; polygons: number; area_km2: number; latest_view_date: string | null }
+export interface AttentionReport {
+  available: boolean
+  reason?: string
+  experimental: boolean
+  official: false
+  region: Region
+  generated_at: string
+  window: { label: string; start_utc: string; end_utc: string }
+  disclaimer: string
+  criteria: { id: string; text: string; km?: number; months?: number }[]
+  detections_considered: { by_satellite: Record<string, number>; products: { product_id: string; available: boolean; count: number; error?: string | null }[] }
+  summary: {
+    protected: Record<string, { with_inside: number; with_near: number }>
+    people: { localities_total: number | null; localities_within_1km: number | null; localities_within_5km: number | null; health_total: number | null; health_within_5km: number | null }
+    environment: { deter_available: boolean; months?: number; detections_over_deter?: number; detections_over_deter_by_satellite?: Record<string, number>; caveat?: string; classes: DeterClassSummary[] }
+    signals: number
+    near_signals: number
+  }
+  signals: AttentionSignal[]
+  targets: GeoJSON.FeatureCollection
+  by_municipality: { region_id: string; name: string; signals: number; categories: Record<string, number>; last_utc: string | null }[]
+  sources: Record<string, { available: boolean; label: string; reason?: string; not_applicable?: boolean; url?: string; fetched_at?: string; features?: number; stale?: boolean; primary_source?: string }>
+  method: string
+  not_evaluated: string[]
+}
+export type DeterLayer = GeoJSON.FeatureCollection & { metadata: { available: boolean; reason?: string; source?: string; url?: string; fetched_at?: string; since?: string; months?: number; count?: number; caveat?: string } }
+
+// ------------------------------------------------------------------ alertas para Terras Indígenas (Missão 08)
+export interface IndigenousRefs { count: number; by_satellite: Record<string, number>; first_utc?: string | null; last_utc?: string | null; max_frp_mw?: number | null
+  detections: AttentionRef[]; truncated?: boolean; nearest_km?: number; overpasses?: number; radius_km?: number }
+export interface IndigenousItem {
+  id: string; code: number | null; name: string; country: string; peoples: string[]; phase: string | null; modality: string | null; area_ha: number | null
+  ufs: string[]; municipalities: string | null; border_zone: string | null; funai_unit: { name: string | null; sigla: string | null } | null; source: string
+  population: { residents: number; indigenous: number; census_names: string[]; year: number; source: string; note: string } | null
+  alert: 'inside_confirmed' | 'inside' | 'surroundings'; recent_24h: boolean
+  inside: IndigenousRefs; surroundings: IndigenousRefs; satellites: string[]; last_utc: string | null
+  bbox: number[]; detections_bbox: number[]; geometry: GeoJSON.Geometry | null
+  access: { nearest_federal_road?: { name: string; km: number; surface?: string | null; note: string }; nearest_brigade?: { name: string; agency?: string | null; municipality?: string | null; uf?: string | null; km: number; note: string } }
+  evidence: { evaluated: boolean; detections_checked?: number
+    mining?: { available: boolean; partial?: boolean; detections_in_mining_areas?: number; detections_in_garimpo_areas?: number; titles?: [string, number][]; source?: string }
+    deter?: { available: boolean; detections_by_group?: Record<string, number>; months?: number } }
+}
+export interface IndigenousReport {
+  available: boolean; reason?: string; official: false; region: Region; generated_at: string; window: string; disclaimer: string
+  rules: Record<string, string>
+  summary: { lands_evaluated: number; lands_with_fire_inside: number; lands_inside_confirmed: number; lands_surroundings_only: number; items_truncated?: boolean
+    indigenous_residents_in_lands_with_fire_inside: number | null; lands_without_census_match: number; peoples_in_lands_with_fire_inside: string[]; residents_note: string }
+  items: IndigenousItem[]
+  public_channels: { name: string; contact: string }[]
+  sources: Record<string, { available: boolean; label?: string; reason?: string; url?: string; fetched_at?: string; scope?: string; features?: number }>
+  method: string
+}
+export interface HeatEvidenceItem { id: string; direction: 'supports_fire' | 'other_source' | 'context' | 'caution'; params: Record<string, unknown>; source: string }
+export interface HeatEvidence {
+  available: boolean; detection: { product_id: string; id: string; lon: number; lat: number; acq_datetime_utc: string; satellite: string }
+  evidence: HeatEvidenceItem[]; reading: 'static_source' | 'mining_context' | 'clearing_context' | 'vegetation_fire_compatible' | 'inconclusive'
+  reading_rules: string[]; disclaimer: string; sources: Record<string, { available: boolean; label?: string; reason?: string }>; generated_at: string
+}
+
+// ------------------------------------------------------------------ focos com impacto (Missão 09)
+export interface HotspotTarget { type: 'city' | 'locality' | 'indigenous' | 'conservation' | 'quilombola' | 'road' | string; name: string; km: number
+  bearing_deg: number; sector: string; lon: number; lat: number; inside: boolean; downwind: boolean; layer?: string; source?: string; peoples?: string; funai_unit?: string; kind?: string; surface?: string; country?: string }
+export interface HotspotWind { speed_ms: number; from_deg: number; toward_deg: number; gusts_ms: number | null; time_utc: string | null
+  next_hours: { time_utc: string; speed_ms: number; from_deg: number }[]; model_cell: number[]; source: string }
+export interface HotspotItem {
+  id: string; centroid: [number, number]; bbox: number[]; hull: GeoJSON.Polygon | null
+  level: 'alto' | 'moderado' | 'baixo' | 'sem_alvo'; level_reasons: { id: string; params: Record<string, unknown> }[]
+  veracity: 'alta' | 'media' | 'baixa'
+  proportion: { pixels: number; by_satellite: Record<string, number>; overpasses: number; satellites: number; area_km2: number; frp_latest_pass_mw: number | null
+    frp_max_mw: number | null; first_utc: string; last_utc: string; duration_h: number; displacement: { km: number; toward_deg: number; toward_sector: string; hours: number } | null; low_confidence_share: number }
+  wind: HotspotWind | null
+  targets: { inside: HotspotTarget[]; downwind: HotspotTarget[]; near: HotspotTarget[] }
+  access: { nearest_federal_road?: { name: string; km: number; sector: string }; nearest_brigade?: { name: string; agency?: string | null; municipality?: string | null; km: number } }
+  censipam_event: { id: number; status: string; persistence_days: number | null; last_seen: string | null } | null
+  recurrence: { years_with_detection: number; last_year: number | null; month: number; km: number } | null
+  detections: AttentionRef[]
+}
+export interface HotspotReport {
+  available: boolean; reason?: string; official: false; historical: boolean; region: Region; generated_at: string
+  detections: { mode: 'nrt' | 'archive'; window?: string; start?: string; end?: string; products: string[]; note?: string }
+  rules: { levels: Record<string, string>; veracity: Record<string, string>; downwind: string }; disclaimer: string; method: string
+  summary: { detections: number; clusters: number; by_level: Record<string, number>; by_veracity: Record<string, number>; cities_close_or_downwind: string[]
+    federal_roads_near: string[]; indigenous_lands_touched: string[]; listed: number; truncated: boolean; recurrence_archive?: { product: string; years: number[]; month: number } }
+  items: HotspotItem[]; sources: Record<string, { available: boolean; label?: string; reason?: string; features?: number; cells?: number; kind?: string }>
+  not_modeled: string[]
 }

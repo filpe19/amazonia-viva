@@ -16,6 +16,7 @@ const EnvironmentPage = lazy(() => import('./pages/EnvironmentPage'))
 const TerritoryPage = lazy(() => import('./pages/TerritoryPage'))
 const EvidencePage = lazy(() => import('./pages/EvidencePage'))
 const FichaPage = lazy(() => import('./pages/FichaPage'))
+const AboutPage = lazy(() => import('./pages/AboutPage'))
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -46,6 +47,7 @@ createRoot(document.getElementById('root')!).render(
                 <Route path="/territorio" element={<TerritoryPage />} />
                 <Route path="/evidencias" element={<EvidencePage />} />
                 <Route path="/ficha/:regionId" element={<FichaPage />} />
+                <Route path="/sobre" element={<AboutPage />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>

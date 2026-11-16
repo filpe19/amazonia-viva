@@ -11,6 +11,8 @@ import { ErrorState, Loading, Unavailable } from '../components/states'
 import { monthNames, fmtNum, fmt1, fmtCoord, fmtDate, fmtInt, fmtUtc } from '../lib/format'
 import { useWeather } from '../lib/hooks'
 import { useRegion } from '../lib/region-context'
+import { Segmented } from '../components/controls'
+import { useSessionState } from '../lib/useSessionState'
 import type { DailyWeather } from '../lib/types'
 
 const MONTH_KEYS = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
@@ -46,7 +48,8 @@ export default function EnvironmentPage() {
   const custom = lat != null && lon != null && Number.isFinite(lat) && Number.isFinite(lon)
   const [draft, setDraft] = useState({ lat: lat?.toString() ?? '', lon: lon?.toString() ?? '' })
 
-  const q = useWeather(custom ? { lat, lon, days: 30 } : { region, days: 30 })
+  const [days, setDays] = useSessionState<number>('av:environment:days', 30)
+  const q = useWeather(custom ? { lat, lon, days } : { region, days })
   const d = q.isPlaceholderData ? undefined : q.data
   const rec = d?.recent_analysis
   const hourly = d?.recent_hourly
@@ -121,6 +124,12 @@ export default function EnvironmentPage() {
       <Section tone="plain">
         <CategoryKey />
       </Section>
+      <div className="period-bar" role="group" aria-label={t('Analysis period')}>
+        <span>{t('Analysis period')}</span>
+        <Segmented label={t('Analysis period')} size="sm" value={String(days)} onChange={(v) => setDays(Number(v))}
+          options={[7, 14, 30, 60, 90].map((n) => ({ value: String(n), label: t('{0} days', { 0: n }) }))} />
+        <small>{t('Daily reanalysis up to the latest available day (NASA POWER has a few days of latency). Climatology: 2001–2025.')}</small>
+      </div>
 
       {q.error && <ErrorState error={q.error} onRetry={() => q.refetch()} />}
       {d && Object.keys(d.errors).length > 0 && (
@@ -191,7 +200,7 @@ export default function EnvironmentPage() {
         </Section>
       </div>
 
-      <Section title={t("Temperature and humidity over the last 30 days")} description={t("Variables with different units are displayed separately. Dashed line: the same variable's monthly climatological mean (2001–2025).")}>
+      <Section title={t("Temperature and humidity over the last {0} days", { 0: days })} description={t("Variables with different units are displayed separately. Dashed line: the same variable's monthly climatological mean (2001–2025).")}>
         {q.isLoading ? <Loading /> : series.length ? (
           <div className="grid gap-6 md:grid-cols-2">
             {([

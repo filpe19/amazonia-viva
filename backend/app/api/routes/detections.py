@@ -9,6 +9,7 @@ from fastapi import APIRouter, Depends, Query
 from fastapi.responses import StreamingResponse
 
 from app.api.container import Container, get_container
+from app.api.responses import big_json
 from app.core.errors import NotFoundError
 from app.services.detections_service import query_metadata, to_feature_collection
 
@@ -39,8 +40,11 @@ async def detections(
     c: Container = Depends(get_container),
 ) -> dict:
     """Últimas observações por satélite (GeoJSON compacto + metadados de proveniência)."""
+    import asyncio
+
     q = await c.detections.query(region, window.value, products, daynight.value)
-    return to_feature_collection(q)
+    # Serializar dezenas de milhares de feições (escala amazônica) fora do laço de eventos.
+    return await big_json(await asyncio.to_thread(to_feature_collection, q))
 
 
 @router.get("/summary")
@@ -88,6 +92,16 @@ async def export_csv(
         iter([buf.getvalue()]), media_type="text/csv; charset=utf-8",
         headers={"Content-Disposition": f'attachment; filename="{name}"'},
     )
+
+
+@router.get("/{product_id}/{detection_id}/evidence")
+async def detection_evidence(product_id: str, detection_id: str, c: Container = Depends(get_container)) -> dict:
+    """'É incêndio mesmo?': confirmação por outras passagens, fonte estática (FIRMS type 2), histórico local,
+    mineração/garimpo (ANM, DETER) e desmatamento recente (DETER). Indícios, não diagnóstico."""
+    out = await c.heat_source.evidence(product_id, detection_id)
+    if not out:
+        raise NotFoundError("Detecção não encontrada no conjunto NRT atual (pode ter saído da janela de 7 dias)")
+    return out
 
 
 @router.get("/{product_id}/{detection_id}")

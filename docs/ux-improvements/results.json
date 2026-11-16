@@ -1,0 +1,291 @@
+{
+  "duration_seconds": 193.1,
+  "checks": [
+    {
+      "name": "MapLibre renders real tiles, boundaries and detections after upgrade",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Municipality search ignores accents",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Empty municipality search explains no matches",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Escape keeps the previously selected territory",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Keyboard search selects Portel and shares it in the URL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Pointer drag resizes the map and details",
+      "passed": true,
+      "detail": {
+        "before": 822.234375,
+        "after": 748.234375
+      }
+    },
+    {
+      "name": "Resize handle supports the keyboard",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Resize retains MapLibre and updates canvas dimensions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Actual UTC query interval is visible beside filters",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Observation table uses the real filtered map dataset",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "FRP column sorts with explicit MW units",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Confidence remains sensor-specific and is not ranked across sensors",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Column picker hides the chosen column",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Column choices preserve full original CSV fields",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Column preference and observation period survive reload",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Table search gives an explicit empty state",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Search resets pagination to available records",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Clicking a table record opens its real satellite details",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Historical provenance table filters by original sensor ID",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Source hash can be shown beside the scientific record",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Invalid date order is explained and cannot be applied",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Editing invalid dates preserves the applied comparison",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "A valid single UTC day can be explicitly applied",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "UX flow completed",
+      "passed": false,
+      "detail": "Page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"http://127.0.0.1:5710/?regiao=para\", waiting until \"networkidle\"\n"
+    }
+  ],
+  "a11y": [
+    {
+      "view": "desktop-search-open",
+      "passes": 27,
+      "violations": [
+        {
+          "id": "aria-hidden-focus",
+          "impact": "serious",
+          "description": "Ensure aria-hidden elements are not focusable nor contain focusable elements",
+          "nodes": [
+            {
+              "target": [
+                ".skip-link"
+              ],
+              "summary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\", be removed from the DOM, or not be hidden with aria-hidden"
+            },
+            {
+              "target": [
+                ".app-sidebar"
+              ],
+              "summary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\", be removed from the DOM, or not be hidden with aria-hidden"
+            },
+            {
+              "target": [
+                "fieldset"
+              ],
+              "summary": "Fix all of the following:\n  Focusable content should be disabled, be removed from the DOM, or not be hidden with aria-hidden"
+            },
+            {
+              "target": [
+                ".activity-heading"
+              ],
+              "summary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\", be removed from the DOM, or not be hidden with aria-hidden"
+            },
+            {
+              "target": [
+                ".map-toolbar"
+              ],
+              "summary": "Fix all of the following:\n  Focusable content should be disabled, be removed from the DOM, or not be hidden with aria-hidden\n  Focusable content should have tabindex=\"-1\", be removed from the DOM, or not be hidden with aria-hidden"
+            },
+            {
+              "target": [
+                "#map"
+              ],
+              "summary": "Fix all of the following:\n  Focusable content should be disabled, be removed from the DOM, or not be hidden with aria-hidden\n  Focusable content should have tabindex=\"-1\", be removed from the DOM, or not be hidden with aria-hidden"
+            },
+            {
+              "target": [
+                "#_r_7_"
+              ],
+              "summary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\", be removed from the DOM, or not be hidden with aria-hidden"
+            },
+            {
+              "target": [
+                ".scientific-caption"
+              ],
+              "summary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\", be removed from the DOM, or not be hidden with aria-hidden"
+            },
+            {
+              "target": [
+                ".science-section"
+              ],
+              "summary": "Fix all of the following:\n  Focusable content should be disabled, be removed from the DOM, or not be hidden with aria-hidden\n  Focusable content should have tabindex=\"-1\", be removed from the DOM, or not be hidden with aria-hidden"
+            },
+            {
+              "target": [
+                ".timeline-section"
+              ],
+              "summary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\", be removed from the DOM, or not be hidden with aria-hidden"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "view": "desktop-observations",
+      "passes": 29,
+      "violations": []
+    },
+    {
+      "view": "desktop-evidence",
+      "passes": 27,
+      "violations": []
+    },
+    {
+      "view": "desktop-history",
+      "passes": 28,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "target": [
+                "td[title=\"November 2009: 750 detections\"] > .text-\\[10\\.5px\\]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.39 (foreground color: #ffffff, background color: #c27c0e, font size: 7.9pt (10.5px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "td[title=\"October 2017: 766 detections\"] > .text-\\[10\\.5px\\]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.39 (foreground color: #ffffff, background color: #c27c0e, font size: 7.9pt (10.5px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "td[title=\"November 2019: 791 detections\"] > .text-\\[10\\.5px\\]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.39 (foreground color: #ffffff, background color: #c27c0e, font size: 7.9pt (10.5px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "td[title=\"October 2021: 729 detections\"] > .text-\\[10\\.5px\\]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.39 (foreground color: #ffffff, background color: #c27c0e, font size: 7.9pt (10.5px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "td[title=\"September 2023: 866 detections\"] > .text-\\[10\\.5px\\]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.39 (foreground color: #ffffff, background color: #c27c0e, font size: 7.9pt (10.5px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "td[title=\"September 2024: 703 detections\"] > .text-\\[10\\.5px\\]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.39 (foreground color: #ffffff, background color: #c27c0e, font size: 7.9pt (10.5px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        },
+        {
+          "id": "definition-list",
+          "impact": "serious",
+          "description": "Ensure <dl> elements are structured correctly",
+          "nodes": [
+            {
+              "target": [
+                "dl"
+              ],
+              "summary": "Fix all of the following:\n  dl element has direct children that are not allowed: p"
+            }
+          ]
+        },
+        {
+          "id": "scrollable-region-focusable",
+          "impact": "serious",
+          "description": "Ensure elements that have scrollable content are accessible by keyboard in Safari",
+          "nodes": [
+            {
+              "target": [
+                ".max-h-\\[320px\\]"
+              ],
+              "summary": "Fix any of the following:\n  Element should have focusable content\n  Element should be focusable"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "console": [],
+  "http": []
+}

@@ -4,9 +4,12 @@ from __future__ import annotations
 
 import asyncio
 import logging
+import ssl
 import time
 from dataclasses import dataclass
+from pathlib import Path
 
+import certifi
 import httpx
 
 from app.core.errors import UpstreamError, UpstreamUnavailableError
@@ -30,6 +33,20 @@ class FetchResult:
         return self.content.decode("utf-8", errors="replace")
 
 
+_CERTS = Path(__file__).parent / "certs"
+
+
+def ssl_context() -> ssl.SSLContext:
+    """Cadeia padrão (certifi) + intermediários públicos que alguns servidores oficiais não enviam.
+
+    geo.anm.gov.br (ANM SIGMINE) entrega só o certificado final; o intermediário Sectigo OV R36 (emitido pela raiz
+    Sectigo R46, já confiável) é incluído para completar a cadeia. A verificação TLS continua ativa."""
+    ctx = ssl.create_default_context(cafile=certifi.where())
+    for pem in sorted(_CERTS.glob("*.pem")):
+        ctx.load_verify_locations(cafile=str(pem))
+    return ctx
+
+
 class HttpClient:
     def __init__(
         self,
@@ -47,6 +64,7 @@ class HttpClient:
             headers={"User-Agent": user_agent},
             follow_redirects=True,
             transport=transport,
+            **({} if transport is not None else {"verify": ssl_context()}),
         )
 
     async def aclose(self) -> None:

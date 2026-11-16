@@ -8,7 +8,7 @@ const KEY = 'amazonia-viva:territorio'
 export function RegionProvider({ children }: { children: ReactNode }) {
   const [params, setParams] = useSearchParams()
   const [stored, setStored] = useState(() => {
-    try { return localStorage.getItem(KEY) ?? 'para' } catch { return 'para' }
+    try { return localStorage.getItem(KEY) ?? 'santarem' } catch { return 'santarem' }
   })
   const region = params.get('regiao') ?? stored
   useEffect(() => { setStored(region); try { localStorage.setItem(KEY, region) } catch { /* optional persistence */ } }, [region])

@@ -1,0 +1,43 @@
+# Produção: Caddy (HTTPS automático com Let's Encrypt) → nginx (interface + proxy) → API.
+# Uso: cd deploy && cp .env.example .env && (editar DOMAIN) && docker compose -f docker-compose.prod.yml up -d --build
+services:
+  api:
+    build: ../backend
+    restart: unless-stopped
+    environment:
+      ENVIRONMENT: production
+      LOG_FORMAT: json
+      CORS_ORIGINS: '["https://${DOMAIN}"]'
+      FIRMS_MAP_KEY: ${FIRMS_MAP_KEY:-}
+    volumes:
+      - av-runtime:/app/data/runtime
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://127.0.0.1:8710/api/v1/health', timeout=8).status == 200 else 1)"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 40s
+  web:
+    build:
+      context: ../frontend
+      args:
+        VITE_ARCGIS_API_KEY: ${VITE_ARCGIS_API_KEY:-}
+    restart: unless-stopped
+    depends_on:
+      api:
+        condition: service_healthy
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    ports: ["80:80", "443:443"]
+    environment:
+      DOMAIN: ${DOMAIN}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    depends_on: [web]
+volumes:
+  av-runtime:
+  caddy-data:
+  caddy-config:

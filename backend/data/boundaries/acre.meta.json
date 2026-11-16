@@ -1,0 +1,12 @@
+{
+  "region_id": "acre",
+  "name": "Acre",
+  "ibge_code": "12",
+  "publisher": "IBGE — Instituto Brasileiro de Geografia e Estatística",
+  "source_url": "https://servicodados.ibge.gov.br/api/v3/malhas/estados/12?formato=application/vnd.geo%2Bjson&qualidade=maxima",
+  "quality": "maxima",
+  "fetched_at": "2026-11-15T19:10:03+00:00",
+  "sha256": "425ea155211e5710d64794b98168d4463d690b75f630581d8a2ec65129e944bc",
+  "bytes": 21069,
+  "license_note": "Dados públicos do IBGE (API de malhas territoriais v3)."
+}

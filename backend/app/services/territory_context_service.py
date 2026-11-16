@@ -112,7 +112,7 @@ class TerritoryContextService:
 
     # ------------------------------------------------------------- camadas
     async def _layers(self, region: Region, detections: pd.DataFrame | None) -> dict:
-        if region.definition.level == "pais":
+        if region.definition.level in ("pais", "bioma"):
             return {"available": False, "kind": "ausente",
                     "reason": "Camadas territoriais são calculadas para estados e municípios."}
         results = await asyncio.gather(*(self._censipam.layer_bbox(layer, region.bbox) for layer in LAYERS.values()),
@@ -166,7 +166,7 @@ class TerritoryContextService:
 
     # ------------------------------------------------------------- Censipam
     async def _events(self, region: Region) -> dict:
-        uf = UF_BY_PARENT.get(region.definition.parent or "") or UF_BY_PARENT.get(region.id)
+        uf = region.uf
         if not uf:
             return {"available": False, "kind": "ausente", "reason": "Eventos do Censipam são consultados por estado (Pará).",
                     "source": "Censipam — Painel do Fogo"}

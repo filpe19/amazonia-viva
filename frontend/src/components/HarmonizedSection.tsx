@@ -1,7 +1,8 @@
+import { validateDateRange } from '../lib/date-range'
 import { t, useLocale } from '../lib/i18n'
 import { Download, FlaskConical, Info } from 'lucide-react'
 import { useMemo, useState } from 'react'
-import { Bar, CartesianGrid, ComposedChart, ErrorBar, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
+import { Area, Bar, CartesianGrid, ComposedChart, ErrorBar, Line, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
 import { ChartFrame, ChartTooltipBox, axisProps, gridProps } from './charts'
 import { AnomalyList } from './HistoryExtras'
 import { Section } from './Page'
@@ -9,7 +10,7 @@ import { ErrorState, Loading } from './states'
 import { apiUrl } from '../lib/api'
 import { monthNames, fmt1, fmtInt, fmtNum, fmtYearMonth } from '../lib/format'
 import { useHarmonized } from '../lib/hooks'
-import type { HarmonizedRow } from '../lib/types'
+import type { HarmonizedRow, HarmonizedSeries } from '../lib/types'
 
 const RAMP = ['#f9edd8', '#efd5a6', '#dfb875', '#bf8d40', '#99621c', '#694010']
 const originLabel = (r?: HarmonizedRow) => r?.origin === 'observado_viirs' ? t("Observed data") : r?.origin === 'convertido_modis' ? t("Experimentally converted data") : t("Unavailable data")
@@ -30,10 +31,10 @@ function HarmonizedMatrix({ rows }: { rows: HarmonizedRow[] }) {
           const row=byKey.get(key)
           const value=row?.value
           const level=value == null ? -1 : value<=0 ? 0 : Math.min(5,Math.floor(Math.sqrt(value/max)*6))
-          return <td key={key}><button type="button" className={`calendar-cell ${row?.origin ?? 'sem_dado'} ${selected===key?'selected':''}`} style={{backgroundColor:level<0?'#edf1ef':value===0?'#e4eae6':RAMP[level],color:level>=4?'#fff':'#233c30'}} aria-pressed={selected===key}
-            aria-label={`${fmtYearMonth(key)}: ${value==null?t("unavailable"):fmtNum(value)+t(" equivalent detections")}; ${originLabel(row)}${row?.origin==='convertido_modis'?t("; empirical range {0} to {1}", {"0": fmtNum(row.low), "1": fmtNum(row.high)}):''}`}
+          return <td key={key}><button type="button" className={`calendar-cell ${row?.origin ?? 'sem_dado'} ${selected===key?'selected':''}`} style={{backgroundColor:level<0?'#edf1ef':value===0?'#e4eae6':RAMP[level],color:level>=4?'#fff':'#0e1c16'}} aria-pressed={selected===key}
+            aria-label={`${value==null?'—':`${value>=1000?fmt1(value/1000)+'k':fmtInt(value)}`} · ${fmtYearMonth(key)}: ${value==null?t("unavailable"):fmtNum(value)+t(" equivalent detections")}; ${originLabel(row)}${row?.origin==='convertido_modis'?t("; empirical range {0} to {1}", {"0": fmtNum(row.low), "1": fmtNum(row.high)}):''}`}
             onClick={()=>setSelected(key)} onFocus={()=>setSelected(key)}>
-            {value==null?'—':`${row?.origin==='convertido_modis'?'~':''}${value>=1000?fmt1(value/1000)+'k':fmtInt(value)}`}
+            {value==null?'—':`${value>=1000?fmt1(value/1000)+'k':fmtInt(value)}`}
           </button></td>
         })}</tr>)}</tbody>
       </table>
@@ -53,12 +54,52 @@ function HarmonizedMatrix({ rows }: { rows: HarmonizedRow[] }) {
   </div>
 }
 
+function SeasonalProfile({ d }: { d: HarmonizedSeries }) {
+  useLocale()
+  const years = [...new Set(d.series.filter(r => r.value != null).map(r => r.year))].sort()
+  const [ya, setYa] = useState<number>(years.at(-2) ?? years.at(-1) ?? 0)
+  const [yb, setYb] = useState<number>(years.at(-6) ?? years[0] ?? 0)
+  const get = (y: number, m: number) => d.series.find(r => r.year === y && r.month === m)
+  const rows = monthNames().map((label, i) => {
+    const m = i + 1, b = d.baseline_by_month.find(x => x.month === m), a = get(ya, m), c = get(yb, m)
+    return { label, band: b?.p10 != null && b?.p90 != null ? [b.p10, b.p90] : null, median: b?.median ?? null,
+      a: a?.value ?? null, aBand: a?.origin === 'convertido_modis' && a.low != null && a.high != null ? [a.low, a.high] : null, aOrigin: a?.origin,
+      b: c?.value ?? null, bOrigin: c?.origin }
+  })
+  const originTxt = (o?: string) => o === 'convertido_modis' ? t('converted MODIS') : o === 'observado_viirs' ? t('observed NOAA-20') : t('no data')
+  return <div className="seasonal-profile">
+    <div className="seasonal-head">
+      <div><h3 className="type-title text-[15px]">{t('Seasonal profile and year comparison')}</h3>
+        <p className="text-xs text-ink-2">{t('Monthly NOAA-20-equivalent detections. Grey band: P10–P90 of all years; dashed: median. Shaded band on year A: conversion range for converted months.')}</p></div>
+      <label>{t('Year A')}<select value={ya} onChange={e => setYa(Number(e.target.value))}>{years.map(y => <option key={y} value={y}>{y}</option>)}</select></label>
+      <label>{t('Year B')}<select value={yb} onChange={e => setYb(Number(e.target.value))}>{years.map(y => <option key={y} value={y}>{y}</option>)}</select></label>
+    </div>
+    <div className="h-[260px]"><ResponsiveContainer><ComposedChart data={rows} margin={{ top: 8, right: 12, left: 0, bottom: 0 }}>
+      <CartesianGrid {...gridProps} /><XAxis dataKey="label" {...axisProps} /><YAxis {...axisProps} width={55} tickFormatter={v => fmtInt(v)} />
+      <Tooltip content={({ active, payload }) => { if (!active || !payload?.length) return null; const r = payload[0].payload as typeof rows[number]
+        return <ChartTooltipBox title={r.label} rows={[
+          { label: `${ya} (${originTxt(r.aOrigin)})`, value: fmtInt(r.a), color: '#c27c0e' },
+          ...(r.aBand ? [{ label: t('Conversion range'), value: `${fmtInt(r.aBand[0])}–${fmtInt(r.aBand[1])}` }] : []),
+          { label: `${yb} (${originTxt(r.bOrigin)})`, value: fmtInt(r.b), color: '#2f4f43' },
+          { label: t('Median, all years'), value: fmtInt(r.median) },
+          { label: 'P10–P90', value: r.band ? `${fmtInt(r.band[0])}–${fmtInt(r.band[1])}` : '—' }]} /> }} />
+      <Area dataKey="band" fill="#dde4dc" stroke="none" isAnimationActive={false} />
+      <Area dataKey="aBand" fill="#c27c0e" fillOpacity={0.18} stroke="none" isAnimationActive={false} />
+      <Line dataKey="median" stroke="#6b7a72" strokeWidth={1.5} strokeDasharray="5 4" dot={false} isAnimationActive={false} />
+      <Line dataKey="b" stroke="#2f4f43" strokeWidth={2} dot={{ r: 2.5 }} isAnimationActive={false} />
+      <Line dataKey="a" stroke="#c27c0e" strokeWidth={2.5} dot={{ r: 3 }} isAnimationActive={false} />
+    </ComposedChart></ResponsiveContainer></div>
+    <div className="seasonal-key"><span><i style={{ background: '#c27c0e' }} />{t('Year A')} {ya}</span><span><i style={{ background: '#2f4f43' }} />{t('Year B')} {yb}</span><span><i className="dash" />{t('Median')}</span><span><i style={{ background: '#dde4dc' }} />P10–P90</span></div>
+  </div>
+}
+
 export function HarmonizedSection({ region }: { region: string }) {
   useLocale()
   const q=useHarmonized(region)
   const [product,setProduct]=useState('VIIRS_NOAA20_SP')
   const [start,setStart]=useState('2024-08-01')
   const [end,setEnd]=useState('2024-11-30')
+  const exportError=validateDateRange(start,end)
   const d=q.data
   const metric=d?.validation.summary?.sazonal
   const annual=(d?.annual??[]).map(a=>({...a,err:[a.value-a.low,a.high-a.value] as [number,number]}))
@@ -66,11 +107,12 @@ export function HarmonizedSection({ region }: { region: string }) {
     <div className="experiment-notice"><FlaskConical size={20} /><div><strong>{t("Experimental harmonization")}</strong><p>{t("This is a comparison tool. It is not an operationally validated product or a reconstruction of individual fires.")}</p></div><span>{d?.first_month_with_data??'…'} — {d?.period?.[1]??'…'}</span></div>
     <div className="origin-legend" aria-label={t("Data origin legend")}>
       <span><i className="observed-key" />{t("Observed data")} <small>VIIRS NOAA-20</small></span>
-      <span><i className="converted-key" />{t("Experimentally converted data")} <small>{t("MODIS Aqua · ~ estimate")}</small></span>
+      <span><i className="converted-key" />{t("Experimentally converted data")} <small>{t("MODIS Aqua · hatched cells")}</small></span>
       <span><i className="unavailable-key" />{t("Unavailable data")} <small>—</small></span>
     </div>
     {q.isLoading?<Loading label={t("Loading the experimental calendar…")}/>:q.error?<ErrorState error={q.error} onRetry={()=>q.refetch()}/>:d&&<>
       <HarmonizedMatrix key={region} rows={d.series}/>
+      <SeasonalProfile key={`sp-${region}`} d={d}/>
       <div className="conversion-validation">
         <div><h3>{t("How uncertain is the conversion?")}</h3><p>{t("Leave-one-year-out evaluation on active months in the overlap period. Errors are absolute percentages of the observed VIIRS count.")}</p></div>
         <div><strong>{metric?`${fmt1(metric.median_ape*100)}%`:'—'}</strong><span>{t("Median error")}</span></div>
@@ -82,7 +124,7 @@ export function HarmonizedSection({ region }: { region: string }) {
       <div className="mt-6 grid gap-6 xl:grid-cols-2"><ChartFrame title={t("Annual equivalent detections")} subtitle={t("Bars: central value. Whiskers: summed empirical conversion ranges, not a calibrated annual confidence interval.")}><div className="h-[230px]"><ResponsiveContainer><ComposedChart data={annual} margin={{top:8,right:8,left:0,bottom:0}}><CartesianGrid {...gridProps}/><XAxis dataKey="year" {...axisProps} interval="preserveStartEnd"/><YAxis {...axisProps} width={55} tickFormatter={v=>fmtInt(v)}/><Tooltip content={({active,payload})=>{if(!active||!payload?.length)return null;const a=payload[0].payload as typeof annual[number];return <ChartTooltipBox title={String(a.year)} rows={[{label:'Equivalent detections',value:fmtInt(a.value)},{label:'Empirical range',value:a.converted_months?`${fmtInt(a.low)}–${fmtInt(a.high)}`:'Direct observations'},{label:'Converted months',value:String(a.converted_months)}]}/>}}/><Bar dataKey="value" fill="#b67c31" maxBarSize={20} isAnimationActive={false}><ErrorBar dataKey="err" width={4} stroke="#435d4d"/></Bar></ComposedChart></ResponsiveContainer></div></ChartFrame><div><h3 className="type-title mb-3 text-[15px]">{t("Unusual months in the experimental series")}</h3><AnomalyList anomalies={d.anomalies}/><p className="mt-3 text-xs text-ink-2">{t("Compared with the same calendar month in other years: P10/P90, |robust z| ≥1.5 and an absolute difference ≥10. Conversion uncertainty also affects this comparison.")}</p></div></div>
     </>}
     <div className="history-downloads"><div><h3>{t("Keep the evidence")}</h3><p>{t("Original records and the experimental series remain separate exports.")}</p></div><a className="button-primary" href={apiUrl('/history/harmonized.csv',{region})}><Download size={15}/>{t("Experimental series CSV")}</a>
-      <details><summary className="button-secondary">{t("Export original observations")}</summary><div className="mt-3 flex flex-wrap items-end gap-3"><label>{t("Product")}<select value={product} onChange={e=>setProduct(e.target.value)}><option value="VIIRS_NOAA20_SP">VIIRS NOAA-20</option><option value="MODIS_SP">{t("MODIS")}</option><option value="VIIRS_SNPP_SP">VIIRS S-NPP</option></select></label><label>{t("From")}<input type="date" value={start} onChange={e=>setStart(e.target.value)}/></label><label>{t("To")}<input type="date" value={end} onChange={e=>setEnd(e.target.value)}/></label><a className="button-secondary" href={apiUrl('/history/export.csv',{region,product,start,end})}>{t("Download observations CSV")}</a></div></details>
+      <details><summary className="button-secondary">{t("Export original observations")}</summary><div className="mt-3 flex flex-wrap items-end gap-3"><label>{t("Product")}<select value={product} onChange={e=>setProduct(e.target.value)}><option value="VIIRS_NOAA20_SP">VIIRS NOAA-20</option><option value="MODIS_SP">{t("MODIS")}</option><option value="VIIRS_SNPP_SP">VIIRS S-NPP</option></select></label><label>{t("From")}<input type="date" value={start} onChange={e=>setStart(e.target.value)}/></label><label>{t("To")}<input type="date" value={end} onChange={e=>setEnd(e.target.value)}/></label><a className="button-secondary" aria-disabled={Boolean(exportError)} href={exportError?undefined:apiUrl('/history/export.csv',{region,product,start,end})}>{t("Download observations CSV")}</a></div><p className={exportError?"text-alert mt-2 text-xs":"mt-2 text-xs text-ink-2"} aria-live="polite">{t(exportError??"Complete UTC days. The end date is included.")}</p></details>
     </div>
     <p className="mt-4 text-xs text-ink-2">{t("Source:")} <a className="underline" href="https://firms.modaps.eosdis.nasa.gov/download/" target="_blank" rel="noreferrer">{t("NASA FIRMS archive")}</a>{t(". Units: NOAA-20 equivalent detections per month. Neither count nor conversion measures burned area.")}</p>
   </Section>

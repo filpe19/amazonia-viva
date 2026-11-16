@@ -230,9 +230,9 @@ class ImpactService:
             }
 
         # ------------------------------------------------ setores censitários (Censo 2022)
-        tracts = tracts_for_municipality(self._gpkg, region.definition.ibge_code)
-        expo = tract_exposure(tracts, dets, proj)
-        meta = reference_meta(self._gpkg)
+        tracts = await asyncio.to_thread(tracts_for_municipality, self._gpkg, region.definition.ibge_code)
+        expo = await asyncio.to_thread(tract_exposure, tracts, dets, proj)
+        meta = await asyncio.to_thread(reference_meta, self._gpkg)
         out["exposure"] = {
             **expo, "kind": "estimativa" if expo.get("available") else "ausente",
             "label": f"População residente em setores censitários a até {EXPOSURE_RADIUS_KM} km de detecções (limite superior)",

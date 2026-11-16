@@ -149,13 +149,39 @@ class DetectionsService:
             fetch = await self._firms.fetch_public_file(product, "7d") if product.public_file_dir and not self._firms.key_configured else None
         except AppError:
             fetch = None
-        frames = [self._parse_cached(fetch)] if fetch else []
-        frames += [f for k, f in self._parsed.items() if k.startswith(f"{product_id}:")]
-        for f in frames:
+        frames = [(self._parse_cached(fetch), fetch)] if fetch else []
+        frames += [(f, None) for k, f in self._parsed.items() if k.startswith(f"{product_id}:")]
+        for f, fx in frames:
             hit = f[f["detection_id"] == detection_id]
             if not hit.empty:
-                return record_to_dict(hit.iloc[0])
+                return {**record_to_dict(hit.iloc[0]), **detection_metadata(product, fx)}
         return None
+
+
+# Unidades dos atributos originais (FIRMS Attribute Fields, VIIRS 375 m C2 e MODIS C6.1).
+FIRMS_UNITS = {"frp_mw": "MW", "bright_ti4_k": "K", "bright_ti5_k": "K", "brightness_k": "K", "bright_t31_k": "K",
+               "scan_km": "km", "track_km": "km", "latitude": "graus (WGS84)", "longitude": "graus (WGS84)"}
+FIRMS_ATTRIBUTES_DOC = "https://www.earthdata.nasa.gov/data/tools/firms/faq"
+
+
+def detection_metadata(product, fx: FirmsFetch | None) -> dict:
+    """Produto, unidades e proveniência do arquivo de origem (rastreabilidade de cada detecção)."""
+    out = {
+        "product": {"id": product.id, "sensor": product.sensor, "platform": product.platform, "processing": product.processing,
+                    "collection": product.collection, "resolution_m": product.resolution_m, "confidence_scale": product.confidence_scale},
+        "units": FIRMS_UNITS,
+        "attributes_doc": FIRMS_ATTRIBUTES_DOC,
+    }
+    if fx is not None:
+        out["provenance"] = {
+            "source": "NASA FIRMS", "mode": fx.mode, "request_urls": fx.request_urls,
+            "fetched_at": _iso(fx.fetched_at),
+            # Último Last-Modified HTTP do arquivo: melhor aproximação disponível do horário de disponibilização.
+            "source_file_last_modified": fx.http_last_modified,
+            "sha256": fx.sha256, "stale": fx.stale, "cache_hit": fx.cache_hit,
+            "nominal_latency": FIRMS_NOMINAL_LATENCY, "nominal_latency_source": FIRMS_LATENCY_SOURCE,
+        }
+    return out
 
 
 # ------------------------------------------------------------- serialização
@@ -181,18 +207,21 @@ def to_feature_collection(q: DetectionQuery) -> dict:
         else:
             conf = [None if pd.isna(c) else int(c) for c in f["confidence_pct"].tolist()]
         frp = [None if pd.isna(v) else float(v) for v in f["frp_mw"].tolist()]
+        # Dimensões do pixel (km) ao longo da varredura e da órbita: área nominal observada, não área queimada.
+        scan = [None if pd.isna(v) else round(float(v), 2) for v in f["scan_km"].tolist()] if "scan_km" in f else [None] * len(f)
+        track = [None if pd.isna(v) else round(float(v), 2) for v in f["track_km"].tolist()] if "track_km" in f else [None] * len(f)
         rows = zip(
             f["longitude"].round(5).tolist(), f["latitude"].round(5).tolist(), f["detection_id"].tolist(),
-            f["satellite_name"].tolist(), times, frp, conf, f["daynight"].tolist(), strict=True,
+            f["satellite_name"].tolist(), times, frp, conf, f["daynight"].tolist(), scan, track, strict=True,
         )
         pid = r.product.id
         features.extend(
             {
                 "type": "Feature",
                 "geometry": {"type": "Point", "coordinates": [lon, lat]},
-                "properties": {"id": did, "p": pid, "s": sat, "t": t, "frp": fv, "c": c, "dn": dn},
+                "properties": {"id": did, "p": pid, "s": sat, "t": t, "frp": fv, "c": c, "dn": dn, "sc": sc, "tr": tr},
             }
-            for lon, lat, did, sat, t, fv, c, dn in rows
+            for lon, lat, did, sat, t, fv, c, dn, sc, tr in rows
         )
     return {"type": "FeatureCollection", "features": features, "metadata": query_metadata(q)}
 

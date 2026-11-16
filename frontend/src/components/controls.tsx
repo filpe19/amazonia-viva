@@ -1,3 +1,7 @@
+import { useId, useMemo } from 'react'
+import { Combobox } from '@base-ui/react/combobox'
+import { Check, ChevronsUpDown, Search } from 'lucide-react'
+import type { Region } from '../lib/types'
 import { t, useLocale } from '../lib/i18n'
 import { useRegions } from '../lib/hooks'
 import { useRegion } from '../lib/region-context'
@@ -48,39 +52,34 @@ export function Segmented<T extends string>({ label, options, value, onChange, s
 export function RegionSelect({ compact = false, onSelect }: { compact?: boolean; onSelect?: (id: string) => void }) {
   useLocale()
   const { region, setRegion } = useRegion()
-  const { data } = useRegions()
-  const regions = data?.regions ?? []
-  const featured = regions.filter((r) => r.featured || r.pilot).sort((a, b) => Number(b.pilot) - Number(a.pilot) || a.name.localeCompare(b.name, 'pt-BR'))
-  const upper = regions.filter((r) => r.level !== 'municipio')
-  const municipios = regions.filter((r) => r.level === 'municipio').sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'))
-  return (
-    <label className="flex min-w-0 flex-col gap-1">
-      {!compact && <span className="type-label text-xs text-ink-2">{t("Territory")}</span>}
-      <select
-        value={region}
-        onChange={(e) => { setRegion(e.target.value); onSelect?.(e.target.value) }}
-        className="control w-full bg-surface px-2.5 py-2 text-sm font-medium text-ink ring-1 ring-rule focus:outline-none focus-visible:ring-2 focus-visible:ring-river"
-        aria-label={t("Selected territory")}
-      >
-        {regions.length === 0 && <option value={region}>{region}</option>}
-        {featured.length > 0 && (
-          <optgroup label={t("Pilot and featured territories")}>
-            {featured.map((r) => <option key={`f-${r.id}`} value={r.id}>{r.name}{r.pilot ? t("— pilot") : ''}</option>)}
-          </optgroup>
-        )}
-        {upper.length > 0 && (
-          <optgroup label={t("Country and state")}>
-            {upper.map((r) => <option key={r.id} value={r.id}>{r.name}</option>)}
-          </optgroup>
-        )}
-        {municipios.length > 0 && (
-          <optgroup label={t("Pará municipalities ({0})", {"0": municipios.length})}>
-            {municipios.map((r) => <option key={r.id} value={r.id}>{r.name}</option>)}
-          </optgroup>
-        )}
-      </select>
-    </label>
-  )
+  const q = useRegions()
+  const regions = useMemo(() => [...(q.data?.regions ?? [])].sort((a,b) => Number(b.level!=='municipio')-Number(a.level!=='municipio') || Number(b.level==='bioma')-Number(a.level==='bioma') || Number(Boolean(b.pilot))-Number(Boolean(a.pilot)) || a.name.localeCompare(b.name,'pt-BR')), [q.data])
+  const selected = regions.find(r=>r.id===region) ?? null
+  const id = useId()
+  return <div className="territory-picker">
+    {!compact && <label htmlFor={id} className="type-label text-xs text-ink-2">{t('Territory')}</label>}
+    <Combobox.Root items={regions} value={selected} isItemEqualToValue={(a,b)=>a.id===b.id}
+      itemToStringLabel={item=>item.name} itemToStringValue={item=>item.id}
+      onValueChange={item=>{if(item){setRegion(item.id);onSelect?.(item.id)}}}>
+      <Combobox.InputGroup className="territory-input-group">
+        <Search size={15} aria-hidden="true" />
+        <Combobox.Input id={id} data-region-id={region} aria-label={t('Selected territory')} placeholder={q.isLoading?t('Loading territories…'):t('Search a municipality or state…')}
+          className="territory-search-input" autoComplete="off" disabled={q.isLoading || q.isError} />
+        <Combobox.Trigger className="territory-picker-trigger" aria-label={t('Show territories')}><ChevronsUpDown size={14} aria-hidden="true" /></Combobox.Trigger>
+      </Combobox.InputGroup>
+      <Combobox.Portal><Combobox.Positioner sideOffset={6} align="end" className="territory-positioner">
+        <Combobox.Popup className="territory-popup">
+          <p className="territory-picker-hint">{t('Type a municipality name. Accents are optional.')}</p>
+          <Combobox.Empty className="territory-no-match">{t('No territory matches your search.')}</Combobox.Empty>
+          <Combobox.List className="territory-options">{(item: Region)=><Combobox.Item key={item.id} data-region-id={item.id} value={item} className="territory-option">
+            <span><strong>{item.name}</strong><small>{item.level==='municipio'?t('Municipality · Pará'):item.level==='bioma'?t('Amazon · 9 countries'):item.level==='estado'?t('State · Legal Amazon'):t('Country')}{item.pilot?` · ${t('Pilot territory')}`:''}</small></span>
+            <Combobox.ItemIndicator><Check size={16} aria-hidden="true" /></Combobox.ItemIndicator>
+          </Combobox.Item>}</Combobox.List>
+        </Combobox.Popup>
+      </Combobox.Positioner></Combobox.Portal>
+    </Combobox.Root>
+    {q.isError && <p role="alert" className="text-xs text-alert">{t('Territories could not be loaded.')}</p>}
+  </div>
 }
 
 export function Toggle({ checked, onChange, label, swatch, disabled, hint }: {

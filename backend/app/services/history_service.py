@@ -518,3 +518,37 @@ def export_records(self, region_id: str, product_id: str, start: date, end: date
 HistoryService.harmonized = harmonized
 HistoryService.harmonized_same_window = harmonized_same_window
 HistoryService.export_records = export_records
+
+
+def grid_layer(self, region_id: str, product_id: str = "VIIRS_NOAA20_SP", start_year: int | None = None,
+               end_year: int | None = None) -> dict:
+    """Camada de recorrência: detecções e anos com atividade por célula de grade (mesmo produto)."""
+    region = self._regions.get(region_id)
+    _, years = self._require_product(product_id, region_id)
+    sy, ey = start_year or years[0], end_year or years[-1]
+    g = self._store.grid_monthly(region_id, product_id)
+    if g.empty:
+        raise DataUnavailableError("Grade espacial indisponível para este território", detail={"produto": product_id})
+    g = g.assign(year=g["year_month"].str.slice(0, 4).astype(int))
+    g = g[(g["year"] >= sy) & (g["year"] <= ey)]
+    size = 0.5 if region_id in ("brasil", ARCHIVE_PARENT) else LOCAL_GRID_SIZE_DEG
+    agg = g.groupby("cell_id").agg(total=("n", "sum"), years_active=("year", "nunique"),
+                                   months_active=("year_month", "nunique")).reset_index()
+    n_years = len([y for y in years if sy <= y <= ey])
+    feats = []
+    for r in agg.itertuples():
+        lat0, lon0 = (float(x) for x in r.cell_id.split("_"))
+        ring = [[lon0, lat0], [lon0 + size, lat0], [lon0 + size, lat0 + size], [lon0, lat0 + size], [lon0, lat0]]
+        feats.append({"type": "Feature", "geometry": {"type": "Polygon", "coordinates": [ring]},
+                      "properties": {"cell": r.cell_id, "total": int(r.total), "years_active": int(r.years_active),
+                                     "months_active": int(r.months_active),
+                                     "mean_per_year": round(float(r.total) / n_years, 1) if n_years else None}})
+    return {"type": "FeatureCollection", "features": feats, "metadata": {
+        "region": region.summary(), "product_id": product_id, "years": [sy, ey], "n_years": n_years, "grid_deg": size,
+        "max_total": int(agg["total"].max()) if not agg.empty else 0,
+        "source": "NASA FIRMS — arquivo anual por país (processamento padrão), recortado pelo limite IBGE",
+        "meaning": "Detecções acumuladas e número de anos com ao menos uma detecção em cada célula. Não é área queimada.",
+    }}
+
+
+HistoryService.grid_layer = grid_layer

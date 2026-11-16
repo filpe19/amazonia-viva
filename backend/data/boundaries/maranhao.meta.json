@@ -1,0 +1,12 @@
+{
+  "region_id": "maranhao",
+  "name": "Maranhão",
+  "ibge_code": "21",
+  "publisher": "IBGE — Instituto Brasileiro de Geografia e Estatística",
+  "source_url": "https://servicodados.ibge.gov.br/api/v3/malhas/estados/21?formato=application/vnd.geo%2Bjson&qualidade=maxima",
+  "quality": "maxima",
+  "fetched_at": "2026-11-15T19:10:03+00:00",
+  "sha256": "d0bcf800a08d88cd3fa8a7d836100a589cee4a33344503b285719592430f48c7",
+  "bytes": 67326,
+  "license_note": "Dados públicos do IBGE (API de malhas territoriais v3)."
+}

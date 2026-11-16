@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teleprompter — vídeo de 30 s · Amazônia Viva</title>
+<style>
+  :root {
+    --size: 46px;
+    --bg: #0d1411;
+    --ink: #f1f5f2;
+    --muted: #9fb2a8;
+    --cue: #e2ab55;
+    --accent: #5fc490;
+    --line: rgba(95, 196, 144, .22);
+  }
+  body.light { --bg: #fbfaf6; --ink: #14231d; --muted: #586b62; --cue: #9a5b00; --accent: #17653f; --line: rgba(23, 101, 63, .14); }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--ink); }
+  body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  body.mirror .script { transform: scaleX(-1); }
+
+  /* Barra de controle */
+  .bar { position: fixed; inset: 0 0 auto 0; z-index: 10; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px;
+         padding: 10px 18px; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(8px);
+         border-bottom: 1px solid color-mix(in srgb, var(--muted) 30%, transparent); font-size: 14px; color: var(--muted); }
+  .bar strong { color: var(--ink); font-weight: 650; }
+  .bar button { font: inherit; color: var(--ink); background: transparent; border: 1px solid color-mix(in srgb, var(--muted) 45%, transparent);
+                border-radius: 6px; padding: 5px 11px; cursor: pointer; }
+  .bar button:hover { border-color: var(--accent); }
+  .bar button[aria-pressed=true] { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+  .bar .play { min-width: 104px; font-weight: 650; }
+  .clock { font-variant-numeric: tabular-nums; font-size: 22px; color: var(--ink); font-weight: 650; letter-spacing: .02em; }
+  .clock.over { color: #ff7a6b; }
+  .clock small { font-size: 13px; color: var(--muted); font-weight: 500; }
+  .scene-now { font-variant-numeric: tabular-nums; }
+  .progress { position: fixed; left: 0; top: 0; height: 3px; background: var(--accent); width: 0; z-index: 11; }
+  .bar .grow { flex: 1; }
+  .bar kbd { font: 12px ui-monospace, Menlo, monospace; padding: 1px 5px; border: 1px solid color-mix(in srgb, var(--muted) 40%, transparent); border-radius: 4px; }
+  body.recording .bar { opacity: .08; transition: opacity .3s; }
+  body.recording .bar:hover { opacity: 1; }
+
+  /* Linha de leitura */
+  .reading-line { position: fixed; left: 0; right: 0; top: 38vh; height: calc(var(--size) * 1.55); transform: translateY(-50%);
+                  background: var(--line); border-top: 1px solid color-mix(in srgb, var(--accent) 50%, transparent);
+                  border-bottom: 1px solid color-mix(in srgb, var(--accent) 50%, transparent); pointer-events: none; z-index: 1; }
+  .reading-line::before { content: "▶"; position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--accent); font-size: 22px; }
+  body.no-line .reading-line { display: none; }
+
+  /* Roteiro */
+  .script { position: relative; z-index: 2; max-width: 30ch; margin: 0 auto; padding: 42vh 28px 70vh; font-size: var(--size); line-height: 1.55; }
+  .scene { margin-bottom: 1.6em; }
+  .scene h2 { font-size: .42em; font-weight: 650; color: var(--accent); margin: 0 0 .3em; letter-spacing: .01em; display: flex; justify-content: space-between; gap: 1em; }
+  .scene h2 span { color: var(--muted); font-weight: 500; font-variant-numeric: tabular-nums; }
+  .cue { font-size: .38em; line-height: 1.45; color: var(--cue); margin: 0 0 .9em; padding-left: .8em; border-left: 3px solid var(--cue); }
+  body.no-cues .cue { display: none; }
+  .script p { margin: 0 0 .62em; }
+  .script b { color: var(--ink); font-weight: 750; }
+  .pause { display: block; height: .5em; }
+  .end { text-align: center; color: var(--muted); font-size: .5em; margin-top: 2em; }
+
+  /* Ajuda */
+  .help { position: fixed; right: 18px; bottom: 18px; z-index: 12; max-width: 360px; padding: 14px 16px; border-radius: 10px; font-size: 13.5px; line-height: 1.6;
+          background: color-mix(in srgb, var(--bg) 92%, var(--ink) 8%); color: var(--muted); border: 1px solid color-mix(in srgb, var(--muted) 30%, transparent); }
+  .help strong { color: var(--ink); }
+  .help[hidden] { display: none; }
+  .help ul { margin: 6px 0 0; padding-left: 16px; }
+  @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+  body.lang-en .script .pt { display: none; }
+  body:not(.lang-en) .script .en { display: none; }
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="bar" role="toolbar" aria-label="Controles do teleprompter">
+  <button class="play" id="play" aria-pressed="false" title="Espaço">▶ Iniciar</button>
+  <span class="clock" id="clock" aria-live="off">0:00 <small>/ 0:30</small></span>
+  <span class="scene-now" id="sceneNow">Cena 1</span>
+  <span>Velocidade <strong id="speedVal">45</strong> <button id="slower" title="Seta para baixo">−</button> <button id="faster" title="Seta para cima">+</button></span>
+  <span>Fonte <button id="smaller" title="Tecla −">A−</button> <button id="bigger" title="Tecla +">A+</button></span>
+  <button id="cues" aria-pressed="true" title="Tecla C">Indicações de tela</button>
+  <button id="mirror" aria-pressed="false" title="Tecla M">Espelhar</button>
+  <button id="theme" aria-pressed="false" title="Tecla L">Fundo claro</button>
+  <span class="grow"></span>
+  <button id="lang" aria-pressed="false" title="Tecla E">English</button>
+  <button id="reset" title="Tecla R">↺ Recomeçar</button>
+  <button id="full" title="Tecla F">Tela cheia</button>
+  <button id="helpBtn" title="Tecla H">?</button>
+</div>
+<div class="reading-line" aria-hidden="true"></div>
+
+<main class="script" id="script">
+  <section class="scene" data-scene="1" data-start="0">
+    <h2>Cena 1 · Abertura <span>0:00–0:04</span></h2>
+    <p class="cue">Tela: Voo do continente até um único foco.</p>
+    <p class="pt">Um satélite detecta um foco de calor na Amazônia.</p>
+    <p class="pt"><b>O que isso significa para quem vive ali?</b></p>
+    <p class="en">A satellite detects a heat spot in the Amazon.</p>
+    <p class="en"><b>What does it mean for the people who live there?</b></p>
+  </section>
+  <section class="scene" data-scene="2" data-start="4">
+    <h2>Cena 2 · Harmonização <span>0:04–0:10</span></h2>
+    <p class="cue">Tela: Pixels de 1 km × 375 m e o calendário de 2002 a 2025.</p>
+    <p class="pt">MODIS e VIIRS veem o fogo em resoluções diferentes.</p>
+    <p class="pt"><b>Nunca somamos sensores:</b> harmonizamos em um calendário de duas décadas, com a incerteza sempre visível.</p>
+    <p class="en">MODIS and VIIRS see fire at different resolutions.</p>
+    <p class="en"><b>We never add sensors:</b> we harmonize them into a two-decade fire calendar, with uncertainty always shown.</p>
+  </section>
+  <section class="scene" data-scene="3" data-start="10">
+    <h2>Cena 3 · Mapa e impacto <span>0:10–0:17</span></h2>
+    <p class="cue">Tela: Foco em alerta alto: anéis, setor do vento, alvos e radar.</p>
+    <p class="pt">O <b>Amazônia Viva</b> agrupa as detecções em focos e mostra o grau de alerta, o vento e o que está no caminho: cidades, estradas, terras indígenas.</p>
+    <p class="en"><b>Amazônia Viva</b> groups detections into hotspots and shows the alert level, the wind, and what lies in the path: towns, roads, Indigenous lands.</p>
+  </section>
+  <section class="scene" data-scene="4" data-start="17">
+    <h2>Cena 4 · Terras indígenas <span>0:17–0:23</span></h2>
+    <p class="cue">Tela: Cartão da TI: residentes (Censo 2022), coordenação da FUNAI, boletim.</p>
+    <p class="pt">Para terras indígenas: quem vive ali, qual coordenação da FUNAI acionar e um boletim pronto para compartilhar.</p>
+    <p class="en">For Indigenous lands: who lives there, which FUNAI office to contact, and a bulletin ready to share.</p>
+  </section>
+  <section class="scene" data-scene="5" data-start="23">
+    <h2>Cena 5 · Escala <span>0:23–0:27</span></h2>
+    <p class="cue">Tela: Do Pará à Amazônia nos 9 países.</p>
+    <p class="pt">Dados reais da NASA.</p>
+    <p class="pt">Pilotos no Pará, cobrindo a Amazônia nos nove países.</p>
+    <p class="en">Real NASA data.</p>
+    <p class="en">Piloted in Pará, covering the Amazon across nine countries.</p>
+  </section>
+  <section class="scene" data-scene="6" data-start="27">
+    <h2>Cena 6 · Encerramento <span>0:27–0:30</span></h2>
+    <p class="cue">Tela: Cartão final com a equipe e a marca.</p>
+    <p class="pt"><b>Amazônia Viva.</b></p>
+    <p class="pt"><b>Da observação à proteção.</b></p>
+    <p class="en"><b>Amazônia Viva.</b></p>
+    <p class="en"><b>From observation to protection.</b></p>
+    <p class="end">— fim —</p>
+  </section>
+</main>
+
+<aside class="help" id="help">
+  <strong>Atalhos</strong>
+  <ul>
+    <li><kbd>Espaço</kbd> iniciar / pausar a rolagem e o cronômetro</li>
+    <li><kbd>↑</kbd> <kbd>↓</kbd> mais rápido / mais devagar</li>
+    <li><kbd>+</kbd> <kbd>−</kbd> fonte maior / menor</li>
+    <li><kbd>1</kbd>–<kbd>6</kbd> pular para a cena · <kbd>E</kbd> português / inglês</li>
+    <li><kbd>C</kbd> mostrar/ocultar indicações de tela</li>
+    <li><kbd>M</kbd> espelhar (vidro de teleprompter) · <kbd>L</kbd> fundo claro</li>
+    <li><kbd>G</kbd> modo gravação (esconde a barra) · <kbd>F</kbd> tela cheia</li>
+    <li><kbd>R</kbd> recomeçar · <kbd>H</kbd> esta ajuda</li>
+  </ul>
+  Leia na faixa verde. Com rolagem pausada, use o trackpad para ajustar.
+</aside>
+
+<script>
+(() => {
+  const $ = (id) => document.getElementById(id)
+  const root = document.documentElement, body = document.body
+  const store = (k, v) => { try { v === undefined ? (v = localStorage.getItem('tp30:' + k)) : localStorage.setItem('tp30:' + k, v) } catch {} return v }
+
+  const setLang = (en) => { body.classList.toggle('lang-en', en); const b = document.getElementById('lang'); if (b) { b.setAttribute('aria-pressed', String(en)); b.textContent = en ? 'Português' : 'English' } try { localStorage.setItem('tp30:lang', en ? 'en' : 'pt') } catch {} }
+  try { setLang(localStorage.getItem('tp30:lang') === 'en') } catch { setLang(false) }
+  document.getElementById('lang')?.addEventListener('click', () => setLang(!body.classList.contains('lang-en')))
+  window.addEventListener('keydown', (e) => { if ((e.key === 'e' || e.key === 'E') && !e.metaKey && !e.ctrlKey) { e.preventDefault(); setLang(!body.classList.contains('lang-en')) } })
+  let speed = Number(store('speed')) || 70          // px por segundo
+  let size = Number(store('size')) || 46            // px
+  let playing = false, last = 0, elapsed = 0, acc = 0
+  const TOTAL = 30
+  const scenes = [...document.querySelectorAll('.scene')]
+
+  const apply = () => { root.style.setProperty('--size', size + 'px'); $('speedVal').textContent = speed }
+  const fmt = (s) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`
+  const tick = (t) => {
+    if (!playing) return
+    const dt = last ? (t - last) / 1000 : 0
+    last = t
+    elapsed += dt
+    acc += speed * dt
+    if (acc >= 1) { const step = Math.floor(acc); window.scrollBy(0, step); acc -= step }
+    renderClock()
+    requestAnimationFrame(tick)
+  }
+  const renderClock = () => {
+    $('clock').innerHTML = `${fmt(elapsed)} <small>/ 0:30</small>`
+    $('clock').classList.toggle('over', elapsed > TOTAL)
+  }
+  const currentScene = () => {
+    const y = window.innerHeight * 0.38
+    let cur = scenes[0]
+    for (const s of scenes) if (s.getBoundingClientRect().top <= y) cur = s
+    return cur
+  }
+  const onScroll = () => {
+    const s = currentScene()
+    const target = Number(s.dataset.start)
+    const diff = Math.round(elapsed - target)
+    $('sceneNow').textContent = `Cena ${s.dataset.scene}` + (playing || elapsed > 0 ? ` · ${diff >= 0 ? '+' : ''}${diff}s do plano` : '')
+    const max = document.documentElement.scrollHeight - window.innerHeight
+    $('progress').style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%'
+  }
+  const play = (on = !playing) => {
+    playing = on
+    $('play').setAttribute('aria-pressed', String(on))
+    $('play').textContent = on ? '❚❚ Pausar' : '▶ Continuar'
+    if (on) { last = 0; requestAnimationFrame(tick) }
+  }
+  const jump = (n) => { const s = scenes[n - 1]; if (!s) return; window.scrollTo({ top: s.offsetTop - window.innerHeight * 0.38 + 10 }); onScroll() }
+  const reset = () => { play(false); elapsed = 0; acc = 0; renderClock(); window.scrollTo({ top: 0 }); $('play').textContent = '▶ Iniciar'; onScroll() }
+  const toggle = (cls, btn, key) => { const on = body.classList.toggle(cls); if (btn) $(btn).setAttribute('aria-pressed', String(cls === 'no-cues' ? !on : on)); store(key, on ? '1' : '0') }
+
+  $('play').onclick = () => play()
+  $('faster').onclick = () => { speed = Math.min(160, speed + 5); store('speed', speed); apply() }
+  $('slower').onclick = () => { speed = Math.max(5, speed - 5); store('speed', speed); apply() }
+  $('bigger').onclick = () => { size = Math.min(96, size + 4); store('size', size); apply() }
+  $('smaller').onclick = () => { size = Math.max(24, size - 4); store('size', size); apply() }
+  $('cues').onclick = () => toggle('no-cues', 'cues', 'nocues')
+  $('mirror').onclick = () => toggle('mirror', 'mirror', 'mirror')
+  $('theme').onclick = () => toggle('light', 'theme', 'light')
+  $('reset').onclick = reset
+  $('full').onclick = () => document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen()
+  $('helpBtn').onclick = () => { $('help').hidden = !$('help').hidden }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.metaKey || e.ctrlKey || e.altKey) return
+    const k = e.key
+    if (k === ' ') { e.preventDefault(); play() }
+    else if (k === 'ArrowUp') { e.preventDefault(); $('faster').click() }
+    else if (k === 'ArrowDown') { e.preventDefault(); $('slower').click() }
+    else if (k === '+' || k === '=') $('bigger').click()
+    else if (k === '-' || k === '_') $('smaller').click()
+    else if (/^[1-7]$/.test(k)) jump(Number(k))
+    else if (k === 'c' || k === 'C') $('cues').click()
+    else if (k === 'm' || k === 'M') $('mirror').click()
+    else if (k === 'l' || k === 'L') $('theme').click()
+    else if (k === 'g' || k === 'G') body.classList.toggle('recording')
+    else if (k === 'f' || k === 'F') $('full').click()
+    else if (k === 'r' || k === 'R') reset()
+    else if (k === 'h' || k === 'H' || k === '?') $('helpBtn').click()
+  })
+  window.addEventListener('scroll', onScroll, { passive: true })
+
+  if (store('nocues') === '1') { body.classList.add('no-cues'); $('cues').setAttribute('aria-pressed', 'false') }
+  if (store('mirror') === '1') { body.classList.add('mirror'); $('mirror').setAttribute('aria-pressed', 'true') }
+  if (store('light') === '1') { body.classList.add('light'); $('theme').setAttribute('aria-pressed', 'true') }
+  apply(); renderClock(); onScroll()
+  setTimeout(() => { $('help').hidden = true }, 9000)
+})()
+</script>
+</body>
+</html>

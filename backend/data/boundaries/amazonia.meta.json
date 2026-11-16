@@ -1,0 +1,76 @@
+{
+  "region_id": "amazonia",
+  "name": "Amazônia (9 países)",
+  "publisher": "IBGE (Amazônia Legal pela LC 124/2007) + OTCA via Censipam (demais países)",
+  "source_url": "https://panorama.sipam.gov.br/geoserver/painel_do_fogo/wfs?service=WFS&version=2.0.0&request=GetFeature&outputFormat=application/json&typeNames=painel_do_fogo:otca_capacombinada_cuencaamazo_act2",
+  "sources": [
+    {
+      "part": "UF 11",
+      "url": "https://servicodados.ibge.gov.br/api/v3/malhas/estados/11?formato=application/vnd.geo%2Bjson&qualidade=intermediaria",
+      "sha256": "6e74bbd9d153dc474c754dc63c1f6f70f40950d390bf0d3bdb8385eb54051746"
+    },
+    {
+      "part": "UF 12",
+      "url": "https://servicodados.ibge.gov.br/api/v3/malhas/estados/12?formato=application/vnd.geo%2Bjson&qualidade=intermediaria",
+      "sha256": "ba428881488df8b4585e9d8dd7cb79e053f0cb42c558f6c4a0f831ae63e63d3f"
+    },
+    {
+      "part": "UF 13",
+      "url": "https://servicodados.ibge.gov.br/api/v3/malhas/estados/13?formato=application/vnd.geo%2Bjson&qualidade=intermediaria",
+      "sha256": "2e9d1d5166091add8c1d2b9ac181199878dd790bdf228de8795665fa8dcbafd7"
+    },
+    {
+      "part": "UF 14",
+      "url": "https://servicodados.ibge.gov.br/api/v3/malhas/estados/14?formato=application/vnd.geo%2Bjson&qualidade=intermediaria",
+      "sha256": "dc7156e8e9a1cb3d2cefac455b1ef9b78a39c8d5966d02fa6aac7befb7b8cea1"
+    },
+    {
+      "part": "UF 15",
+      "url": "https://servicodados.ibge.gov.br/api/v3/malhas/estados/15?formato=application/vnd.geo%2Bjson&qualidade=intermediaria",
+      "sha256": "94f9a7e7f1e659b0e98f8d1221af859adbdb815be051994fd73f9a8703df5467"
+    },
+    {
+      "part": "UF 16",
+      "url": "https://servicodados.ibge.gov.br/api/v3/malhas/estados/16?formato=application/vnd.geo%2Bjson&qualidade=intermediaria",
+      "sha256": "965aa6d0f006f83218506111773fdc733122adc65314f58697770dd6d2609846"
+    },
+    {
+      "part": "UF 17",
+      "url": "https://servicodados.ibge.gov.br/api/v3/malhas/estados/17?formato=application/vnd.geo%2Bjson&qualidade=intermediaria",
+      "sha256": "52c673846c7738befc72a8e30a0de4e88825d2a06ca8b2908673660bdaa704af"
+    },
+    {
+      "part": "UF 51",
+      "url": "https://servicodados.ibge.gov.br/api/v3/malhas/estados/51?formato=application/vnd.geo%2Bjson&qualidade=intermediaria",
+      "sha256": "e4514632909fa9acadef07477324e7c12e63593ebabf76c457cb3f0edad94999"
+    },
+    {
+      "part": "UF 21",
+      "url": "https://servicodados.ibge.gov.br/api/v3/malhas/estados/21?formato=application/vnd.geo%2Bjson&qualidade=intermediaria",
+      "sha256": "c6423dd1153cc36bf498eef25c9574cc7c81b3f4697d0f5df399ff7a4208cbda"
+    },
+    {
+      "part": "OTCA (demais países)",
+      "url": "https://panorama.sipam.gov.br/geoserver/painel_do_fogo/wfs?service=WFS&version=2.0.0&request=GetFeature&outputFormat=application/json&typeNames=painel_do_fogo:otca_capacombinada_cuencaamazo_act2",
+      "sha256": "e7b3c3c61f211f60c1eccd6576cc0984cb468000242365a7d341fc3d44afba75",
+      "features": 1411,
+      "countries": [
+        "Bolivia",
+        "Colombia",
+        "Ecuador",
+        "Guyana",
+        "Perú",
+        "Suriname",
+        "Venezuela"
+      ]
+    }
+  ],
+  "definition": "Brasil: Amazônia Legal (AC, AP, AM, MT, PA, RO, RR, TO e Maranhão a oeste de 44° W). Demais países: definição amazônica de cada país na capa combinada da OTCA.",
+  "area_km2_geodesic": 7833852.0,
+  "brazil_km2_geodesic": 5015079.0,
+  "simplification_deg": 0.005,
+  "fetched_at": "2026-11-15T15:14:26+00:00",
+  "sha256": "7d9265a3624afcbcfc7e45a638af410fb96b819fae3736260130bc782ca12680",
+  "bytes": 740167,
+  "license_note": "Dados públicos do IBGE e da OTCA (via GeoServer Panorama do Censipam)."
+}

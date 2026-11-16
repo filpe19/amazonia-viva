@@ -1,0 +1,28 @@
+# Shared server with an existing host nginx (no Caddy): the web container listens only on 127.0.0.1:8095 and the
+# host nginx terminates TLS and proxies to it. Runtime data and secrets live outside the git checkout.
+# Usage (on the server): docker compose -f deploy/docker-compose.vps.yml up -d --build
+name: amazonia-viva
+services:
+  api:
+    build: ../backend
+    restart: unless-stopped
+    env_file: ${AV_SHARED:-/var/www/amazonia-viva-shared}/api.env
+    environment:
+      ENVIRONMENT: production
+      LOG_FORMAT: json
+    volumes:
+      - ${AV_SHARED:-/var/www/amazonia-viva-shared}/runtime:/app/data/runtime
+    # Other applications share this server: cap CPU and memory so heavy Amazon-scale jobs cannot starve them.
+    cpus: 1.0
+    mem_limit: 2560m
+  web:
+    build:
+      context: ../frontend
+      args:
+        VITE_ARCGIS_API_KEY: ${VITE_ARCGIS_API_KEY:-}
+    restart: unless-stopped
+    ports: ["127.0.0.1:8095:80"]
+    mem_limit: 256m
+    depends_on:
+      api:
+        condition: service_healthy

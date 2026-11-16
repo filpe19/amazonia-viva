@@ -1,7 +1,7 @@
 import { t, useLocale } from '../lib/i18n'
 import { sourceCopy } from '../lib/sourceCopy'
 import { ArrowLeft, Download, Printer } from 'lucide-react'
-import { useEffect, useMemo, type ReactNode } from 'react'
+import { useEffect, useMemo, useState, type ReactNode } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { ErrorBoundary } from '../components/ErrorBoundary'
 import { KIND_ORDER, KindBadge } from '../components/KindBadge'
@@ -10,7 +10,10 @@ import { MiniMap, type MiniLayer } from '../components/MiniMap'
 import { ErrorState, Loading, Unavailable } from '../components/states'
 import { apiUrl } from '../lib/api'
 import { fmt1, fmt2, fmtBrt, fmtDate, fmtInt, fmtUtc } from '../lib/format'
-import { useBoundary, useDetections, useFicha, useOverlap, useRegions } from '../lib/hooks'
+import { useAttention, useBoundary, useDeter, useIndigenous, useDetections, useFicha, useMunicipalities, useOverlap, useRegions, useSeats } from '../lib/hooks'
+import { CrossCheckBlock, IndigenousTable } from '../features/ficha/CrossCheck'
+import { EvidenceMap } from '../features/map/EvidenceMap'
+import { SATELLITES, shapeSvg } from '../features/map/symbology'
 import { productStyle } from '../lib/products'
 import { useRegion } from '../lib/region-context'
 import type { Ficha, InfoKind, Signal } from '../lib/types'
@@ -208,8 +211,14 @@ function FichaBody({ f }: { f: Ficha }) {
   const b = f.brief
   const ctx = f.context
   const boundary = useBoundary(region.id)
-  const det = useDetections({ region: region.id, window: '7d', products: ['VIIRS_NOAA20_NRT', 'VIIRS_NOAA21_NRT'], daynight: 'all' })
+  const det = useDetections({ region: region.id, window: '7d', products: ['VIIRS_NOAA20_NRT', 'VIIRS_NOAA21_NRT', 'MODIS_NRT'], daynight: 'all' })
+  const seats = useSeats('para')
+  const munis = useMunicipalities('para')
+  const [mapFailed, setMapFailed] = useState(false)
   const overlap = useOverlap(region.id, 'Aqua', 'VIIRS_NOAA20_SP')
+  const att = useAttention(region.id, '7d', region.level === 'municipio' || region.level === 'estado')
+  const deterQ = useDeter(region.id, region.level === 'municipio')
+  const tiQ = useIndigenous(region.id, '7d')
   const layers = ctx.layers?.layers ?? []
   const cz = ctx.censipam
   const wx = 'recent_analysis' in b.weather ? b.weather : null
@@ -219,7 +228,10 @@ function FichaBody({ f }: { f: Ficha }) {
   const miniLayers: MiniLayer[] = useMemo(() => [
     ...layers.filter((l) => l.items?.length).map((l) => ({ id: l.id, label: sourceCopy(l.label), geometries: l.items.map((i) => i.geometry), ...LAYER_STYLE[l.id] ?? { stroke: '#44554d' } })),
     ...(cz.events?.length ? [{ id: 'censipam', label: t("Censipam events"), geometries: cz.events.map((e) => e.geometry), stroke: '#6250d6', fill: 'rgba(98,80,214,0.16)' }] : []),
-  ], [layers, cz.events, locale])
+    ...[['deforestation', 'DETER: deforestation (12 months)', '#9c4a1a', 'rgba(156,74,26,0.30)'], ['burn_scar', 'DETER: forest fire scars (12 months)', '#3d3d3d', 'rgba(61,61,61,0.26)']]
+      .map(([g, label, stroke, fill]) => ({ id: `deter-${g}`, label: t(label), stroke, fill, geometries: (deterQ.data?.features ?? []).filter((x) => x.properties?.group === g).map((x) => x.geometry) }))
+      .filter((l) => l.geometries.length),
+  ], [layers, cz.events, locale, deterQ.data])
   const points = useMemo(() => (det.data?.features ?? []).map((ft) => ({ lon: ft.geometry.coordinates[0], lat: ft.geometry.coordinates[1], color: productStyle(ft.properties.p).color })), [det.data])
   const outline = useMemo(() => (boundary.data?.features ?? []).map((ft) => ft.geometry), [boundary.data])
   const viirsProducts = b.recent.products ?? []
@@ -228,15 +240,37 @@ function FichaBody({ f }: { f: Ficha }) {
     <div className="flex flex-col gap-6">
       {/* Mapa + resumo do nível */}
       <div className="grid gap-6 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] print:grid-cols-[3fr_2fr]">
-        <div>
-          {outline.length ? (
-            <MiniMap outline={outline} layers={miniLayers} points={points}
-              ariaLabel={`Map of ${region.name} with VIIRS detections over the last 7 days, official areas and Censipam events`} />
-          ) : <Loading label={t("Loading territorial boundary…")} />}
-          <p className="mt-1 text-[11px] text-ink-3">
-            {t("Points: VIIRS NOAA-20 (amber) and NOAA-21 (blue) detections over the last 7 days.")} {det.isLoading ? t("Loading observations…") : ''}
-          </p>
-        </div>
+        <figure className="evidence-figure">
+          {!outline.length ? <Loading label={t("Loading territorial boundary…")} />
+            : mapFailed || !region.bbox ? (
+              <MiniMap outline={outline} layers={miniLayers} points={points}
+                ariaLabel={`Map of ${region.name} with satellite detections over the last 7 days, official areas and Censipam events`} />
+            ) : (
+              <EvidenceMap boundary={boundary.data} bbox={region.bbox as [number, number, number, number]} polygons={miniLayers} detections={det.data} seats={seats.data}
+                regionId={region.id} localities={f.impact?.localities?.items} municipalities={munis.data} onError={() => setMapFailed(true)}
+                ariaLabel={`Map of ${region.name} with satellite detections over the last 7 days, municipal seat, localities, official areas and Censipam events`} />
+            )}
+          <figcaption className="evidence-legend">
+            <div className="ev-group">
+              <h4>{t("Detections, last 7 days")} {det.data?.metadata?.window ? <span className="num">({fmtDate(det.data.metadata.window.start_utc)} – {fmtDate(det.data.metadata.window.end_utc)} UTC)</span> : null}</h4>
+              <ul>{SATELLITES.map((sat) => {
+                const p = det.data?.metadata?.products.find((x) => x.product_id === sat.product)
+                const n = p?.available ? (p.by_satellite?.[sat.key] ?? 0) : null
+                return <li key={sat.key}><span dangerouslySetInnerHTML={{ __html: shapeSvg(sat.shape, sat.color, 12) }} />{sat.label} · {sat.resolution} <b className="num">{n == null ? '—' : fmtInt(n)}</b></li>
+              })}</ul>
+            </div>
+            <div className="ev-group">
+              <h4>{t("Territory and references")}</h4>
+              <ul>
+                <li><i className="ev-line" />{t("IBGE municipal boundary")}</li>
+                <li><b className="star">★</b>{t("Municipal seat (IBGE BC250)")}</li>
+                <li><i className="ev-dot" />{t("Locality (IBGE BC250); villages named")}</li>
+                {miniLayers.map((l) => <li key={l.id}><i className={`ev-sq ${l.dashed ? 'dashed' : ''}`} style={{ borderColor: l.stroke, background: l.fill ?? 'transparent' }} />{l.label}</li>)}
+              </ul>
+            </div>
+            <p className="ev-credits">{t("Symbols are thermal-anomaly pixels at fixed size, not fire extent. Sources: NASA FIRMS (VIIRS 375 m, MODIS 1 km), IBGE (boundaries, BC250 2025), Censipam/ICMBio/FUNAI/INCRA (official areas). Basemap: OpenFreeMap, © OpenStreetMap contributors.")} {det.isLoading ? t("Loading observations…") : ''}</p>
+          </figcaption>
+        </figure>
         <div className="rounded-[var(--radius-panel)] bg-lichen p-4 ring-1 ring-rule">
           <p className="flex items-center gap-2 text-xs font-medium text-ink-2">{t("Exploratory screening")} <KindBadge kind="estimativa" compact /></p>
           <p className="type-title mt-1 text-2xl text-ink">{t("Investigation checklist")}</p>
@@ -391,7 +425,12 @@ function FichaBody({ f }: { f: Ficha }) {
         <h3 className="mt-5 flex flex-wrap items-center gap-2 text-[15px] font-semibold text-ink">{t("People and infrastructure near observations")} <KindBadge kind="estimativa" compact /></h3>
         <ImpactBlock f={f} />
       </FichaSection>
-      <FichaSection n={6} title={t("What needs further verification?")} kind="ausente">
+      <FichaSection n={6} title={t("Where do the detections touch territories, people and forest?")} kind="estimativa">
+        <h3 className="mb-2 flex flex-wrap items-center gap-2 text-[15px] font-semibold text-ink">{t('Indigenous lands with fire inside or within 10 km')} <KindBadge kind="estimativa" compact /></h3>
+        <IndigenousTable query={tiQ} />
+        <div className="mt-5"><CrossCheckBlock query={att} /></div>
+      </FichaSection>
+      <FichaSection n={7} title={t("What needs further verification?")} kind="ausente">
         <ul className="flex flex-col gap-2">
           {f.human_review.map((h) => (
             <li key={sourceCopy(h)} className="flex gap-2.5 text-[13px] text-ink">
@@ -404,7 +443,7 @@ function FichaBody({ f }: { f: Ficha }) {
           {f.decrees.map((d) => <p key={d.id} className="mt-1 text-ink-2"><strong className="text-ink">{t("State decree no.")} {d.id}</strong> ({fmtDate(d.date)}): {sourceCopy(d.summary)} <span className="text-ink-3">{sourceCopy(d.verification)}</span></p>)}
         </div>
       </FichaSection>
-      <FichaSection n={7} title={t("What evidence and limitations support this analysis?")} kind="observacao">
+      <FichaSection n={8} title={t("What evidence and limitations support this analysis?")} kind="observacao">
         <ul className="flex flex-col gap-1 break-words text-[12px] text-ink-2">
           {viirsProducts.map((p) => p.provenance && <li key={p.product_id}><strong className="text-ink">{t(productStyle(p.product_id).label)}</strong>: {p.provenance.request_urls.join(' ')}{t("; retrieved")} {fmtUtc(p.provenance.fetched_at)}; SHA-256 {p.provenance.sha256.slice(0, 16)}…</li>)}
           {b.comparisons.filter((c) => c.available).map((c) => <li key={c.product_baseline}><strong className="text-ink">{c.product_baseline}</strong>{t(": NASA FIRMS annual country archives, years")} {c.baseline!.stats.years.join(', ')} {t("(file provenance in Evidence & exports).")}</li>)}
@@ -417,6 +456,7 @@ function FichaBody({ f }: { f: Ficha }) {
           {f.impact?.health?.url && <li><strong className="text-ink">{t("Health facilities")}</strong>: {f.impact.health.url}{t("; retrieved")} {fmtUtc(f.impact.health.fetched_at)}</li>}
           {f.impact?.exposure?.source_url && <li><strong className="text-ink">{t("Census tracts")}</strong>: {f.impact.exposure.source_url} (SHA-256 {f.impact.exposure.source_sha256?.slice(0, 16)}…)</li>}
           {f.impact?.infrastructure?.airstrips?.url && <li><strong className="text-ink">{t("Airstrips")}</strong>: {f.impact.infrastructure.airstrips.source}</li>}
+          {att.data?.sources?.deter?.url && <li><strong className="text-ink">INPE DETER</strong>: {att.data.sources.deter.url}{t("; retrieved")} {fmtUtc(att.data.sources.deter.fetched_at)}</li>}
         </ul>
         <div className="mt-3 flex flex-wrap gap-2 print:hidden">
           <a className="control inline-flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-medium ring-1 ring-rule hover:bg-lichen" href={apiUrl('/detections/export.csv', { region: region.id, window: '7d', products: 'VIIRS_NOAA20_NRT,VIIRS_NOAA21_NRT,MODIS_NRT' })}>
@@ -443,12 +483,14 @@ export default function FichaPage() {
   const { region, setRegion } = useRegion()
   const regions = useRegions()
   const q = useFicha(regionId)
+  const attQ = useAttention(regionId, '7d')
+  const tiQ = useIndigenous(regionId, '7d')
   useEffect(() => { if (region !== regionId) setRegion(regionId) }, [regionId]) // eslint-disable-line react-hooks/exhaustive-deps
   const regionName = regions.data?.regions.find((r) => r.id === regionId)?.name
 
   const downloadJson = () => {
     if (!q.data) return
-    const blob = new Blob([JSON.stringify(q.data, null, 2)], { type: 'application/json' })
+    const blob = new Blob([JSON.stringify({ ...q.data, cross_check: attQ.data ?? null, indigenous_alerts: tiQ.data ?? null }, null, 2)], { type: 'application/json' })
     const a = document.createElement('a')
     a.href = URL.createObjectURL(blob)
     a.download = `ficha-atencao-territorial_${regionId}_${q.data.generated_at.replace(/[:-]/g, '').slice(0, 13)}.json`

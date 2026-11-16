@@ -32,8 +32,8 @@ async def main(only: set[str]) -> int:
     http = HttpClient(timeout=60, max_retries=3, user_agent=settings.http_user_agent)
     try:
         for d in REGION_DEFS:
-            if only and d.id not in only:
-                continue
+            if (only and d.id not in only) or not d.ibge_path:
+                continue  # sem caminho na API de malhas (ex.: amazonia → scripts.fetch_amazonia)
             url = f"{IBGE_MALHAS}/{d.ibge_path}?formato=application/vnd.geo%2Bjson&qualidade={QUALITY}"
             res = await http.get(url, source="IBGE malhas v3")
             gj = json.loads(res.content)

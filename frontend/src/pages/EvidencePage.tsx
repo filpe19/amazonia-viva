@@ -1,3 +1,4 @@
+import { EvidenceObservations, HistoricalSourceTable } from '../features/map/EvidenceTables'
 import { t, useLocale } from '../lib/i18n'
 import { sourceCopy } from '../lib/sourceCopy'
 import { Download, FileJson, FileText } from 'lucide-react'
@@ -7,7 +8,7 @@ import { Segmented, Toggle } from '../components/controls'
 import { Page, Section } from '../components/Page'
 import { ErrorState, Loading } from '../components/states'
 import { apiUrl } from '../lib/api'
-import { fmtInt, fmtUtc, shortHash } from '../lib/format'
+import { fmtUtc } from '../lib/format'
 import { useEvidence } from '../lib/hooks'
 import { DEFAULT_NRT, NRT_SELECTABLE, productStyle } from '../lib/products'
 import { useRegion } from '../lib/region-context'
@@ -85,31 +86,7 @@ export default function EvidencePage() {
           </Section>
 
           <Section title={t("Observations and sources")} description={t("Counts are kept separate by product. Each row identifies the exact source file or API request.")}>
-            <div className="overflow-x-auto">
-              <table className="w-full min-w-[860px] text-left text-[12.5px]">
-                <thead className="text-ink-3">
-                  <tr>
-                    <th className="py-1.5 pr-3 font-medium">{t("Product")}</th><th className="pr-3 text-right font-medium">{t("Detections")}</th><th className="pr-3 font-medium">{t("Latest observation")}</th>
-                    <th className="pr-3 font-medium">{t("Retrieved")}</th><th className="pr-3 font-medium">{t("Mode")}</th><th className="pr-3 font-medium">{t("Version")}</th><th className="pr-3 font-medium">{t("SHA-256")}</th><th className="font-medium">{t("Origin")}</th>
-                  </tr>
-                </thead>
-                <tbody className="num divide-y divide-rule/60 align-top">
-                  {m.observations.map((o) => (
-                    <tr key={o.product_id}>
-                      <td className="py-2 pr-3"><span className="flex items-center gap-1.5"><span className="inline-block size-2.5 rounded-full" style={{ background: productStyle(o.product_id).color }} />{t(productStyle(o.product_id).label)}</span></td>
-                      <td className="pr-3 text-right">{o.available ? fmtInt(o.count) : '—'}</td>
-                      <td className="pr-3">{fmtUtc(o.latest_observation_utc)}</td>
-                      <td className="pr-3">{fmtUtc(o.provenance?.fetched_at)}{o.provenance?.stale ? t("(cached copy)") : ''}</td>
-                      <td className="pr-3">{o.provenance?.mode === 'public_file' ? t("public NRT archive") : o.provenance?.mode === 'area_api' ? t("area API") : '—'}</td>
-                      <td className="pr-3">{o.provenance?.versions.join(', ') || '—'}</td>
-                      <td className="pr-3"><code title={o.provenance?.sha256}>{shortHash(o.provenance?.sha256)}</code></td>
-                      <td className="break-all">{o.provenance?.request_urls.map((u) => <a key={u} href={u} className="text-river underline" target="_blank" rel="noreferrer">{u.split('/').at(-1)}</a>)}
-                        {o.error && <span className="text-alert">{sourceCopy(o.error.message)}</span>}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+            <EvidenceObservations manifest={m}/>
             <p className="mt-3 text-xs text-ink-3">{t("Nominal source latency:")} {sourceCopy(m.observations[0]?.provenance?.nominal_latency) || '—'}.</p>
           </Section>
 
@@ -122,21 +99,7 @@ export default function EvidencePage() {
           </Section>
 
           <Section title={t("Historical source files")} description={t("NASA FIRMS annual country archives, processed into aggregates.")}>
-            <div className="overflow-x-auto">
-              <table className="w-full min-w-[720px] text-left text-[12.5px]">
-                <thead className="text-ink-3"><tr><th className="py-1.5 pr-3 font-medium">{t("Product")}</th><th className="pr-3 font-medium">{t("Year")}</th><th className="pr-3 font-medium">{t("Version")}</th><th className="pr-3 text-right font-medium">{t("Rows")}</th><th className="pr-3 font-medium">{t("Imported at")}</th><th className="font-medium">{t("SHA-256")}</th></tr></thead>
-                <tbody className="num divide-y divide-rule/60">
-                  {m.historical_sources.map((f) => (
-                    <tr key={`${f.product_id}-${f.year}`}>
-                      <td className="py-1.5 pr-3"><a href={f.url} className="text-river underline" target="_blank" rel="noreferrer">{t(productStyle(f.product_id).label)}</a></td>
-                      <td className="pr-3">{f.year}</td><td className="pr-3">{f.version_values.join(', ')}</td>
-                      <td className="pr-3 text-right">{fmtInt(f.rows_read)}</td><td className="pr-3">{fmtUtc(f.imported_at)}</td>
-                      <td><code title={f.sha256}>{shortHash(f.sha256)}</code></td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+            <HistoricalSourceTable files={m.historical_sources}/>
           </Section>
 
           <Section title={t("Limitations")}>

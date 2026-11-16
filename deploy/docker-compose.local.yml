@@ -1,0 +1,11 @@
+# Teste local do kit de produção (sem domínio/TLS): API + nginx em http://127.0.0.1:8088, usando os dados de execução já baixados.
+services:
+  api:
+    volumes:
+      - ${RUNTIME_DIR:-../backend/data/runtime}:/app/data/runtime
+    environment:
+      CORS_ORIGINS: '["http://127.0.0.1:8088"]'
+  web:
+    ports: ["8088:80"]
+  caddy:
+    profiles: ["tls"]

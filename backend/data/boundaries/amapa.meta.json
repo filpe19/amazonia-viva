@@ -1,0 +1,12 @@
+{
+  "region_id": "amapa",
+  "name": "Amapá",
+  "ibge_code": "16",
+  "publisher": "IBGE — Instituto Brasileiro de Geografia e Estatística",
+  "source_url": "https://servicodados.ibge.gov.br/api/v3/malhas/estados/16?formato=application/vnd.geo%2Bjson&qualidade=maxima",
+  "quality": "maxima",
+  "fetched_at": "2026-11-15T19:10:03+00:00",
+  "sha256": "61e85202bec445fda9f8a94ef7597d5ac90cffa7ed27691c7a199b7181970c3c",
+  "bytes": 25978,
+  "license_note": "Dados públicos do IBGE (API de malhas territoriais v3)."
+}

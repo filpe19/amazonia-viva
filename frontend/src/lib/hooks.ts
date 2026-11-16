@@ -3,6 +3,7 @@ import { getJson } from './api'
 import type {
   CalendarHistory, DayNight, DetectionRecord, DetectionsFC, EvidenceManifest, Health, HistoryStatus, MonthlyHistory,
   OverlapHistory, Region, SourcesInfo, WeatherContext, WindowLabel, BriefV2, Ficha, TerritoryContext, ImpactReport, CoverageReport, HarmonizationExperiment, HarmonizedSeries,
+  AttentionReport, DeterLayer, IndigenousReport, HeatEvidence, HotspotReport,
 } from './types'
 
 const MIN = 60_000
@@ -102,6 +103,16 @@ export function useMunicipalities(parent = 'para') {
   })
 }
 
+export function useSeats(region: string, enabled = true) {
+  return useQuery({
+    queryKey: ['seats', region],
+    queryFn: ({ signal }) => getJson<GeoJSON.FeatureCollection & { metadata: { source: string; url: string; fetched_at: string; count: number } }>(`/regions/${region}/seats`, undefined, signal),
+    enabled,
+    staleTime: 60 * MIN,
+    retry: 1,
+  })
+}
+
 export function useTerritoryContext(region: string) {
   return useQuery({
     queryKey: ['context', region],
@@ -145,6 +156,76 @@ export function useImpact(region: string) {
   })
 }
 
+export function useAttention(region: string, window: string, enabled = true) {
+  return useQuery({
+    queryKey: ['attention', region, window],
+    queryFn: ({ signal }) => getJson<AttentionReport>(`/territory/${region}/attention`, { window }, signal),
+    enabled,
+    staleTime: 5 * MIN,
+    placeholderData: (prev) => (prev && prev.region.id === region ? prev : undefined),
+  })
+}
+
+export function useIndigenous(region: string, window: string, enabled = true) {
+  return useQuery({
+    queryKey: ['indigenous', region, window],
+    queryFn: ({ signal }) => getJson<IndigenousReport>(`/territory/${region}/indigenous`, { window }, signal),
+    enabled,
+    staleTime: 5 * MIN,
+    placeholderData: (prev) => (prev && prev.region?.id === region ? prev : undefined),
+  })
+}
+
+export function useMapLayers(region: string, enabled = true) {
+  return useQuery({
+    queryKey: ['map-layers', region],
+    queryFn: ({ signal }) => getJson<{ areas: GeoJSON.FeatureCollection; roads: GeoJSON.FeatureCollection; sources: Record<string, { available: boolean; features?: number; reason?: string }> }>(`/territory/${region}/map-layers`, undefined, signal),
+    enabled,
+    staleTime: 30 * MIN,
+    retry: 1,
+  })
+}
+
+export function useHotspots(region: string, window: string, hist: { start: string; end: string } | null, enabled = true) {
+  return useQuery({
+    queryKey: ['hotspots', region, window, hist?.start, hist?.end],
+    queryFn: ({ signal }) => getJson<HotspotReport>(`/territory/${region}/hotspots`, hist ? { start: hist.start, end: hist.end } : { window }, signal),
+    enabled,
+    staleTime: 5 * MIN,
+    placeholderData: (prev) => (prev && prev.region?.id === region ? prev : undefined),
+  })
+}
+
+export function useHistoryDetections(region: string, hist: { start: string; end: string } | null) {
+  return useQuery({
+    queryKey: ['history-detections', region, hist?.start, hist?.end],
+    queryFn: ({ signal }) => getJson<DetectionsFC & { metadata: { mode: string; start: string; end: string; count: number; by_product_satellite: Record<string, number>; note: string } }>(
+      '/history/detections', { region, start: hist!.start, end: hist!.end }, signal),
+    enabled: Boolean(hist),
+    staleTime: 60 * MIN,
+  })
+}
+
+export function useHeatEvidence(product: string | null, id: string | null) {
+  return useQuery({
+    queryKey: ['heat-evidence', product, id],
+    queryFn: ({ signal }) => getJson<HeatEvidence>(`/detections/${product}/${id}/evidence`, undefined, signal),
+    enabled: Boolean(product && id),
+    staleTime: 10 * MIN,
+    retry: 1,
+  })
+}
+
+export function useDeter(region: string, enabled = true) {
+  return useQuery({
+    queryKey: ['deter', region],
+    queryFn: ({ signal }) => getJson<DeterLayer>(`/territory/${region}/deter`, undefined, signal),
+    enabled,
+    staleTime: 30 * MIN,
+    retry: 1,
+  })
+}
+
 export function useCoverage(region: string) {
   return useQuery({
     queryKey: ['coverage', region],
@@ -166,5 +247,15 @@ export function useHarmonized(region: string) {
     queryKey: ['harmonized', region],
     queryFn: ({ signal }) => getJson<HarmonizedSeries>('/history/harmonized', { region }, signal),
     staleTime: 30 * MIN,
+  })
+}
+
+export function useHistoryGrid(region: string, product = 'VIIRS_NOAA20_SP', enabled = true) {
+  return useQuery({
+    queryKey: ['history-grid', region, product],
+    queryFn: ({ signal }) => getJson<GeoJSON.FeatureCollection & { metadata: { grid_deg: number; years: [number, number]; n_years: number; max_total: number; source: string; meaning: string } }>(
+      '/history/grid', { region, product }, signal),
+    enabled,
+    staleTime: 60 * MIN,
   })
 }

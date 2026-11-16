@@ -1,147 +1,153 @@
 # Amazônia Viva
 
-Plataforma de inteligência ambiental para a Amazônia, construída para o desafio
-**Harmonization of MODIS and VIIRS Hot Spots** do NASA Space Apps Challenge 2026.
+**Environmental intelligence for the Amazon, built on NASA satellite fire data.**
+Built by team **Binary Horizon (Horizonte Binário)** for the NASA Space Apps Challenge 2026 challenge
+**"Harmonization of MODIS and VIIRS Hot Spots"**.
 
-Une, com dados reais e rastreáveis:
+> Português: [README.pt-BR.md](README.pt-BR.md)
 
-- **últimas observações por satélite** (NASA FIRMS, VIIRS NOAA-20/NOAA-21 e MODIS);
-- **histórico** do arquivo FIRMS, com séries separadas por sensor, linha de base e percentis;
-- **comparação MODIS × VIIRS** e calendário de conversão experimental, com origem e incerteza explícitas;
-- **contexto meteorológico** (NASA POWER: reanálise recente e climatologia 2001–2025);
-- **análise territorial** com resumo fundamentado e sinais de atenção experimentais;
-- **evidências**: manifesto de proveniência e exportação CSV dos registros reais.
+Amazônia Viva turns NASA FIRMS fire detections into territorial context. It shows where fire activity is unusual,
+which hotspots deserve attention, and who and what may be affected. It also states clearly what the data cannot say.
 
-> Detecções são pixels com anomalia térmica no momento da passagem do satélite,
-> não incêndios individuais. MODIS e VIIRS têm sensibilidades diferentes e nunca
-> são somados. Nenhuma previsão de propagação é feita.
+> **Not an official alert system.** A satellite detection is a pixel with a thermal anomaly at the time of the
+> overpass. It is not a confirmed fire. MODIS and VIIRS are never summed. Fire spread and the probability of
+> reaching a place are not modeled. The platform supports decisions and does not replace civil defense or
+> environmental agencies.
 
-## Fluxo piloto: Portel (PA)
+## What it does
 
-1. Em **Current activity**, clique em Portel no mapa (os 144 municípios do Pará são selecionáveis).
-2. Veja as detecções VIIRS/MODIS reais com data, horário UTC e de Brasília, e sensor.
-3. Em **Territory analysis**, compare o período atual com os anos anteriores **no mesmo instrumento**
-   (MODIS × arquivo MODIS 2001–2025; NOAA-20 × arquivo NOAA-20 2021–2025).
-4. Consulte temperatura, umidade, chuva e vento (NASA POWER, reanálise com latência de dias).
-5. Veja áreas oficiais sobrepostas (FUNAI, ICMBio, MMA/CNUC, INCRA), população do Censo 2022,
-   localidades (IBGE), unidades de saúde (CNES), brigadas e pistas de pouso, e eventos do Censipam
-   (indicador externo). Proximidade e exposição potencial aparecem separadas de dano confirmado.
-6. Gere a **Ficha de Atenção Territorial** (`/ficha/portel?regiao=portel`), organizada em sete perguntas
-   (o que, quando, é incomum?, ambiente, quem está perto, o que verificar, fontes e limitações),
-   com cada afirmação rotulada como observação, estimativa, previsão, indicador externo ou ausente.
-   Exporta PDF (impressão), JSON, CSV das detecções e CSV de proximidade.
+### 1. Harmonized fire history (the challenge)
+- MODIS (1 km pixels, Terra/Aqua) and VIIRS (375 m pixels, NOAA-20/NOAA-21) see fire at different resolutions,
+  so raw counts are **never added or compared directly**.
+- Each satellite is compared only with itself (MODIS × MODIS archive, NOAA-20 × NOAA-20 archive).
+- An **experimental harmonized series** converts MODIS Aqua into NOAA-20-equivalent detections.
+  - It is validated by leaving one year out. For Pará: median error 14.3%, 90th percentile 54.1%,
+    60 active months, 2021–2025.
+  - The uncertainty is shown on every chart.
+- The result is a **monthly fire-activity calendar for 2002–2025** with seasonal profiles, year comparison and
+  unusual months (robust z-score with P10/P90 bands).
 
-## Telas
+### 2. Situation center
+- Near-real-time FIRMS detections from **four satellites** (NOAA-20, NOAA-21, Terra, Aqua) are grouped into
+  **hotspots**: detections within 1.5 km of each other.
+- Each hotspot shows:
+  - its proportion (pixels, overpasses, satellites, area) and observed displacement;
+  - **model wind** (Open-Meteo);
+  - **what lies in the path**: towns, federal roads, Indigenous lands, quilombola territories, settlements and
+    protected areas within 5/10/20 km or downwind.
+- **Alert level** (high, moderate, low) and **detection reliability** follow public, written rules. There is no
+  arbitrary risk score.
+- The map has satellite imagery, hover pop-ups for every layer and quick layer filters. It is available in
+  Portuguese and English.
 
-| Rota | Conteúdo |
+### 3. Dedicated alerts for Indigenous lands
+- Each Indigenous land (FUNAI, plus OTCA for the other Amazon countries) is classified as: fire inside confirmed
+  by two or more overpasses, fire inside, or fire within 10 km.
+- Each alert shows:
+  - census residents (IBGE 2022) and peoples;
+  - the FUNAI regional office to contact;
+  - the nearest road and brigade;
+  - a bulletin ready to copy or share.
+
+### 4. "Is it really a fire?"
+- For each detection, the platform checks other overpasses, the FIRMS static-source type, ANM mining titles,
+  INPE DETER warnings and archive recurrence.
+- It then shows a rule-based reading: *compatible with vegetation fire*, *mining context*, *clearing context*,
+  *static source* or *inconclusive*.
+
+### 5. Evidence sheet
+- Each territory has a printable report in which every fact is labeled as an observation, an estimate or an
+  external indicator, with its source.
+
+**Coverage:** the nine Amazon countries. All 144 municipalities of Pará (Brazil) have detailed history.
+Santarém and Portel are the pilots.
+
+## Data sources
+
+| Source | Used for |
 |---|---|
-| `/` Current activity | mapa (pontos, agrupamentos, limite IBGE, imagem VIIRS do dia), filtros 24 h/48 h/7 dias, sensor, dia/noite; detalhe da detecção; horário da observação, da coleta e atraso declarado; faixa de passagens dos satélites |
-| `/historico` Fire history | calendário experimental em primeiro plano, com legenda observado/convertido/indisponível, faixa empírica e validação; atividade mensal por sensor, sazonalidade × mediana e P10–P90, matriz ano × mês com anomalias, calendário diário por produto, comparação de períodos, MODIS × VIIRS (temporal e espacial), experimento de agregação comum com validação "deixa um ano de fora", cobertura e processamento, pipeline e arquivos de origem |
-| `/ambiente` | temperatura, umidade, vento (rosa dos ventos), chuva × climatologia, para o território ou para uma coordenada |
-| `/territorio` Territory analysis | cinco perguntas: observações → atividade incomum → ambiente → áreas para investigar → evidências e limitações |
-| `/evidencias` | região, período, fontes, versões, SHA-256, limitações; CSV e manifesto JSON |
-| `/ficha/:territorio` | Ficha de Atenção Territorial: detectado, comparação, ambiente, território, Censipam, critérios, avaliação humana, fontes |
+| **NASA FIRMS** (near real time and archive) | VIIRS 375 m (NOAA-20, NOAA-21) and MODIS C6.1 (Terra, Aqua) detections; 2002–2025 fire calendar |
+| **NASA POWER** | Weather reanalysis and climatology |
+| **NASA GIBS** | Dated satellite basemap |
+| INPE TerraBrasilis (DETER) | Deforestation and degradation warnings |
+| IBGE | Territorial meshes, BC250 localities, 2022 Census (SIDRA) |
+| Censipam Panorama | Fire Panel API; GeoServer layers for FUNAI, ICMBio, CNUC, INCRA, DNIT and OTCA |
+| DATASUS CNES, ANM SIGMINE | Health facilities and mining titles |
+| Copernicus GWIS, Open-Meteo | Fire Weather Index (FWI) and model wind |
+| Esri World Imagery, OpenFreeMap / OpenStreetMap | Basemaps |
 
-## Rodar localmente
+More detail: [docs/DATA_SOURCES.md](docs/DATA_SOURCES.md). Only real, traceable public data is shown. Synthetic
+fixtures exist only inside the automated tests.
 
-Requisitos: Python 3.11, Node 20+ (testado com 26), ~100 MB de disco (mais ~20 MB
-para o histórico agregado).
-
-```bash
-make setup          # venv + dependências + npm install + limites do IBGE + setores censitários do Pará
-make history-pilot  # opcional: histórico piloto (~1,1 GB lidos em fluxo; ficam agregados e o recorte do Pará em Parquet)
-make api            # http://127.0.0.1:8710  (documentação: /docs)
-make web            # http://127.0.0.1:5710
-```
-
-Sem `make`:
-
-```bash
-cd backend
-python3.11 -m venv .venv && .venv/bin/pip install -r requirements-dev.txt
-cp .env.example .env
-.venv/bin/python -m scripts.fetch_boundaries
-.venv/bin/uvicorn app.main:app --port 8710 --reload --reload-dir app
-
-cd ../frontend
-npm install
-npx vite --port 5710
-```
-
-### NASA FIRMS MAP_KEY (opcional)
-
-Sem chave, a plataforma usa os **arquivos públicos NRT** da NASA FIRMS, sem
-nenhuma credencial. Com chave (gratuita em
-https://firms.modaps.eosdis.nasa.gov/api/map_key/), defina `FIRMS_MAP_KEY` em
-`backend/.env`: a API por área passa a ser usada. A chave fica só no back-end e
-é redigida em logs, URLs de proveniência e respostas.
-
-## Testes
-
-```bash
-make test      # back-end (pytest, 77 testes, sem rede) + front-end (tsc + vitest)
-make lint      # ruff
-make smoke     # integrações REAIS: 13 fontes (FIRMS, POWER, GIBS, IBGE, Censipam, CNES, OpenFreeMap)
-make validate  # recalcula o histórico de Portel direto do Parquet e compara com a API
-make e2e       # fluxo completo no navegador com dados reais (Chrome local)
-```
-
-Os testes usam **fixtures sintéticas identificadas** (`backend/tests/fixtures`) e
-fontes simuladas com `httpx.MockTransport`; nenhum valor sintético é usado fora
-dos testes.
-
-## Estrutura
+## Architecture
 
 ```
 amazonia-viva/
-├── backend/
-│   ├── app/{core,domain,integrations,science,services,persistence,api}
-│   ├── scripts/{fetch_boundaries.py,import_history.py}
-│   ├── data/boundaries/        limites IBGE + proveniência (versionados)
-│   ├── data/runtime/           cache, SQLite e logs (gerados, ignorados pelo git)
-│   └── tests/
-├── frontend/src/{pages,features/map,components,lib}
-└── docs/{ARCHITECTURE,METHODOLOGY,DATA_SOURCES}.md
+├── backend/   FastAPI (Python 3.11): integrations, science (harmonization, anomalies), services (hotspots,
+│              Indigenous alerts, cross-checks), Parquet archive + SQLite aggregates, file cache
+├── frontend/  React 19 + TypeScript + Vite + Tailwind 4 + MapLibre GL + TanStack Query + Recharts (PT-BR/EN)
+├── deploy/    Docker images, nginx, Caddy, compose files and deployment guide
+└── docs/      architecture, methodology, data sources, product notes and development reports
 ```
 
-## Documentação
+- Heavy geospatial work (Shapely STRtree, pyproj) runs off the event loop, one job at a time. Results are cached
+  and identical requests are coalesced.
+- API reference: `/docs` (OpenAPI) and [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
+- Method: [docs/METHODOLOGY.md](docs/METHODOLOGY.md).
 
-- [Arquitetura e endpoints](docs/ARCHITECTURE.md)
-- [Metodologia científica e resultados do piloto](docs/METHODOLOGY.md)
-- [Fontes de dados](docs/DATA_SOURCES.md)
-- [Plano das próximas etapas](docs/PLANO_PROXIMAS_ETAPAS.md)
+## Run locally
 
-## Limitações conhecidas
-
-- Histórico importado é um piloto: MODIS 2001–2025, VIIRS NOAA-20 2021–2025 e VIIRS S-NPP 2023–2024.
-- O índice de prioridade do Censipam é exibido sem alteração; sua fórmula não está publicada em formato verificável.
-- O espelho do CNUC consultado contém só UCs estaduais; federais vêm do ICMBio; municipais não estão disponíveis.
-- O arquivo anual MODIS mistura coleções (6.2, 6.03, 61.03) entre anos; a linha de base não corrige.
-- Deriva orbital de Terra e Aqua não corrigida na comparação "incomum para a época".
-- Cobertura real de observação (nuvens, grânulos) ainda não auditada.
-- NASA POWER: reanálise em grade de ~50 km com ~3 dias de atraso; sem previsão.
-- Localidades IBGE, unidades de saúde CNES e setores censitários foram integrados; escolas e comunidades ausentes dos cadastros continuam sendo lacunas.
-- PDF usa a impressão do navegador no relatório territorial; não há serviço independente de geração de PDF.
-
-## Missão 05 — interface científica
-
-Interface de demonstração em inglês e português (PT-BR), com três experiências conectadas e seleção territorial compartilhada. Use os botões **PT-BR / EN** na barra superior, inclusive no celular; a preferência é salva entre páginas e recarregamentos. A troca mantém mapa, território e filtros. O mapa usa limites IBGE e detecções reais; a hora da observação e a sincronização da plataforma são distintas. O calendário separa observações VIIRS e valores convertidos de MODIS Aqua, preservando a incerteza.
-
-- [Entrega, diagnóstico visual, testes e limitações](docs/mission05/DELIVERY.md)
-- [Direção de design](docs/mission05/DESIGN.md)
-- [Tradução PT-BR/EN, testes e screenshots](docs/i18n/README.md)
-- [Verificações Playwright](docs/mission05/test-results.json)
-- [Capturas antes](docs/mission05/before/) e [depois](docs/mission05/after/)
-
-Os servidores locais existentes são `http://127.0.0.1:5710` (web) e `http://127.0.0.1:8710` (API). Evite iniciar outra instância nas mesmas portas. Para executar a auditoria visual, use Python 3.11 com `playwright` instalado e Chrome local:
+Requirements: Python 3.11 and Node 20+.
 
 ```bash
-python frontend/e2e/visual_audit.py --help
-python frontend/e2e/visual_audit.py after
-python frontend/e2e/mission05_flow.py --help
-python frontend/e2e/mission05_flow.py
-python frontend/e2e/i18n_flow.py --help
-python frontend/e2e/i18n_flow.py
+make setup          # virtualenv, dependencies, npm install, IBGE boundaries, census tracts for Pará
+make history-pilot  # optional: imports the FIRMS archive (streams ~1.1 GB; keeps aggregates and a Parquet subset)
+make api            # http://127.0.0.1:8710  (OpenAPI docs at /docs)
+make web            # http://127.0.0.1:5710
 ```
 
-Nenhum download histórico nem nova integração é feito pela auditoria. A simulação de indisponibilidade intercepta uma resposta apenas em um contexto isolado do navegador. Os dados históricos, o backend e os cálculos científicos foram preservados.
+- Without a key, the backend reads the public FIRMS near-real-time files.
+- With a free FIRMS MAP_KEY (`FIRMS_MAP_KEY` in `backend/.env`), it uses the FIRMS area API. The key stays on
+  the server and is redacted from logs and responses.
+
+## Quality
+
+- **Backend:** 93 tests (pytest, no network). **Frontend:** type check + vitest.
+- **End-to-end:** Playwright flows on real data (map and pilot).
+- **Data consistency:** 30/30 checks comparing independent routes and official IBGE totals
+  (`backend/scripts/verify_consistency.py`).
+- **Accessibility:** zero WCAG 2.1 AA violations in automated axe-core audits.
+
+```bash
+make test   # backend + frontend
+make lint   # ruff
+make e2e    # browser flow with real data (local Chrome)
+```
+
+## Deployment
+
+Docker images for the API and the web app (nginx with per-IP rate limits and security headers), plus a Caddy
+profile for automatic HTTPS. See [deploy/DEPLOY.md](deploy/DEPLOY.md) and [docs/DEPLOY_VPS.md](docs/DEPLOY_VPS.md)
+(shared server behind an existing nginx).
+
+## Known limitations
+
+- The harmonized MODIS → VIIRS series is experimental and is labeled as such. Uncertainty is empirical
+  (leave-one-year-out), not a calibrated confidence interval.
+- Alert levels follow transparent rules but have not yet been calibrated with field teams.
+- Detailed history (archive, census tracts, health facilities) is complete for Pará. The other Amazon states and
+  countries have near-real-time detections, hotspots and Indigenous-land alerts.
+- Wind comes from numerical models (Open-Meteo), not from local stations.
+- External sources can be temporarily unavailable. The interface always says which source failed and never
+  shows a failure as zero.
+
+## Use of AI
+
+We used Claude (Anthropic), an AI assistant, to help write and review code, tests, data pipelines and
+documentation, to translate texts into English and to script the demo videos. whisper.cpp was used to time the
+subtitles. All data shown are real public data. There are no AI-generated images, footage or voices.
+
+## Team
+
+**Binary Horizon (Horizonte Binário):** Felipe Souza (software engineer and full-stack developer), Ariel Barros
+(social worker) and Ronaldo Moraes (full-stack developer).

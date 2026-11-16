@@ -54,6 +54,40 @@ def municipalities(region_id: str, c: Container = Depends(get_container)) -> dic
             "metadata": {"count": len(feats), "simplification_deg": 0.002, "source": "IBGE malhas v3 (qualidade máxima, simplificada para exibição)"}}
 
 
+@router.get("/regions/{region_id}/seats")
+async def municipal_seats(region_id: str, c: Container = Depends(get_container)) -> dict:
+    """Sedes municipais (IBGE BC250 2025) no retângulo da região, associadas ao município do Pará que as contém."""
+    import numpy as np
+
+    from app.core.errors import AppError, UpstreamUnavailableError
+    from app.integrations.ibge import ibge_municipal_seats
+
+    region = c.regions.get(region_id)
+    w, s, e, n = region.bbox
+    pad = 0.3
+    try:
+        res = await ibge_municipal_seats(c.http, c.cache, (w - pad, s - pad, e + pad, n + pad))
+    except AppError:
+        raise
+    except Exception as exc:  # noqa: BLE001 — resposta inesperada do WFS
+        raise UpstreamUnavailableError("IBGE geoserviços não respondeu", source="IBGE geoserviços") from exc
+    munis = c.regions.municipalities("para")
+    feats = []
+    for f in res["data"].get("features", []):
+        g = f.get("geometry") or {}
+        if g.get("type") != "Point":
+            continue
+        lon, lat = (float(v) for v in g["coordinates"][:2])
+        p = f.get("properties", {})
+        rid = next((m.definition.id for m in munis if bool(m.contains(np.array([lon]), np.array([lat]))[0])), None)
+        feats.append({"type": "Feature", "geometry": {"type": "Point", "coordinates": [round(lon, 6), round(lat, 6)]},
+                      "properties": {"name": p.get("identificador"), "region_id": rid, "in_region": bool(region.contains(np.array([lon]), np.array([lat]))[0]),
+                                     "approximate": p.get("geometriaaproximada") == "Sim"}})
+    return {"type": "FeatureCollection", "features": feats, "metadata": {
+        "region": region_id, "count": len(feats), "source": "IBGE — Base Cartográfica Contínua 1:250.000, edição 2025 (localidades do tipo Cidade ou Capital = sede municipal)",
+        "url": res["url"], "fetched_at": res["fetched_at"], "cache_hit": res["cache_hit"]}}
+
+
 @router.get("/sources")
 def sources(c: Container = Depends(get_container)) -> dict:
     products = []
