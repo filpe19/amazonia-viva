@@ -44,6 +44,9 @@ class Settings(BaseSettings):
     firms_base_url: str = "https://firms.modaps.eosdis.nasa.gov"
     firms_nrt_cache_ttl_seconds: int = 900  # 15 min: arquivos NRT são atualizados continuamente
 
+    # Pré-cálculo em segundo plano ("região:janela"). Em servidores com pouca memória, deixe a escala amazônica de fora.
+    warm_targets: list[str] = ["santarem:24h", "santarem:7d", "portel:24h", "portel:7d", "para:24h", "amazonia:24h"]
+
     # NASA POWER
     power_base_url: str = "https://power.larc.nasa.gov"
     power_cache_ttl_seconds: int = 6 * 3600

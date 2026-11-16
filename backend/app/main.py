@@ -38,7 +38,7 @@ def create_app(settings: Settings | None = None, container=None) -> FastAPI:
                 except Exception as exc:  # noqa: BLE001 - registra e tenta no próximo ciclo
                     log.warning("warm cache failed", extra={"product": pid, "error": str(exc)})
             # Pilotos de demonstração e escalas pesadas pré-calculados (em thread, um por vez; a API segue respondendo).
-            warm = [("santarem", "24h"), ("santarem", "7d"), ("portel", "24h"), ("portel", "7d"), ("para", "24h"), ("amazonia", "24h")]
+            warm = [tuple(t.split(":", 1)) for t in settings.warm_targets if ":" in t]
             for region_id, window in warm:
                 try:
                     if c.hotspots is not None:

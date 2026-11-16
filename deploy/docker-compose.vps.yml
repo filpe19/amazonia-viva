@@ -13,8 +13,10 @@ services:
     volumes:
       - ${AV_SHARED:-/var/www/amazonia-viva-shared}/runtime:/app/data/runtime
     # Other applications share this server: cap CPU and memory so heavy Amazon-scale jobs cannot starve them.
+    # memswap_limit = mem_limit: if memory runs out the container restarts instead of thrashing on swap.
     cpus: 1.0
-    mem_limit: 2560m
+    mem_limit: 3g
+    memswap_limit: 3g
   web:
     build:
       context: ../frontend
