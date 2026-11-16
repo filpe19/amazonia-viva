@@ -30,7 +30,7 @@ git clone https://github.com/filpe19/amazonia-viva.git /var/www/amazonia-viva
 cat > /var/www/amazonia-viva-shared/api.env <<'ENV'
 CORS_ORIGINS=["https://amazoniaviva.179-197-65-61.sslip.io"]
 # Background pre-computation; the Amazon-wide scale needs ~3 GB, so leave it out on small shared servers
-WARM_TARGETS=["santarem:7d","santarem:24h","portel:7d","portel:24h","para:24h"]
+WARM_TARGETS=["santarem:7d","santarem:24h","portel:7d","portel:24h"]
 # FIRMS_MAP_KEY=   (optional, free: https://firms.modaps.eosdis.nasa.gov/api/map_key/)
 ENV
 chmod 600 /var/www/amazonia-viva-shared/api.env
@@ -76,7 +76,7 @@ Keep the sslip.io name until the new domain answers over HTTPS, then remove it.
   tar czf ~/av-runtime-$(date +%F).tgz -C /var/www/amazonia-viva-shared/runtime history.sqlite detections reference
   ```
 - **Resources:** the API is capped at 1 CPU and 3 GB without swap (`docker-compose.vps.yml`). The background warm-up
-  (`WARM_TARGETS`) keeps the pilots and Pará ready. The Amazon-wide scale is computed only when someone opens it.
+  (`WARM_TARGETS`) keeps the pilots ready. The state (Pará) and Amazon-wide scales are computed when someone opens them, one job at a time.
 - **Stop or remove:**
   ```bash
   sudo docker compose -f deploy/docker-compose.vps.yml down   # runtime data stays in the shared folder

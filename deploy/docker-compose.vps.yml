@@ -10,6 +10,9 @@ services:
     environment:
       ENVIRONMENT: production
       LOG_FORMAT: json
+      # glibc: few malloc arenas and eager trimming keep the threaded geospatial jobs from fragmenting memory.
+      MALLOC_ARENA_MAX: "2"
+      MALLOC_TRIM_THRESHOLD_: "131072"
     volumes:
       - ${AV_SHARED:-/var/www/amazonia-viva-shared}/runtime:/app/data/runtime
     # Other applications share this server: cap CPU and memory so heavy Amazon-scale jobs cannot starve them.
